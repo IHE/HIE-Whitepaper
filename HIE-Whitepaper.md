@@ -1524,93 +1524,16 @@ available only to direct care providers. This differentiation of the
 types of data can be represented using a diagram like found in Table
 6.2.2-1: Sample Access Control Policies
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p>Sensitivity</p>
-<p>Functional Role</p></td>
-<td>Billing Information</td>
-<td>Administrative Information</td>
-<td>General Clinical Information</td>
-<td>Sensitive Clinical Information</td>
-<td>Research Information</td>
-<td>Mediated by<br />
-Direct Care Provider</td>
-</tr>
-<tr class="even">
-<td>HL7 confidentialityCode (2.16.840.1.113883.5.25)</td>
-<td>L</td>
-<td>N</td>
-<td>D</td>
-<td>R</td>
-<td>V</td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td>Administrative Staff</td>
-<td><strong>X</strong></td>
-<td><strong>X</strong></td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="even">
-<td>Dietary Staff</td>
-<td> </td>
-<td><strong>X</strong></td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td>General Care Provider</td>
-<td> </td>
-<td><strong>X</strong></td>
-<td><strong>X</strong></td>
-<td> </td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="even">
-<td>Direct Care Provider</td>
-<td> </td>
-<td><strong>X</strong></td>
-<td><strong>X</strong></td>
-<td><strong>X</strong></td>
-<td> </td>
-<td><strong>X</strong></td>
-</tr>
-<tr class="odd">
-<td>Emergency Care Provider (e.g., EMT)</td>
-<td> </td>
-<td></td>
-<td><strong>X</strong></td>
-<td></td>
-<td> </td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Researcher</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td><strong>X</strong></td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td>Patient or Legal Representative</td>
-<td><strong>X</strong></td>
-<td><strong>X</strong></td>
-<td><strong>X</strong></td>
-<td><strong>X</strong></td>
-<td> </td>
-<td> </td>
-</tr>
-</tbody>
-</table>
+
+| Confidentiality vs Role             | U | L | M | N | R | V |
+| ----------------------------------- | - | - | - | - | - | - |
+| Administrative Staff                |   | X | X |   |   |   |
+| Dietary Staff                       |   |   | X |   |   |   |
+| General Care Provider               |   |   | X | X |   |   |
+| Direct Care Provider                |   |   | X | X | X | X |
+| Emergency Care Provider (e.g., EMT) |   |   |   | X |   |   |
+| Researcher                          | X |   |   |   |   |   |
+| Patient or Legal Representative     |   | X | X | X | X |   |
 
 Table 6.2.2‑1 Sample Access Control Policies
 
@@ -1750,123 +1673,17 @@ found in the profile text or through other webinars.
 
 Table 6.3-1: Profiles relationship to Controls
 
-<table>
-<thead>
-<tr class="header">
-<th><p> Security &amp; Privacy Controls</p>
-<p>IHE Profile</p></th>
-<th>Profile Issued</th>
-<th>Audit Log</th>
-<th>Identification and Authentication</th>
-<th>Data Access Control</th>
-<th>Secrecy</th>
-<th>Data Integrity</th>
-<th>Non-Repudiation</th>
-<th>Patient Privacy</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Audit Trails and Node Authentication</td>
-<td>2004</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-</tr>
-<tr class="even">
-<td>Consistent Time</td>
-<td>2003</td>
-<td>√</td>
-<td>∙</td>
-<td></td>
-<td></td>
-<td></td>
-<td>√</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Enterprise User Authentication</td>
-<td>2003</td>
-<td></td>
-<td>√</td>
-<td>∙</td>
-<td></td>
-<td></td>
-<td>∙</td>
-<td>∙</td>
-</tr>
-<tr class="even">
-<td>Cross-Enterprise User Assertion</td>
-<td>2006</td>
-<td></td>
-<td>√</td>
-<td>∙</td>
-<td></td>
-<td></td>
-<td>∙</td>
-<td>∙</td>
-</tr>
-<tr class="odd">
-<td>Basic Patient Privacy Consents</td>
-<td>2006</td>
-<td></td>
-<td></td>
-<td>∙</td>
-<td></td>
-<td></td>
-<td></td>
-<td>√</td>
-</tr>
-<tr class="even">
-<td>Personnel White Pages</td>
-<td>2004</td>
-<td></td>
-<td>√</td>
-<td>√</td>
-<td></td>
-<td></td>
-<td>∙</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Healthcare Provider Directory</td>
-<td>2010</td>
-<td></td>
-<td>√</td>
-<td>∙</td>
-<td></td>
-<td></td>
-<td>∙</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Document Digital Signature</td>
-<td>2005</td>
-<td></td>
-<td>√</td>
-<td></td>
-<td></td>
-<td>√</td>
-<td>√</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Document Encryption (in development)</td>
-<td>2011</td>
-<td></td>
-<td></td>
-<td>√</td>
-<td>√</td>
-<td>∙</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+| Function vs Profile                  | Audit Log | Id / Authn | Authz | Secrecy | Integrity | Non-Repudiation | Privacy |
+| ------------------------------------ | --------- | ---------- | ----- | ------- | --------- | --------------- | ------- |
+| Audit Trails and Node Authentication | √         | √          | √     | √       | √         | √               | √       |
+| Consistent Time                      | √         | ∙          |       |         |           | √               |         |
+| Internet User Authorization          |           | √          | √     |         |           | ∙               | ∙       |
+| Cross-Enterprise User Assertion      |           | √          | ∙     |         |           | ∙               | ∙       |
+| Basic Patient Privacy Consents       |           |            | ∙     |         |           |                 | √       |
+| Mobile Care Services Discovery       |           | √          | ∙     |         |           | ∙               |         |
+| Document Digital Signature           |           | √          |       |         | √         | √               |         |
+| Document Encryption                  |           |            | √     | √       | ∙         |                 |         |
+
 
 Note: The topic of Security and Privacy is covered in two slide decks
 and webinars, see endnote \[ii\].

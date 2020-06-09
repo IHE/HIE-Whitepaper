@@ -1,7 +1,23 @@
 # HIE-Whitepaper
 [White Paper - Health Information Exchange: Enabling Document Sharing using IHE Profiles](HIE-Whitepaper.md)
 
+Github.io html rendering -- https://ihe.github.io/HIE-Whitepaper/HIE-Whitepaper.html
+
+## Why using markdown
+We (ITI) are looking to learn more how github + markdown can enable more teamwork vs one owner of a word document; how it can constrain unapproved styles; how this enables html publication while also supporting PDF; how well this all fits in with IHE governance; and how we can utilize github issue tracking.  But github does bring along problems, as does markdown. few years from now we will likely have much more friendly WYSIWYG editing with integrated spell-check and sentence structure support, without the editor feeling the pain of git or markdown. 
+
 # Meeting Minutes ITI Tech
+
+## 6/9/2020 11:00am 
+
+agenda
+* Review progress
+  * Review use of GitHub Issues
+  * Review use of GitHub Projects Kanban
+* Brainstorm tasks
+  * Nothing new identified
+* Assignments
+  * Reviewed assignments with those on the call
 
 ## 5/7/2020 2:00pm
 
