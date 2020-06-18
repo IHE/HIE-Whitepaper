@@ -682,7 +682,7 @@ address these use-cases.
 
 **Figure: Document Sharing Use Case Continuum**
 
-![](images/continuum.png)
+![](images/Continuum.png)
 
 The following sections will describe in more detail the three models.
 
