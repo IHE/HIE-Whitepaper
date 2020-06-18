@@ -1,26 +1,19 @@
-**IHE IT Infrastructure**
+**IHE IT Infrastructure** **White Paper**
 
-**White Paper**
-
-**Health Information Exchange:**
-
-**Enabling Document Sharing Using IHE Profiles**
-
-Email: iti@ihe.net
+**Enabling Document Sharing Health Information Exchange Using IHE Profiles**
 
 **CONTENTS**
-
-* [1 Introduction](#introduction)
-* [2 Principles of Health Document Sharing](#principles-of-ihe-for-health-document-sharing)
-* [3 Document sharing profiles](#document-sharing-profiles)
-* [4 Patient identity management](#patient-identity-management-1)
-* [5 Common Provider Directory](#common-provider-directory)
-* [6 Security and Privacy](#security-and-privacy)
-* [7 Further Reading](#further-reading)
+* [Introduction](#introduction)
+* [Principles of Health Document Sharing](#principles-of-ihe-for-health-document-sharing)
+* [Document sharing profiles](#document-sharing-profiles)
+* [Patient identity management](#patient-identity-management-1)
+* [Common Provider Directory](#common-provider-directory)
+* [Security and Privacy](#security-and-privacy)
+* [Further Reading](#further-reading)
 
 # Introduction
 
-The Integrating the Healthcare Enterprise (IHE) standards profiling
+The [Integrating the Healthcare Enterprise (IHE)](http://www.ihe.net) standards profiling
 organization has developed a collection of profiles which can be
 leveraged for use by healthcare communities for the purposes of document
 sharing. One of the most significant applications of healthcare
@@ -37,10 +30,6 @@ directories, and the protection of privacy and security. This white
 paper will show how various profiles work together to provide a
 standards based, interoperable approach to community and cross-community
 health information sharing.
-
-This document will be annually reviewed for improvements and extensions.
-Please submit comments to be considered as part of the annual review.
-Comments can be submitted at http://www.ihe.net/iti/iticomments.cfm.
 
 ## Scope
 
@@ -1594,18 +1583,14 @@ purposely omitted from those descriptions since the intent of this white
 paper is to offer a primer on how to apply IHE ITI profiles to document
 sharing. For those readers who wish to learn more details, please refer:
 
-1.  IHE IT Infrastructure Committee [Educational slides and webinars](http://wiki.ihe.net/index.php?title=Current_Published_ITI_Educational_Materials).
+1. IHE IT Infrastructure Committee [Educational slides and webinars](http://wiki.ihe.net/index.php?title=Current_Published_ITI_Educational_Materials).
+1. IHE IT Infrastructure [formal specifications and whitepapers](http://www.ihe.net/Technical\_Framework/index.cfm\#IT )
+1. A white paper that covers deployment planning for an exchange [Template for XDS Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
+1. A Handbook to aid a Document Sharing community with desiging how they will use [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
+1. General information about IHE can be found at [IHE](http://ihe.net)
+1. Information about the [IHE IT Infrastructure domain](http://ihe.net/IHE_Domains)
+1. Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [IHE Process](https://wiki.ihe.net/index.php/Process) 
+1. A listing of all IHE authored [Implementation Guide Profiles](https://wiki.ihe.net/index.php/Profiles)
 
-2.  IHE IT Infrastructure [formal specifications](http://www.ihe.net/Technical\_Framework/index.cfm\#IT )
-
-3.  A white paper that covers deployment planning for an exchange
-    [Template for XDS Affinity Domain Deployment Planning](http://www.ihe.net/Technical\_Framework/index.cfm\#IT )
-	
-Comments on this whitepaper are invited at any time and can [be submitted](http://www.ihe.net/ITI_Public_Comments)
-
-General information about IHE can be found at [IHE](http://ihe.net)
-
-Information about the [IHE IT Infrastructure domain](http://ihe.net/IHE_Domains)
-
-Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [IHE Process](https://wiki.ihe.net/index.php/Process) and [Current Profiles](https://wiki.ihe.net/index.php/Profiles)
+**Comments on this whitepaper are invited at any time and can [be submitted as GitHub issues](https://github.com/IHE/HIE-Whitepaper/issues)**
 
