@@ -57,8 +57,7 @@ the creation of standards-based communities.
 
 This white paper will focus on explainin how IHE profiles are used to
 address interoperability aspects of document sharing and how they work
-together to solve common document sharing problems. The IHE White Paper,
-																	
+together to solve common document sharing problems. The IHE White Paper
 “[Template for XDS Affinity Domain Deployment
 Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)”,
 provides support for policy and deployment planning. The IHE “[Document
@@ -238,7 +237,8 @@ community should address the following issues:
   - **Coding of metadata**: Metadata are data that provide information
     about one or more aspects of the document. In the case of
     IHE-defined document exchange, specific metadata are coded within
-    the structure of the content being exchanged. See [Value of Metadata](#value-of-metadata) where the metadata defined by IHE are introduced. Some of that metadata
+    the structure of the content being exchanged. See 
+	[Value of Metadata](#value-of-metadata) where the metadata defined by IHE are introduced. Some of that metadata
     have values chosen from a coding system defined by the governance of
     the sharing community. Because IHE profiles can be applied in many
     parts of the world where coding systems are different, IHE has not
@@ -301,6 +301,7 @@ document.
 ### FHIR-Document vs CDA-Document
 
 TODO add this section
+
 ## Longitudinal Patient Record
 
 Building on the document concepts described above in [Distinction between Documents and Messages](#distinction-between-documents-and-messages) of
@@ -317,7 +318,7 @@ health documents. Typically, a patient will go through a sequence of
 encounters in different care settings over the course of his/her lifetime.
 With each encounter there is the potential that a provider will produce
 a health document that can be shared with the community. Documents
-shared by the provider and tracked by a [centralized registry(#centralized-discovery-and-retrieve) or [federation of communities(federated-discovery-and-retrieve) form a
+shared by the provider and tracked by a [centralized registry](#centralized-discovery-and-retrieve) or [federation of communities](federated-discovery-and-retrieve) form a
 longitudinal record for the patients that received care among those
 providers within the community. Longitudinal records, therefore, are
 expected to last over the span of many decades, just as the documents
@@ -388,15 +389,16 @@ and “Content Consumer”, utilizing an abstraction of “Share Content”;
 where “Share Content” can be any of the Document Sharing infrastructures
 including MHDS, XDS, XDR, XCA, etc.
 
-![](.//media/image13.png)
+![](.//images/ContentActors.png)
 
-**Figure: MHDS Actor Diagram**
+**Figure: Document Sharing Actor Diagram**
 
 IHE Content Profiles can be found:
 
   - CDA <https://wiki.ihe.net/index.php/Category:CDA>
 
   - FHIR-Document <https://wiki.ihe.net/index.php/Category:FHIR-Doc>
+  
 ## Value of Metadata
 
 Another key principle leveraged by IHE Document Sharing is the use of
@@ -574,7 +576,6 @@ approaches currently used in various parts of the world are:
     enables a directory of individual and organizational entities along
     with electronic services provided by those entities. See [Common Provider Directory](#common-provider-directory).
 
-TODO - review this content for inclusion 
 For locating source of information about a particular patient, some
 approaches are:
 
@@ -631,11 +632,11 @@ according to three different data sharing models:
 
   - Centralized Discovery and Retrieve (XDS Affinity Domain) – a
     community of sharing partners agrees to use a common infrastructure
-    to enable Health Document Sharing. A **document source will publish
+    to enable Health Document Sharing. A **document source will publish**
     the existence of documents to a location that is accessible to other
     systems. Then, document consumers can discover document locations
     that have been previously published and pull a copy of the
-    document.**
+    document.
 
   - Federated Discovery and Retrieve – content is pulled directly from
     the content holder who is found through manual means or a directory
@@ -668,19 +669,20 @@ The IHE profiles addressing these models are:
 
   - Federated Discovery and Retrieve – Mobile access to Health Documents(MHD), Cross-Community Access (XCA)
 
-**Figure 3-1 shows the flow of data for each of these models.**
+**Figure: shows the flow of data for each of these models.**
 
-![](images/media/image2.emf)
+![](images/models.png)
 
-Figure 3-1: Document Sharing Models
 
-Figure 3-2 shows this as a continuum from a simple point-to-point push
+The Next figure shows this as a continuum from a simple point-to-point push
 model on the bottom left to a highly scaled multi-community federated
 discovery on the top right. Across the bottom are the use-cases we have
 been discussing and coming from the left are the IHE profiles that
 address these use-cases.
 
-Figure 3-2: Document Sharing Use Case Continuum
+**Figure: Document Sharing Use Case Continuum**
+
+![](images/continuum.png)
 
 The following sections will describe in more detail the three models.
 
@@ -811,7 +813,7 @@ metadata to the document repository, and the document repository
 subsequently sends the metadata to the document registry (see figure
 3.2-1).
 
-![](images/media/image4.png)
+![](images/Publish.png)
 
 Figure 3.2-1: Provide and register document
 
@@ -1086,7 +1088,7 @@ of those identifiers is equivalent to Garry Collin with an ID of 333 at
 a local Hospital. This is known as a cross-reference that links the two
 patient identifiers for Gary Collins.
 
-![](images/media/image5.png)
+![](images/PatientManager.png)
 
 Figure 4.1-1: Patient identifier cross-referencing
 
