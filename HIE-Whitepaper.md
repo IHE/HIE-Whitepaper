@@ -1,3 +1,9 @@
+
+[White Paper - Health Information Exchange: Enabling Document Sharing using IHE Profiles](HIE-Whitepaper.md)
+
+Github.io html rendering -- https://ihe.github.io/HIE-Whitepaper/HIE-Whitepaper.html
+
+
 **Integrating the Healthcare Enterprise**
 
 ![](images/media/image1.png)
