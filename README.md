@@ -1,13 +1,3 @@
-
-[White Paper - Health Information Exchange: Enabling Document Sharing using IHE Profiles](HIE-Whitepaper.md)
-
-Github.io html rendering -- https://ihe.github.io/HIE-Whitepaper/HIE-Whitepaper.html
-
-
-**Integrating the Healthcare Enterprise**
-
-![](images/media/image1.png)
-
 **IHE IT Infrastructure**
 
 **White Paper**
@@ -16,111 +6,17 @@ Github.io html rendering -- https://ihe.github.io/HIE-Whitepaper/HIE-Whitepaper.
 
 **Enabling Document Sharing Using IHE Profiles**
 
-Date: January 24, 2012
-
-Author: Karen Witting, John Moehrke
-
 Email: iti@ihe.net
 
 **CONTENTS**
 
-[1 Introduction 3](#introduction)
-
-[1.1 Scope 3](#scope)
-
-[1.2 Intended Audience 4](#intended-audience)
-
-[1.3 Overview of Health Document Sharing Communities
-4](#overview-of-health-document-sharing-communities)
-
-[2 Principles of IHE for Health Document Sharing
-6](#principles-of-ihe-for-health-document-sharing)
-
-[2.1 General IHE principles 6](#general-ihe-principles)
-
-[2.2 Document Sharing Governance 6](#document-sharing-governance)
-
-[2.3 Distinction between Documents and Messages
-7](#distinction-between-documents-and-messages)
-
-[2.4 Longitudinal Patient Record 8](#longitudinal-patient-record)
-
-[2.5 Use of Documents 8](#use-of-documents)
-
-[2.6 Value of Metadata 9](#value-of-metadata)
-
-[2.7 Document Relationships 10](#document-relationships)
-
-[2.8 Document Sharing Models 11](#document-sharing-models)
-
-[2.9 Patient Identity Management 11](#patient-identity-management)
-
-[2.10 Locating sharing partners 12](#locating-sharing-partners)
-
-[2.11 Security/Privacy 12](#securityprivacy)
-
-[3 Document sharing profiles 14](#document-sharing-profiles)
-
-[3.1 Direct Push 16](#direct-push)
-
-[3.1.1 Cross-Enterprise Document Reliable Interchange (XDR)
-16](#cross-enterprise-document-reliable-interchange-xdr)
-
-[3.1.2 Cross-Enterprise Document Media Interchange (XDM)
-16](#cross-enterprise-document-media-interchange-xdm)
-
-[3.2 Centralized Discovery and Retrieve
-17](#centralized-discovery-and-retrieve)
-
-[3.2.1 Document Publishing 17](#document-publishing)
-
-[3.2.2 Document Discovery 19](#document-discovery)
-
-[3.2.3 Governance 19](#governance)
-
-[3.2.4 Notifications 20](#notifications)
-
-[3.3 Federated Discovery and Retrieve
-20](#federated-discovery-and-retrieve)
-
-[4 Patient identity management 22](#patient-identity-management-1)
-
-[4.1 Patient Identity Cross-Reference (PIX)
-22](#patient-identity-cross-reference-pix)
-
-[4.2 Patient Demographics Query (PDQ)
-24](#patient-demographics-query-pdq)
-
-[4.3 Cross-Community Patient Discovery (XCPD)
-24](#cross-community-patient-discovery-xcpd)
-
-[5 Common Provider Directory 26](#common-provider-directory)
-
-[6 Security and Privacy 27](#security-and-privacy)
-
-[6.1 Policies and Risk Management 27](#policies-and-risk-management)
-
-[6.1.1 Technical Security and Privacy controls
-29](#technical-security-and-privacy-controls)
-
-[6.2 Applying Security and Privacy to Document Sharing
-30](#applying-security-and-privacy-to-document-sharing)
-
-[6.2.1 Basic Security 30](#basic-security)
-
-[6.2.2 Protecting different types of documents
-31](#protecting-different-types-of-documents)
-
-[6.2.3 Patient Privacy Consent to participate in Document Sharing
-32](#patient-privacy-consent-to-participate-in-document-sharing)
-
-[6.2.4 Security and Privacy in a Patient Safety Environment
-33](#security-and-privacy-in-a-patient-safety-environment)
-
-[6.3 IHE Security and Privacy Controls
-33](#ihe-security-and-privacy-controls)
-
-[7 Further Reading 35](#further-reading)
+* [1 Introduction](#introduction)
+* [2 Principles of Health Document Sharing](#principles-of-ihe-for-health-document-sharing)
+* [3 Document sharing profiles](#document-sharing-profiles)
+* [4 Patient identity management](#patient-identity-management-1)
+* [5 Common Provider Directory](#common-provider-directory)
+* [6 Security and Privacy](#security-and-privacy)
+* [7 Further Reading](#further-reading)
 
 # Introduction
 
@@ -542,8 +438,7 @@ describing the document includes things like: document identifier,
 patient identifier and demographics, document author, class of document,
 confidentiality of document, creation time, and events causing creation
 of document, document format and several more. For a complete list of
-document metadata refer to ITI TF-3: Section 4.1.7 \[see endnote
-\[1\]\].
+document metadata refer to ITI TF-3: Section 4.1.7 [Further Reading](#further-reading).
 
 **Folders:** Metadata shared using IHE-defined constructs can also
 describe folders and document’s membership in folders. A folder may be
@@ -787,7 +682,7 @@ other clinical documents) from Dr. Suwati's Apollo EMR to Dr. Lima's
 Great Charts EMR.
 
 The Point-to-Point Transmission of Documents slide deck and webinar,
-\[see endnote \[2\]\], provide more detail about XDR.
+[Further Reading](#further-reading), provide more detail about XDR.
 
 ### Cross-Enterprise Document Media Interchange (XDM)
 
@@ -828,7 +723,7 @@ USB key to Mary so that she may take the files with her to the
 orthopedist.
 
 The Point-to-Point Transmission of Documents slide deck and webinar,
-\[see endnote ii\], provide more detail about XDM.
+[Further Reading](#further-reading), provide more detail about XDM.
 
 ## Centralized Discovery and Retrieve
 
@@ -978,8 +873,8 @@ find and use it. Use of the PIX and/or PDQ profiles are often applied in
 support of this task, see Section 4.
 
 Further detail regarding deployment of an XDS Affinity Domain may be
-found in the “Template for XDS Affinity Domain Deployment Planning” IHE
-ITI White Paper \[see endnote i\].
+found in the [Template for XDS Affinity Domain Deployment Planning IHE
+ITI White Paper](#further-reading).
 
 XDS is commonly deployed in an integrated environment which makes use of
 many IHE profiles working together to enable all aspects of a Document
@@ -1012,8 +907,7 @@ refine the ability to notify or subscribe for notifications.
     documents fitting specified metadata and notification of available
     documents.
 
-The Publication and Discovery slide deck and webinar, \[see endnote
-ii\], provide more detail about XDS and DSUB.
+The Publication and Discovery slide deck and webinar, [Further Reading](#further-reading), provide more detail about XDS and DSUB.
 
 ## Federated Discovery and Retrieve
 
@@ -1069,7 +963,7 @@ well. This patient identity federation is profiled in the
 Cross-Community Patient Discovery (XCPD) profile. For more information
 on this profile see Section 4.3.
 
-The Cross-Community slide deck and webinar, \[see endnote ii\], provide
+The Cross-Community slide deck and webinar, [Further Reading](#further-reading), provide
 more detail about XCA and XCPD.
 
 # Patient identity management
@@ -1117,7 +1011,7 @@ query by a set of demographics and get in response a complete set of
 demographics, usually including patient identifiers in domains of
 interest.
 
-The Patient Identity Management deck and webinar, \[see endnote ii\],
+The Patient Identity Management deck and webinar, [Further Reading](#further-reading),
 provide more detail about PIX and PDQ.
 
 ## Patient Identity Cross-Reference (PIX)
@@ -1231,7 +1125,7 @@ community that represent Trudy. With this information, Dr. Holsen can
 subsequently use XCA to look for documents containing Trudy’s past
 medical history held within the Chicago community.
 
-The Cross-Community slide deck and webinar \[see endnote ii\], provide
+The Cross-Community slide deck and webinar [Further Reading](#further-reading), provide
 more detail about XCPD.
 
 # Common Provider Directory
@@ -1268,15 +1162,14 @@ who belongs to the organizational provider General Hospital.
 
 HPD does not support attributes intended directly for Access Control.
 
-The Healthcare Provider Directory slide deck and webinar, \[see endnote
-ii\], provide more detail about HPD.
+The Healthcare Provider Directory slide deck and webinar, [Further Reading](#further-reading), provide more detail about HPD.
 
 # Security and Privacy
 
 This section will discuss how a community that leverages IHE Profiles
 for document sharing can protect patient privacy and information
 security. The topic of Security and Privacy is covered in two slide
-decks and webinars, see endnote \[ii\].
+decks and webinars, see [Further Reading](#further-reading).
 
 A very important aspect that is beyond the scope of IHE is the
 definition of the overall Policies of the community. There is guidance
@@ -1318,8 +1211,8 @@ Network Controls.
 
 While community Policies and Risk Management are outside its scope, IHE
 does recognize that these elements are a necessary piece of a system
-implementation. IHE IT Infrastructure technical white paper, “Template
-for XDS Affinity Domain Deployment Planning” \[see endnote i\] outlines
+implementation. IHE IT Infrastructure technical white paper, [Template
+for XDS Affinity Domain Deployment Planning](#further-reading) outlines
 some of the issues that should be evaluated for inclusion in the local
 Policy creation and Risk Management decisions. It is therefore the duty
 of system implementers to take this guidance into account as part of
@@ -1514,7 +1407,7 @@ systems participating in the Document Sharing exchange. The
 communications between these trusted systems is also encrypted.
 
 For more information on the use of IHE ATNA to enable basic security see
-the security and privacy slide decks and webinars, \[see endnote ii\].
+the security and privacy slide decks and webinars, [Further Reading](#further-reading).
 
 ### Protecting different types of documents
 
@@ -1568,8 +1461,7 @@ Control rules can leverage any of the user context, patient identity, or
 document metadata discussed above.
 
 For more details on enabling Role-Based-Access-Control and federation of
-identities see the security and privacy slide decks and webinars, \[see
-endnote ii\].
+identities see the security and privacy slide decks and webinars, [Further Reading](#further-reading).
 
 ### Patient Privacy Consent to participate in Document Sharing
 
@@ -1692,7 +1584,7 @@ Table 6.3-1: Profiles relationship to Controls
 
 
 Note: The topic of Security and Privacy is covered in two slide decks
-and webinars, see endnote \[ii\].
+and webinars, see [Further Reading](#further-reading).
 
 # Further Reading
 
@@ -1702,20 +1594,18 @@ purposely omitted from those descriptions since the intent of this white
 paper is to offer a primer on how to apply IHE ITI profiles to document
 sharing. For those readers who wish to learn more details, please refer:
 
-1.  ITI Educational slides and webinars available at endnote \[ii\].
+1.  IHE IT Infrastructure Committee [Educational slides and webinars](http://wiki.ihe.net/index.php?title=Current_Published_ITI_Educational_Materials).
 
-2.  ITI Technical Framework and supplements available at endnote \[i\]
+2.  IHE IT Infrastructure [formal specifications](http://www.ihe.net/Technical\_Framework/index.cfm\#IT )
 
 3.  A white paper that covers deployment planning for an exchange
-    “Template for XDS Affinity Domain Deployment Planning” available
-    at endnote \[i\]
+    [Template for XDS Affinity Domain Deployment Planning](http://www.ihe.net/Technical\_Framework/index.cfm\#IT )
+	
+Comments on this whitepaper are invited at any time and can [be submitted](http://www.ihe.net/ITI_Public_Comments)
 
-<!-- end list -->
+General information about IHE can be found at [IHE](http://ihe.net)
 
-1.  See http://www.ihe.net/Technical\_Framework/index.cfm\#IT for
-    published IHE ITI documents.
+Information about the [IHE IT Infrastructure domain](http://ihe.net/IHE_Domains)
 
-2.  See
-    <http://wiki.ihe.net/index.php?title=Current_Published_ITI_Educational_Materials>
-    for a list of Educational presentations and Webinars related to the
-    topic of this paper.
+Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [IHE Process](https://wiki.ihe.net/index.php/Process) and [Current Profiles](https://wiki.ihe.net/index.php/Profiles)
+
