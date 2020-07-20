@@ -909,7 +909,7 @@ Sharing environment. The services include:
 
   - [Patient Identification Management](#patient-identity-management).
 
-  - Subscription and Notification Profiles like NAV and DSUB. See
+  - Subscription and Notification Profiles like DSUB. See
     [Notifications](#notifications).
 
   - [Security and Privacy](#security-and-privacy) Profiles like ATNA, CT, XUA, BPPC and others.
@@ -925,10 +925,6 @@ notified when a new document is made available. The simplest type of
 notification is a personal email requesting that the receiver look for
 new content. Beyond this approach, IHE specifies profiles that further
 refine the ability to notify or subscribe for notifications.
-
-  - Notification of Document Availability (NAV) – supports out-of-band
-    notifications of documents between systems via an email containing a
-    machine process able message.
 
   - Document Metadata Subscription (DSUB) – uses subscription for new
     documents fitting specified metadata and notification of available
