@@ -1656,5 +1656,39 @@ sharing. For those readers who wish to learn more details, please refer:
 1. Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [IHE Process](https://wiki.ihe.net/index.php/Process) 
 1. A listing of all IHE authored [Implementation Guide Profiles](https://wiki.ihe.net/index.php/Profiles)
 
+## Case Studies
+
+The Document Sharing Health Information Exchange has been deployed in various regions. This section will provide linkage to some of those projects explaination of how they have used the Document Sharing Health Information Exchange profiles for their specific needs. These links are to external publications. 
+
+### OpenHIE
+[Open Health Information Exchange (OpenHIE)](https://ohie.org/) is an Open Data, Open Standards, Open Source, and Open Innovation project. OpenHIE is an [open community of organizations](http://digitalprinciples.org/build-for-sustainability/) and individuals who are passionate about improving health and health care data sharing. The OpenHIE community is owned by countries and serves as a resource for capacity building, and it receives operational support from Regenstrief Institute.
+
+See the [Case Study on use of OpenHIE](https://digitalprinciples.org/wp-content/uploads/PDD_CaseStudy-OpenHIE_v3.pdf) for an overview of the architecture and how they use the IHE Document Sharing Health Information Exchange profiles.
+
+### CareQuality
+
+blah blah [CareQuality](https://carequality.org/what-we-do/)
+
+### CommonWell
+
+blah blah [CommonWell](https://www.commonwellalliance.org/connect-to-the-network/)
+
+### Canada Infoway
+
+blah blah [Infoway](https://infoway-inforoute.ca/en/solutions/digital-health-foundation)
+
+### Netherlands
+
+### Switzerland
+
+
+blah blah [Siss approach to interconnect](https://na.eventscloud.com/file_uploads/865a2f1cf5d49424e2ae1d8bc9e78306_Day1.Panel1.Speaker2.SangIlKim.pdf)
+
+### And many more
+
+See the other [IHE case studies on the use of IHE profiles](https://www.ihe.net/resources/user_success_stories/)
+
+
+
 **Comments on this whitepaper are invited at any time and can [be submitted as GitHub issues](https://github.com/IHE/HIE-Whitepaper/issues)**
 
