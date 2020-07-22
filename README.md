@@ -89,6 +89,8 @@ communities already in production and many more are being planned. The
 size, nature and scope of communities vary widely but can be
 characterized by a number of different aspects.
 
+
+
 First, some communities are geographically focused while others are not.
 What often comes to mind when speaking of a community is a regional
 organization that facilitates information exchange across multiple
