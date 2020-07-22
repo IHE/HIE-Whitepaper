@@ -1029,29 +1029,8 @@ share a common patient identification scheme (an identifier and an
 assignment process to a patient) and issuing authority for patient
 identifiers.
 
-TODO: the following text comes from MHDS, not clear how to integrate it here
-
-A consumer system may query the PMIR Patient Identity Manager to receive
-the master Patient Identity based on their local identifiers or based on
-the identifying characteristics of the patient. In this way the PCP
-office can discover the master Patient Identity and know the domain
-specific identifier used by the specialist’s system and thus can
-communicate with that system using a known patient identifier.
-
-The PMIR Profile Patient Identity Manager integrates the server side of
-the PDQm and PIXm Profiles, so that systems needing a patient identity
-lookup can use PDQm or PIXm Profiles. A system that publishes documents
-or a system that consumes documents can implement the client PDQm
-Patient Demographics Consumer or PIXm Patient Identifier Cross-reference
-Consumer as their method of discovering patient identities. As such
-these clients are agnostic to the Patient Identity Management
-technology, which might be a PMIR Patient Identity Manager, a legacy PIX
-Patient Identity Manager, etc. A primary use of the PDQm and PIXm
-Profiles is to enable document consumers and document sources using the
-MHDS Profile to find the patient’s identifier in that Community Patient
-Identifier Domain. See Section 50.7.3.2.
-
-TODO - end
+## TO DO by Charles
+Insert table with assumptions & conditions
 
 
 The Patient Identifier Cross-Referencing (PIX) profile supports the
