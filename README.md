@@ -1029,37 +1029,17 @@ share a common patient identification scheme (an identifier and an
 assignment process to a patient) and issuing authority for patient
 identifiers.
 
-TODO: the following text comes from MHDS, not clear how to integrate it here
+The following table presents the four IHE Profiles that support various
+style of distributed management of patient IDs and discusses the 
+assumptions the profile is built upon and highlights key conditions 
+that need to be addressed at the time of deployment.
 
-A consumer system may query the PMIR Patient Identity Manager to receive
-the master Patient Identity based on their local identifiers or based on
-the identifying characteristics of the patient. In this way the PCP
-office can discover the master Patient Identity and know the domain
-specific identifier used by the specialist’s system and thus can
-communicate with that system using a known patient identifier.
-
-The PMIR Profile Patient Identity Manager integrates the server side of
-the PDQm and PIXm Profiles, so that systems needing a patient identity
-lookup can use PDQm or PIXm Profiles. A system that publishes documents
-or a system that consumes documents can implement the client PDQm
-Patient Demographics Consumer or PIXm Patient Identifier Cross-reference
-Consumer as their method of discovering patient identities. As such
-these clients are agnostic to the Patient Identity Management
-technology, which might be a PMIR Patient Identity Manager, a legacy PIX
-Patient Identity Manager, etc. A primary use of the PDQm and PIXm
-Profiles is to enable document consumers and document sources using the
-MHDS Profile to find the patient’s identifier in that Community Patient
-Identifier Domain. See Section 50.7.3.2.
-
-TODO - end
-
-
-The Patient Identifier Cross-Referencing (PIX) profile supports the
-linking of patient identifiers from multiple patient identifier domains.
-The Patient Demographics Query (PDQ) profile supports the ability to
-query by a set of demographics and get in response a complete set of
-demographics, usually including patient identifiers in domains of
-interest.
+|    Patient Identification Profiles       |                           Assumptions                             |                       Conditions                       | 
+| ---------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------|
+| Patient Demographics Query (PDQ) | 1. PDQ supports the access to a central registry of identities. </br> 2. It supports the ability to query in one or more patient identity domains of interest, by a set of demographics traits and get in response one or more matching identiities with their complete set of demographics traits, usually including patient identifiers.| 1. The process to create and update the registry of identities along with their demographics needs to addressed at deployment time for each one of the identity domain served. |
+| Patient Id Cross-referencing (PIX) | 1. PIX supports the linking of patient identifiers between patient identifiers from different domains. </br> 2. Each identifier domain entirely controls the creation, updates and merges of its identities. </br> 3. The consumer of identity cross-references does not need to know any of the patient demographics as managed by the domain controlling the identitiy. | 1. Each deployment relies on a cross-referencing algorithm which is centrally managed and needs to be quality controlled. </br> 2. The consumers of cross-references between identities from different identity domains shall either persist the cross-reference and actively process update notification (profile option) or never persist cross-references and requery when needed. |
+| Cross-Enterprise Patient Discovery (XCPD) | 1. XCPD supports the access between distributed peer registries of identities. </br> 2. It supports the ability to query by a set of demographics traits including a domain specific patient identifer and get in response one or more matching identiities with a complete set of demographics traits, usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the registry of identities along with their demographics needs to addressed at deployment time for each one of the identity domain served. |
+| Patient Master Identity Registry (PMIR)  | 1. PMIR support the distributed creation, access, update and merge process of shared master identities.  </br> 2. The identitiy registry is only a passive store for such shared (or golden) identities that are under the distributed control of identity sources.  | 1. Each deployment shall define the policies to be followed by identity sources to ensure stability and quality of the master identities they create, update and merge. </br> 2. In particular, when identities are created without a well defined minimum set of demographic traits, the restrictions about their use when accessed and the duties of the creator to further enriched such identities until the well defined minimum set has been reached shall be established. </br> 3.  The policies that authorize an identitiy source to request the merge of different master identities and to request an unmerge shall be defined. </br> 4. The duties of an identitiy source that recieves notifications about master identities to refelct these chnages on the local identities shall be established. |
 
 The Patient Identity Management deck and webinar, [Further Reading](#further-reading),
 provide more detail about PIX and PDQ.
@@ -1174,6 +1154,16 @@ community and finds the relevant patient identifiers from the Chicago
 community that represent Trudy. With this information, Dr. Holsen can
 subsequently use XCA to look for documents containing Trudy’s past
 medical history held within the Chicago community.
+
+## Patient Master Identity Registry  (PMIR)
+
+TODO: the following text comes from MHDS, not clear how to integrate it here
+
+A consumer system may query the PMIR Patient Identity Manager to receive the master Patient Identity based on their local identifiers or based on the identifying characteristics of the patient. In this way the PCP office can discover the master Patient Identity and know the domain specific identifier used by the specialist’s system and thus can communicate with that system using a known patient identifier.
+
+The PMIR Profile Patient Identity Manager integrates the server side of the PDQm and PIXm Profiles, so that systems needing a patient identity lookup can use PDQm or PIXm Profiles. A system that publishes documents or a system that consumes documents can implement the client PDQm Patient Demographics Consumer or PIXm Patient Identifier Cross-reference Consumer as their method of discovering patient identities. As such these clients are agnostic to the Patient Identity Management technology, which might be a PMIR Patient Identity Manager, a legacy PIX Patient Identity Manager, etc. A primary use of the PDQm and PIXm Profiles is to enable document consumers and document sources using the MHDS Profile to find the patient’s identifier in that Community Patient Identifier Domain. See Section 50.7.3.2.
+
+TODO - end
 
 The Cross-Community slide deck and webinar [Further Reading](#further-reading), provide
 more detail about XCPD.
