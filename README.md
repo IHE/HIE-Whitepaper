@@ -11,7 +11,7 @@
 * [Security and Privacy](#security-and-privacy)
 * [Further Reading](#further-reading)
 
-# Introduction
+# 1. Introduction
 
 The [Integrating the Healthcare Enterprise (IHE)](http://www.ihe.net) standards profiling
 organization has developed a collection of profiles which can be
