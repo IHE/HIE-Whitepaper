@@ -991,6 +991,31 @@ on this profile see Section 4.3.
 The Cross-Community slide deck and webinar, [Further Reading](#further-reading), provide
 more detail about XCA and XCPD.
 
+## Consuming FHIR Resources
+
+A challange that Document Sharing has is on the consuming side. The [Principles of a Document](#distinction-between-documents-and-messages) are more beneficial to the source. The source is in control of each document creation, and content. Therefore a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
+
+The [Mobile Cross-Enterprise Document Data Element Extraction (mXDE)](https://wiki.ihe.net/index.php/Mobile_Cross-Enterprise_Document_Data_Element_Extraction) Profile provides the means to access data elements extracted from shared structured documents. The profile enables the deployment of health data exchange infrastructures where fine-grained access to health data coexists and complements the sharing of coarse-grained documents and the fine-grained data elements they contain.
+
+This profile is based on the reality that health information sharing relies on different granularities of exchange:
+
+* Document-Level Granularity: share and access documents as a composition of various data elements to reflect the information known and produced during a care or administrative workflow step. This level of granularity is optimum to ensure that contained data has clarity of context in care delivery and reflects source attestation (responsibility) of clinical data shared.
+* Data Element-Level Granularity: access a specific type of data element (e.g., vital signs, medications, etc.). This level of granularity is optimum when the list of data elements relevant to a “time span” or a set of encounters is of interest. Examples of situations where this level of granularity may be optimum include access to a list of allergies at the time of medication dispensation, or information reconciliation at the time of hospital admission.
+Each granularity level delivers unique benefits and this profile provides efficient access to both levels.
+
+This profile defines rules to ensure consistency and traceability of information used for clinical decisions. When a data element is accessed by a Clinical Data Consumer, identifiers from that data element can be used to access one or more documents in which this data element was originally recorded, providing a valuable broader clinical context.
+
+The flows of information are depicted in the figure 3.3-3:
+
+![](images/MXDE_Picture.jpg)
+
+Figure 3.3-3: mXDE Flow from Documents to Resources
+
+1. Specific data elements are extracted from the structured documents per mXDE Profile.
+2. Data elements (e.g. allergies) queried using the FHIR based QEDm Profile (Query_for_Existing_Data_for_Mobile).
+3. Each data element is linked to the document(s) from which it was extracted per mXDE Profile.
+4. Clinician accesses context of any data element of interest using source documents (XDS, MHD Profiles) providing the clinical context in which the observation was recorded.
+
 # Patient identity management
 
 The Document Sharing defined in this white paper is patient centric,
