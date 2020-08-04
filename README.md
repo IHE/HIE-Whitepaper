@@ -3,13 +3,13 @@
 **Enabling Document Sharing Health Information Exchange Using IHE Profiles**
 
 **CONTENTS**
-* [Introduction](#introduction)
-* [Principles of Health Document Sharing](#principles-of-ihe-for-health-document-sharing)
-* [Document sharing profiles](#document-sharing-profiles)
-* [Patient identity management](#patient-identity-management-1)
-* [Common Provider Directory](#common-provider-directory)
-* [Security and Privacy](#security-and-privacy)
-* [Further Reading](#further-reading)
+* [Introduction](#1-introduction)
+* [Principles of Health Document Sharing](#2-principles-of-ihe-for-health-document-sharing)
+* [Document sharing profiles](#3-document-sharing-profiles)
+* [Patient identity management](#4-patient-identity-management)
+* [Common Provider Directory](#5-common-provider-directory)
+* [Security and Privacy](#6-security-and-privacy)
+* [Further Reading](#7-further-reading)
 
 # 1 Introduction
 
