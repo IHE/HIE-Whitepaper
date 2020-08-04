@@ -11,7 +11,7 @@
 * [Security and Privacy](#security-and-privacy)
 * [Further Reading](#further-reading)
 
-# 1. Introduction
+# 1 Introduction
 
 The [Integrating the Healthcare Enterprise (IHE)](http://www.ihe.net) standards profiling
 organization has developed a collection of profiles which can be
@@ -31,7 +31,7 @@ paper will show how various profiles work together to provide a
 standards based, interoperable approach to community and cross-community
 health information sharing.
 
-## Scope
+## 1.1 Scope
 
 Effective health information exchange involves a diverse set of
 activities and a broad set of challenges, whether that exchange takes
@@ -70,7 +70,7 @@ Anatomic Pathology, Cardiology, Eye Care, Laboratory, Patient Care
 Coordination, Patient Care Device, Pharmacy, Quality, Research and
 Public Health; Radiation Oncology, and Radiology.
 
-## Intended Audience
+## 1.2 Intended Audience
 
 The assumed audience for this white paper includes those involved in a
 current or planned health information community of any size and scope
@@ -79,7 +79,7 @@ exchange model based on open standards. This paper does not cover the
 technical details as they are found in the IHE Profiles, White Papers,
 and Webinar material.
 
-## Overview of Health Document Sharing Communities
+## 1.3 Overview of Health Document Sharing Communities
 
 A health document sharing community (community) exists for the purpose
 of increasing the accessibility of patient health information across
@@ -150,12 +150,12 @@ sharing and each environment will use some set of those building blocks
 to enable the architecture desired by the community or communities
 participating.
 
-# Principles of IHE for Health Document Sharing
+# 2 Principles of IHE for Health Document Sharing
 
 This section describes several principles which are foundational to
 IHE’s approach to health document sharing.
 
-## General IHE principles
+## 2.1 General IHE principles
 
 The following general IHE principles are applicable to the set of IHE
 profiles used for Document Sharing:
@@ -191,7 +191,7 @@ profiles used for Document Sharing:
     underlying technology like XML, TCP/IP, DNS, Digital Certificates 
 	(PKI), etc. without detailed explanations.
 
-## Document Sharing Governance
+## 2.2 Document Sharing Governance
 
 IHE enables interoperable sharing of documents but assumes this sharing
 occurs under a document sharing governance structure agreed to by all
@@ -250,7 +250,7 @@ interoperability among participating partners. When the Cross-enterprise
 Document Sharing (XDS) profile is used the governance is provided
 through the XDS Affinity Domain, see [Centralized Discovery and Retrieve](#centralized-discovery-and-retrieve).
 
-## Distinction between Documents and Messages
+## 2.3 Distinction between Documents and Messages
 
 The HL7 standard for [Structured Documents
 Section 1.2](http://archive.hl7.org/v3ballotarchive/v3ballot2008may/html/domains/uvcd/UVCD.htm#spec-dam)
@@ -298,13 +298,13 @@ properties, but does not require that documents have these properties.
 The only property required is that there is a mime-type for the
 document. 
 
-### FHIR-Document vs CDA-Document
+### 2.3.1 FHIR-Document vs CDA-Document
 
 Two structured and coded health specific document types are Clinical Document Architecture (CDA) and Fast Health Interoperability Resources (FHIR) documents. Both of these formats are defined by HL7. CDA has received much of the attention over the past 20 years, with FHIR emerging in 2010s. FHIR initial focus was on an interactive query/response model referred to as "REST"; but FHIR has a "Document" encoding as well. The FHIR Document model has a top level resource that sets the context, content, and flow of the FHIR Document, and that is followed by copies of the data resources; all of this is encoded into a single bundle. This single bundle is able to be managed in Document Sharing just like any other Document. 
 
 The FHIR Document has a benefit of being made up of the same resources that one would get from a Query/Response API. There is clear identity (.id) of each of these resources to so they are clearly distinct, which can be used for tracking if the data contained previously known. The FHIR Document model includes more consistant metadata and provenance for each resource. This traceability makes accessing the content within a FHIR Document more consistant limiting unnecessary duplication of data. This model enables more easy on the Content Consumer.
 
-## Longitudinal Patient Record
+## 2.4 Longitudinal Patient Record
 
 Building on the document concepts described above in [Distinction between Documents and Messages](#distinction-between-documents-and-messages) of
 persistence, wholeness, stewardship and context, we can identify the
@@ -340,7 +340,7 @@ interoperability amongst local systems and supports a longitudinal
 patient record that spans across many local systems potentially using
 multiple different database systems.
 
-## Use of Documents
+## 2.5 Use of Documents
 
 IHE Document Sharing profiles are content neutral, meaning that any type
 of information without regard to content and representation is
@@ -393,7 +393,7 @@ including MHDS, XDS, XDR, XCA, etc.
 
 ![](.//images/ContentActors.png)
 
-**Figure: Document Sharing Actor Diagram**
+**Figure 2.5-1: Document Sharing Actor Diagram**
 
 IHE Content Profiles can be found:
 
@@ -401,7 +401,7 @@ IHE Content Profiles can be found:
 
   - FHIR-Document <https://wiki.ihe.net/index.php/Category:FHIR-Doc>
   
-## Value of Metadata
+## 2.6 Value of Metadata
 
 Another key principle leveraged by IHE Document Sharing is the use of
 metadata. [Document metadata](#value-of-metadata) are data that provides
@@ -444,7 +444,7 @@ document and enables automated and manual management of the document
 without the requirement access to the detailed clinical information
 contained within the document.
 
-## Document Relationships
+## 2.7 Document Relationships
 
 The metadata defined in the IHE Document Sharing model encompasses more
 than just characteristics of documents. In fact, the metadata model is
@@ -485,7 +485,7 @@ associations support representation of document lifecycle events, where
 a document is associated with documents which are created as part of
 lifecycle events related to the original document.
 
-## Document Sharing Models
+## 2.8 Document Sharing Models
 
 IHE has enabled three distinct Document Sharing Models that share the
 principles in this section. Because the principles are the same it is
@@ -528,7 +528,7 @@ later. The addition of a new model to an existing deployment is
 relatively simple because the IHE profiles are based on common
 principles.
 
-## Patient Identity Management
+## 2.9 Patient Identity Management
 
 The Document Sharing mechanisms enabled through IHE assume that a
 patient is associated with every document shared. That patient is
@@ -551,7 +551,7 @@ historic norms, regulations, and business factors. Some regions have a
 universal identifier, but most regions do not. IHE provides several
 profiles that aid the resolution of the patient identifier. 
 
-## Locating sharing partners
+## 2.10 Locating sharing partners
 
 One of the challenges of Document Sharing that is not directly addressed
 by IHE is the identification of Document Sharing partners. Each Document
@@ -597,7 +597,7 @@ approaches are:
   - Cross-Enterprise Document Sharing (XDS) – used to locate documents
     related to a specific patient, see Section 3.2.
 
-## Security/Privacy
+## 2.11 Security/Privacy
 
 IHE addresses Privacy and Security through the use of Risk Assessment
 and Management. Each profile is assessed for various types of risks and
@@ -616,7 +616,7 @@ encryption, data integrity, digital signatures, and privacy consent
 management. Security and Privacy and the profiles IHE offers are
 discussed in [Security and Privacy](#security-and-privacy).
 
-# Document sharing profiles
+# 3 Document sharing profiles
 
 The key actors in health information exchange are the document source
 actors – those applications or modules that create the document to be
@@ -671,26 +671,26 @@ The IHE profiles addressing these models are:
 
   - Federated Discovery and Retrieve – Mobile access to Health Documents(MHD), Cross-Community Access (XCA)
 
-**Figure: shows the flow of data for each of these models.**
+The following figure shows the flow of data for each of these models.
 
 ![](images/models.png)
 
+**Figure 3-1: Data Flow for Data Sharing Models.**
 
-The Next figure shows this as a continuum from a simple point-to-point push
+The next figure shows this as a continuum from a simple point-to-point push
 model on the bottom left to a highly scaled multi-community federated
 discovery on the top right. Across the bottom are the use-cases we have
 been discussing and coming from the left are the IHE profiles that
 address these use-cases.
 
-**Figure: Document Sharing Use Case Continuum**
-
 ![](images/Continuum.png)
+**Figure 3-2: Document Sharing Use Case Continuum**
 
 The following sections will describe in more detail the three models.
 
-## Direct Push
+## 3.1 Direct Push
 
-### Cross-Enterprise Document Reliable Interchange (XDR)
+### 3.1.1 Cross-Enterprise Document Reliable Interchange (XDR)
 
 The XDR profile provides a point-to-point method of sending documents to
 a specific recipient. It leverages common principles as described in
@@ -707,7 +707,7 @@ Great Charts EMR.
 The Point-to-Point Transmission of Documents slide deck and webinar,
 [Further Reading](#further-reading), provide more detail about XDR.
 
-### Cross-Enterprise Document Media Interchange (XDM)
+### 3.1.2 Cross-Enterprise Document Media Interchange (XDM)
 
 The Cross-Enterprise Document Media Interchange (XDM) profile addresses
 situations where the electronic exchange of clinical information does
@@ -748,11 +748,11 @@ orthopedist.
 The Point-to-Point Transmission of Documents slide deck and webinar,
 [Further Reading](#further-reading), provide more detail about XDM.
 
-### Mobile access to Health Documents (MHD) push
+### 3.1.3 Mobile access to Health Documents (MHD) push
 
 TODO - explain how to use MHD to push issue #12
 
-## Centralized Discovery and Retrieve
+## 3.2 Centralized Discovery and Retrieve
 
 The Mobile Health Document Sharing (MHDS) and Cross-Enterprise Document Sharing (XDS) profile enables centralized
 discovery of health documents and retrieval of those documents from
@@ -790,7 +790,7 @@ within distributed document repositories. The IHE profiles enable the
 automation of discovery and retrieve by more advanced health information
 systems.
 
-### Document Publishing
+### 3.2.1 Document Publishing
 
 The document registry and document repositories always work
 hand-in-hand, the one being useless without the other. It may be
@@ -812,12 +812,12 @@ the document source, whereas the act of putting the book on the shelf
 and then cataloging it is referred to as "provide and register." Thus,
 the document source sends a copy of medical documents and associated
 metadata to the document repository, and the document repository
-subsequently sends the metadata to the document registry (see figure
-3.2-1).
+subsequently sends the metadata to the document registry (see Figure
+3.2.1-1).
 
 ![](images/Publish.png)
 
-Figure 3.2-1: Provide and register document
+**Figure 3.2.1-1: Provide and Register Document**
 
 The actual location of the document repository will depend on the local
 deployment. IHE provides flexibility to enable many different deployment
@@ -848,7 +848,7 @@ approaches.
     organization, like a hospital system of an infrastructure only
     partner.
 
-### Document Discovery
+### 3.2.2 Document Discovery
 
 To complete our analogy, we must consider the library patron (Dr. Suwati
 in our case), whose goal is to find specific books. The patron interacts
@@ -862,7 +862,7 @@ from a document repository is known as the retrieve document.
 Of course with the structured and coded metadata, this step
 of discovery can be highly automated.
 
-### Governance
+### 3.2.3 Governance
 
 As described in [Principles of Health Document Sharing](principles-of-health-document-sharing) 
 is document content neutral; uses
@@ -916,7 +916,7 @@ Sharing environment. The services include:
 
   - [Security and Privacy](#security-and-privacy) Profiles like ATNA, CT, XUA, BPPC and others.
 
-### Notifications
+### 3.2.4 Notifications
 
 TODO: review
 
@@ -934,7 +934,7 @@ refine the ability to notify or subscribe for notifications.
 
 The Publication and Discovery slide deck and webinar, [Further Reading](#further-reading), provide more detail about XDS and DSUB.
 
-## Federated Discovery and Retrieve
+## 3.3 Federated Discovery and Retrieve
 
 TODO: review
 
@@ -993,7 +993,7 @@ on this profile see Section 4.3.
 The Cross-Community slide deck and webinar, [Further Reading](#further-reading), provide
 more detail about XCA and XCPD.
 
-## Consuming FHIR Resources
+## 3.4 Consuming FHIR Resources
 
 A challange that Document Sharing has is on the consuming side. The [Principles of a Document](#distinction-between-documents-and-messages) are more beneficial to the source. The source is in control of each document creation, and content. Therefore a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
 
@@ -1007,18 +1007,18 @@ Each granularity level delivers unique benefits and this profile provides effici
 
 This profile defines rules to ensure consistency and traceability of information used for clinical decisions. When a data element is accessed by a Clinical Data Consumer, identifiers from that data element can be used to access one or more documents in which this data element was originally recorded, providing a valuable broader clinical context.
 
-The flows of information are depicted in the figure 3.3-3:
+The flows of information are depicted in the Figure 3.4-1:
 
 ![](images/MXDE_Picture.jpg)
 
-Figure 3.3-3: mXDE Flow from Documents to Resources
+**Figure 3.4-1: mXDE Flow from Documents to Resources**
 
 1. Specific data elements are extracted from the structured documents per mXDE Profile.
 2. Data elements (e.g. allergies) queried using the FHIR based QEDm Profile (Query_for_Existing_Data_for_Mobile).
 3. Each data element is linked to the document(s) from which it was extracted per mXDE Profile.
 4. Clinician accesses context of any data element of interest using source documents (XDS, MHD Profiles) providing the clinical context in which the observation was recorded.
 
-# Patient identity management
+# 4 Patient identity management
 
 The Document Sharing defined in this white paper is patient centric,
 meaning that a patient is associated with each document shared. When
@@ -1057,9 +1057,11 @@ assignment process to a patient) and issuing authority for patient
 identifiers.
 
 The following table presents the four IHE Profiles that support various
-style of distributed management of patient IDs and discusses the 
+styles of distributed management of patient IDs and discusses the 
 assumptions the profile is built upon and highlights key conditions 
 that need to be addressed at the time of deployment.
+
+**Table 4-1: IHE Profiles that Support Various Style of Distributed Management of Patient ID**
 
 |    Patient Identification Profiles       |                           Assumptions                             |                       Conditions                       | 
 | ---------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------|
@@ -1071,7 +1073,7 @@ that need to be addressed at the time of deployment.
 The Patient Identity Management deck and webinar, [Further Reading](#further-reading),
 provide more detail about PIX and PDQ.
 
-## Patient Identity Cross-Reference (PIX)
+## 4.1 Patient Identity Cross-Reference (PIX)
 
 Most health information systems assign to each patient an identifier
 (usually a string of letters and/or numbers) that is unique to the
@@ -1093,7 +1095,7 @@ patient identifiers for Gary Collins.
 
 ![](images/PatientManager.png)
 
-Figure 4.1-1: Patient identifier cross-referencing
+**Figure 4.1-1: Patient identifier cross-referencing**
 
 The PIX profile is IHE's answer to the difficulty of managing an
 individual patient's multiple Identifiers. A PIX Manager system receives
@@ -1120,7 +1122,7 @@ Section 3.2. The PIX profile can be used for Cross-Community if the
 communities are willing to have a centralized patient cross-reference
 (See Section 4.3 for federation of patient identity.)
 
-## Patient Demographics Query (PDQ)
+## 4.2 Patient Demographics Query (PDQ)
 
 Demographics (information describing the patient in general) are used to
 help identify the patient. With information on dates of birth and sex,
@@ -1145,7 +1147,7 @@ of the demographics returned. With the knowledge of Justin's XDS
 Affinity Domain Patient ID, the public health department can now publish
 his vaccination record to the community via the XDS profile.
 
-## Cross-Community Patient Discovery (XCPD)
+## 4.3 Cross-Community Patient Discovery (XCPD)
 
 The Cross-Community Patient Discovery (XCPD) profile offers a means to
 discover mutually known patients and a method to correlate the patient's
@@ -1182,7 +1184,7 @@ community that represent Trudy. With this information, Dr. Holsen can
 subsequently use XCA to look for documents containing Trudy’s past
 medical history held within the Chicago community.
 
-## Patient Master Identity Registry  (PMIR)
+## 4.4 Patient Master Identity Registry  (PMIR)
 
 TODO: the following text comes from MHDS, not clear how to integrate it here
 
@@ -1195,7 +1197,7 @@ TODO - end
 The Cross-Community slide deck and webinar [Further Reading](#further-reading), provide
 more detail about XCPD.
 
-# Common Provider Directory
+# 5 Common Provider Directory
 
 As with patient identity management, the management of data related to
 healthcare providers (both individual providers and provider
@@ -1230,7 +1232,7 @@ who belongs to the organizational provider General Hospital.
 It does not support attributes intended directly for Access Control.
 
 
-# Security and Privacy
+# 6 Security and Privacy
 
 *The security considerations for a content module are dependent upon the
 security provisions defined by the grouped actor(s).*
@@ -1271,7 +1273,7 @@ so in a way that is supportive of many of the policies mentioned.
 The policy landscape that the community is built on needs to be defined
 well before the community is built.
 
-## Policies and Risk Management
+## 6.1 Policies and Risk Management
 
 IHE solves Interoperability problems via the implementation of
 technology standards. It does not ***define*** Privacy or Security
@@ -1372,7 +1374,7 @@ regulatory retention is typically fixed at a short period after death,
 yet if the patient has black lung then the records must be preserved
 well beyond.
 
-### Technical Security and Privacy controls
+### 6.1.1 Technical Security and Privacy controls
 
 In 1980, the Organization for Economic Cooperation and Development
 (“OECD”) developed Guidelines on the Protection of Privacy and
@@ -1430,7 +1432,7 @@ These security and privacy controls are:
     tolerance, RAID, trusted recovery, uninterruptible power supplies,
     etc. (not an area where Interoperability applies)
 
-## Applying Security and Privacy to Document Sharing
+## 6.2 Applying Security and Privacy to Document Sharing
 
 IHE does not set policies but is policy sensitive. Therefore, we now
 discuss the policy enabling technologies but not the policies
@@ -1440,7 +1442,7 @@ This section shows how the existing security controls in the local
 health IT system are leveraged and extended when they become
 interconnected through document sharing.
 
-### Basic Security
+### 6.2.1 Basic Security
 
 IHE recognizes that in healthcare, with patient lives at stake, audit
 control is the primary method of accountability enforcement. The profile
@@ -1452,10 +1454,10 @@ system:
 
 <!-- end list -->
 
-9.  Security Audit Logs are recorded, and
+2.  security Audit Logs are recorded, and
 
-10. Strong network authentication and encryption for all communications
-    of sensitive patient data
+3. strong network authentication and encryption for all communications
+    of sensitive patient data.
 
 The Security Audit Logging includes a set of security relevant events
 that must be audited. When one of these events happens the record of the
@@ -1477,7 +1479,7 @@ communications between these trusted systems is also encrypted.
 For more information on the use of IHE ATNA to enable basic security see
 the security and privacy slide decks and webinars, [Further Reading](#further-reading).
 
-### Protecting different types of documents
+### 6.2.2 Protecting different types of documents
 
 The IHE Document Sharing profiles allow for many different
 types of documents to be shared. These documents are likely to have
@@ -1491,6 +1493,7 @@ available only to direct care providers. This differentiation of the
 types of data can be represented using a diagram like found in Table
 6.2.2-1: Sample Access Control Policies
 
+**Table 6.2.2-1: Sample Access Control Policies**
 
 | Confidentiality vs Role             | U | L | M | N | R | V |
 | ----------------------------------- | - | - | - | - | - | - |
@@ -1501,8 +1504,6 @@ types of data can be represented using a diagram like found in Table
 | Emergency Care Provider (e.g., EMT) |   |   |   | X |   |   |
 | Researcher                          | X |   |   |   |   |   |
 | Patient or Legal Representative     |   | X | X | X | X |   |
-
-Table 6.2.2‑1 Sample Access Control Policies
 
 Then documents can be labeled with one or more of the codes on the
 columns, and results in the specified Functional Roles to be given
@@ -1532,7 +1533,7 @@ document metadata discussed above.
 For more details on enabling Role-Based-Access-Control and federation of
 identities see the security and privacy slide decks and webinars, [Further Reading](#further-reading).
 
-### Patient Privacy Consent to participate in Document Sharing
+### 6.2.3 Patient Privacy Consent to participate in Document Sharing
 
 The topic of Patient Privacy Consent (Authorization) to collect, use,
 and disclose is a complex topic. This complexity does not always need to
@@ -1604,7 +1605,7 @@ policy. Thus, now if that research application tries to access the
 patient’s data, it will be blocked as the patient does not have a
 current acknowledgement of the research policy.
 
-### Security and Privacy in a Patient Safety Environment 
+### 6.2.4 Security and Privacy in a Patient Safety Environment 
 
 The IHE security and privacy model supports both centralized and
 distributed control. The entities that are allowed to participate in
@@ -1623,7 +1624,7 @@ The IHE security and privacy model is very careful to include security
 while allowing for flexible and safe provision of healthcare by
 individual participants.
 
-## IHE Security and Privacy Controls
+## 6.3 IHE Security and Privacy Controls
 
 The following is a breakdown of the security and privacy controls and in
 what way the IHE profiles can help. The following table shows the set of
@@ -1635,7 +1636,7 @@ relationship, meaning that the Profile assists with the principle.
 Further details on the ‘√’ direct and ‘.’ Indirect relationships can be
 found in the profile text or through other webinars.
 
-Table: Profiles relationship to Controls
+**Table 6.3-1: Profiles Relationship to Controls**
 
 | Function vs Profile                  | Audit Log | Id / Authn | Authz | Secrecy | Integrity | Non-Repudiation | Privacy |
 | ------------------------------------ | --------- | ---------- | ----- | ------- | --------- | --------------- | ------- |
@@ -1652,7 +1653,7 @@ Table: Profiles relationship to Controls
 Note: The topic of Security and Privacy is covered in two slide decks
 and webinars, see [Further Reading](#further-reading).
 
-# Further Reading
+# 7 Further Reading
 
 In the paragraphs above, the core set of IHE IT Infrastructure profiles
 are described in an introductory manner. Specific technical details were
@@ -1669,35 +1670,35 @@ sharing. For those readers who wish to learn more details, please refer:
 1. Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [IHE Process](https://wiki.ihe.net/index.php/Process) 
 1. A listing of all IHE authored [Implementation Guide Profiles](https://wiki.ihe.net/index.php/Profiles)
 
-## Case Studies
+## 7.1 Case Studies
 
 The Document Sharing Health Information Exchange has been deployed in various regions. This section will provide linkage to some of those projects explaination of how they have used the Document Sharing Health Information Exchange profiles for their specific needs. These links are to external publications. 
 
-### OpenHIE
+### 7.1.1 OpenHIE
 [Open Health Information Exchange (OpenHIE)](https://ohie.org/) is an Open Data, Open Standards, Open Source, and Open Innovation project. OpenHIE is an [open community of organizations](http://digitalprinciples.org/build-for-sustainability/) and individuals who are passionate about improving health and health care data sharing. The OpenHIE community is owned by countries and serves as a resource for capacity building, and it receives operational support from Regenstrief Institute.
 
 See the [Case Study on use of OpenHIE](https://digitalprinciples.org/wp-content/uploads/PDD_CaseStudy-OpenHIE_v3.pdf) for an overview of the architecture and how they use the IHE Document Sharing Health Information Exchange profiles.
 
-### CareQuality
+### 7.1.2 CareQuality
 
 blah blah [CareQuality](https://carequality.org/what-we-do/)
 
-### CommonWell
+### 7.1.3 CommonWell
 
 blah blah [CommonWell](https://www.commonwellalliance.org/connect-to-the-network/)
 
-### Canada Infoway
+### 7.1.4 Canada Infoway
 
 blah blah [Infoway](https://infoway-inforoute.ca/en/solutions/digital-health-foundation)
 
-### Netherlands
+### 7.1.5 Netherlands
 
-### Switzerland
+### 7.1.6 Switzerland
 
 
 blah blah [Siss approach to interconnect](https://na.eventscloud.com/file_uploads/865a2f1cf5d49424e2ae1d8bc9e78306_Day1.Panel1.Speaker2.SangIlKim.pdf)
 
-### And many more
+### 7.1.7And many more
 
 See the other [IHE case studies on the use of IHE profiles](https://www.ihe.net/resources/user_success_stories/)
 
