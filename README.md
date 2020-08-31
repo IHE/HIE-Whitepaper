@@ -993,9 +993,30 @@ on this profile see Section 4.3.
 The Cross-Community slide deck and webinar, [Further Reading](#further-reading), provide
 more detail about XCA and XCPD.
 
-## 3.4 Consuming FHIR Resources
+## 3.4 Choosing an infrastructure
 
-A challange that Document Sharing has is on the consuming side. The [Principles of a Document](#distinction-between-documents-and-messages) are more beneficial to the source. The source is in control of each document creation, and content. Therefore a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
+Presented is the Centralized Document Registry model of XDS and MHDS, the Federated Community Exchange of XCA, and the API access model enabled by MHD along side the classic access model defined in XDS/XCA. These choices present two very important alternatives that need to be considered.
+
+
+![](images/Which_Infrastructure_to_use.png)
+
+**Figure 3.4-1: Decision tree on which Infrastructure to use**
+
+First, recognize that the MHD as an API for publishing and consuming documents is always available regardless of use of MHDS, XDR, XDS, or XCA. The clients can be enabled to use legacy (XDR/XDS/XCA) or MHD based query/retrieve or publication.   Where one has an XDR, XDS, or XCA infrastructure; one can always add MHD as a more simple API.
+
+Where there are existing source systems or consumer systems that are using the legacy XDS or XCA design; then one must use XDS or XCA infrastructure. At this point there is no way to support legacy edge systems with the MHDS infrastructure.
+
+Where no existing infrastructure exists, there is still critical distinctions that would encourage the coice of infrastructure. 
+* XCA and XDS are the only solution that enable asynchronous communications. The technology that XCA and XDS are based on is more flexible enabling requests and responses to be decoupled. This is important when the communications may be to remote locations, locations that are not always connected, or locations that might need extra time to process requests. 
+* XCA and XDS are the only solution that enable end-to-end security. This is important when there are intermediaries that are only partially trusted, where data claims need to be cryptographically checked at the ends of the communications, or where communications are crossing jurisdiction boundaries (e.g. EC rules around the use of AS4)
+
+Where none of these conditions exist, then the choice could be XDS or MHDS based. 
+
+
+
+## 3.5 Consuming FHIR Resources
+
+A challenge that Document Sharing has is on the consuming side. The [Principles of a Document](#distinction-between-documents-and-messages) are more beneficial to the source. The source is in control of each document creation, and content. Therefore a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
 
 The [Mobile Cross-Enterprise Document Data Element Extraction (mXDE)](https://wiki.ihe.net/index.php/Mobile_Cross-Enterprise_Document_Data_Element_Extraction) Profile provides the means to access data elements extracted from shared structured documents. The profile enables the deployment of health data exchange infrastructures where fine-grained access to health data coexists and complements the sharing of coarse-grained documents and the fine-grained data elements they contain.
 
@@ -1007,11 +1028,11 @@ Each granularity level delivers unique benefits and this profile provides effici
 
 This profile defines rules to ensure consistency and traceability of information used for clinical decisions. When a data element is accessed by a Clinical Data Consumer, identifiers from that data element can be used to access one or more documents in which this data element was originally recorded, providing a valuable broader clinical context.
 
-The flows of information are depicted in the Figure 3.4-1:
+The flows of information are depicted in the Figure 3.5-1:
 
 ![](images/MXDE_Picture.jpg)
 
-**Figure 3.4-1: mXDE Flow from Documents to Resources**
+**Figure 3.5-1: mXDE Flow from Documents to Resources**
 
 1. Specific data elements are extracted from the structured documents per mXDE Profile.
 2. Data elements (e.g. allergies) queried using the FHIR based QEDm Profile (Query_for_Existing_Data_for_Mobile).
