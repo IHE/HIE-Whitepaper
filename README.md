@@ -750,7 +750,13 @@ The Point-to-Point Transmission of Documents slide deck and webinar,
 
 ### 3.1.3 Mobile access to Health Documents (MHD) push
 
-TODO - explain how to use MHD to push issue #12
+The MHD profile provides a point-to-point method of sending documents to a specific recipient. It leverages common principles described in Section 2. It sends documents and metadata using FHIR Rest push to deliver one or more documents to a Document Recipient. 
+
+The typical use case for MHD in this mode is when documents are known to be needed by a recipient. Such as a patient referral in the use case given in [XDR](#311-cross-enterprise-document-reliable-interchange-xdr).
+
+In addition the MHD can be used as an API in push mode. In this use case the MHD push request could be handled by an intermediary that further pushes the content using XDR or XDM. On the recipient side the MHD api could be used by an intermediary to forward a XDR or XDM push is further pushed to a Recipient using MHD; or the intermediary could store in a registry allowing a MHD Document Consumer to query and retrieve the content.
+
+![](images/MHD_Push_XDR.png)
 
 ## 3.2 Centralized Discovery and Retrieve
 
