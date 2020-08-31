@@ -238,7 +238,7 @@ community should address the following issues:
     about one or more aspects of the document. In the case of
     IHE-defined document exchange, specific metadata are coded within
     the structure of the content being exchanged. See 
-	[2.6 Value of Metadata](#2.6-value-of-metadata) where the metadata defined by IHE are introduced. Some of that metadata
+	[2.6 Value of Metadata](#26-value-of-metadata) where the metadata defined by IHE are introduced. Some of that metadata
     have values chosen from a coding system defined by the governance of
     the sharing community. Because IHE profiles can be applied in many
     parts of the world where coding systems are different, IHE has not
@@ -248,7 +248,7 @@ community should address the following issues:
 The purpose of this aspect of governance is to enable semantic
 interoperability among participating partners. When the Cross-enterprise
 Document Sharing (XDS) profile is used the governance is provided
-through the XDS Affinity Domain, see [3.2 Centralized Discovery and Retrieve](#3.2-centralized-discovery-and-retrieve).
+through the XDS Affinity Domain, see [3.2 Centralized Discovery and Retrieve](#32-centralized-discovery-and-retrieve).
 
 ## 2.3 Distinction between Documents and Messages
 
@@ -306,7 +306,7 @@ The FHIR Document has a benefit of being made up of the same resources that one 
 
 ## 2.4 Longitudinal Patient Record
 
-Building on the document concepts described above in [2.3 Distinction between Documents and Messages](#2.3-distinction-between-documents-and-messages) of
+Building on the document concepts described above in [2.3 Distinction between Documents and Messages](#23-distinction-between-documents-and-messages) of
 persistence, wholeness, stewardship and context, we can identify the
 principle of the longitudinal patient record which is foundational and
 central to health document sharing. Document Sharing Communities are
@@ -320,7 +320,7 @@ health documents. Typically, a patient will go through a sequence of
 encounters in different care settings over the course of his/her lifetime.
 With each encounter there is the potential that a provider will produce
 a health document that can be shared with the community. Documents
-shared by the provider and tracked by a [centralized registry](#3.2-centralized-discovery-and-retrieve) or [federation of communities](3.3-federated-discovery-and-retrieve) form a
+shared by the provider and tracked by a [centralized registry](#32-centralized-discovery-and-retrieve) or [federation of communities](3.3-federated-discovery-and-retrieve) form a
 longitudinal record for the patients that received care among those
 providers within the community. Longitudinal records, therefore, are
 expected to last over the span of many decades, just as the documents
@@ -347,16 +347,16 @@ of information without regard to content and representation is
 supported. A document is any collection of bytes, including proprietary
 and textual formats. It is expected that a deployment of Document
 Sharing will restrict the format and content of documents exchanged to
-those agreed to by the [partners in the exchange](#2.2-document-sharing-governance). 
+those agreed to by the [partners in the exchange](#22-document-sharing-governance). 
 While the format and content of a document is not restrictively
 defined, it is expected to be a coherent set of healthcare data that
 includes enough context to be useful to a practitioner. A document
-should have the [document characteristics](#2.3-distinction-between-documents-and-messages) namely,
+should have the [document characteristics](#23-distinction-between-documents-and-messages) namely,
 persistence, wholeness, stewardship, context and potential for
 authentication.
 
 IHE Document Sharing profiles assume that a patient identity is
-associated with every [document shared](#2.4-longitudinal-patient-record).
+associated with every [document shared](#24-longitudinal-patient-record).
 
 The most common document content standards that are profiled by IHE are HL7
 Clinical Document Architecture (CDA), and HL7 FHIR Document. 
@@ -404,7 +404,7 @@ IHE Content Profiles can be found:
 ## 2.6 Value of Metadata
 
 Another key principle leveraged by IHE Document Sharing is the use of
-metadata. [Document metadata](#2.6-value-of-metadata) are data that provides
+metadata. [Document metadata](#26-value-of-metadata) are data that provides
 information about one or more aspects of the document. While a document
 may be any collection of bytes, IHE defines a collection of metadata
 about the document that aid its identity, discovery, routing, security,
@@ -869,7 +869,7 @@ is document content neutral; uses
 document metadata that are represented in a structured, standard format;
 and supports longevity of document storage.
 
-MHD and XDS requires a [governance structure](#2.2-document-sharing-governance) and
+MHD and XDS requires a [governance structure](#22-document-sharing-governance) and
 defines the XDS Affinity Domain or a Community as the agent for that governance. An XDS
 Affinity domain or a Community is a group that have agreed to
 work together using a common set of policies and Document Sharing. Some examples
@@ -912,7 +912,7 @@ Sharing environment. The services include:
   - [4 Patient Identification Management](#4-patient-identity-management).
 
   - Subscription and Notification Profiles like DSUB. See
-    [3.2.4 Notifications](#3.2.4-notifications).
+    [3.2.4 Notifications](#324-notifications).
 
   - [6 Security and Privacy](#6-security-and-privacy) Profiles like ATNA, CT, XUA, BPPC and others.
 
@@ -1016,7 +1016,7 @@ Where none of these conditions exist, then the choice could be XDS or MHDS based
 
 ## 3.5 Consuming FHIR Resources
 
-A challenge that Document Sharing has is on the consuming side. The [2.3 Principles of a Document](#2.3-distinction-between-documents-and-messages) are more beneficial to the source. The source is in control of each document creation, and content. Therefore a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
+A challenge that Document Sharing has is on the consuming side. The [2.3 Principles of a Document](#23-distinction-between-documents-and-messages) are more beneficial to the source. The source is in control of each document creation, and content. Therefore a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
 
 The [Mobile Cross-Enterprise Document Data Element Extraction (mXDE)](https://wiki.ihe.net/index.php/Mobile_Cross-Enterprise_Document_Data_Element_Extraction) Profile provides the means to access data elements extracted from shared structured documents. The profile enables the deployment of health data exchange infrastructures where fine-grained access to health data coexists and complements the sharing of coarse-grained documents and the fine-grained data elements they contain.
 
