@@ -238,7 +238,7 @@ community should address the following issues:
     about one or more aspects of the document. In the case of
     IHE-defined document exchange, specific metadata are coded within
     the structure of the content being exchanged. See 
-	[Value of Metadata](#value-of-metadata) where the metadata defined by IHE are introduced. Some of that metadata
+	[2.6 Value of Metadata](#2.6-value-of-metadata) where the metadata defined by IHE are introduced. Some of that metadata
     have values chosen from a coding system defined by the governance of
     the sharing community. Because IHE profiles can be applied in many
     parts of the world where coding systems are different, IHE has not
@@ -248,7 +248,7 @@ community should address the following issues:
 The purpose of this aspect of governance is to enable semantic
 interoperability among participating partners. When the Cross-enterprise
 Document Sharing (XDS) profile is used the governance is provided
-through the XDS Affinity Domain, see [Centralized Discovery and Retrieve](#centralized-discovery-and-retrieve).
+through the XDS Affinity Domain, see [3.2 Centralized Discovery and Retrieve](#3.2-centralized-discovery-and-retrieve).
 
 ## 2.3 Distinction between Documents and Messages
 
@@ -306,7 +306,7 @@ The FHIR Document has a benefit of being made up of the same resources that one 
 
 ## 2.4 Longitudinal Patient Record
 
-Building on the document concepts described above in [Distinction between Documents and Messages](#distinction-between-documents-and-messages) of
+Building on the document concepts described above in [2.3 Distinction between Documents and Messages](#2.3-distinction-between-documents-and-messages) of
 persistence, wholeness, stewardship and context, we can identify the
 principle of the longitudinal patient record which is foundational and
 central to health document sharing. Document Sharing Communities are
@@ -320,7 +320,7 @@ health documents. Typically, a patient will go through a sequence of
 encounters in different care settings over the course of his/her lifetime.
 With each encounter there is the potential that a provider will produce
 a health document that can be shared with the community. Documents
-shared by the provider and tracked by a [centralized registry](#centralized-discovery-and-retrieve) or [federation of communities](federated-discovery-and-retrieve) form a
+shared by the provider and tracked by a [centralized registry](#3.2-centralized-discovery-and-retrieve) or [federation of communities](3.3-federated-discovery-and-retrieve) form a
 longitudinal record for the patients that received care among those
 providers within the community. Longitudinal records, therefore, are
 expected to last over the span of many decades, just as the documents
@@ -347,16 +347,16 @@ of information without regard to content and representation is
 supported. A document is any collection of bytes, including proprietary
 and textual formats. It is expected that a deployment of Document
 Sharing will restrict the format and content of documents exchanged to
-those agreed to by the [partners in the exchange](#document-sharing-governance). 
+those agreed to by the [partners in the exchange](#2.2-document-sharing-governance). 
 While the format and content of a document is not restrictively
 defined, it is expected to be a coherent set of healthcare data that
 includes enough context to be useful to a practitioner. A document
-should have the [document characteristics](#distinction-between-documents-and-messages) namely,
+should have the [document characteristics](#2.3-distinction-between-documents-and-messages) namely,
 persistence, wholeness, stewardship, context and potential for
 authentication.
 
 IHE Document Sharing profiles assume that a patient identity is
-associated with every [document shared](#longitudinal-patient-record).
+associated with every [document shared](#2.4-longitudinal-patient-record).
 
 The most common document content standards that are profiled by IHE are HL7
 Clinical Document Architecture (CDA), and HL7 FHIR Document. 
@@ -404,7 +404,7 @@ IHE Content Profiles can be found:
 ## 2.6 Value of Metadata
 
 Another key principle leveraged by IHE Document Sharing is the use of
-metadata. [Document metadata](#value-of-metadata) are data that provides
+metadata. [Document metadata](#2.6-value-of-metadata) are data that provides
 information about one or more aspects of the document. While a document
 may be any collection of bytes, IHE defines a collection of metadata
 about the document that aid its identity, discovery, routing, security,
@@ -576,7 +576,7 @@ approaches currently used in various parts of the world are:
 
   - Healthcare Provider Directory profiles – 
     enables a directory of individual and organizational entities along
-    with electronic services provided by those entities. See [Common Provider Directory](#common-provider-directory).
+    with electronic services provided by those entities. See [5 Common Provider Directory](#5-common-provider-directory).
 
 For locating source of information about a particular patient, some
 approaches are:
@@ -614,7 +614,7 @@ IHE provides profiles that support privacy and security audit logging,
 user and system identification and authentication, access control,
 encryption, data integrity, digital signatures, and privacy consent
 management. Security and Privacy and the profiles IHE offers are
-discussed in [Security and Privacy](#security-and-privacy).
+discussed in [6 Security and Privacy](#6-security-and-privacy).
 
 # 3 Document sharing profiles
 
@@ -705,7 +705,7 @@ other clinical documents) from Dr. Suwati's Apollo EMR to Dr. Lima's
 Great Charts EMR.
 
 The Point-to-Point Transmission of Documents slide deck and webinar,
-[Further Reading](#further-reading), provide more detail about XDR.
+[Further Reading](#7-further-reading), provide more detail about XDR.
 
 ### 3.1.2 Cross-Enterprise Document Media Interchange (XDM)
 
@@ -746,7 +746,7 @@ USB key to Mary so that she may take the files with her to the
 orthopedist.
 
 The Point-to-Point Transmission of Documents slide deck and webinar,
-[Further Reading](#further-reading), provide more detail about XDM.
+[Further Reading](#7-further-reading), provide more detail about XDM.
 
 ### 3.1.3 Mobile access to Health Documents (MHD) push
 
@@ -864,12 +864,12 @@ of discovery can be highly automated.
 
 ### 3.2.3 Governance
 
-As described in [Principles of Health Document Sharing](principles-of-health-document-sharing) 
+As described in [1 Principles of Health Document Sharing](1-principles-of-health-document-sharing) 
 is document content neutral; uses
 document metadata that are represented in a structured, standard format;
 and supports longevity of document storage.
 
-MHD and XDS requires a [governance structure](#document-sharing-governance) and
+MHD and XDS requires a [governance structure](#2.2-document-sharing-governance) and
 defines the XDS Affinity Domain or a Community as the agent for that governance. An XDS
 Affinity domain or a Community is a group that have agreed to
 work together using a common set of policies and Document Sharing. Some examples
@@ -903,18 +903,18 @@ There are various methods defined by IHE to support [Patient Identity Management
 
 Further detail regarding deployment of an XDS Affinity Domain may be
 found in the [Template for XDS Affinity Domain Deployment Planning IHE
-ITI White Paper](#further-reading).
+ITI White Paper](#7-further-reading).
 
 Document Sharing is commonly deployed in an integrated environment which makes use of
 many IHE profiles working together to enable all aspects of a Document
 Sharing environment. The services include:
 
-  - [Patient Identification Management](#patient-identity-management).
+  - [4 Patient Identification Management](#4-patient-identity-management).
 
   - Subscription and Notification Profiles like DSUB. See
-    [Notifications](#notifications).
+    [3.2.4 Notifications](#3.2.4-notifications).
 
-  - [Security and Privacy](#security-and-privacy) Profiles like ATNA, CT, XUA, BPPC and others.
+  - [6 Security and Privacy](#6-security-and-privacy) Profiles like ATNA, CT, XUA, BPPC and others.
 
 ### 3.2.4 Notifications
 
@@ -932,7 +932,7 @@ refine the ability to notify or subscribe for notifications.
     documents fitting specified metadata and notification of available
     documents.
 
-The Publication and Discovery slide deck and webinar, [Further Reading](#further-reading), provide more detail about XDS and DSUB.
+The Publication and Discovery slide deck and webinar, [Further Reading](#7-further-reading), provide more detail about XDS and DSUB.
 
 ## 3.3 Federated Discovery and Retrieve
 
@@ -990,7 +990,7 @@ well. This patient identity federation is profiled in the
 Cross-Community Patient Discovery (XCPD) profile. For more information
 on this profile see Section 4.3.
 
-The Cross-Community slide deck and webinar, [Further Reading](#further-reading), provide
+The Cross-Community slide deck and webinar, [Further Reading](#7-further-reading), provide
 more detail about XCA and XCPD.
 
 ## 3.4 Choosing an infrastructure
@@ -1016,7 +1016,7 @@ Where none of these conditions exist, then the choice could be XDS or MHDS based
 
 ## 3.5 Consuming FHIR Resources
 
-A challenge that Document Sharing has is on the consuming side. The [Principles of a Document](#distinction-between-documents-and-messages) are more beneficial to the source. The source is in control of each document creation, and content. Therefore a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
+A challenge that Document Sharing has is on the consuming side. The [2.3 Principles of a Document](#2.3-distinction-between-documents-and-messages) are more beneficial to the source. The source is in control of each document creation, and content. Therefore a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
 
 The [Mobile Cross-Enterprise Document Data Element Extraction (mXDE)](https://wiki.ihe.net/index.php/Mobile_Cross-Enterprise_Document_Data_Element_Extraction) Profile provides the means to access data elements extracted from shared structured documents. The profile enables the deployment of health data exchange infrastructures where fine-grained access to health data coexists and complements the sharing of coarse-grained documents and the fine-grained data elements they contain.
 
@@ -1091,7 +1091,7 @@ that need to be addressed at the time of deployment.
 | Cross-Enterprise Patient Discovery (XCPD) | 1. XCPD supports the access between distributed peer registries of identities. <br/> 2. It supports the ability to query by a set of demographics traits including a domain specific patient identifer and get in response one or more matching identiities with a complete set of demographics traits, usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the registry of identities along with their demographics needs to addressed at deployment time for each one of the identity domain served. |
 | Patient Master Identity Registry (PMIR)  | 1. PMIR support the distributed creation, access, update and merge process of shared master identities.  <br/> 2. The identitiy registry is only a passive store for such shared (or golden) identities that are under the distributed control of identity sources.  | 1. Each deployment shall define the policies to be followed by identity sources to ensure stability and quality of the master identities they create, update and merge. <br/> 2. In particular, when identities are created without a well defined minimum set of demographic traits, the restrictions about their use when accessed and the duties of the creator to further enriched such identities until the well defined minimum set has been reached shall be established. <br/> 3.  The policies that authorize an identitiy source to request the merge of different master identities and to request an unmerge shall be defined. <br/> 4. The duties of an identitiy source that recieves notifications about master identities to refelct these chnages on the local identities shall be established. |
 
-The Patient Identity Management deck and webinar, [Further Reading](#further-reading),
+The Patient Identity Management deck and webinar, [7 Further Reading](#7-further-reading),
 provide more detail about PIX and PDQ.
 
 ## 4.1 Patient Identity Cross-Reference (PIX)
@@ -1215,7 +1215,7 @@ The PMIR Profile Patient Identity Manager integrates the server side of the PDQm
 
 TODO - end
 
-The Cross-Community slide deck and webinar [Further Reading](#further-reading), provide
+The Cross-Community slide deck and webinar [7 Further Reading](#7-further-reading), provide
 more detail about XCPD.
 
 # 5 Common Provider Directory
@@ -1261,11 +1261,11 @@ security provisions defined by the grouped actor(s).*
 This section will discuss how a community that leverages IHE Profiles
 for document sharing can protect patient privacy and information
 security. The topic of Security and Privacy is covered in slide
-decks and webinars, see [Further Reading](#further-reading).
+decks and webinars, see [7 Further Reading](#7-further-reading).
 
 An especially important aspect that is beyond the scope of IHE is the
 definition of the overall Policies of the community. There are 
-[whitepapers and handbooks from IHE](#further-reading), but there is no
+[whitepapers and handbooks from IHE](#7-further-reading), but there is no
 single policy that must
 be put in place by an IHE based community to ensure privacy and
 security. In this section, we will discuss potential policy decisions and
@@ -1305,7 +1305,7 @@ Network Controls.
 While community Policies and Risk Management are outside its scope, IHE
 does recognize that these elements are a necessary piece of a system
 implementation. IHE IT Infrastructure technical white paper, [Template
-for XDS Affinity Domain Deployment Planning](#further-reading) outlines
+for XDS Affinity Domain Deployment Planning](#7-further-reading) outlines
 some of the issues that should be evaluated for inclusion in the local
 Policy creation and Risk Management decisions. It is therefore the duty
 of system implementers to take this guidance into account as part of
@@ -1498,7 +1498,7 @@ systems participating in the Document Sharing exchange. The
 communications between these trusted systems is also encrypted.
 
 For more information on the use of IHE ATNA to enable basic security see
-the security and privacy slide decks and webinars, [Further Reading](#further-reading).
+the security and privacy slide decks and webinars, [Further Reading](#7-further-reading).
 
 ### 6.2.2 Protecting different types of documents
 
@@ -1552,7 +1552,7 @@ Control rules can leverage any of the user context, patient identity, or
 document metadata discussed above.
 
 For more details on enabling Role-Based-Access-Control and federation of
-identities see the security and privacy slide decks and webinars, [Further Reading](#further-reading).
+identities see the security and privacy slide decks and webinars, [Further Reading](#7-further-reading).
 
 ### 6.2.3 Patient Privacy Consent to participate in Document Sharing
 
@@ -1672,7 +1672,7 @@ found in the profile text or through other webinars.
 
 
 Note: The topic of Security and Privacy is covered in two slide decks
-and webinars, see [Further Reading](#further-reading).
+and webinars, see [Further Reading](#7-further-reading).
 
 # 7 Further Reading
 
