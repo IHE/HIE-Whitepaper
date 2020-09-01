@@ -11,6 +11,8 @@
 * [6 Security and Privacy](#6-security-and-privacy)
 * [7 Further Reading](#7-further-reading)
 
+**Comments on this whitepaper are invited at any time and can be submitted as either [IHE comment form](https://www.ihe.net/ITI_Public_Comments/) or [GitHub issues](https://github.com/IHE/HIE-Whitepaper/issues)** Please reference the section that your comment applies to.
+
 # 1 Introduction
 
 The [Integrating the Healthcare Enterprise (IHE)](http://www.ihe.net) standards profiling
@@ -894,7 +896,7 @@ are:
 
   - Insurance provider supported communities
 
-Documnt Sharing is patient centric thus requires that a Patient Identity 
+Document Sharing is patient centric thus requires that a Patient Identity 
 Domain coordinates use of a single Patient Identification. 
 In XDS Domain called this is called an XDS Affinity
 Domain Patient Identification Domain (XAD-PID). A XAD-PID is a patient
@@ -917,8 +919,7 @@ Sharing environment. The services include:
 
   - [4 Patient Identification Management](#4-patient-identity-management).
 
-  - Subscription and Notification Profiles like DSUB. See
-    [3.2.4 Notifications](#324-notifications).
+  - [3.2.4 Notifications and Subscriptions](#324-notifications) 
 
   - [6 Security and Privacy](#6-security-and-privacy) Profiles like ATNA, CT, XUA, BPPC and others.
 
@@ -1731,5 +1732,5 @@ See the other [IHE case studies on the use of IHE profiles](https://www.ihe.net/
 
 
 
-**Comments on this whitepaper are invited at any time and can [be submitted as GitHub issues](https://github.com/IHE/HIE-Whitepaper/issues)**
+**Comments on this whitepaper are invited at any time and can be submitted as either [IHE comment form](https://www.ihe.net/ITI_Public_Comments/) or [GitHub issues](https://github.com/IHE/HIE-Whitepaper/issues)** Please reference the section that your comment applies to.
 
