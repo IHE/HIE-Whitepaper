@@ -57,10 +57,10 @@ themselves. Thus, while each community will generate an architecture
 that meets its individual needs, the use of IHE profiles will lead to
 the creation of standards-based communities.
 
-This white paper will focus on explainin how IHE profiles are used to
+This white paper will focus on explaining how IHE profiles are used to
 address interoperability aspects of document sharing and how they work
 together to solve common document sharing problems. The IHE White Paper
-“[Template for XDS Affinity Domain Deployment
+“[Template for [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Deployment
 Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)”,
 provides support for policy and deployment planning. The IHE “[Document
 Sharing Metadata
@@ -125,7 +125,7 @@ exchange activities that they facilitate.
 
 Finally, a fourth aspect of a community is the size, scope and political
 jurisdiction(s) that regulate it. The simplest community uses only an
-adhoc arrangement to push documents from one organization to another.
+ad-hoc arrangement to push documents from one organization to another.
 National and sub-national jurisdictions have significant effects on the
 organization and operations of a community.
 
@@ -249,8 +249,8 @@ community should address the following issues:
 
 The purpose of this aspect of governance is to enable semantic
 interoperability among participating partners. When the Cross-enterprise
-Document Sharing (XDS) profile is used the governance is provided
-through the XDS Affinity Domain, see [3.2 Centralized Discovery and Retrieve](#32-centralized-discovery-and-retrieve).
+Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)) profile is used the governance is provided
+through the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain, see [3.2 Centralized Discovery and Retrieve](#32-centralized-discovery-and-retrieve).
 
 ## 2.3 Distinction between Documents and Messages
 
@@ -304,7 +304,7 @@ document.
 
 Two structured and coded health specific document types are Clinical Document Architecture (CDA) and Fast Health Interoperability Resources (FHIR) documents. Both of these formats are defined by HL7. CDA has received much of the attention over the past 20 years, with FHIR emerging in 2010s. FHIR initial focus was on an interactive query/response model referred to as "REST"; but FHIR has a "Document" encoding as well. The FHIR Document model has a top level resource that sets the context, content, and flow of the FHIR Document, and that is followed by copies of the data resources; all of this is encoded into a single bundle. This single bundle is able to be managed in Document Sharing just like any other Document. 
 
-The FHIR Document has a benefit of being made up of the same resources that one would get from a Query/Response API. There is clear identity (.id) of each of these resources to so they are clearly distinct, which can be used for tracking if the data contained previously known. The FHIR Document model includes more consistant metadata and provenance for each resource. This traceability makes accessing the content within a FHIR Document more consistant limiting unnecessary duplication of data. This model enables more easy on the Content Consumer.
+The FHIR Document has a benefit of being made up of the same resources that one would get from a Query/Response API. There is clear identity (.id) of each of these resources to so they are clearly distinct, which can be used for tracking if the data contained previously known. The FHIR Document model includes more consistent metadata and provenance for each resource. This traceability makes accessing the content within a FHIR Document more consistent limiting unnecessary duplication of data. This model enables more easy on the Content Consumer.
 
 ## 2.4 Longitudinal Patient Record
 
@@ -391,7 +391,7 @@ throughout the healthcare continuum.
 The IHE Content Profiles utilize two abstract actors “Content Creator”
 and “Content Consumer”, utilizing an abstraction of “Share Content”;
 where “Share Content” can be any of the Document Sharing infrastructures
-including MHDS, XDS, XDR, XCA, etc.
+including [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html), [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html), [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html), etc.
 
 ![](.//images/ContentActors.png)
 
@@ -453,10 +453,8 @@ than just characteristics of documents. In fact, the metadata model is
 very rich, encompassing the relationships between documents through use
 of folders, submission sets, and associations.  For a complete list of
 document metadata, refer to [ITI TF-3:
-Section 4.1](http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol3.pdf#nameddest=4_1_Abstract_Metadata_Model)
-– “Abstract Metadata Model”. This abstract metadata model has two
-representations: Section 4.2 “ebRIM Representation” used by XDS and XCA;
-and Section 4.5 “FHIR Representation” used by MHDS and MHD.
+Section 4.1 Abstract Metadata Model](http://profiles.ihe.net/ITI/TF/Volume3/ch-4.1.html). This abstract metadata model has two representations: [Section 4.2 ebRIM Representation](http://profiles.ihe.net/ITI/TF/Volume3/ch-4.2.html) used by [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html);
+and [Section 4.5 FHIR Representation](http://profiles.ihe.net/ITI/TF/Volume3/ch-4.5.html) used by [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) and [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html).
 
 
 **Documents:** Each document shared using IHE-defined constructs comes
@@ -584,20 +582,20 @@ For locating source of information about a particular patient, some
 approaches are:
 
   - Patient Specific Health Data Locator – the Cross-Community Patient
-    Discovery (XCPD) profile enables a special type of locator which can
+    Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) profile enables a special type of locator which can
     be used to find entities holding data about specific patients. See
-    Section 4 for more information about XCPD.
+    [4 Patient identity management](#4-patient-identity-management) for more information about [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
-  - Patient Identity Cross-Reference (PIX) – may be used to find an
+  - Patient Identity Cross-Reference ([PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html)) – may be used to find an
     assigning authority of an organization which has registered patient
     demographics for the patient.
 
-  - Patient Demographic Query (PDQ) – may be used to find an assigning
+  - Patient Demographic Query ([PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html)) – may be used to find an assigning
     authority of an organization which has registered patient
     demographics for the patient.
 
-  - Cross-Enterprise Document Sharing (XDS) – used to locate documents
-    related to a specific patient, see Section 3.2.
+  - Cross-Enterprise Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)) – used to locate documents
+    related to a specific patient, see [Section 3.2](#32-centralized-discovery-and-retrieve).
 
 ## 2.11 Security/Privacy
 
@@ -634,7 +632,7 @@ according to three different data sharing models:
     content is sent directly to the intended recipient found through
     manual means or infrastructure enabled directory
 
-  - Centralized Discovery and Retrieve (XDS Affinity Domain) – a
+  - Centralized Discovery and Retrieve ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain) – a
     community of sharing partners agrees to use a common infrastructure
     to enable Health Document Sharing. A **document source will publish**
     the existence of documents to a location that is accessible to other
@@ -665,13 +663,13 @@ like:
 
 The IHE profiles addressing these models are:
 
-  - Direct Push – Mobile access to Health Documents (MHD), Cross-Enterprise Document Reliable Interchange (XDR)
-    and Cross-Enterprise Document Media Interchange (XDM)
+  - Direct Push – Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Cross-Enterprise Document Reliable Interchange ([XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html))
+    and Cross-Enterprise Document Media Interchange ([XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html))
 
-  - Centralized Discovery and Retrieve (XDS Affinity Domain) –
-    Mobile access to Health Documents (MHD), Mobile Health Document Sharing (MHDS), Cross-Enterprise Document Sharing (XDS)
+  - Centralized Discovery and Retrieve ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain) –
+    Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Mobile Health Document Sharing ([MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html)), Cross-Enterprise Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html))
 
-  - Federated Discovery and Retrieve – Mobile access to Health Documents(MHD), Cross-Community Access (XCA)
+  - Federated Discovery and Retrieve – Mobile access to Health Documents([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Cross-Community Access ([[XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html)](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html))
 
 The following figure shows the flow of data for each of these models.
 
@@ -692,82 +690,82 @@ The following sections will describe in more detail the three models.
 
 ## 3.1 Direct Push
 
-### 3.1.1 Cross-Enterprise Document Reliable Interchange (XDR)
+### 3.1.1 Cross-Enterprise Document Reliable Interchange ([XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html))
 
-The XDR profile provides a point-to-point method of sending documents to
+The [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) profile provides a point-to-point method of sending documents to
 a specific recipient. It leverages common principles as described in
 Section 2. It sends documents and metadata using the same Web-Services
 reliable transport that is used to publish documents in the Centralized
 Discovery and Retrieve Document model.
 
-The typical use case for XDR is the patient referral. Dr. Suwati may
+The typical use case for [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) is the patient referral. Dr. Suwati may
 wish to refer her patient Mary to a specialist, Dr. Lima, who works
-across town. XDR may be used to send the referral document (and possibly
+across town. [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) may be used to send the referral document (and possibly
 other clinical documents) from Dr. Suwati's Apollo EMR to Dr. Lima's
 Great Charts EMR.
 
 The Point-to-Point Transmission of Documents slide deck and webinar,
-[Further Reading](#7-further-reading), provide more detail about XDR.
+[Further Reading](#7-further-reading), provide more detail about [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html).
 
-### 3.1.2 Cross-Enterprise Document Media Interchange (XDM)
+### 3.1.2 Cross-Enterprise Document Media Interchange ([XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html))
 
-The Cross-Enterprise Document Media Interchange (XDM) profile addresses
+The Cross-Enterprise Document Media Interchange ([XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html)) profile addresses
 situations where the electronic exchange of clinical information does
 not rely on networked connections between the parties exchanging the
 information. In these cases, electronic media (such as CDs and USB
 drives) or email may be employed to transport the data from one system
 to another.
 
-The XDM e-Mail option is a logical advance for directed e-mail exchange
+The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) e-Mail option is a logical advance for directed e-mail exchange
 that provides content packaging and metadata to enable accurate
-processing. The XDM profile has been adopted in national exchange
+processing. The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) profile has been adopted in national exchange
 specifications such as the USA defined “Direct Project”.
 
-The XDM CD-ROM and USB-Memory options are logical methods for physically
+The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) CD-ROM and USB-Memory options are logical methods for physically
 handing the patient records to the patient them-selves; or for delivery
 via secure courier.
 
 Whether the data is transferred via electronic media or e-mail, the same
 format is used to express the documents, metadata, and encapsulation
-structure. The XDM profile can be especially useful when there is no
+structure. The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) profile can be especially useful when there is no
 established infrastructure in place between those who have documents and
-those that need them. Thus the XDM profile can be used in environments
+those that need them. Thus the [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) profile can be used in environments
 where much of the Governance is managed manually, out-of-band. The
-receiver of an XDM exchange does need to be robust to high variability
+receiver of an [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) exchange does need to be robust to high variability
 of the content due to this lack of automated Governance.
 
 Again, the patient referral use case is a typical one that may employ
-XDM. Dr. Suwati may wish to refer her patient Mary to an orthopedist who
+[XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html). Dr. Suwati may wish to refer her patient Mary to an orthopedist who
 does not have an electronic endpoint to receive the referral
 documentation or to an orthopedist of Mary’s choice in which case the
 point of service is unknown at the time of the referral. Dr. Suwati
 decides to write a referral letter and to create an image file of the
 X-ray of Mary's leg. Dr. Suwati employs her EMR to write this letter and
-the image file to a USB key using the XDM profile. She then gives the
+the image file to a USB key using the [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) profile. She then gives the
 USB key to Mary so that she may take the files with her to the
 orthopedist.
 
 The Point-to-Point Transmission of Documents slide deck and webinar,
-[Further Reading](#7-further-reading), provide more detail about XDM.
+[Further Reading](#7-further-reading), provide more detail about [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html).
 
-### 3.1.3 Mobile access to Health Documents (MHD) push
+### 3.1.3 Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)) push
 
-The MHD profile provides a point-to-point method of sending documents to a specific recipient. It leverages common principles described in Section 2. It sends documents and metadata using FHIR Rest push to deliver one or more documents to a Document Recipient. 
+The [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) profile provides a point-to-point method of sending documents to a specific recipient. It leverages common principles described in Section 2. It sends documents and metadata using FHIR Rest push to deliver one or more documents to a Document Recipient. 
 
-The typical use case for MHD in this mode is when documents are known to be needed by a recipient. Such as a patient referral in the use case given in [XDR](#311-cross-enterprise-document-reliable-interchange-xdr).
+The typical use case for [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) in this mode is when documents are known to be needed by a recipient. Such as a patient referral in the use case given in [XDR](#311-cross-enterprise-document-reliable-interchange-xdr).
 
-In addition the MHD can be used as an API in push mode. In this use case the MHD push request could be handled by an intermediary that further pushes the content using XDR or XDM. On the recipient side the MHD api could be used by an intermediary to forward a XDR or XDM push is further pushed to a Recipient using MHD; or the intermediary could store in a registry allowing a MHD Document Consumer to query and retrieve the content.
+In addition the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) can be used as an API in push mode. In this use case the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) push request could be handled by an intermediary that further pushes the content using [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) or [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html). On the recipient side the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) api could be used by an intermediary to forward a [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) or [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) push is further pushed to a Recipient using [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html); or the intermediary could store in a registry allowing a [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Document Consumer to query and retrieve the content.
 
 ![](images/MHD_Push_XDR.png)
 
 ## 3.2 Centralized Discovery and Retrieve
 
-The Mobile Health Document Sharing (MHDS) and Cross-Enterprise Document Sharing (XDS) profile enables centralized
+The Mobile Health Document Sharing ([MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html)) and Cross-Enterprise Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)) profile enables centralized
 discovery of health documents and retrieval of those documents from
-distributed document repositories. Mobile access to Health Documents (MHD) provides a simplified API for Document Source and Document Consumer actors.
+distributed document repositories. Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)) provides a simplified API for Document Source and Document Consumer actors.
 
 The following scenario describes a typical exchange of clinical
-information using XDS or MHDS. Dr. Suwati works for New Hope Medical Partners
+information using [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) or [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html). Dr. Suwati works for New Hope Medical Partners
 which provides her with an EMR system. Her patient, Mary Gomez, just
 explained to the doctor that she was recently hospitalized at Norwalk
 General Hospital. Dr. Suwati would like to review the medical records
@@ -784,11 +782,11 @@ Suwati) has three principal objectives: find patient records available
 from external systems, view a selection of those records, and
 incorporate a select number of those records to her local system. This
 sequence of actions is repeated continually in the healthcare setting.
-To address this very common scenario, IHE has created the MHDS profile and XDS profile, a
+To address this very common scenario, IHE has created the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) profile and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile, a
 method to coordinate the authorized discovery and sharing of medical
 documents among disparate information systems.
 
-MHDS and XDS minimizes the burden imposed on the document sources and consumers
+[MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) minimizes the burden imposed on the document sources and consumers
 when sharing documents by establishing the use of two infrastructure
 components (the document registry and document repositories), which
 handle most of the effort involved in exchanging clinical data. This
@@ -877,8 +875,8 @@ is document content neutral; uses
 document metadata that are represented in a structured, standard format;
 and supports longevity of document storage.
 
-MHD and XDS requires a [governance structure](#22-document-sharing-governance) and
-defines the XDS Affinity Domain or a Community as the agent for that governance. An XDS
+[MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) requires a [governance structure](#22-document-sharing-governance) and
+defines the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain or a Community as the agent for that governance. An [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)
 Affinity domain or a Community is a group that have agreed to
 work together using a common set of policies and Document Sharing. Some examples
 are:
@@ -898,7 +896,7 @@ are:
 
 Document Sharing is patient centric thus requires that a Patient Identity 
 Domain coordinates use of a single Patient Identification. 
-In XDS Domain called this is called an XDS Affinity
+In [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Domain called this is called an [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity
 Domain Patient Identification Domain (XAD-PID). A XAD-PID is a patient
 identifier assigning authority which provides a single unique identifier
 for each patient for which documents are registered in the document
@@ -909,9 +907,8 @@ Mary’s documents by using this single unique identifier.
 
 There are various methods defined by IHE to support [Patient Identity Management](#4-patient-identity-management).
 
-Further detail regarding deployment of an XDS Affinity Domain may be
-found in the [Template for XDS Affinity Domain Deployment Planning IHE
-ITI White Paper](#7-further-reading).
+Further detail regarding deployment of an [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain may be
+found in the [Template for XDS Affinity Domain Deployment Planning IHE ITI White Paper](#7-further-reading).
 
 Document Sharing is commonly deployed in an integrated environment which makes use of
 many IHE profiles working together to enable all aspects of a Document
@@ -921,13 +918,13 @@ Sharing environment. The services include:
 
   - [3.2.4 Notifications and Subscriptions](#324-notifications) 
 
-  - [6 Security and Privacy](#6-security-and-privacy) Profiles like ATNA, CT, XUA, BPPC and others.
+  - [6 Security and Privacy](#6-security-and-privacy) Profiles like [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), CT, [XUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-13.html), BPPC and others.
 
 ### 3.2.4 Notifications
 
 TODO: review
 
-The XDS profile supports registration of content and the ability to
+The [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile supports registration of content and the ability to
 query and retrieve from a centralized service, but there are many use
 cases where a system (i.e., a clinician) may wish to be proactively
 notified when a new document is made available. The simplest type of
@@ -939,13 +936,13 @@ refine the ability to notify or subscribe for notifications.
     documents fitting specified metadata and notification of available
     documents.
 
-The Publication and Discovery slide deck and webinar, [Further Reading](#7-further-reading), provide more detail about XDS and DSUB.
+The Publication and Discovery slide deck and webinar, [Further Reading](#7-further-reading), provide more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and DSUB.
 
 ## 3.3 Federated Discovery and Retrieve
 
 TODO: review
 
-A community, such as an XDS Affinity Domain, is a means for a specific
+A community, such as an [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain, is a means for a specific
 set of related organizations/facilities to exchange clinical
 information. But care-givers need access to a patient's entire
 longitudinal health history, regardless of where that historic
@@ -956,10 +953,10 @@ outside of their home community and sometimes the care received
 externally can be very significant clinically. A very specific
 healthcare related use-case is when a patient is seeking the care of a
 specialist. So, there is a need to share health information between two
-communities. The Cross-Community Access (XCA) profile was developed to
+communities. The Cross-Community Access ([XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) profile was developed to
 address this need.
 
-To implement XCA, a community builds two services called gateways
+To implement [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html), a community builds two services called gateways
 through which all inter-community transactions will flow. An Initiating
 Gateway is used to send queries to other communities, while a Responding
 Gateway is employed to receive queries and respond to them. Behind the
@@ -969,23 +966,23 @@ simple organization like a single small hospital or facility. The
 gateways hide the internal structure of each participant in the
 cross-community exchange.
 
-XCA is based on the discovery and retrieve pattern defined in XDS, but
-does not require that either community use XDS. Rather than the
-centralized model of XDS, which aids locating documents of interest, the
-XCA model enables a federated approach, where discovery of documents of
+[XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) is based on the discovery and retrieve pattern defined in [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), but
+does not require that either community use [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html). Rather than the
+centralized model of [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), which aids locating documents of interest, the
+[XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) model enables a federated approach, where discovery of documents of
 interest requires a query to each community that might hold such
-documents. The XCA gateways are the conduit through which these
+documents. The [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) gateways are the conduit through which these
 transactions flow.
 
-The extension of XCA beyond XDS based communities is an important
-characteristic. A community that is not XDS based, such as the
+The extension of [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) beyond [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) based communities is an important
+characteristic. A community that is not [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) based, such as the
 aforementioned USA Veterans Administration, can develop services that
-implement the interface characteristics of XCA Initiating and Responding
-Gateways. Since XCA defines only the interface characteristics,
+implement the interface characteristics of [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) Initiating and Responding
+Gateways. Since [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) defines only the interface characteristics,
 proprietary networks are able to support Document Sharing without
 changing their internal architecture.
 
-The Federation aspects of XCA allow for easy expansion of a network to
+The Federation aspects of [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) allow for easy expansion of a network to
 add new gateway participants in a way that has minimal impact on the
 creators of content, which still publish information locally, and those
 that need the data, which use the same query mechanism no matter how
@@ -994,30 +991,30 @@ broadly the query is federated.
 The Federation of many communities does create a larger patient identity
 problem, and thus a federation approach to patient identity is needed as
 well. This patient identity federation is profiled in the
-Cross-Community Patient Discovery (XCPD) profile. For more information
-on this profile see Section 4.3.
+Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) profile. For more information
+on this profile see [Section 4.3](#43-cross-community-patient-discovery-xcpd).
 
 The Cross-Community slide deck and webinar, [Further Reading](#7-further-reading), provide
-more detail about XCA and XCPD.
+more detail about [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
 ## 3.4 Choosing an infrastructure
 
-Presented is the Centralized Document Registry model of XDS and MHDS, the Federated Community Exchange of XCA, and the API access model enabled by MHD along side the classic access model defined in XDS/XCA. These choices present two very important alternatives that need to be considered.
+Presented is the Centralized Document Registry model of [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html), the Federated Community Exchange of [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html), and the API access model enabled by [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) along side the classic access model defined in [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)/[XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html). These choices present two very important alternatives that need to be considered.
 
 
 ![](images/Which_Infrastructure_to_use.png)
 
 **Figure 3.4-1: Decision tree on which Infrastructure to use**
 
-First, recognize that the MHD as an API for publishing and consuming documents is always available regardless of use of MHDS, XDR, XDS, or XCA. The clients can be enabled to use legacy (XDR/XDS/XCA) or MHD based query/retrieve or publication.   Where one has an XDR, XDS, or XCA infrastructure; one can always add MHD as a more simple API.
+First, recognize that the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) as an API for publishing and consuming documents is always available regardless of use of [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html), [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html), [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), or [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html). The clients can be enabled to use legacy ([XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html)/[XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)/[XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) or [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) based query/retrieve or publication.   Where one has an [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html), [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), or [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) infrastructure; one can always add [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) as a more simple API.
 
-Where there are existing source systems or consumer systems that are using the legacy XDS or XCA design; then one must use XDS or XCA infrastructure. At this point there is no way to support legacy edge systems with the MHDS infrastructure.
+Where there are existing source systems or consumer systems that are using the legacy [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) or [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) design; then one must use [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) or [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) infrastructure. At this point there is no way to support legacy edge systems with the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) infrastructure.
 
-Where no existing infrastructure exists, there is still critical distinctions that would encourage the coice of infrastructure. 
-* XCA and XDS are the only solution that enable asynchronous communications. The technology that XCA and XDS are based on is more flexible enabling requests and responses to be decoupled. This is important when the communications may be to remote locations, locations that are not always connected, or locations that might need extra time to process requests. 
-* XCA and XDS are the only solution that enable end-to-end security. This is important when there are intermediaries that are only partially trusted, where data claims need to be cryptographically checked at the ends of the communications, or where communications are crossing jurisdiction boundaries (e.g. EC rules around the use of AS4)
+Where no existing infrastructure exists, there is still critical distinctions that would encourage the choice of infrastructure. 
+* [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) are the only solution that enable asynchronous communications. The technology that [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) are based on is more flexible enabling requests and responses to be decoupled. This is important when the communications may be to remote locations, locations that are not always connected, or locations that might need extra time to process requests. 
+* [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) are the only solution that enable end-to-end security. This is important when there are intermediaries that are only partially trusted, where data claims need to be cryptographically checked at the ends of the communications, or where communications are crossing jurisdiction boundaries (e.g. EC rules around the use of AS4)
 
-Where none of these conditions exist, then the choice could be XDS or MHDS based. 
+Where none of these conditions exist, then the choice could be [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) or [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) based. 
 
 
 
@@ -1025,7 +1022,7 @@ Where none of these conditions exist, then the choice could be XDS or MHDS based
 
 A challenge that Document Sharing has is on the consuming side. The [2.3 Principles of a Document](#23-distinction-between-documents-and-messages) are more beneficial to the source. The source is in control of each document creation, and content. Therefore a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
 
-The [Mobile Cross-Enterprise Document Data Element Extraction (mXDE)](https://wiki.ihe.net/index.php/Mobile_Cross-Enterprise_Document_Data_Element_Extraction) Profile provides the means to access data elements extracted from shared structured documents. The profile enables the deployment of health data exchange infrastructures where fine-grained access to health data coexists and complements the sharing of coarse-grained documents and the fine-grained data elements they contain.
+The Mobile Cross-Enterprise Document Data Element Extraction ([mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html)) Profile provides the means to access data elements extracted from shared structured documents. The profile enables the deployment of health data exchange infrastructures where fine-grained access to health data coexists and complements the sharing of coarse-grained documents and the fine-grained data elements they contain.
 
 This profile is based on the reality that health information sharing relies on different granularities of exchange:
 
@@ -1041,10 +1038,10 @@ The flows of information are depicted in the Figure 3.5-1:
 
 **Figure 3.5-1: mXDE Flow from Documents to Resources**
 
-1. Specific data elements are extracted from the structured documents per mXDE Profile.
+1. Specific data elements are extracted from the structured documents per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
 2. Data elements (e.g. allergies) queried using the FHIR based QEDm Profile (Query_for_Existing_Data_for_Mobile).
-3. Each data element is linked to the document(s) from which it was extracted per mXDE Profile.
-4. Clinician accesses context of any data element of interest using source documents (XDS, MHD Profiles) providing the clinical context in which the observation was recorded.
+3. Each data element is linked to the document(s) from which it was extracted per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
+4. Clinician accesses context of any data element of interest using source documents ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profiles) providing the clinical context in which the observation was recorded.
 
 # 4 Patient identity management
 
@@ -1093,13 +1090,13 @@ that need to be addressed at the time of deployment.
 
 |    Patient Identification Profiles       |                           Assumptions                             |                       Conditions                       | 
 | ---------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------|
-| Patient Demographics Query (PDQ) | 1. PDQ supports the access to a central registry of identities. <br/> 2. It supports the ability to query in one or more patient identity domains of interest, by a set of demographics traits and get in response one or more matching identiities with their complete set of demographics traits, usually including patient identifiers.| 1. The process to create and update the registry of identities along with their demographics needs to addressed at deployment time for each one of the identity domain served. |
-| Patient Id Cross-referencing (PIX) | 1. PIX supports the linking of patient identifiers between patient identifiers from different domains. <br/> 2. Each identifier domain entirely controls the creation, updates and merges of its identities. <br/> 3. The consumer of identity cross-references does not need to know any of the patient demographics as managed by the domain controlling the identitiy. | 1. Each deployment relies on a cross-referencing algorithm which is centrally managed and needs to be quality controlled. <br/> 2. The consumers of cross-references between identities from different identity domains shall either persist the cross-reference and actively process update notification (profile option) or never persist cross-references and requery when needed. |
-| Cross-Enterprise Patient Discovery (XCPD) | 1. XCPD supports the access between distributed peer registries of identities. <br/> 2. It supports the ability to query by a set of demographics traits including a domain specific patient identifer and get in response one or more matching identiities with a complete set of demographics traits, usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the registry of identities along with their demographics needs to addressed at deployment time for each one of the identity domain served. |
-| Patient Master Identity Registry (PMIR)  | 1. PMIR support the distributed creation, access, update and merge process of shared master identities.  <br/> 2. The identitiy registry is only a passive store for such shared (or golden) identities that are under the distributed control of identity sources.  | 1. Each deployment shall define the policies to be followed by identity sources to ensure stability and quality of the master identities they create, update and merge. <br/> 2. In particular, when identities are created without a well defined minimum set of demographic traits, the restrictions about their use when accessed and the duties of the creator to further enriched such identities until the well defined minimum set has been reached shall be established. <br/> 3.  The policies that authorize an identitiy source to request the merge of different master identities and to request an unmerge shall be defined. <br/> 4. The duties of an identitiy source that recieves notifications about master identities to refelct these chnages on the local identities shall be established. |
+| Patient Demographics Query ([PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html)) | 1. [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) supports the access to a central registry of identities. <br/> 2. It supports the ability to query in one or more patient identity domains of interest, by a set of demographics traits and get in response one or more matching identities with their complete set of demographics traits, usually including patient identifiers.| 1. The process to create and update the registry of identities along with their demographics needs to addressed at deployment time for each one of the identity domain served. |
+| Patient Id Cross-referencing ([PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html)) | 1. [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) supports the linking of patient identifiers between patient identifiers from different domains. <br/> 2. Each identifier domain entirely controls the creation, updates and merges of its identities. <br/> 3. The consumer of identity cross-references does not need to know any of the patient demographics as managed by the domain controlling the identity. | 1. Each deployment relies on a cross-referencing algorithm which is centrally managed and needs to be quality controlled. <br/> 2. The consumers of cross-references between identities from different identity domains shall either persist the cross-reference and actively process update notification (profile option) or never persist cross-references and re-query when needed. |
+| Cross-Enterprise Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) | 1. [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) supports the access between distributed peer registries of identities. <br/> 2. It supports the ability to query by a set of demographics traits including a domain specific patient identifier and get in response one or more matching identities with a complete set of demographics traits, usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the registry of identities along with their demographics needs to addressed at deployment time for each one of the identity domain served. |
+| Patient Master Identity Registry ([PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html))  | 1. [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) support the distributed creation, access, update and merge process of shared master identities.  <br/> 2. The identity registry is only a passive store for such shared (or golden) identities that are under the distributed control of identity sources.  | 1. Each deployment shall define the policies to be followed by identity sources to ensure stability and quality of the master identities they create, update and merge. <br/> 2. In particular, when identities are created without a well defined minimum set of demographic traits, the restrictions about their use when accessed and the duties of the creator to further enriched such identities until the well defined minimum set has been reached shall be established. <br/> 3.  The policies that authorize an identity source to request the merge of different master identities and to request an unmerge shall be defined. <br/> 4. The duties of an identity source that recieves notifications about master identities to reflect these changes on the local identities shall be established. |
 
 The Patient Identity Management deck and webinar, [7 Further Reading](#7-further-reading),
-provide more detail about PIX and PDQ.
+provide more detail about [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html).
 
 ## 4.1 Patient Identity Cross-Reference (PIX)
 
@@ -1125,30 +1122,30 @@ patient identifiers for Gary Collins.
 
 **Figure 4.1-1: Patient identifier cross-referencing**
 
-The PIX profile is IHE's answer to the difficulty of managing an
-individual patient's multiple Identifiers. A PIX Manager system receives
+The [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile is IHE's answer to the difficulty of managing an
+individual patient's multiple Identifiers. A [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Manager system receives
 feeds from multiple patient identity domains, such as the PCP and
 specialist offices, and uses the demographics in those feeds to create a
 cross-referencing table which associates identities with matching
 demographics and does not associate identities found not to match. It
-should be noted that the PIX profile does not specify how patient
+should be noted that the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile does not specify how patient
 matching occurs. Each vendor is welcome to use their own matching
 algorithms to determine which IDs should be cross-referenced. The IHE
 profile focuses only on the interfacing characteristics that would be
-consistent regardless of how the PIX Manager matches the identifiers.
+consistent regardless of how the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Manager matches the identifiers.
 
-A consumer system may query the PIX Manager to receive a list of
+A consumer system may query the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Manager to receive a list of
 identifiers which are cross-referenced with the identifier specified in
 the query. In this way the PCP office can discover the identifier used
 by the specialist’s system and thus can communicate with that system
 using a known patient identifier.
 
-A primary use of the PIX profile is to enable document consumers and
-document sources using the XDS profile to find the patient’s identifier
-in that XDS Affinity Domain Patient Identifier Domain (XAD-PID). See
-Section 3.2. The PIX profile can be used for Cross-Community if the
+A primary use of the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile is to enable document consumers and
+document sources using the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile to find the patient’s identifier
+in that [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Patient Identifier Domain (XAD-PID). See
+Section 3.2. The [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile can be used for Cross-Community if the
 communities are willing to have a centralized patient cross-reference
-(See Section 4.3 for federation of patient identity.)
+(See [Section 4.3](#43-cross-community-patient-discovery-xcpd) for federation of patient identity.)
 
 ## 4.2 Patient Demographics Query (PDQ)
 
@@ -1158,49 +1155,49 @@ information about Leslie Ramsi, a male born on May-2-1968, can be
 distinguished from that of Leslie Ramsi, a female born on July-23-1987.
 To help information systems improve their management of patient
 demographic information, IHE defines a profile called patient
-demographics query (PDQ). The premise of this profile is that some
+demographics query ([PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html)). The premise of this profile is that some
 information systems will have more comprehensive and more accurate
 demographic information about a patient than other systems. The
-following paragraph describes a typical use of the PDQ profile.
+following paragraph describes a typical use of the [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) profile.
 
-A typical use of PDQ is to discover the patient's XDS Affinity Domain
+A typical use of [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) is to discover the patient's [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain
 Patient ID. Imagine that Justin McCarthy heads to the local public
 health department for a vaccination. The public health department's
 clinical system does not assign local patient identifiers and thus
-cannot use the PIX profile to discover Justin's XDS Affinity Domain
-Patient ID (a required element for the XDS transactions described
-above). The public health department can use PDQ to find matches for
-Justin and will receive Justin's XDS Affinity Domain Patient ID as part
-of the demographics returned. With the knowledge of Justin's XDS
+cannot use the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile to discover Justin's [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain
+Patient ID (a required element for the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) transactions described
+above). The public health department can use [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) to find matches for
+Justin and will receive Justin's [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Patient ID as part
+of the demographics returned. With the knowledge of Justin's [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)
 Affinity Domain Patient ID, the public health department can now publish
-his vaccination record to the community via the XDS profile.
+his vaccination record to the community via the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile.
 
 ## 4.3 Cross-Community Patient Discovery (XCPD)
 
-The Cross-Community Patient Discovery (XCPD) profile offers a means to
+The Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) profile offers a means to
 discover mutually known patients and a method to correlate the patient's
 identifiers across those communities.
 
-XCPD uses the same transaction standard as PDQ but adjusts the profiling
+[XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) uses the same transaction standard as [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) but adjusts the profiling
 of that standard in such a way that it is suitable for environments
 where there is no centralized source of patient demographics or
-identifiers. For this reason XCPD is most likely to be used with the
-Federated Discovery and Retrieve (XCA) model of Document Sharing, which
-adjusts a subset of the transactions of XDS for use in environments
-where there is no centralized patient record. Thus, XCPD and XCA are
+identifiers. For this reason [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) is most likely to be used with the
+Federated Discovery and Retrieve ([XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) model of Document Sharing, which
+adjusts a subset of the transactions of [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) for use in environments
+where there is no centralized patient record. Thus, [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) and [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) are
 designed for environments where the implementation of a centralized
 source of patient demographics, identifiers or record locations - like
-is required when using PIX/PDQ/XDS - is not considered acceptable. In
+is required when using [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html)/[PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html)/[XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) - is not considered acceptable. In
 environments where communities are willing (and allowed) to feed all
 patient demographics to a single, central server, or even a small number
-of duplicated central servers, the use of PDQ or PIX is a more efficient
+of duplicated central servers, the use of [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) or [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) is a more efficient
 technology to resolve patient identifiers. But as numbers of systems
 grow, multiple centralized authorities are needed to accommodate the
-scale and XCPD and XCA are designed to enable communication across
-multiple such central authorities. Thus XCPD supports a hierarchical
-approach which bridges communities that might use PIX or PDQ internally.
+scale and [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) and [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) are designed to enable communication across
+multiple such central authorities. Thus [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) supports a hierarchical
+approach which bridges communities that might use [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) or [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) internally.
 
-To illustrate the use of XCPD, imagine that Dr. Holsen has an encounter
+To illustrate the use of [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html), imagine that Dr. Holsen has an encounter
 with his patient, Trudy Levitz. At the moment, Trudy lives in
 Indianapolis; however, she recently moved there from Chicago. Thus, the
 majority of Trudy's past medical history is stored in the clinical
@@ -1209,28 +1206,28 @@ EMR has the ability to discover patient data that exists outside of the
 local, Indianapolis-based community. Dr. Holsen queries to the Chicago
 community and finds the relevant patient identifiers from the Chicago
 community that represent Trudy. With this information, Dr. Holsen can
-subsequently use XCA to look for documents containing Trudy’s past
+subsequently use [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) to look for documents containing Trudy’s past
 medical history held within the Chicago community.
 
 ## 4.4 Patient Master Identity Registry  (PMIR)
 
-TODO: the following text comes from MHDS, not clear how to integrate it here
+TODO: the following text comes from [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html), not clear how to integrate it here
 
-A consumer system may query the PMIR Patient Identity Manager to receive the master Patient Identity based on their local identifiers or based on the identifying characteristics of the patient. In this way the PCP office can discover the master Patient Identity and know the domain specific identifier used by the specialist’s system and thus can communicate with that system using a known patient identifier.
+A consumer system may query the [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) Patient Identity Manager to receive the master Patient Identity based on their local identifiers or based on the identifying characteristics of the patient. In this way the PCP office can discover the master Patient Identity and know the domain specific identifier used by the specialist’s system and thus can communicate with that system using a known patient identifier.
 
-The PMIR Profile Patient Identity Manager integrates the server side of the PDQm and PIXm Profiles, so that systems needing a patient identity lookup can use PDQm or PIXm Profiles. A system that publishes documents or a system that consumes documents can implement the client PDQm Patient Demographics Consumer or PIXm Patient Identifier Cross-reference Consumer as their method of discovering patient identities. As such these clients are agnostic to the Patient Identity Management technology, which might be a PMIR Patient Identity Manager, a legacy PIX Patient Identity Manager, etc. A primary use of the PDQm and PIXm Profiles is to enable document consumers and document sources using the MHDS Profile to find the patient’s identifier in that Community Patient Identifier Domain. See Section 50.7.3.2.
+The [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) Profile Patient Identity Manager integrates the server side of the PDQm and PIXm Profiles, so that systems needing a patient identity lookup can use PDQm or PIXm Profiles. A system that publishes documents or a system that consumes documents can implement the client PDQm Patient Demographics Consumer or PIXm Patient Identifier Cross-reference Consumer as their method of discovering patient identities. As such these clients are agnostic to the Patient Identity Management technology, which might be a [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) Patient Identity Manager, a legacy [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Patient Identity Manager, etc. A primary use of the PDQm and PIXm Profiles is to enable document consumers and document sources using the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) Profile to find the patient’s identifier in that Community Patient Identifier Domain. See Section 50.7.3.2.
 
 TODO - end
 
 The Cross-Community slide deck and webinar [7 Further Reading](#7-further-reading), provide
-more detail about XCPD.
+more detail about [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
 # 5 Common Provider Directory
 
 As with patient identity management, the management of data related to
 healthcare providers (both individual providers and provider
 organizations) is a fundamental challenge for communities. IHE has
-defined the Mobile Care Services Discovery (mCSD) and Healthcare Provider Directory (HPD) profile to addresses
+defined the Mobile Care Services Discovery ([mCDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-46.html)) and Healthcare Provider Directory ([HPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-28.html)) profile to addresses
 this challenge. There are two principal benefits of using a provider directory.
 First, it provides a means to disambiguate the identity of
 providers (i.e., allow one to distinguish between the 58 year-old male
@@ -1312,7 +1309,7 @@ Network Controls.
 While community Policies and Risk Management are outside its scope, IHE
 does recognize that these elements are a necessary piece of a system
 implementation. IHE IT Infrastructure technical white paper, [Template
-for XDS Affinity Domain Deployment Planning](#7-further-reading) outlines
+for [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Deployment Planning](#7-further-reading) outlines
 some of the issues that should be evaluated for inclusion in the local
 Policy creation and Risk Management decisions. It is therefore the duty
 of system implementers to take this guidance into account as part of
@@ -1475,15 +1472,11 @@ interconnected through document sharing.
 IHE recognizes that in healthcare, with patient lives at stake, audit
 control is the primary method of accountability enforcement. The profile
 that provides this basic security principle is Audit Trail and Node
-Authentication (ATNA). This profile requires three things of each
+Authentication ([ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html)). This profile requires three things of each
 system:
 
 1.  User authentication and Access Controls are enforced accordingly,
-
-<!-- end list -->
-
 2.  security Audit Logs are recorded, and
-
 3. strong network authentication and encryption for all communications
     of sensitive patient data.
 
@@ -1491,7 +1484,7 @@ The Security Audit Logging includes a set of security relevant events
 that must be audited. When one of these events happens the record of the
 event must be described a specific way. The systems are expected to
 support the recording of all of the security relevant events that might
-happen in the system. The ATNA Profile offloads the recording,
+happen in the system. The [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Profile offloads the recording,
 filtering, alerting, and reporting to an audit service. The more
 centralized this audit log analysis can be, the easier it is to
 prove accountability across the whole Document Sharing exchange.
@@ -1504,7 +1497,7 @@ basis for a chain of trust through accountability among all of the
 systems participating in the Document Sharing exchange. The
 communications between these trusted systems is also encrypted.
 
-For more information on the use of IHE ATNA to enable basic security see
+For more information on the use of IHE [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) to enable basic security see
 the security and privacy slide decks and webinars, [Further Reading](#7-further-reading).
 
 ### 6.2.2 Protecting different types of documents
@@ -1550,8 +1543,8 @@ shared or published.
 
 The rows are showing a set of functional roles. These roles would be
 conveyed from the requesting organization through the use of the 
-Internet User Authorization (IUA) Profile, or 
-Cross-Enterprise User Assertion (XUA) profile. This profile defines how
+Internet User Authorization ([IUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-34.html)) Profile, or 
+Cross-Enterprise User Assertion ([XUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-13.html)) profile. This profile defines how
 a user and the security/privacy context of the request is defined.
 Additional information can be carried such as the PurposeOfUse, what the
 user intends to use the data for. Note that Privacy Policies and Access
@@ -1572,14 +1565,14 @@ explaining the detail of this Privacy Consent to the requesting
 system/individual adds no value. Most often the requesting
 system/individual is either fully empowered to receive and use the
 content, or not authorized at all. In these cases, the use of user
-identity context, as discussed above around the IUA or XUA profiles, is
+identity context, as discussed above around the [IUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-34.html) or [XUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-13.html) profiles, is
 sufficient to make the Access Control decision. The trust relationship
 of the Document Sharing exchange includes background governance on
-appropriate use, as discussed above around the ATNA Profile.
+appropriate use, as discussed above around the [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Profile.
 
 Privacy Consents may need to be expressed in a way that all parties in a
 Document Exchange can understand. IHE has published the Basic Patient
-Privacy Consents (BPPC) Profile that can be used to enable basic privacy
+Privacy Consents ([BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html)) Profile that can be used to enable basic privacy
 consent controls, and Advanced Patient Privacy Consents (APPC) that can
 encode more complex rules specific to a patient consent. The encoding of
 Consent and advanced rules in FHIR “Consent” resource is possible but
@@ -1607,15 +1600,15 @@ Privacy Consents are:
 
   - Change the consent policy (change from opt-in to opt-out)
 
-The BPPC Profile can be used as a gate-keeper to the document sharing
-community. BPPC does not define the policies but does allow for a
+The [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) Profile can be used as a gate-keeper to the document sharing
+community. [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) does not define the policies but does allow for a
 community that has defined its set of policies to capture that a patient
 has chosen one or more of those policies.
 
 For example: Let’s say that the above set of sample policy fragments was
 available to a patient sharing in a community. The patient could agree
 to Opt-In, and also agree to a specific research project. This set of
-acknowledgments would be captured as one or more BPPC documents. These
+acknowledgments would be captured as one or more [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) documents. These
 documents would indicate the policy that is being acknowledged, the date
 it is being acknowledged, an expiration date if applicable, etc. Then
 the systems involved in the document sharing can know that the patient
@@ -1632,6 +1625,8 @@ replacement for the previous Opt-In policies including the research
 policy. Thus, now if that research application tries to access the
 patient’s data, it will be blocked as the patient does not have a
 current acknowledgement of the research policy.
+
+TODO: include APPC
 
 ### 6.2.4 Security and Privacy in a Patient Safety Environment 
 
@@ -1693,14 +1688,14 @@ sharing. For those readers who wish to learn more details, please refer:
 1. Information about the [IHE domains](http://ihe.net/IHE_Domains)
 1. IHE IT Infrastructure Committee [Educational slides and webinars](http://wiki.ihe.net/index.php?title=Current_Published_ITI_Educational_Materials).
 1. IHE IT Infrastructure [formal specifications and whitepapers](https://www.ihe.net/resources/technical_frameworks/#IT )
-1. A white paper that covers deployment planning for an exchange [Template for XDS Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
-1. A Handbook to aid a Document Sharing community with desiging how they will use [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
+1. A white paper that covers deployment planning for an exchange [Template for [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
+1. A Handbook to aid a Document Sharing community with designing how they will use [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
 1. Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [IHE Process](https://wiki.ihe.net/index.php/Process) 
 1. A listing of all IHE authored [Implementation Guide Profiles](https://wiki.ihe.net/index.php/Profiles)
 
 ## 7.1 Case Studies
 
-The Document Sharing Health Information Exchange has been deployed in various regions. This section will provide linkage to some of those projects explaination of how they have used the Document Sharing Health Information Exchange profiles for their specific needs. These links are to external publications. 
+The Document Sharing Health Information Exchange has been deployed in various regions. This section will provide linkage to some of those projects explanation of how they have used the Document Sharing Health Information Exchange profiles for their specific needs. These links are to external publications. 
 
 ### 7.1.1 OpenHIE
 [Open Health Information Exchange (OpenHIE)](https://ohie.org/) is an Open Data, Open Standards, Open Source, and Open Innovation project. OpenHIE is an [open community of organizations](http://digitalprinciples.org/build-for-sustainability/) and individuals who are passionate about improving health and health care data sharing. The OpenHIE community is owned by countries and serves as a resource for capacity building, and it receives operational support from Regenstrief Institute.
