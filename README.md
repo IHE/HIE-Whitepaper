@@ -320,7 +320,7 @@ health documents. Typically, a patient will go through a sequence of
 encounters in different care settings over the course of his/her lifetime.
 With each encounter there is the potential that a provider will produce
 a health document that can be shared with the community. Documents
-shared by the provider and tracked by a [centralized registry](#32-centralized-discovery-and-retrieve) or [federation of communities](3.3-federated-discovery-and-retrieve) form a
+shared by the provider and tracked by a [centralized registry](#32-centralized-discovery-and-retrieve) or [federation of communities](#3.3-federated-discovery-and-retrieve) form a
 longitudinal record for the patients that received care among those
 providers within the community. Longitudinal records, therefore, are
 expected to last over the span of many decades, just as the documents
@@ -870,7 +870,7 @@ of discovery can be highly automated.
 
 ### 3.2.3 Governance
 
-As described in [1 Principles of Health Document Sharing](1-principles-of-health-document-sharing) 
+As described in [1 Principles of Health Document Sharing](#1-principles-of-health-document-sharing) 
 is document content neutral; uses
 document metadata that are represented in a structured, standard format;
 and supports longevity of document storage.
@@ -905,7 +905,7 @@ Mary Gomez the same unique patient identifier is associated with each
 document for Mary Gomez, and thus a search can reliably find all of
 Mary’s documents by using this single unique identifier. 
 
-There are various methods defined by IHE to support [Patient Identity Management](patient-identity-management).
+There are various methods defined by IHE to support [Patient Identity Management](#4-patient-identity-management).
 
 Further detail regarding deployment of an XDS Affinity Domain may be
 found in the [Template for XDS Affinity Domain Deployment Planning IHE
