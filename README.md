@@ -669,7 +669,7 @@ The IHE profiles addressing these models are:
   - Centralized Discovery and Retrieve ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain) –
     Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Mobile Health Document Sharing ([MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html)), Cross-Enterprise Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html))
 
-  - Federated Discovery and Retrieve – Mobile access to Health Documents([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Cross-Community Access ([[XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html)](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html))
+  - Federated Discovery and Retrieve – Mobile access to Health Documents([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Cross-Community Access ([XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html))
 
 The following figure shows the flow of data for each of these models.
 
@@ -690,7 +690,7 @@ The following sections will describe in more detail the three models.
 
 ## 3.1 Direct Push
 
-### 3.1.1 Cross-Enterprise Document Reliable Interchange ([XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html))
+### 3.1.1 Cross-Enterprise Document Reliable Interchange (XDR)
 
 The [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) profile provides a point-to-point method of sending documents to
 a specific recipient. It leverages common principles as described in
@@ -707,7 +707,7 @@ Great Charts EMR.
 The Point-to-Point Transmission of Documents slide deck and webinar,
 [Further Reading](#7-further-reading), provide more detail about [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html).
 
-### 3.1.2 Cross-Enterprise Document Media Interchange ([XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html))
+### 3.1.2 Cross-Enterprise Document Media Interchange (XDM)
 
 The Cross-Enterprise Document Media Interchange ([XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html)) profile addresses
 situations where the electronic exchange of clinical information does
@@ -748,7 +748,7 @@ orthopedist.
 The Point-to-Point Transmission of Documents slide deck and webinar,
 [Further Reading](#7-further-reading), provide more detail about [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html).
 
-### 3.1.3 Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)) push
+### 3.1.3 Mobile access to Health Documents (MHD) push
 
 The [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) profile provides a point-to-point method of sending documents to a specific recipient. It leverages common principles described in Section 2. It sends documents and metadata using FHIR Rest push to deliver one or more documents to a Document Recipient. 
 
@@ -918,7 +918,7 @@ Sharing environment. The services include:
 
   - [3.2.4 Notifications and Subscriptions](#324-notifications) 
 
-  - [6 Security and Privacy](#6-security-and-privacy) Profiles like [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), CT, [XUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-13.html), BPPC and others.
+  - [6 Security and Privacy](#6-security-and-privacy) Profiles like ATNA, CT, XUA, BPPC and others.
 
 ### 3.2.4 Notifications
 
@@ -953,7 +953,7 @@ outside of their home community and sometimes the care received
 externally can be very significant clinically. A very specific
 healthcare related use-case is when a patient is seeking the care of a
 specialist. So, there is a need to share health information between two
-communities. The Cross-Community Access ([XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) profile was developed to
+communities. The Cross-Community Access ([XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html)) profile was developed to
 address this need.
 
 To implement [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html), a community builds two services called gateways
@@ -1039,7 +1039,7 @@ The flows of information are depicted in the Figure 3.5-1:
 **Figure 3.5-1: mXDE Flow from Documents to Resources**
 
 1. Specific data elements are extracted from the structured documents per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
-2. Data elements (e.g. allergies) queried using the FHIR based QEDm Profile (Query_for_Existing_Data_for_Mobile).
+2. Data elements (e.g. allergies) queried using the FHIR based Query for Existing Data for Mobile ([QEDm](https://wiki.ihe.net/index.php/Query_for_Existing_Data_for_Mobile)) Profile (Query_for_Existing_Data_for_Mobile).
 3. Each data element is linked to the document(s) from which it was extracted per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
 4. Clinician accesses context of any data element of interest using source documents ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profiles) providing the clinical context in which the observation was recorded.
 
