@@ -60,8 +60,7 @@ the creation of standards-based communities.
 This white paper will focus on explaining how IHE profiles are used to
 address interoperability aspects of document sharing and how they work
 together to solve common document sharing problems. The IHE White Paper
-“[Template for [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Deployment
-Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)”,
+[Template for XDS Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf),
 provides support for policy and deployment planning. The IHE “[Document
 Sharing Metadata
 Handbook](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)”,
