@@ -484,6 +484,12 @@ associations support representation of document lifecycle events, where
 a document is associated with documents which are created as part of
 lifecycle events related to the original document.
 
+![](images/multiple-document-formats.png)
+
+**Figure 2.7-1: Multiple Document formats of the same document related by Document Associations.**
+
+Depicted in Figure 2.7-1 is a master document of format C-CDA with a set of transforms of the same content into CCD, C32, PDF, and a FHIR Document. This enables a Document Consumer to pull the content that best fits their ability to consume. Note the master document could be of any format, so one might chose to have the master document as the FHIR Document. Similar associations functionality would also support human language translations.
+
 ## 2.8 Document Sharing Models
 
 IHE has enabled three distinct Document Sharing Models that share the
@@ -676,17 +682,19 @@ The following figure shows the flow of data for each of these models.
 
 **Figure 3-1: Data Flow for Direct Push Sharing Models.**
 
+Figure 3-1 shows three different Direct Push models. The sending system is depicted on the left sending to a recipient on the right. 
+
 ![](images/centralized-models.png)
 
 **Figure 3-2: Data Flow for Centralized Discovery and Retrieve Sharing Models.**
+
+Figure 3-2 shows a MHDS community, and a XDS community;  with clients publishing on the left side and clients consuming on the right side. Note that MHD clients are shown with the ability to be accessing the XDS Affinity Domain using the MHD API. This figure is showing the relationship of the profiles and actors, but is not depicting all possible deployment architectures.
 
 ![](images/federation-models.png)
 
 **Figure 3-3: Data Flow for Federalization Discovery and Retrieve Sharing Models.**
 
-![](images/clients-federation-models.png)
-
-**Figure 3-4: Data Flow for Clients interacting with Federation Discovery and Retrieve Sharing Models.**
+Figure 3-3 shows a deployment depicting set of communities that are linked by the [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) for patient discovery, and [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) for federated Query for Documents and Retrieve Documents. On the Left side are [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) style clients. In this case the Publication functionality is supported as they are interacting locally with an XDS Affinity Domain.
 
 The following sections will describe in more detail the three models.
 
@@ -1039,6 +1047,12 @@ The flows of information are depicted in the Figure 3.5-1:
 ![](images/MXDE_Picture.jpg)
 
 **Figure 3.5-1: mXDE Flow from Documents to Resources**
+
+Alternate Picture
+
+![](images/mXDE.png)
+
+TODO: Decide which picture
 
 1. Specific data elements are extracted from the structured documents per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
 2. Data elements (e.g. allergies) queried using the FHIR based Query for Existing Data for Mobile ([QEDm](https://wiki.ihe.net/index.php/Query_for_Existing_Data_for_Mobile)) Profile (Query_for_Existing_Data_for_Mobile).
