@@ -668,13 +668,11 @@ like:
 
 The IHE profiles addressing these models are:
 
-  - Direct Push – Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Cross-Enterprise Document Reliable Interchange ([XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html))
-    and Cross-Enterprise Document Media Interchange ([XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html))
+  - Direct Push – Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Cross-Enterprise Document Reliable Interchange ([XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html)), and Cross-Enterprise Document Media Interchange ([XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html))
 
-  - Centralized Discovery and Retrieve ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain) –
-    Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Mobile Health Document Sharing ([MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html)), Cross-Enterprise Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html))
+  - Centralized Discovery and Retrieve – Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Mobile Health Document Sharing ([MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html)), and Cross-Enterprise Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html))
 
-  - Federated Discovery and Retrieve – Mobile access to Health Documents([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Cross-Community Access ([XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html))
+  - Federated Discovery and Retrieve – Cross-Community Access ([XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html))
 
 The following figure shows the flow of data for each of these models.
 
@@ -796,19 +794,23 @@ To address this very common scenario, IHE has created the [MHDS](http://profiles
 method to coordinate the authorized discovery and sharing of medical
 documents among disparate information systems.
 
-![](images/MHD-as-API-to-XDS.png)
-
-**Figure 3.2-1: XDS environment with MHD as API.**
-
-[MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) minimizes the burden imposed on the document sources and consumers
+[XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) minimizes the burden imposed on the document sources
 when sharing documents by establishing the use of two infrastructure
 components (the document registry and document repositories), which
 handle most of the effort involved in exchanging clinical data. This
 separation allows for minimal yet rich metadata to be centrally managed
 in a document registry while the full clinical details stay protected
-within distributed document repositories. The IHE profiles enable the
-automation of discovery and retrieve by more advanced health information
-systems.
+within distributed document repositories. 
+
+[MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) allows for a similar separation of repository, but does not call out the repository actor. The MHD Document Source simply preserves the document in an appropriate repository available to the MHDS community, and records the URL to that location when publishing the metadata to the MHDS repository. The MHD Document Source can include the document within the publication request where the MHDS Registry will store and provide access to it centrally. MHDS also includes solutions for Patient Identity Management Registry ([PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html)), Terminology Services ([SVCM](http://profiles.ihe.net/ITI/TF/Volume1/ch-51.html)), organization directory ([mCSD](http://profiles.ihe.net/ITI/TF/Volume1/ch-46.html)), user authentication/authorization ([IUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-34.html)), system security ([ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html)), and Consistent Time ([CT](http://profiles.ihe.net/ITI/TF/Volume1/ch-7.html)).  More details available in the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) profile.
+ 
+Both XDS and MHDS enable the automation of discovery and retrieve of document content by more advanced health information systems.
+
+The following Figure 3.2-1 shows the use of the MHD profile as an API to an XDS Document Sharing exchange. 
+
+![](images/MHD-as-API-to-XDS.png)
+
+**Figure 3.2-1: XDS environment with MHD as API.**
 
 ### 3.2.1 Document Publishing
 
