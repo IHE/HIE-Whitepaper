@@ -673,18 +673,21 @@ The IHE profiles addressing these models are:
 
 The following figure shows the flow of data for each of these models.
 
-![](images/models.png)
+![](images/push-models.png)
 
-**Figure 3-1: Data Flow for Data Sharing Models.**
+**Figure 3-1: Data Flow for Direct Push Sharing Models.**
 
-The next figure shows this as a continuum from a simple point-to-point push
-model on the bottom left to a highly scaled multi-community federated
-discovery on the top right. Across the bottom are the use-cases we have
-been discussing and coming from the left are the IHE profiles that
-address these use-cases.
+![](images/centralized-models.png)
 
-![](images/Continuum.png)
-**Figure 3-2: Document Sharing Use Case Continuum**
+**Figure 3-2: Data Flow for Centralized Discovery and Retrieve Sharing Models.**
+
+![](images/federation-models.png)
+
+**Figure 3-3: Data Flow for Federalization Discovery and Retrieve Sharing Models.**
+
+![](images/clients-federation-models.png)
+
+**Figure 3-4: Data Flow for Clients interacting with Federation Discovery and Retrieve Sharing Models.**
 
 The following sections will describe in more detail the three models.
 
