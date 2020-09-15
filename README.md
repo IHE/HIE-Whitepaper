@@ -796,6 +796,10 @@ To address this very common scenario, IHE has created the [MHDS](http://profiles
 method to coordinate the authorized discovery and sharing of medical
 documents among disparate information systems.
 
+![](images/MHD-as-API-to-XDS.png)
+
+**Figure 3.2-1: XDS environment with MHD as API.**
+
 [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) minimizes the burden imposed on the document sources and consumers
 when sharing documents by establishing the use of two infrastructure
 components (the document registry and document repositories), which
