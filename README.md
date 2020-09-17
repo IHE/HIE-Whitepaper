@@ -924,7 +924,7 @@ Mary’s documents by using this single unique identifier.
 There are various methods defined by IHE to support [Patient Identity Management](#4-patient-identity-management).
 
 Further detail regarding deployment of an [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain may be
-found in the [Template for XDS Affinity Domain Deployment Planning IHE ITI White Paper](#7-further-reading).
+found in the [Template for XDS Affinity Domain Deployment Planning IHE ITI White Paper](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf).
 
 Document Sharing is commonly deployed in an integrated environment which makes use of
 many IHE profiles working together to enable all aspects of a Document
@@ -948,11 +948,11 @@ notification is a personal email requesting that the receiver look for
 new content. Beyond this approach, IHE specifies profiles that further
 refine the ability to notify or subscribe for notifications.
 
-  - Document Metadata Subscription (DSUB) – uses subscription for new
+  - Document Metadata Subscription [(DSUB)](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_DSUB.pdf) – uses subscription for new
     documents fitting specified metadata and notification of available
     documents.
 
-The Publication and Discovery slide deck and webinar, [Further Reading](#7-further-reading), provide more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and DSUB.
+The [Publication and Discovery slide deck](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-XDS_DSUB_2012-12-10.ppt)and webinar (*broken link*) provide more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_DSUB.pdf).
 
 ## 3.3 Federated Discovery and Retrieve
 
@@ -1010,7 +1010,7 @@ well. This patient identity federation is profiled in the
 Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) profile. For more information
 on this profile see [Section 4.3](#43-cross-community-patient-discovery-xcpd).
 
-The Cross-Community slide deck and webinar, [Further Reading](#7-further-reading), provide
+The [Cross-Community slide deck](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Cross-Community_2012-12-10.ppt) and webinar (*broken link*) provide
 more detail about [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
 ## 3.4 Choosing an infrastructure
@@ -1117,7 +1117,7 @@ that need to be addressed at the time of deployment.
 | Cross-Enterprise Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) | 1. [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) supports the access between distributed peer registries of identities. <br/> 2. It supports the ability to query by a set of demographics traits including a domain specific patient identifier and get in response one or more matching identities with a complete set of demographics traits, usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the registry of identities along with their demographics needs to addressed at deployment time for each one of the identity domain served. |
 | Patient Master Identity Registry ([PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html))  | 1. [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) support the distributed creation, access, update and merge process of shared master identities.  <br/> 2. The identity registry is only a passive store for such shared (or golden) identities that are under the distributed control of identity sources.  | 1. Each deployment shall define the policies to be followed by identity sources to ensure stability and quality of the master identities they create, update and merge. <br/> 2. In particular, when identities are created without a well defined minimum set of demographic traits, the restrictions about their use when accessed and the duties of the creator to further enriched such identities until the well defined minimum set has been reached shall be established. <br/> 3.  The policies that authorize an identity source to request the merge of different master identities and to request an unmerge shall be defined. <br/> 4. The duties of an identity source that recieves notifications about master identities to reflect these changes on the local identities shall be established. |
 
-The Patient Identity Management deck and webinar, [7 Further Reading](#7-further-reading),
+The [Patient Identity Management deck](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Patient-Identity-Mgmt-2012-03-07.pptx) and webinar (*broken link*) 
 provide more detail about [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html).
 
 ## 4.1 Patient Identity Cross-Reference (PIX)
@@ -1241,7 +1241,7 @@ The [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) Profile Patient Id
 
 TODO - end
 
-The Cross-Community slide deck and webinar [7 Further Reading](#7-further-reading), provide
+The [Cross-Community slide deck](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Cross-Community_2012-12-10.ppt) and webinar (*broken link*) provide
 more detail about [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
 # 5 Common Provider Directory
@@ -1287,11 +1287,11 @@ security provisions defined by the grouped actor(s).*
 This section will discuss how a community that leverages IHE Profiles
 for document sharing can protect patient privacy and information
 security. The topic of Security and Privacy is covered in slide
-decks and webinars, see [7 Further Reading](#7-further-reading).
+decks [1](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
 
 An especially important aspect that is beyond the scope of IHE is the
-definition of the overall Policies of the community. There are 
-[whitepapers and handbooks from IHE](#7-further-reading), but there is no
+definition of the overall Policies of the community. There are **TO DO**
+[whitepapers and handbooks from IHE](*Cannot locate resources*), but there is no
 single policy that must
 be put in place by an IHE based community to ensure privacy and
 security. In this section, we will discuss potential policy decisions and
@@ -1331,7 +1331,7 @@ Network Controls.
 While community Policies and Risk Management are outside its scope, IHE
 does recognize that these elements are a necessary piece of a system
 implementation. IHE IT Infrastructure technical white paper, [Template
-for [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Deployment Planning](#7-further-reading) outlines
+for [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html). [Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf) outlines
 some of the issues that should be evaluated for inclusion in the local
 Policy creation and Risk Management decisions. It is therefore the duty
 of system implementers to take this guidance into account as part of
@@ -1520,7 +1520,8 @@ systems participating in the Document Sharing exchange. The
 communications between these trusted systems is also encrypted.
 
 For more information on the use of IHE [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) to enable basic security see
-the security and privacy slide decks and webinars, [Further Reading](#7-further-reading).
+the security and privacy slide
+decks [1](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
 
 ### 6.2.2 Protecting different types of documents
 
@@ -1574,7 +1575,8 @@ Control rules can leverage any of the user context, patient identity, or
 document metadata discussed above.
 
 For more details on enabling Role-Based-Access-Control and federation of
-identities see the security and privacy slide decks and webinars, [Further Reading](#7-further-reading).
+identities see the security and privacy slide
+decks [1](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
 
 ### 6.2.3 Patient Privacy Consent to participate in Document Sharing
 
@@ -1695,8 +1697,8 @@ found in the profile text or through other webinars.
 | Document Encryption                  |           |            | √     | √       | ∙         |                 |         |
 
 
-Note: The topic of Security and Privacy is covered in two slide decks
-and webinars, see [Further Reading](#7-further-reading).
+Note: The topic of Security and Privacy is covered in slide
+decks [1](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
 
 # 7 Further Reading
 
@@ -1710,7 +1712,7 @@ sharing. For those readers who wish to learn more details, please refer:
 1. Information about the [IHE domains](http://ihe.net/IHE_Domains)
 1. IHE IT Infrastructure Committee [Educational slides and webinars](http://wiki.ihe.net/index.php?title=Current_Published_ITI_Educational_Materials).
 1. IHE IT Infrastructure [formal specifications and whitepapers](https://www.ihe.net/resources/technical_frameworks/#IT )
-1. A white paper that covers deployment planning for an exchange [Template for [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
+1. A white paper that covers deployment planning for an exchange [Template for [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) [Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
 1. A Handbook to aid a Document Sharing community with designing how they will use [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
 1. Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [IHE Process](https://wiki.ihe.net/index.php/Process) 
 1. A listing of all IHE authored [Implementation Guide Profiles](https://wiki.ihe.net/index.php/Profiles)
