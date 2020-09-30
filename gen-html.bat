@@ -1,1 +1,1 @@
-pandoc -r gfm readme.md -o index.html
+pandoc -r gfm readme.md -w html -o index.html
