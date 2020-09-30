@@ -1082,16 +1082,13 @@ around demographics changing over time (name changes) and other aspects
 of demographics matching rules. There is also concern around privacy
 when unnecessarily transporting patient demographics.
 
-TODO - should we define demographics distinct from identification? Much like PMIR did.
+A Patient Identity is distinct from Patient Identifier, in that a Patient Identifier is a unique value within a domain; where as the Patient Identity is made up of one or more Patient Identifier(s) and identifying information including what is classically understood as demographics and also identifiers issued by any recognized authority. These attributes of a Patient Identity could include name (family name, given name(s), etc), phone, email, gender, birth date, address(s), marital status, photo, *others to contact*, preference for language, general practitioner(s), and links to other Patient Identities. The use of identifiers from other recognized authorities would include identifiers issued by healthcare organizations, but also by non-healthcare organizations such as government issued identifiers such as drivers license number, social security number, or passport number; or any identifier that a patient that can be authenticated such as a Voluntary Health Identifier (VHID) being a specific example of an identifier assigned outside of treatment or a Decentralized Identifier (DID) being an example of an general purpose identifier that can be authenticated. 
 
-Thus, IHE recommends that the identification of the patient be done
+IHE recommends that the identification of the patient be done
 through patient identifiers in a common or accepted patient
 identification domain. Thus, prior to the exchange of healthcare
 information the partners agreed on a commonly known patient identifier
-to refer to the patient. Essentially any identifier that a patient
-provides can be used to correlate identities, with a Voluntary Health
-Identifier (VHID) being a specific example of an identifier assigned
-outside of treatment. This requirement, however, is often non-trivial
+to refer to the patient. This requirement, however, is often non-trivial
 and the patient identity management profiles serve the purpose of
 enabling this aspect of Document Sharing. Some regions and nations have
 enabled the use of a unique patient identifier that is widely available
