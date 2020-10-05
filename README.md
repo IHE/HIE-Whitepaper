@@ -938,19 +938,13 @@ Sharing environment. The services include:
 
 ### 3.2.4 Notifications
 
-TODO: review
-
 The [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile supports registration of content and the ability to
 query and retrieve from a centralized service, but there are many use
 cases where a system (i.e., a clinician) may wish to be proactively
-notified when a new document is made available. The simplest type of
-notification is a personal email requesting that the receiver look for
-new content. Beyond this approach, IHE specifies profiles that further
-refine the ability to notify or subscribe for notifications.
+notified when a new document is made available. DSUB describes the use of subscription and notification mechanisms for use within an XDS Affinity Domain and across communities. The subscription allows for the matching of metadata during the publication of a new document for a given patient, and results a notification which can be parsed:
 
-  - Document Metadata Subscription (DSUB) – uses subscription for new
-    documents fitting specified metadata and notification of available
-    documents.
+1. Using a push-style method of notification where the Subscriber subscribes to receive notifications about the availability of documents based on specific criteria or,
+2. Using a pull-style method which creates a Pull Point resource able to store notifications targeted to a specific recipient. Notifications stored in the Pull Point can be retrieved using a specific transaction.
 
 The Publication and Discovery slide deck and webinar, [Further Reading](#7-further-reading), provide more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and DSUB.
 
