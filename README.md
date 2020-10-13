@@ -1044,15 +1044,9 @@ This profile defines rules to ensure consistency and traceability of information
 
 The flows of information are depicted in the Figure 3.5-1:
 
-![](images/MXDE_Picture.jpg)
-
-**Figure 3.5-1: mXDE Flow from Documents to Resources**
-
-Alternate Picture
-
 ![](images/mXDE.png)
 
-TODO: Decide which picture
+**Figure 3.5-1: mXDE Flow from Documents to Resources**
 
 1. Specific data elements are extracted from the structured documents per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
 2. Data elements (e.g. allergies) queried using the FHIR based Query for Existing Data for Mobile ([QEDm](https://wiki.ihe.net/index.php/Query_for_Existing_Data_for_Mobile)) Profile (Query_for_Existing_Data_for_Mobile).
