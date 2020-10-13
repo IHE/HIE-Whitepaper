@@ -712,8 +712,7 @@ across town. [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) may be use
 other clinical documents) from Dr. Suwati's Apollo EMR to Dr. Lima's
 Great Charts EMR.
 
-The Point-to-Point Transmission of Documents slide deck and webinar,
-[Further Reading](#7-further-reading), provide more detail about [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html).
+The [Point-to-Point Transmission of Documents slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDM_XDR_2012-12-10.ppt) and webinar (*broken webinar URLs*) provide more detail about [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html).
 
 ### 3.1.2 Cross-Enterprise Document Media Interchange (XDM)
 
@@ -753,8 +752,7 @@ the image file to a USB key using the [XDM](http://profiles.ihe.net/ITI/TF/Volum
 USB key to Mary so that she may take the files with her to the
 orthopedist.
 
-The Point-to-Point Transmission of Documents slide deck and webinar,
-[Further Reading](#7-further-reading), provide more detail about [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html).
+The [Point-to-Point Transmission of Documents slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDM_XDR_2012-12-10.ppt) and webinar (*broken webinar URLs*) provide more detail about [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html).
 
 ### 3.1.3 Mobile access to Health Documents (MHD) push
 
@@ -946,7 +944,7 @@ notified when a new document is made available. DSUB describes the use of subscr
 1. Using a push-style method of notification where the Subscriber subscribes to receive notifications about the availability of documents based on specific criteria or,
 2. Using a pull-style method which creates a Pull Point resource able to store notifications targeted to a specific recipient. Notifications stored in the Pull Point can be retrieved using a specific transaction.
 
-The [Publication and Discovery slide deck](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-XDS_DSUB_2012-12-10.ppt)and webinar (*broken link*) provide more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_DSUB.pdf).
+The [Publication and Discovery slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDS_DSUB_2012-12-10.ppt)and webinar (*broken link*) provide more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](http://profiles.ihe.net/ITI/TF/Volume1/ch-26.html).
 
 ## 3.3 Federated Discovery and Retrieve
 
@@ -1004,7 +1002,7 @@ well. This patient identity federation is profiled in the
 Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) profile. For more information
 on this profile see [Section 4.3](#43-cross-community-patient-discovery-xcpd).
 
-The [Cross-Community slide deck](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Cross-Community_2012-12-10.ppt) and webinar (*broken link*) provide
+The [Cross-Community slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Cross-Community_2012-12-10.ppt) and webinar (*broken link*) provide
 more detail about [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
 ## 3.4 Choosing an infrastructure
@@ -1104,7 +1102,7 @@ that need to be addressed at the time of deployment.
 | [Cross-Enterprise Patient Discovery (XCPD)](#43-cross-community-patient-discover-xcpd) | 1. supports the access between distributed peer patient identity domains. <br/> 2. It supports the ability to query by a set of demographics traits, including a domain specific patient identifier, and get in response one or more matching identities with a complete set of demographics traits, usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the peer patient identity domain needs to be addressed at deployment time for each one of the identity domain served. |
 | [Patient Master Identity Registry (PMIR)](#44-patient-master-identity-registry-pmir)  | 1. support the distributed creation, access, update, and merge process of shared master patient identity.  <br/> 2. The identity registry is a passive store for such shared (or golden) identities that are under the distributed control of identity sources.  | 1. Each deployment defines the policies to be followed by identity sources to ensure stability and quality of the master identities they create, update, and merge. <br/> 3. The is a mechanism to distribute all create, update, and merge actions to identity consumer actors, which have a duty to reflect these changes in their patient specific information stores. |
 
-The [Patient Identity Management deck](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Patient-Identity-Mgmt-2012-03-07.pptx) and webinar (*broken link*) 
+The [Patient Identity Management deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Patient-Identity-Mgmt-2012-03-07.pptx) and webinar (*broken link*) 
 provide more detail about [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html).
 
 ## 4.1 Patient Identity Cross-Reference (PIX)
@@ -1214,7 +1212,7 @@ medical history held within the Chicago community.
 
 The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) is functionally the same as XCPD but leverages the [FHIR](http://fhir.hl7.org) standard.
 
-The Cross-Community slide deck and webinar [7 Further Reading](#7-further-reading), provide
+The [Cross-Community slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Cross-Community_2012-12-10.ppt) and webinar [7 Further Reading](#7-further-reading), provide
 more detail about [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
 ## 4.4 Patient Master Identity Registry (PMIR)
@@ -1274,7 +1272,7 @@ security provisions defined by the grouped actor(s).*
 This section will discuss how a community that leverages IHE Profiles
 for document sharing can protect patient privacy and information
 security. The topic of Security and Privacy is covered in slide
-decks [1](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
+decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
 
 An especially important aspect that is beyond the scope of IHE is the
 definition of the overall Policies of the community. There are **TO DO**
@@ -1508,7 +1506,7 @@ communications between these trusted systems is also encrypted.
 
 For more information on the use of IHE [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) to enable basic security see
 the security and privacy slide
-decks [1](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
+decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
 
 ### 6.2.2 Protecting different types of documents
 
@@ -1563,7 +1561,7 @@ document metadata discussed above.
 
 For more details on enabling Role-Based-Access-Control and federation of
 identities see the security and privacy slide
-decks [1](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
+decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
 
 ### 6.2.3 Patient Privacy Consent to participate in Document Sharing
 
@@ -1685,7 +1683,7 @@ found in the profile text or through other webinars.
 
 
 Note: The topic of Security and Privacy is covered in slide
-decks [1](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
+decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
 
 # 7 Further Reading
 
