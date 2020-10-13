@@ -938,19 +938,13 @@ Sharing environment. The services include:
 
 ### 3.2.4 Notifications
 
-TODO: review
-
 The [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile supports registration of content and the ability to
 query and retrieve from a centralized service, but there are many use
 cases where a system (i.e., a clinician) may wish to be proactively
-notified when a new document is made available. The simplest type of
-notification is a personal email requesting that the receiver look for
-new content. Beyond this approach, IHE specifies profiles that further
-refine the ability to notify or subscribe for notifications.
+notified when a new document is made available. DSUB describes the use of subscription and notification mechanisms for use within an XDS Affinity Domain and across communities. The subscription allows for the matching of metadata during the publication of a new document for a given patient, and results a notification which can be parsed:
 
-  - Document Metadata Subscription [(DSUB)](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_DSUB.pdf) – uses subscription for new
-    documents fitting specified metadata and notification of available
-    documents.
+1. Using a push-style method of notification where the Subscriber subscribes to receive notifications about the availability of documents based on specific criteria or,
+2. Using a pull-style method which creates a Pull Point resource able to store notifications targeted to a specific recipient. Notifications stored in the Pull Point can be retrieved using a specific transaction.
 
 The [Publication and Discovery slide deck](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-XDS_DSUB_2012-12-10.ppt)and webinar (*broken link*) provide more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_DSUB.pdf).
 
@@ -1050,15 +1044,9 @@ This profile defines rules to ensure consistency and traceability of information
 
 The flows of information are depicted in the Figure 3.5-1:
 
-![](images/MXDE_Picture.jpg)
-
-**Figure 3.5-1: mXDE Flow from Documents to Resources**
-
-Alternate Picture
-
 ![](images/mXDE.png)
 
-TODO: Decide which picture
+**Figure 3.5-1: mXDE Flow from Documents to Resources**
 
 1. Specific data elements are extracted from the structured documents per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
 2. Data elements (e.g. allergies) queried using the FHIR based Query for Existing Data for Mobile ([QEDm](https://wiki.ihe.net/index.php/Query_for_Existing_Data_for_Mobile)) Profile (Query_for_Existing_Data_for_Mobile).
@@ -1082,14 +1070,13 @@ around demographics changing over time (name changes) and other aspects
 of demographics matching rules. There is also concern around privacy
 when unnecessarily transporting patient demographics.
 
-Thus, IHE recommends that the identification of the patient be done
+A Patient Identity is distinct from Patient Identifier, in that a Patient Identifier is a unique value within a domain; where as the Patient Identity is made up of one or more Patient Identifier(s) and identifying information including what is classically understood as demographics and also identifiers issued by any recognized authority. These attributes of a Patient Identity could include name (family name, given name(s), etc), phone, email, gender, birth date, address(s), marital status, photo, *others to contact*, preference for language, general practitioner(s), and links to other Patient Identities. The use of identifiers from other recognized authorities would include identifiers issued by healthcare organizations, but also by non-healthcare organizations such as government issued identifiers such as drivers license number, social security number, or passport number; or any identifier that a patient that can be authenticated such as a Voluntary Health Identifier (VHID) being a specific example of an identifier assigned outside of treatment or a Decentralized Identifier (DID) being an example of an general purpose identifier that can be authenticated. 
+
+IHE recommends that the identification of the patient be done
 through patient identifiers in a common or accepted patient
 identification domain. Thus, prior to the exchange of healthcare
 information the partners agreed on a commonly known patient identifier
-to refer to the patient. Essentially any identifier that a patient
-provides can be used to correlate identities, with a Voluntary Health
-Identifier (VHID) being a specific example of an identifier assigned
-outside of treatment. This requirement, however, is often non-trivial
+to refer to the patient. This requirement, however, is often non-trivial
 and the patient identity management profiles serve the purpose of
 enabling this aspect of Document Sharing. Some regions and nations have
 enabled the use of a unique patient identifier that is widely available
@@ -1112,21 +1099,23 @@ that need to be addressed at the time of deployment.
 
 |    Patient Identification Profiles       |                           Assumptions                             |                       Conditions                       | 
 | ---------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------|
-| Patient Demographics Query ([PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html)) | 1. [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) supports the access to a central registry of identities. <br/> 2. It supports the ability to query in one or more patient identity domains of interest, by a set of demographics traits and get in response one or more matching identities with their complete set of demographics traits, usually including patient identifiers.| 1. The process to create and update the registry of identities along with their demographics needs to addressed at deployment time for each one of the identity domain served. |
-| Patient Id Cross-referencing ([PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html)) | 1. [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) supports the linking of patient identifiers between patient identifiers from different domains. <br/> 2. Each identifier domain entirely controls the creation, updates and merges of its identities. <br/> 3. The consumer of identity cross-references does not need to know any of the patient demographics as managed by the domain controlling the identity. | 1. Each deployment relies on a cross-referencing algorithm which is centrally managed and needs to be quality controlled. <br/> 2. The consumers of cross-references between identities from different identity domains shall either persist the cross-reference and actively process update notification (profile option) or never persist cross-references and re-query when needed. |
-| Cross-Enterprise Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) | 1. [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) supports the access between distributed peer registries of identities. <br/> 2. It supports the ability to query by a set of demographics traits including a domain specific patient identifier and get in response one or more matching identities with a complete set of demographics traits, usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the registry of identities along with their demographics needs to addressed at deployment time for each one of the identity domain served. |
-| Patient Master Identity Registry ([PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html))  | 1. [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) support the distributed creation, access, update and merge process of shared master identities.  <br/> 2. The identity registry is only a passive store for such shared (or golden) identities that are under the distributed control of identity sources.  | 1. Each deployment shall define the policies to be followed by identity sources to ensure stability and quality of the master identities they create, update and merge. <br/> 2. In particular, when identities are created without a well defined minimum set of demographic traits, the restrictions about their use when accessed and the duties of the creator to further enriched such identities until the well defined minimum set has been reached shall be established. <br/> 3.  The policies that authorize an identity source to request the merge of different master identities and to request an unmerge shall be defined. <br/> 4. The duties of an identity source that recieves notifications about master identities to reflect these changes on the local identities shall be established. |
+| [Patient Demographics Query (PDQ)](#42-patient-demographics-query-pdq) | 1. supports the access to a central registry of identities. <br/> 2. It supports the ability to query in one or more patient identity domains of interest, by a set of demographics traits and get in response one or more matching identities with their complete set of demographics traits, usually including patient identifiers.| 1. The process to create and update the registry of identities along with their demographics needs to be addressed at deployment time for each one of the identity domain served. |
+| [Patient Id Cross-referencing (PIX)](#41-patient-identity-cross-reference-pix) | 1. supports the linking of patient identifiers between patient identifiers from different domains. <br/> 2. Each identifier domain entirely controls the creation, updates, and merges of its identities. <br/> 3. The consumer of identity cross-references does not need to know any of the patient demographics as managed by the domain controlling the identity. | 1. Each deployment relies on a cross-referencing algorithm which is centrally managed and needs to be quality controlled. <br/> 2. The consumers of cross-references between identities from different identity domains either persist the cross-reference and actively process update notification (profile option), or never persist cross-references and re-query when needed. |
+| [Cross-Enterprise Patient Discovery (XCPD)](#43-cross-community-patient-discover-xcpd) | 1. supports the access between distributed peer patient identity domains. <br/> 2. It supports the ability to query by a set of demographics traits, including a domain specific patient identifier, and get in response one or more matching identities with a complete set of demographics traits, usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the peer patient identity domain needs to be addressed at deployment time for each one of the identity domain served. |
+| [Patient Master Identity Registry (PMIR)](#44-patient-master-identity-registry-pmir)  | 1. support the distributed creation, access, update, and merge process of shared master patient identity.  <br/> 2. The identity registry is a passive store for such shared (or golden) identities that are under the distributed control of identity sources.  | 1. Each deployment defines the policies to be followed by identity sources to ensure stability and quality of the master identities they create, update, and merge. <br/> 3. The is a mechanism to distribute all create, update, and merge actions to identity consumer actors, which have a duty to reflect these changes in their patient specific information stores. |
 
 The [Patient Identity Management deck](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Patient-Identity-Mgmt-2012-03-07.pptx) and webinar (*broken link*) 
 provide more detail about [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html).
 
 ## 4.1 Patient Identity Cross-Reference (PIX)
 
+The Patient Identity Cross-Reference [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) profile supports the access to a central registry of cross-referenced identities, and the feed of identity updates from distributed identity domains. 
+
 Most health information systems assign to each patient an identifier
 (usually a string of letters and/or numbers) that is unique to the
 patient within only that information system. Thus, Gary Collins may be
-identified as 3562A at the office of his Primary Care Physician (PCP)
-and 0320 at his specialist's clinic.
+identified as `3562A` at the office of his Primary Care Physician (PCP)
+and `0320` at his specialist's clinic.
 
 IHE utilizes the concept of Patient Identifier Domains which defines a
 domain of patient identifiers, like identifiers assigned within a PCP
@@ -1134,9 +1123,9 @@ office, assigned by a single authority and an identifier for each
 assigning authority. For example, the PCP office identifier is unique
 within the assigning authority for the PCP. If the PCP's system wants to
 communicate with the specialist's system about Gary Collins, both
-systems must be able to know that 3562A assigned by the PCP offices is
-equivalent to 0320 assigned by the specialist’s office, and that neither
-of those identifiers is equivalent to Garry Collin with an ID of 333 at
+systems must be able to know that `3562A` assigned by the PCP offices is
+equivalent to `0320` assigned by the specialist’s office, and that neither
+of those identifiers is equivalent to Garry Collin with an ID of `333` at
 a local Hospital. This is known as a cross-reference that links the two
 patient identifiers for Gary Collins.
 
@@ -1151,7 +1140,7 @@ specialist offices, and uses the demographics in those feeds to create a
 cross-referencing table which associates identities with matching
 demographics and does not associate identities found not to match. It
 should be noted that the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile does not specify how patient
-matching occurs. Each vendor is welcome to use their own matching
+matching occurs. Each deployment is welcome to use their own matching
 algorithms to determine which IDs should be cross-referenced. The IHE
 profile focuses only on the interfacing characteristics that would be
 consistent regardless of how the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Manager matches the identifiers.
@@ -1164,10 +1153,11 @@ using a known patient identifier.
 
 A primary use of the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile is to enable document consumers and
 document sources using the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile to find the patient’s identifier
-in that [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Patient Identifier Domain (XAD-PID). See
-Section 3.2. The [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile can be used for Cross-Community if the
+in that [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Patient Identifier Domain (XAD-PID). Centralized Discovery and Retrieve are described above in section 3.2](#32-centralized-discovery-and-retrieve). 
+The [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile can be used for Cross-Community if the
 communities are willing to have a centralized patient cross-reference
-(See [Section 4.3](#43-cross-community-patient-discovery-xcpd) for federation of patient identity.)
+
+The [Patient Identifier Cross-reference for Mobile (PIXm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-41.html) is functionally the same as PIX but leverages the [FHIR](http://fhir.hl7.org) standard.
 
 ## 4.2 Patient Demographics Query (PDQ)
 
@@ -1175,12 +1165,10 @@ Demographics (information describing the patient in general) are used to
 help identify the patient. With information on dates of birth and sex,
 information about Leslie Ramsi, a male born on May-2-1968, can be
 distinguished from that of Leslie Ramsi, a female born on July-23-1987.
-To help information systems improve their management of patient
-demographic information, IHE defines a profile called patient
-demographics query ([PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html)). The premise of this profile is that some
-information systems will have more comprehensive and more accurate
-demographic information about a patient than other systems. The
-following paragraph describes a typical use of the [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) profile.
+
+The Patient Demographics Query ([PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html)) profile enables client systems to discover full identity information on a Patient given some set of demographics information the client knows. 
+The premise of this profile is that the PDQ service will be made available at systems with a more comprehensive and more accurate
+demographic information about a patient than other systems.
 
 A typical use of [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) is to discover the patient's [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain
 Patient ID. Imagine that Justin McCarthy heads to the local public
@@ -1194,29 +1182,22 @@ of the demographics returned. With the knowledge of Justin's [XDS](http://profil
 Affinity Domain Patient ID, the public health department can now publish
 his vaccination record to the community via the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile.
 
+The [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) service could be combined with the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) service to provide comprehensive patient identity knowledge. 
+
+The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) is functionally the same as PDQ but leverages the [FHIR](http://fhir.hl7.org) standard.
+
 ## 4.3 Cross-Community Patient Discovery (XCPD)
 
 The Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) profile offers a means to
 discover mutually known patients and a method to correlate the patient's
 identifiers across those communities.
 
-[XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) uses the same transaction standard as [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) but adjusts the profiling
-of that standard in such a way that it is suitable for environments
-where there is no centralized source of patient demographics or
+[XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) is similar in function to [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) but is more suited to environments where there is no centralized source of patient demographics or
 identifiers. For this reason [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) is most likely to be used with the
-Federated Discovery and Retrieve ([XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) model of Document Sharing, which
-adjusts a subset of the transactions of [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) for use in environments
-where there is no centralized patient record. Thus, [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) and [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) are
+[Federated Discovery and Retrieve](#33-federated-discovery-and-retrieve) model of Document Sharing. Thus, [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) and [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) are
 designed for environments where the implementation of a centralized
-source of patient demographics, identifiers or record locations - like
-is required when using [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html)/[PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html)/[XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) - is not considered acceptable. In
-environments where communities are willing (and allowed) to feed all
-patient demographics to a single, central server, or even a small number
-of duplicated central servers, the use of [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) or [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) is a more efficient
-technology to resolve patient identifiers. But as numbers of systems
-grow, multiple centralized authorities are needed to accommodate the
-scale and [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) and [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) are designed to enable communication across
-multiple such central authorities. Thus [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) supports a hierarchical
+source of patient demographics, identifiers, or record locations is not considered practical. 
+[XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) supports a hierarchical
 approach which bridges communities that might use [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) or [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) internally.
 
 To illustrate the use of [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html), imagine that Dr. Holsen has an encounter
@@ -1224,25 +1205,31 @@ with his patient, Trudy Levitz. At the moment, Trudy lives in
 Indianapolis; however, she recently moved there from Chicago. Thus, the
 majority of Trudy's past medical history is stored in the clinical
 systems of provider institutions in Chicago. Fortunately, Dr. Holsen's
-EMR has the ability to discover patient data that exists outside of the
+EHR has the ability to discover patient data that exists outside of the
 local, Indianapolis-based community. Dr. Holsen queries to the Chicago
 community and finds the relevant patient identifiers from the Chicago
 community that represent Trudy. With this information, Dr. Holsen can
 subsequently use [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) to look for documents containing Trudy’s past
 medical history held within the Chicago community.
 
-## 4.4 Patient Master Identity Registry  (PMIR)
+The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) is functionally the same as XCPD but leverages the [FHIR](http://fhir.hl7.org) standard.
 
-TODO: the following text comes from [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html), not clear how to integrate it here
-
-A consumer system may query the [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) Patient Identity Manager to receive the master Patient Identity based on their local identifiers or based on the identifying characteristics of the patient. In this way the PCP office can discover the master Patient Identity and know the domain specific identifier used by the specialist’s system and thus can communicate with that system using a known patient identifier.
-
-The [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) Profile Patient Identity Manager integrates the server side of the PDQm and PIXm Profiles, so that systems needing a patient identity lookup can use PDQm or PIXm Profiles. A system that publishes documents or a system that consumes documents can implement the client PDQm Patient Demographics Consumer or PIXm Patient Identifier Cross-reference Consumer as their method of discovering patient identities. As such these clients are agnostic to the Patient Identity Management technology, which might be a [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) Patient Identity Manager, a legacy [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Patient Identity Manager, etc. A primary use of the PDQm and PIXm Profiles is to enable document consumers and document sources using the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) Profile to find the patient’s identifier in that Community Patient Identifier Domain. See Section 50.7.3.2.
-
-TODO - end
-
-The [Cross-Community slide deck](ftp://ftp.ihe.net/IT_Infrastructure/ITI_EducationalMaterials/CurrentPublished/IHE-Cross-Community_2012-12-10.ppt) and webinar (*broken link*) provide
+The Cross-Community slide deck and webinar [7 Further Reading](#7-further-reading), provide
 more detail about [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
+
+## 4.4 Patient Master Identity Registry (PMIR)
+
+The Patient Master Identity Registry [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) is a community based system of cooperating to maintain a master identity for each patient. [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) leverages the [FHIR](http://fhir.hl7.org) standard.
+
+A consumer system may query the [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) registry to receive the master Patient Identity (aka. golden identity) based on their local identifiers or based on the identifying characteristics of the patient. In this way the PCP office can discover the master Patient Identity so that it can communicate with the systems in that community using a known patient identifier. This query uses [Patient Identity Cross-referencing for Mobile (PIXm)](#41-patient-identity-cross-reference-pix) and [Patient Demographics Query for Mobile (PDQm)](#42-patient-demographics-query-pdq).
+
+![](images/PMIR-Diagrams.png)
+
+**Figure 4.4-1: Patient Master Identity Registry**
+
+Authorized patient identity source authorities will feed create, update, or merge events to the [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) registry, which will further propagate these changes to a set of patient identity consumers that have subscribed. Upon receiving a create, update, or merge event these subscribed consumers are expected to update their patient specific information accordingly. For example when a merge has been declared the subscribed consumer will merge into the surviving identity any data that was known against the merged identity. This set of authorized patient identity source authorities keep the master identity accurate, using update when there are changes to the demographics. The registry may also implement the identity source to enable automated quality checks.
+
+ A primary use of the PMIR, PDQm, and PIXm Profiles are to enable document consumers and document sources using the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) Profile to find the patient’s identifier in that Community Patient Identifier Domain within a [Centralized Discovery and Retrieve](#32-centralized-discovery-and-retrieve) environment.
 
 # 5 Common Provider Directory
 
@@ -1739,6 +1726,30 @@ blah blah [CommonWell](https://www.commonwellalliance.org/connect-to-the-network
 blah blah [Infoway](https://infoway-inforoute.ca/en/solutions/digital-health-foundation)
 
 ### 7.1.5 Netherlands
+
+#### 7.1.5.1 Frysian Cardiology Network 
+
+[IHE Success Story](https://www.iheusa.org/sites/iheusa/files/HIMSS_IHE_Forcare_Success_Story_web.pdf)
+
+After extensive research the Medical Center Leeuwarden (MCL, The Netherlands) chose to create a regional cardiology exchange based on the principles of the IHE XDS profile back in 2007.  The cardiology exchange network connects hospitals in the Dutch province of Friesland and is in operation since 2008. The exchange network is based on various IT-Infrastructure profiles centered around XDS and supports a clinical pathway where community-based hospitals and clinics refer patients for cardiac intervention procedures to MCL. Given the heterogenous landscape of clinical information systems from different (local) vendors, information broker technology is used to connect to legacy system and to transform data into XDS documents. Prior to implementing the exchange network, it took on average 3 days to complete a patient referral. Most of the delay was caused by the inability to exchange diagnostic information in a timely manner. With the network in place referrals can be completed in less than 24 hours which provides great patient benefits and lead to a shorter stay in the hospital 
+
+The network covers 4 hospitals and 2 outpatient clinics. The number of users is approximately 250, with 10,000 documents being processed annually.
+
+#### 7.1.5.2 XDS Network North Netherlands
+
+Starting in 2014 the hospitals in the northern provinces in the Netherlands have gradually create an XDS-based network to share diagnostic images among them. The initial goal, to reduce exchange of CD and DVD to virtually zero, was reached around 2018. It demonstrated that the costs per study transfer were reduced with almost 90%. Over a million studies are available through the network to date.
+   
+
+From the initial image sharing use case the network has expanded into other use cases. A number of mental health professionals use the network to share a summary record. As these records hold very privacy sensitive information, strict access control has been implemented that leverages a combination of the IHE XUA and BPPC profiles though which the identity of the mental health professional is exchanged. IHE BPPC based consent documents are used to comply with Dutch legislation. It requires that explicit patient consent is obtained before information can be shared. Another use case the network supports is the transfer of patients to Skilled Nursing Facilities and/or Long-Term Care facilities. In 2019 the XDS network was extended with XDW-based workflow capabilities to implement a referral workflow to support hospitals in the region to refer patients to the newly opened Proton Therapy Center. 
+
+The [following video](https://www.youtube.com/watch?v=LtbZ6QzUBhs) demonstrates how the XDS network is used to provide access to CT images in a time critical trauma use-case.
+
+#### 7.1.5.3 Dutch COVID-19 Portal
+
+As the first wave of the COVID-19 pandemic hit, the Dutch hospitals were quickly flooded with patients. In several hospitals that soon lead to a shortage of ICU bed capacity. The Dutch government set up a national control center to coordinate the spreading of patients across hospitals in The Netherlands. To exchange radiology images and reports as well as other information for patients being transferred, Philips set up a COVID-19 Portal. Within the first two weeks of that IHE XDS based information exchange infrastructure being available, virtually all the Dutch hospitals were using it. The portal uses an IHE BPPC based consent mechanism that enables a sending hospital to specify which receiving hospital can access a patient’s record. This mechanism allows hospitals to use a sharing-type infrastructure as opposed to a peer-to-peer information exchange, while staying compliant with Dutch privacy regulations.
+
+More [information is available here](https://www.ihe.net/wp-content/uploads/2020/04/Netherlands_COVID-case-study_edits_4.24.20.pdf).
+
 
 ### 7.1.6 Switzerland
 
