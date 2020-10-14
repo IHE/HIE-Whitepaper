@@ -1700,7 +1700,14 @@ sharing. For those readers who wish to learn more details, please refer:
 1. A white paper that covers deployment planning for an exchange [Template for [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) [Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
 1. A Handbook to aid a Document Sharing community with designing how they will use [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
 1. Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [IHE Process](https://wiki.ihe.net/index.php/Process) 
-1. A listing of all IHE authored [Implementation Guide Profiles](https://wiki.ihe.net/index.php/Profiles)
+1. Full listing of all IHE authored [Implementation Guide Profiles](https://wiki.ihe.net/index.php/Profiles)
+1. A listing of the [Document Sharing profiles from IHE](https://wiki.ihe.net/index.php/Category:DocShare)
+1. A listing of the [CDA content profiles from IHE](https://wiki.ihe.net/index.php/Category:CDA)
+1. A listing of the [FHIR Document content profiles from IHE](https://wiki.ihe.net/index.php/Category:FHIR-Doc)
+1. A listing of the [Cross-Enterprise Document Workflow profiles from IHE](https://wiki.ihe.net/index.php/Category:XDW)
+1. A listing of the [Security and Privacy profiles from IHE](https://wiki.ihe.net/index.php/Category:Security)
+1. Publication and discovery support [Non-Patient File Sharing (NPFS)](https://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFS))
+1. System end-point configuratino management form and catalog [Survey of Network Interfaces Form White Paper](https://ihe.github.io/SNIF/SNIF-Whitepaper.html)
 
 ## 7.1 Case Studies
 
