@@ -1707,9 +1707,8 @@ sharing. For those readers who wish to learn more details, please refer:
 The Document Sharing Health Information Exchange has been deployed in various regions. This section will provide linkage to some of those projects explanation of how they have used the Document Sharing Health Information Exchange profiles for their specific needs. These links are to external publications. 
 
 ### 7.1.1 OpenHIE
-[Open Health Information Exchange (OpenHIE)](https://ohie.org/) is an Open Data, Open Standards, Open Source, and Open Innovation project. OpenHIE is an [open community of organizations](http://digitalprinciples.org/build-for-sustainability/) and individuals who are passionate about improving health and health care data sharing. The OpenHIE community is owned by countries and serves as a resource for capacity building, and it receives operational support from Regenstrief Institute.
 
-See the [Case Study on use of OpenHIE](https://digitalprinciples.org/wp-content/uploads/PDD_CaseStudy-OpenHIE_v3.pdf) for an overview of the architecture and how they use the IHE Document Sharing Health Information Exchange profiles.
+In 2012, an initiative was launched, with donor support from the US President's Emergency Plan for AIDS Relief [PEPFAR](https://www.state.gov/pepfar/), to develop an open source health enterprise architecture that could be adapted and adopted by low and middle income countries (LMIC) to support national-scale health data sharing. The [Open Health Information Exchange (OpenHIE)](https://ohie.org/) framework describes a comprehensive family of digital health workflows expressed in terms of IHE Profiles. A case study of [OpenHIE](https://ohie.org), and version 1 of its architecture, was published by the [Principles for Digital Development](https://digitalprinciples.org/wp-content/uploads/PDD_CaseStudy-OpenHIE_v3.pdf). The latest version (v2) of the OpenHIE architecture, which is based on the HL7 FHIR specification (as profiled by IHE's [Mobile Health Document Sharing (MHDS)](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) specification), can be found here: https://ohie.org/architecture-specification/.
 
 ### 7.1.2 CareQuality
 
@@ -1720,6 +1719,7 @@ blah blah [CareQuality](https://carequality.org/what-we-do/)
 blah blah [CommonWell](https://www.commonwellalliance.org/connect-to-the-network/)
 
 ### 7.1.4 Canada Infoway
+
 
 blah blah [Infoway](https://infoway-inforoute.ca/en/solutions/digital-health-foundation)
 
