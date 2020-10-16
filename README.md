@@ -1156,7 +1156,7 @@ in that [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain
 The [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile can be used for Cross-Community if the
 communities are willing to have a centralized patient cross-reference
 
-The [Patient Identifier Cross-reference for Mobile (PIXm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-41.html) is functionally the same as PIX but leverages the [FHIR](http://fhir.hl7.org) standard.
+The [Patient Identifier Cross-reference for Mobile (PIXm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-41.html) provides the same query capability as PIX but leverages the [FHIR](http://fhir.hl7.org) standard. [PIXm](http://profiles.ihe.net/ITI/TF/Volume1/ch-41.html) can be used as an API to a Patient Identity Management system like [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) defines.  [PIXm](http://profiles.ihe.net/ITI/TF/Volume1/ch-41.html) does not include a feed transaction, see the [Patient Master Identity Registry (PMIR)](#54-patient-master-identity-registry-pmir) discussion below. 
 
 ## 5.2 Patient Demographics Query (PDQ)
 
@@ -1183,7 +1183,7 @@ his vaccination record to the community via the [XDS](http://profiles.ihe.net/IT
 
 The [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) service could be combined with the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) service to provide comprehensive patient identity knowledge. 
 
-The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) is functionally the same as PDQ but leverages the [FHIR](http://fhir.hl7.org) standard.
+The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) is functionally the same as PDQ but leverages the [FHIR](http://fhir.hl7.org) standard.  [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be used as an API to a Patient Identity Management system. [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be a FHIR API backed by a [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) query or a [Cross-Enterprise Patient Discovery (XCPD)](#53-cross-community-patient-discover-xcpd) query.   
 
 ## 5.3 Cross-Community Patient Discovery (XCPD)
 
@@ -1211,7 +1211,7 @@ community that represent Trudy. With this information, Dr. Holsen can
 subsequently use [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) to look for documents containing Trudy’s past
 medical history held within the Chicago community.
 
-The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) is functionally the same as XCPD but leverages the [FHIR](http://fhir.hl7.org) standard.
+The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) could be used similar XCPD but leverages the [FHIR](http://fhir.hl7.org) standard.  [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be a FHIR API backed by a [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) query. 
 
 The [Cross-Community slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Cross-Community_2012-12-10.ppt) and webinar [8 Further Reading](#8-further-reading), provide
 more detail about [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
