@@ -622,6 +622,16 @@ encryption, data integrity, digital signatures, and privacy consent
 management. Security and Privacy and the profiles IHE offers are
 discussed in [7 Security and Privacy](#7-security-and-privacy).
 
+# 2.12 Dynamic Documents
+
+There are three different models of a document: Stable, Delayed Assembly, and On-Demand. 
+
+A **Stable document** is one where the content has been gathered together at the time the document entry is authored. The stable model fits best with environments that can produce a document and have it stored in a Document Repository for retrieval as is necessary. The Stable document entry can be replaced, but the content is fixed at the time the document entry is authored.
+
+A **Delayed Assembly document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind and identity. The document is not assembled until the first Document Consumer requests to retrieve that document. The Retrieve request triggers the creation (delayed assembly) of the document. The Document Entry is updated with the given hash and size, and the document is now available as a Stable document. Usually this model is used when the Document Source is a responsible electronic health record but is not inherently document based. The Document Source can indicate all of the metadata about the document (except the hash and size), but chooses to not produce the document content until a Retrieve request is made. This model is used for episode or encounter based documents that have a given scope of content.
+
+An **On-Demand document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind, but content that is expected to change over time. The On-Demand model is used for summary documents, where the document contains the 'current' data fitting the defined kind of document. Thus, a request two months apart may contain different content given changes during the two month span. The document instance isn't created until a Document Consumer requests to retrieve an instance of the document. The Retrieve request triggers the creation of an instance of the document. The instance could be preserved as a snapshot, which is a kind of [Association](#27-document-relationships) managed off of the On-Demand document entry.
+
 # 3 Document sharing profiles
 
 The key actors in health information exchange are the document source
