@@ -1739,7 +1739,7 @@ blah blah [CommonWell](https://www.commonwellalliance.org/connect-to-the-network
 
 ### 8.1.4 Canada Infoway
 
-blah blah [Infoway](https://infoway-inforoute.ca/en/solutions/digital-health-foundation)
+Canada’s national standard for the exchange of diagnostic imaging (DI) is Cross-enterprise Document Sharing for Imaging (XDS-I). The benefits of nation-wide adoption of these specifications have been evaluated, over the years, by Canada’s national digital health agency, Canada Health Infoway. A recently-released [benefits analysis of community access to medical imaging](https://www.infoway-inforoute.ca/en/what-we-do/news-events/webinars/resources/reports/benefits-evaluation/3009-community-access-to-medical-imaging-benefits-evaluation) noted benefits related access, quality, and some improvements in productivity (although not evenly realized across all participants). The use of detailed benefits evaluations has informed Canada’s adoption of digital health and the fine-tuning of approaches that better serve the needs of clinicians and their patients.
 
 ### 8.1.5 Netherlands
 
