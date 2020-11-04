@@ -12,7 +12,7 @@
 * [7 Security and Privacy](#7-security-and-privacy)
 * [8 Further Reading](#8-further-reading)
 
-**Comments on this whitepaper are invited at any time and can be submitted as either [IHE comment form](https://www.ihe.net/ITI_Public_Comments/) or [GitHub issues](https://github.com/IHE/HIE-Whitepaper/issues)** Please reference the section that your comment applies to.
+**Comments on this whitepaper are invited at any time and can be submitted as either [IHE comment form](https://www.ihe.net/ITI_Public_Comments/) or [GitHub issues](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md)** Please reference the section that your comment applies to.
 
 # 1 Introduction
 
@@ -33,6 +33,8 @@ directories, and the protection of privacy and security. This white
 paper will show how various profiles work together to provide a
 standards based, interoperable approach to community and cross-community
 health information sharing.
+
+IHE has provided a recorded [YouTube webinar on the topic of the HIE-Whitepaper](https://www.youtube.com/watch?v=3sDgnS71m4o) with a focus on the FHIR support available.
 
 ## 1.1 Scope
 
@@ -723,7 +725,7 @@ across town. [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) may be use
 other clinical documents) from Dr. Suwati's Apollo EMR to Dr. Lima's
 Great Charts EMR.
 
-The [Point-to-Point Transmission of Documents slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDM_XDR_2012-12-10.ppt) and webinar (*broken webinar URLs*) provide more detail about [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html).
+The [Point-to-Point Transmission of Documents slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDM_XDR_2012-12-10.ppt) provides more detail about [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html).
 
 ### 3.1.2 Cross-Enterprise Document Media Interchange (XDM)
 
@@ -763,7 +765,7 @@ the image file to a USB key using the [XDM](http://profiles.ihe.net/ITI/TF/Volum
 USB key to Mary so that she may take the files with her to the
 orthopedist.
 
-The [Point-to-Point Transmission of Documents slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDM_XDR_2012-12-10.ppt) and webinar (*broken webinar URLs*) provide more detail about [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html).
+The [Point-to-Point Transmission of Documents slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDM_XDR_2012-12-10.ppt)  provides more detail about [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html).
 
 ### 3.1.3 Mobile access to Health Documents (MHD) push
 
@@ -820,6 +822,8 @@ The following Figure 3.2-1 shows the use of the MHD profile as an API to an XDS 
 ![](images/MHD-as-API-to-XDS.png)
 
 **Figure 3.2-1: XDS environment with MHD as API.**
+
+IHE Youtube channel has more [XDS webinar](https://www.youtube.com/watch?v=VG1oF5FEijY&t=2s) and [MHD webinar](https://www.youtube.com/watch?v=ZpQrHI3VVxY&t=1s) available.
 
 ### 3.2.1 Document Publishing
 
@@ -955,11 +959,9 @@ notified when a new document is made available. DSUB describes the use of subscr
 1. Using a push-style method of notification where the Subscriber subscribes to receive notifications about the availability of documents based on specific criteria or,
 2. Using a pull-style method which creates a Pull Point resource able to store notifications targeted to a specific recipient. Notifications stored in the Pull Point can be retrieved using a specific transaction.
 
-The [Publication and Discovery slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDS_DSUB_2012-12-10.ppt)and webinar (*broken link*) provide more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](http://profiles.ihe.net/ITI/TF/Volume1/ch-26.html).
+The [Publication and Discovery slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDS_DSUB_2012-12-10.ppt) provides more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](http://profiles.ihe.net/ITI/TF/Volume1/ch-26.html).
 
 ## 3.3 Federated Discovery and Retrieve
-
-TODO: review
 
 A community, such as an [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain, is a means for a specific
 set of related organizations/facilities to exchange clinical
@@ -1013,7 +1015,7 @@ well. This patient identity federation is profiled in the
 Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) profile. For more information
 on this profile see [Section 5.3](#53-cross-community-patient-discovery-xcpd).
 
-The [Cross-Community slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Cross-Community_2012-12-10.ppt) and webinar (*broken link*) provide
+The [Cross-Community slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Cross-Community_2012-12-10.ppt) provides
 more detail about [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
 ## 3.4 Choosing an infrastructure
@@ -1061,6 +1063,8 @@ The flows of information are depicted in the Figure 4-1:
 2. Data elements (e.g. allergies) queried using the FHIR based Query for Existing Data for Mobile ([QEDm](https://wiki.ihe.net/index.php/Query_for_Existing_Data_for_Mobile)) Profile (Query_for_Existing_Data_for_Mobile).
 3. Each data element is linked to the document(s) from which it was extracted per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
 4. Clinician accesses context of any data element of interest using source documents ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profiles) providing the clinical context in which the observation was recorded.
+
+For a more detailed guide see the [mXDE webinar](https://www.youtube.com/watch?v=o24WQgxiYVI&t=47s)
 
 # 5 Patient identity management
 
@@ -1113,8 +1117,8 @@ that need to be addressed at the time of deployment.
 | [Cross-Enterprise Patient Discovery (XCPD)](#53-cross-community-patient-discover-xcpd) | 1. supports the access between distributed peer patient identity domains. <br/> 2. It supports the ability to query by a set of demographics traits, including a domain specific patient identifier, and get in response one or more matching identities with a complete set of demographics traits, usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the peer patient identity domain needs to be addressed at deployment time for each one of the identity domain served. |
 | [Patient Master Identity Registry (PMIR)](#54-patient-master-identity-registry-pmir)  | 1. support the distributed creation, access, update, and merge process of shared master patient identity.  <br/> 2. The identity registry is a passive store for such shared (or golden) identities that are under the distributed control of identity sources.  | 1. Each deployment defines the policies to be followed by identity sources to ensure stability and quality of the master identities they create, update, and merge. <br/> 3. The is a mechanism to distribute all create, update, and merge actions to identity consumer actors, which have a duty to reflect these changes in their patient specific information stores. |
 
-The [Patient Identity Management deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Patient-Identity-Mgmt-2012-03-07.pptx) and webinar (*broken link*) 
-provide more detail about [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html).
+The [Patient Identity Management deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Patient-Identity-Mgmt-2012-03-07.pptx) 
+provides more detail about [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html). The [Patient Master Identity Registry (PMIR) Webinar](https://www.youtube.com/watch?v=MTHEfufTi-o&t=21s) covers more depth on [PMIR](#54-patient-master-identity-registry-pmir).
 
 ## 5.1 Patient Identity Cross-Reference (PIX)
 
@@ -1283,14 +1287,18 @@ security provisions defined by the grouped actor(s).*
 This section will discuss how a community that leverages IHE Profiles
 for document sharing can protect patient privacy and information
 security. The topic of Security and Privacy is covered in slide
-decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
+decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and the [Security and Privacy Profiles Introduction is long-form narrated](https://healthcaresecprivacy.blogspot.com/2011/05/ihe-privacy-and-security-profiles.html).
 
 An especially important aspect that is beyond the scope of IHE is the
-definition of the overall Policies of the community. There are **TO DO**
-[whitepapers and handbooks from IHE](*Cannot locate resources*), but there is no
+definition of the overall Policies of the community. There are 
+whitepapers and handbooks from IHE, but there is no
 single policy that must
 be put in place by an IHE based community to ensure privacy and
-security. In this section, we will discuss potential policy decisions and
+security. 
+* [Template for Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
+* [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
+
+In this section, we will discuss potential policy decisions and
 positions with regard to the profiles. It is especially important for the
 reader to understand that the scope of an IHE profile is only the
 technical details necessary to ensure interoperability. It is up to any
@@ -1517,7 +1525,7 @@ communications between these trusted systems is also encrypted.
 
 For more information on the use of IHE [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) to enable basic security see
 the security and privacy slide
-decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
+decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and the [Security and Privacy Profiles Introduction is long-form narrated](https://healthcaresecprivacy.blogspot.com/2011/05/ihe-privacy-and-security-profiles.html).
 
 ### 7.2.2 Protecting different types of documents
 
@@ -1572,7 +1580,7 @@ document metadata discussed above.
 
 For more details on enabling Role-Based-Access-Control and federation of
 identities see the security and privacy slide
-decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
+decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and the [Security and Privacy Profiles Introduction is long-form narrated](https://healthcaresecprivacy.blogspot.com/2011/05/ihe-privacy-and-security-profiles.html).
 
 ### 7.2.3 Patient Privacy Consent to participate in Document Sharing
 
@@ -1593,7 +1601,7 @@ appropriate use, as discussed above around the [ATNA](http://profiles.ihe.net/IT
 Privacy Consents may need to be expressed in a way that all parties in a
 Document Exchange can understand. IHE has published the Basic Patient
 Privacy Consents ([BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html)) Profile that can be used to enable basic privacy
-consent controls, and Advanced Patient Privacy Consents (APPC) that can
+consent controls, and Advanced Patient Privacy Consents [APPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-43.html) that can
 encode more complex rules specific to a patient consent. The encoding of
 Consent and advanced rules in FHIR “Consent” resource is possible but
 has not yet been profiled by IHE.
@@ -1625,6 +1633,8 @@ community. [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) does not de
 community that has defined its set of policies to capture that a patient
 has chosen one or more of those policies.
 
+The [APPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-43.html) Profile adds to the [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) functionality the ability to include deviations from the base policy in a structured and coded format. Where [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) is limited to agreement or not to a pre-defined policy, [APPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-43.html) allows for more fluid patient privacy consent function.
+
 For example: Let’s say that the above set of sample policy fragments was
 available to a patient sharing in a community. The patient could agree
 to Opt-In, and also agree to a specific research project. This set of
@@ -1635,7 +1645,7 @@ the systems involved in the document sharing can know that the patient
 has acknowledged these policies and thus the patient’s choices can be
 enforced. A system that is doing research can see that this patient has
 acknowledged participation in the research project, while other patients
-have not.
+have not. Where the patient agrees with the Policy but wants to exclude from access a named individual, that individual could be indicated inside the additional [APPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-43.html) document.
 
 Let’s further examine what happens when the patient changes their
 decision. For example, the patient is moving to a totally different
@@ -1645,8 +1655,6 @@ replacement for the previous Opt-In policies including the research
 policy. Thus, now if that research application tries to access the
 patient’s data, it will be blocked as the patient does not have a
 current acknowledgement of the research policy.
-
-TODO: include APPC
 
 ### 7.2.4 Security and Privacy in a Patient Safety Environment 
 
@@ -1694,7 +1702,7 @@ found in the profile text or through other webinars.
 
 
 Note: The topic of Security and Privacy is covered in slide
-decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and webinars (*broken links*).
+decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and the [Security and Privacy Profiles Introduction is long-form narrated](https://healthcaresecprivacy.blogspot.com/2011/05/ihe-privacy-and-security-profiles.html).
 
 # 8 Further Reading
 
@@ -1708,7 +1716,7 @@ sharing. For those readers who wish to learn more details, please refer:
 1. Information about the [IHE domains](http://ihe.net/IHE_Domains)
 1. IHE IT Infrastructure Committee [Educational slides and webinars](http://wiki.ihe.net/index.php?title=Current_Published_ITI_Educational_Materials).
 1. IHE IT Infrastructure [formal specifications and whitepapers](https://www.ihe.net/resources/technical_frameworks/#IT )
-1. A white paper that covers deployment planning for an exchange [Template for [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) [Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
+1. A white paper that covers deployment planning for an exchange [Template for XDS Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
 1. A Handbook to aid a Document Sharing community with designing how they will use [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
 1. Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [IHE Process](https://wiki.ihe.net/index.php/Process) 
 1. Full listing of all IHE authored [Implementation Guide Profiles](https://wiki.ihe.net/index.php/Profiles)
@@ -1718,7 +1726,8 @@ sharing. For those readers who wish to learn more details, please refer:
 1. A listing of the [Cross-Enterprise Document Workflow profiles from IHE](https://wiki.ihe.net/index.php/Category:XDW)
 1. A listing of the [Security and Privacy profiles from IHE](https://wiki.ihe.net/index.php/Category:Security)
 1. Publication and discovery support [Non-Patient File Sharing (NPFS)](https://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFS))
-1. System end-point configuratino management form and catalog [Survey of Network Interfaces Form White Paper](https://ihe.github.io/SNIF/SNIF-Whitepaper.html)
+1. System end-point configuration management form and catalog [Survey of Network Interfaces Form White Paper](https://ihe.github.io/SNIF/SNIF-Whitepaper.html)
+1. [Webinar on the topic](https://www.youtube.com/watch?v=3sDgnS71m4o)
 
 ## 8.1 Case Studies
 
@@ -1747,7 +1756,7 @@ Canada’s national standard for the exchange of diagnostic imaging (DI) is Cros
 
 [IHE Success Story](https://www.iheusa.org/sites/iheusa/files/HIMSS_IHE_Forcare_Success_Story_web.pdf)
 
-After extensive research the Medical Center Leeuwarden (MCL, The Netherlands) chose to create a regional cardiology exchange based on the principles of the IHE XDS profile back in 2007.  The cardiology exchange network connects hospitals in the Dutch province of Friesland and is in operation since 2008. The exchange network is based on various IT-Infrastructure profiles centered around XDS and supports a clinical pathway where community-based hospitals and clinics refer patients for cardiac intervention procedures to MCL. Given the heterogenous landscape of clinical information systems from different (local) vendors, information broker technology is used to connect to legacy system and to transform data into XDS documents. Prior to implementing the exchange network, it took on average 3 days to complete a patient referral. Most of the delay was caused by the inability to exchange diagnostic information in a timely manner. With the network in place referrals can be completed in less than 24 hours which provides great patient benefits and lead to a shorter stay in the hospital 
+After extensive research the Medical Center Leeuwarden (MCL, The Netherlands) chose to create a regional cardiology exchange based on the principles of the IHE XDS profile back in 2007.  The cardiology exchange network connects hospitals in the Dutch province of Friesland and is in operation since 2008. The exchange network is based on various IT-Infrastructure profiles centered around XDS and supports a clinical pathway where community-based hospitals and clinics refer patients for cardiac intervention procedures to MCL. Given the heterogeneous landscape of clinical information systems from different (local) vendors, information broker technology is used to connect to legacy system and to transform data into XDS documents. Prior to implementing the exchange network, it took on average 3 days to complete a patient referral. Most of the delay was caused by the inability to exchange diagnostic information in a timely manner. With the network in place referrals can be completed in less than 24 hours which provides great patient benefits and lead to a shorter stay in the hospital 
 
 The network covers 4 hospitals and 2 outpatient clinics. The number of users is approximately 250, with 10,000 documents being processed annually.
 
@@ -1762,7 +1771,7 @@ The [following video](https://www.youtube.com/watch?v=LtbZ6QzUBhs) demonstrates 
 
 #### 8.1.5.3 Dutch COVID-19 Portal
 
-As the first wave of the COVID-19 pandemic hit, the Dutch hospitals were quickly flooded with patients. In several hospitals that soon lead to a shortage of ICU bed capacity. The Dutch government set up a national control center to coordinate the spreading of patients across hospitals in The Netherlands. To exchange radiology images and reports as well as other information for patients being transferred, Philips set up a COVID-19 Portal. Within the first two weeks of that IHE XDS based information exchange infrastructure being available, virtually all the Dutch hospitals were using it. The portal uses an IHE BPPC based consent mechanism that enables a sending hospital to specify which receiving hospital can access a patient’s record. This mechanism allows hospitals to use a sharing-type infrastructure as opposed to a peer-to-peer information exchange, while staying compliant with Dutch privacy regulations.
+As the first wave of the COVID-19 pandemic hit, the Dutch hospitals were quickly flooded with patients. In several hospitals that soon lead to a shortage of ICU bed capacity. The Dutch government set up a national control center to coordinate the spreading of patients across hospitals in The Netherlands. To exchange radiology images and reports as well as other information for patients being transferred, Phillips set up a COVID-19 Portal. Within the first two weeks of that IHE XDS based information exchange infrastructure being available, virtually all the Dutch hospitals were using it. The portal uses an IHE BPPC based consent mechanism that enables a sending hospital to specify which receiving hospital can access a patient’s record. This mechanism allows hospitals to use a sharing-type infrastructure as opposed to a peer-to-peer information exchange, while staying compliant with Dutch privacy regulations.
 
 More [information is available here](https://www.ihe.net/wp-content/uploads/2020/04/Netherlands_COVID-case-study_edits_4.24.20.pdf).
 
@@ -1778,5 +1787,5 @@ See the other [IHE case studies on the use of IHE profiles](https://www.ihe.net/
 
 
 
-**Comments on this whitepaper are invited at any time and can be submitted as either [IHE comment form](https://www.ihe.net/ITI_Public_Comments/) or [GitHub issues](https://github.com/IHE/HIE-Whitepaper/issues)** Please reference the section that your comment applies to.
+**Comments on this whitepaper are invited at any time and can be submitted as either [IHE comment form](https://www.ihe.net/ITI_Public_Comments/) or [GitHub issues](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md)** Please reference the section that your comment applies to.
 
