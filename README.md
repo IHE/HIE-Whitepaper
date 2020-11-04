@@ -1734,6 +1734,7 @@ sharing. For those readers who wish to learn more details, please refer:
 1. A white paper that covers deployment planning for an exchange [Template for XDS Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
 1. A Handbook to aid a Document Sharing community with designing how they will use [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
 1. Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [IHE Process](https://wiki.ihe.net/index.php/Process) 
+1. HIMSS:  [Interoperability in Healthcare Guide](https://www.himss.org/resources/interoperability-healthcare). This guide covers the basics of interoperability in health information exchange. Covering the definition of interoperability, interoperability standards, interoperability ecosystem, use of information exchange, workflow considerations and guidelines, and policy and government efforts.
 1. Full listing of all IHE authored [Implementation Guide Profiles](https://wiki.ihe.net/index.php/Profiles)
 1. A listing of the [Document Sharing profiles from IHE](https://wiki.ihe.net/index.php/Category:DocShare)
 1. A listing of the [CDA content profiles from IHE](https://wiki.ihe.net/index.php/Category:CDA)
