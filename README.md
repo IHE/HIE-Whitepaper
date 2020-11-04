@@ -1243,6 +1243,21 @@ A consumer system may query the [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch
 Authorized patient identity source authorities will feed create, update, or merge events to the [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) registry, which will further propagate these changes to a set of patient identity consumers that have subscribed. Upon receiving a create, update, or merge event these subscribed consumers are expected to update their patient specific information accordingly. For example when a merge has been declared the subscribed consumer will merge into the surviving identity any data that was known against the merged identity. This set of authorized patient identity source authorities keep the master identity accurate, using update when there are changes to the demographics. The registry may also implement the identity source to enable automated quality checks.
 
  A primary use of the PMIR, PDQm, and PIXm Profiles are to enable document consumers and document sources using the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) Profile to find the patient’s identifier in that Community Patient Identifier Domain within a [Centralized Discovery and Retrieve](#32-centralized-discovery-and-retrieve) environment.
+ 
+The Figure 5.4-2 diagram shows three sytems: A Registration Desk, A Patient Master Registry, and a Data Services (data server). These are implementing the PMIR actors depicted in yellow boxes. This is not the only way the PMIR actors can be used, many configurations are not shown including one where the Patient Master Registry has internal logic that would have it detect and automatically correct entries which is accomplished by the Patient Master Registry also implementing a Patient Identity Source.
+
+First shown is that the Data Services, representing any or all of the servers (e.g. EHR) in a community that hold data about patient subjects. This Data Services uses the PMIR Patient Identity Subscriber actor to subscribe to be notified if any Patient Identity changes (created, updated, merged, or deleted). This subscription comes in later caused by Registration Desk activities.
+ 
+Second shown is the Registration Desk activities. A patient presents, so is looked up in the Patient Master Registry. 
+* If there is only one Patient found, and all the demographics are correct, then there is nothing more needing to be done. That one Patient found can be used within the community. 
+* There are three alternatives shown: where one patient needs demographics or identifiers updated, where there is no patient found, and where more than one patient are found. 
+  * In the first case after clarifying that there is a need to make the demographics or identifier change, the Registration desk informs the Patient Master Registry of the  update to the demographics, which causes the Patient Master Registry to record these changes AND inform all the interested parties such as the Data Services that has subscribed.
+  * In the second case after confirming that no patient has found (e.g. a newborn, or new emigrant), the Registration desk informs the Patient Master Registry of the new patient with given demographics, which causes the Patient Master Registry to record this new Patient AND inform all the interested partieis such as the Data Services that has subscribed.
+  * In the third case after confirming that the patients found are indeed all the same human, the Registration desk determines which patient entry should be merged into the other. The Registration desk informs the Patient Master Registry of the merged patients with specific instructions on which identity should be used and which identity should not be used anymore, which causes the Patient Master Registry to record this merge Patients AND inform all the interested partieis such as the Data Services that has subscribed.
+
+![](images/PMIR-flow.png)
+
+**Figure 5.4-2: Patient Master Identity Registry flow**
 
 # 6 Common Provider Directory
 
