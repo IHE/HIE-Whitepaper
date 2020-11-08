@@ -1787,8 +1787,18 @@ More [information is available here](https://www.ihe.net/wp-content/uploads/2020
 
 ### 8.1.6 Switzerland
 
+The Swiss Electronic Patient Record is a national initiative to build a XDS-based sharing infrastructure for all health related data. Reports, diagnostic data, medication, images, and other health related information is shared between practitioners, hospitals and the patients concerned.
 
-blah blah [Siss approach to interconnect](https://na.eventscloud.com/file_uploads/865a2f1cf5d49424e2ae1d8bc9e78306_Day1.Panel1.Speaker2.SangIlKim.pdf)
+The network is made up of 8 [regional and cross-regional communities](https://www.e-health-suisse.ch/fileadmin/user_upload/Bilder/Gemeinschaft_und_Umsetzung/gemeinschaften-im-aufbau.png). Each Community provides a IHE XDS Affinity Domain to share the data between the healthcare enterprises and the patients concerned, and with all other communities. Some communities also provide proprietary health related services for patients and healthcare professionals participating to the community.      
+
+To ensure interoperability and prevent from vendor lock in, communities use IHE ITI transactions for the cross communication data exchange as well is for the internal communication. Currently 16 [profiles and the according transactions](https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/E/overview-profiles-swiss-electronic-patient-record.pdf) of the ITI Technical Framework are implemented by the communities. The use of new profiles is foreseen to adapt to changes or to add specific functionality, e.g., mobile access or the IHE pharmacy framework.  
+
+The base IHE profiles are adapted to the [Swiss specific use cases](https://ehealthsuisse.ihe-europe.net/docs/sequence_diagrams/) and requirements in [Swiss national extensions](https://www.e-health-suisse.ch/en/technik-semantik/epr-projectathon/epr-programming-aids/relevant-specifications.html). In addition national profiles and transactions have been defined for Swiss specific use cases, i.e., enhanced access policy management and interfaces to national registers. 
+
+The national extensions and the mandatory IHE profiles are legally anchored as part of the ordinances to the law of the electronic patient dossier. Communities and their vendors verify the compliance to the IHE profiles performing [Swiss specific interoperability tests](https://ehealthsuisse.ihe-europe.net/gazelle/testing/testsDefinition/testsList.seam?testType=2&testStatus=1) as part of a certification process.  
+
+While initially planned to April 2020, the go live was postponed due to the COVID-19 pandemia to April 2021.
+
 
 ### 8.1.7 And many more
 
