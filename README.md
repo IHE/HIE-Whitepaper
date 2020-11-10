@@ -1747,9 +1747,40 @@ The Document Sharing Health Information Exchange has been deployed in various re
 
 In 2012, an initiative was launched, with donor support from the US President's Emergency Plan for AIDS Relief [PEPFAR](https://www.state.gov/pepfar/), to develop an open source health enterprise architecture that could be adapted and adopted by low and middle income countries (LMIC) to support national-scale health data sharing. The [Open Health Information Exchange (OpenHIE)](https://ohie.org/) framework describes a comprehensive family of digital health workflows expressed in terms of IHE Profiles. A case study of [OpenHIE](https://ohie.org), and version 1 of its architecture, was published by the [Principles for Digital Development](https://digitalprinciples.org/wp-content/uploads/PDD_CaseStudy-OpenHIE_v3.pdf). The latest version (v2) of the OpenHIE architecture, which is based on the HL7 FHIR specification (as profiled by IHE's [Mobile Health Document Sharing (MHDS)](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) specification), can be found here: https://ohie.org/architecture-specification/.
 
-### 8.1.2 CareQuality
+### 8.1.2 The Sequoia Project
+ [The Sequoia Project](https://sequoiaproject.org/). 
+ 
+#### 8.1.2.1 eHealth Exchange
+In 2012, the [eHealth Exchange Network](https://ehealthexchange.org/) transitioned from the Office of the National Coordinator for Health IT to a private sector initiative, supported by [The Sequoia Project](https://sequoiaproject.org/). Since then, the eHealth Exchange network became a separate company, independent from Sequoia and has morphed and matured to connect more than 75 percent of all hospitals in the United States, 70,000 medical groups, and over 120 million patients. Today, the eHealth Exchange is the largest public-private health information network in the country.  Its connectivity spans all 50 states and the current participants can be found [here](https://ehealthexchange.org/participants/).
 
-blah blah [CareQuality](https://carequality.org/what-we-do/)
+The [eHealth Exchange](https://ehealthexchange.org/what-is-the-ehealth-exchange/) is a mature network of U.S. exchange partners, including the government and healthcare industry, that securely share clinical information over the Internet, using a standardized approach. By leveraging [common standards](https://ehealthexchange.org/testing-program/exchange-specifications/)  participants find the eHealth Exchange offers a unique value proposition, one that enables them to share a wide array of health data without requiring additional customization or one-off legal agreements. The eHealth Exchange is improving content to address several pain points across the healthcare industry, including optionality, terminology, specification and complexity. Participating organizations mutually agree to support a common set of standards and specifications that enable the establishment of a secure, trusted and interoperable connection among all participating organizations for the standardized flow of information, by: 
+- Sending health information to other participating organizations
+- Finding and requesting copies of healthcare information from other participating organizations – where permitted by law and policy
+- Matching patients to their data without a national patient identifier
+- Subscribing to receive updates to health information
+
+The eHealth Exchange supports multiple use cases, including: 
+- Treatment / Care Coordination
+- Military / Veteran Health
+- Authorized Release of Information for Disability Benefits Determination, Consumer Access to Health Information, and Life Insurance
+- Quality Reporting for the End Stage Renal Disease (ESRD) Program
+- Immunization
+- Encounter Alerts
+- Prescription Drug Monitoring Program (PDMP) and Electronic Lab Reporting (in support of public heatlh)
+- Electronic Case Reporting to the Association of Public Health Laboratories
+- Syndromic Surveillance
+- Image Sharing
+
+#### 8.1.2.2 Carequality
+What if you had a cell phone plan that only allowed you to call other customers of your carrier?  That’s the situation for many healthcare providers today when they join a data sharing network.  The networks provide connectivity, but only within their membership, which ofter follows geographic or technology vendor lines.  The connectivity can provide significant benefits, but falls shows of the potential value if networks could be connected. [Carequality](https://carequality.org/overview-video/) has brought together the entire healthcare industry to overcome this challenge by providing a national-level, consensus-build, common interoperability framework to enable exchange between and among health data sharing networks.  Carequality brings together a diverse group of [implementers](https://carequality.org/members-and-supporters/)  including electronic health record (EHR) vendors, record locator service (RLS) providers and other types of existing networks from the private sector and government, to determine technical and policy agreements to enable data to flow between and among networks, platforms, and geographies, much like the telecommunications industry did for linking cell phone networks.  
+
+There are three essential core elements to enable this sort of widespread connectivity, without individual pre-coordination with each partner:
+- Common rules of the road: In order for the varied participants to trust each other with health information, everyone needs to have a legal obligation to abide by the same rules.
+- Well defined technical specifications: Shared rules are not enough; clear standards must be laid out in an implementation guide that all implementers can follow.
+- A participant directory: To connect using the common standards, systems must know the addresses and roles of each participant
+
+Carequality is implementing each of these pieces, as the core of a practical, operational framework for connecting the country through existing networks.  The comprehensive [Carequality Interoperability Framework](https://carequality.org/resources/) consists of multiple elements, including legal terms, policy requirements, technical specifications, and governance processes, which operationalize data sharing under the previously approved Principles of Trust.  The Framework is now available for health information exchange networks, vendors, payers, and others across the healthcare ecosystem to adopt, providing a practical approach to unlocking previously unseen levels of connectivity. By developing a scalable, health IT interoperability framework for nationwide health data sharing across networks Carequality is [helping patient and providers](https://carequality.org/members-and-supporters/testimonials/). 
+
 
 ### 8.1.3 CommonWell
 
