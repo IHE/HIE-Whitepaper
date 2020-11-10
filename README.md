@@ -1088,10 +1088,9 @@ A Patient Identity is distinct from Patient Identifier, in that a Patient Identi
 IHE recommends that the identification of the patient be done
 through patient identifiers in a common or accepted patient
 identification domain. Thus, prior to the exchange of healthcare
-information the partners agreed on a commonly known patient identifier
-to refer to the patient. This requirement, however, is often non-trivial
-and the patient identity management profiles serve the purpose of
-enabling this aspect of Document Sharing. Some regions and nations have
+information the partners agree on a commonly known patient identifier
+to refer to the patient. This recommendation, however, is often non-trivial
+and the patient identity management profiles enable this aspect of Document Sharing. Some regions and nations have
 enabled the use of a unique patient identifier that is widely available
 but many places still need profiles which aid in patient identifier
 discovery.
@@ -1108,11 +1107,11 @@ styles of distributed management of patient IDs and discusses the
 assumptions the profile is built upon and highlights key conditions 
 that need to be addressed at the time of deployment.
 
-**Table 5-1: IHE Profiles that Support Various Style of Distributed Management of Patient ID**
+**Table 5-1: IHE Profiles that Support Various Styles of Distributed Management of Patient ID**
 
 |    Patient Identification Profiles       |                           Assumptions                             |                       Conditions                       | 
 | ---------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------|
-| [Patient Demographics Query (PDQ)](#52-patient-demographics-query-pdq) | 1. supports the access to a central registry of identities. <br/> 2. It supports the ability to query in one or more patient identity domains of interest, by a set of demographics traits and get in response one or more matching identities with their complete set of demographics traits, usually including patient identifiers.| 1. The process to create and update the registry of identities along with their demographics needs to be addressed at deployment time for each one of the identity domain served. |
+| [Patient Demographics Query (PDQ)](#52-patient-demographics-query-pdq) | 1. supports the access to a central registry of identities. <br/> 2. It supports the ability to query in one or more patient identity domains of interest, by a set of demographics traits and get in response one or more matching identities with their complete set of demographics traits, usually including patient identifiers.| 1. The process to create and update the registry of identities along with their demographics needs to be addressed at deployment time for each one of the identity domains served. |
 | [Patient Id Cross-referencing (PIX)](#51-patient-identity-cross-reference-pix) | 1. supports the linking of patient identifiers between patient identifiers from different domains. <br/> 2. Each identifier domain entirely controls the creation, updates, and merges of its identities. <br/> 3. The consumer of identity cross-references does not need to know any of the patient demographics as managed by the domain controlling the identity. | 1. Each deployment relies on a cross-referencing algorithm which is centrally managed and needs to be quality controlled. <br/> 2. The consumers of cross-references between identities from different identity domains either persist the cross-reference and actively process update notification (profile option), or never persist cross-references and re-query when needed. |
 | [Cross-Enterprise Patient Discovery (XCPD)](#53-cross-community-patient-discover-xcpd) | 1. supports the access between distributed peer patient identity domains. <br/> 2. It supports the ability to query by a set of demographics traits, including a domain specific patient identifier, and get in response one or more matching identities with a complete set of demographics traits, usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the peer patient identity domain needs to be addressed at deployment time for each one of the identity domain served. |
 | [Patient Master Identity Registry (PMIR)](#54-patient-master-identity-registry-pmir)  | 1. support the distributed creation, access, update, and merge process of shared master patient identity.  <br/> 2. The identity registry is a passive store for such shared (or golden) identities that are under the distributed control of identity sources.  | 1. Each deployment defines the policies to be followed by identity sources to ensure stability and quality of the master identities they create, update, and merge. <br/> 3. The is a mechanism to distribute all create, update, and merge actions to identity consumer actors, which have a duty to reflect these changes in their patient specific information stores. |
