@@ -70,9 +70,16 @@ Handbook](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metad
 provides guidance on developing policy and vocabulary valuesets for use
 within the community. For application of Document Sharing for particular
 clinical use cases, consider the work of the clinical IHE domains:
-Anatomic Pathology, Cardiology, Eye Care, Laboratory, Patient Care
-Coordination, Patient Care Device, Pharmacy, Quality, Research and
-Public Health; Radiation Oncology, and Radiology.
+* Anatomic Pathology
+* Cardiology
+* Eye Care
+* Laboratory
+* Patient Care Coordination
+* Patient Care Device
+* Pharmacy
+* Quality, Research and Public Health
+* Radiation Oncology
+* Radiology.
 
 ## 1.2 Intended Audience
 
@@ -304,7 +311,7 @@ document.
 
 ### 2.3.1 FHIR-Document vs CDA-Document
 
-Two structured and coded health specific document types are Clinical Document Architecture (CDA) and Fast Health Interoperability Resources (FHIR) documents. Both of these formats are defined by HL7. CDA has received much of the attention over the past 20 years, with FHIR emerging in 2010s. FHIR initial focus was on an interactive query/response model referred to as "REST"; but FHIR has a "Document" encoding as well. The FHIR Document model has a top level resource that sets the context, content, and flow of the FHIR Document, and that is followed by copies of the data resources; all of this is encoded into a single bundle. This single bundle is able to be managed in Document Sharing just like any other Document. 
+Two structured and coded health specific document types are Clinical Document Architecture (CDA) and Fast Health Interoperability Resources (FHIR) documents. Both of these formats are defined by HL7. CDA has received much of the attention over the past 20 years, with FHIR emerging in 2010s. FHIR's initial focus was on an interactive query/response model referred to as "REST"; but FHIR has a "Document" encoding as well. The FHIR Document model has a top level resource that sets the context, content, and flow of the FHIR Document, and that is followed by copies of the data resources; all of this is encoded into a single bundle. This single bundle is able to be managed in Document Sharing just like any other Document. 
 
 The FHIR Document has a benefit of being made up of the same resources that one would get from a Query/Response API. There is clear identity (.id) of each of these resources to so they are clearly distinct, which can be used for tracking if the data contained previously known. The FHIR Document model includes more consistent metadata and provenance for each resource. This traceability makes accessing the content within a FHIR Document more consistent limiting unnecessary duplication of data. This model enables more easy on the Content Consumer.
 
@@ -630,9 +637,9 @@ There are three different models of a document: Stable, Delayed Assembly, and On
 
 A **Stable document** is one where the content has been gathered together at the time the document entry is authored. The stable model fits best with environments that can produce a document and have it stored in a Document Repository for retrieval as is necessary. The Stable document entry can be replaced, but the content is fixed at the time the document entry is authored.
 
-A **Delayed Assembly document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind and identity. The document is not assembled until the first Document Consumer requests to retrieve that document. The Retrieve request triggers the creation (delayed assembly) of the document. The Document Entry is updated with the given hash and size, and the document is now available as a Stable document. Usually this model is used when the Document Source is a responsible electronic health record but is not inherently document based. The Document Source can indicate all of the metadata about the document (except the hash and size), but chooses to not produce the document content until a Retrieve request is made. This model is used for episode or encounter based documents that have a given scope of content.
+A **Delayed Assembly document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind and identity. The document is not assembled until the first Document Consumer requests to retrieve that document. The retrieve request triggers the creation (delayed assembly) of the document. The Document Entry is updated with the given hash and size, and the document is now available as a Stable document. This model can be used when the Document Source is a database that is not inherently document based, but can produce a document for persistant storage upon request. The Document Source can indicate all of the metadata about the document (except the hash and size), but chooses to not produce the document content until a retrieve request is made. 
 
-An **On-Demand document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind, but content that is expected to change over time. The On-Demand model is used for summary documents, where the document contains the 'current' data fitting the defined kind of document. Thus, a request two months apart may contain different content given changes during the two month span. The document instance isn't created until a Document Consumer requests to retrieve an instance of the document. The Retrieve request triggers the creation of an instance of the document. The instance could be preserved as a snapshot, which is a kind of [Association](#27-document-relationships) managed off of the On-Demand document entry.
+An **On-Demand document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind, but content that is expected to change over time. The On-Demand model is used when the document source can ensure that the returned document always contains information that is known to be accurate at the time of request. This can be used in cases where the document source is a database that is not inherently document based, and document consumers wish to always receive the most up to date information available. Thus, a request two months apart may contain different content given changes during the two month span. The document instance isn't created until a Document Consumer requests to retrieve an instance of the document. The retrieve request triggers the creation of an instance of the document. The instance could be preserved as a snapshot, which is a kind of [Association](#27-document-relationships) managed off of the On-Demand document entry.
 
 # 3 Document sharing profiles
 
@@ -687,7 +694,7 @@ The IHE profiles addressing these models are:
 
   - Federated Discovery and Retrieve – Cross-Community Access ([XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html))
 
-The following figure shows the flow of data for each of these models.
+The following figures show the flow of data for each of these models.
 
 ![](images/push-models.png)
 
@@ -899,8 +906,8 @@ of discovery can be highly automated.
 
 ### 3.2.3 Governance
 
-As described in [1 Principles of Health Document Sharing](#1-principles-of-health-document-sharing) 
-is document content neutral; uses
+As described in [1 Principles of Health Document Sharing](#1-principles-of-health-document-sharing), 
+Document Sharing is document content neutral; uses
 document metadata that are represented in a structured, standard format;
 and supports longevity of document storage.
 
@@ -1124,7 +1131,7 @@ provides more detail about [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.htm
 
 ## 5.1 Patient Identity Cross-Reference (PIX)
 
-The Patient Identity Cross-Reference [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) profile supports the access to a central registry of cross-referenced identities, and the feed of identity updates from distributed identity domains. 
+The Patient Identity Cross-Reference [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile supports the access to a central registry of cross-referenced identities, and the feed of identity updates from distributed identity domains. 
 
 Most health information systems assign to each patient an identifier
 (usually a string of letters and/or numbers) that is unique to the
@@ -1342,8 +1349,8 @@ Network Controls.
 
 While community Policies and Risk Management are outside its scope, IHE
 does recognize that these elements are a necessary piece of a system
-implementation. IHE IT Infrastructure technical white paper, [Template
-for [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html). [Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf) outlines
+implementation. The IHE IT Infrastructure technical white paper, [Template
+for XDS Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf) outlines
 some of the issues that should be evaluated for inclusion in the local
 Policy creation and Risk Management decisions. It is therefore the duty
 of system implementers to take this guidance into account as part of
@@ -1510,8 +1517,8 @@ Authentication ([ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html)). This 
 system:
 
 1.  User authentication and Access Controls are enforced accordingly,
-2.  security Audit Logs are recorded, and
-3. strong network authentication and encryption for all communications
+2.  Security Audit Logs are recorded, and
+3.  Strong network authentication and encryption for all communications
     of sensitive patient data.
 
 The Security Audit Logging includes a set of security relevant events
