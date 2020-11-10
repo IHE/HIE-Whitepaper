@@ -1,4 +1,4 @@
-**IHE IT Infrastructure** **White Paper**
+**[IHE IT Infrastructure](https://profiles.ihe.net/ITI)** **White Paper**
 
 **Enabling Document Sharing Health Information Exchange Using IHE Profiles**
 
@@ -17,7 +17,7 @@
 # 1 Introduction
 
 The [Integrating the Healthcare Enterprise (IHE)](http://www.ihe.net) standards profiling
-organization has developed a collection of profiles which can be
+organization has developed a [collection of profiles](http://profiles.ihe.net/ITI/TF/Volume1/index.html) which can be
 leveraged for use by healthcare communities for the purposes of document
 sharing. One of the most significant applications of healthcare
 information technology is the exchange of health information among
