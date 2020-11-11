@@ -1,4 +1,4 @@
-**IHE IT Infrastructure** **White Paper**
+**[IHE IT Infrastructure](https://profiles.ihe.net/ITI)** **White Paper**
 
 **Enabling Document Sharing Health Information Exchange Using IHE Profiles**
 
@@ -17,7 +17,7 @@
 # 1 Introduction
 
 The [Integrating the Healthcare Enterprise (IHE)](http://www.ihe.net) standards profiling
-organization has developed a collection of profiles which can be
+organization has developed a [collection of profiles](http://profiles.ihe.net/ITI/TF/Volume1/index.html) which can be
 leveraged for use by healthcare communities for the purposes of document
 sharing. One of the most significant applications of healthcare
 information technology is the exchange of health information among
@@ -70,9 +70,16 @@ Handbook](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metad
 provides guidance on developing policy and vocabulary valuesets for use
 within the community. For application of Document Sharing for particular
 clinical use cases, consider the work of the clinical IHE domains:
-Anatomic Pathology, Cardiology, Eye Care, Laboratory, Patient Care
-Coordination, Patient Care Device, Pharmacy, Quality, Research and
-Public Health; Radiation Oncology, and Radiology.
+* Anatomic Pathology
+* Cardiology
+* Eye Care
+* Laboratory
+* Patient Care Coordination
+* Patient Care Device
+* Pharmacy
+* Quality, Research and Public Health
+* Radiation Oncology
+* Radiology.
 
 ## 1.2 Intended Audience
 
@@ -304,7 +311,7 @@ document.
 
 ### 2.3.1 FHIR-Document vs CDA-Document
 
-Two structured and coded health specific document types are Clinical Document Architecture (CDA) and Fast Health Interoperability Resources (FHIR) documents. Both of these formats are defined by HL7. CDA has received much of the attention over the past 20 years, with FHIR emerging in 2010s. FHIR initial focus was on an interactive query/response model referred to as "REST"; but FHIR has a "Document" encoding as well. The FHIR Document model has a top level resource that sets the context, content, and flow of the FHIR Document, and that is followed by copies of the data resources; all of this is encoded into a single bundle. This single bundle is able to be managed in Document Sharing just like any other Document. 
+Two structured and coded health specific document types are Clinical Document Architecture (CDA) and Fast Health Interoperability Resources (FHIR) documents. Both of these formats are defined by HL7. CDA has received much of the attention over the past 20 years, with FHIR emerging in 2010s. FHIR's initial focus was on an interactive query/response model referred to as "REST"; but FHIR has a "Document" encoding as well. The FHIR Document model has a top level resource that sets the context, content, and flow of the FHIR Document, and that is followed by copies of the data resources; all of this is encoded into a single bundle. This single bundle is able to be managed in Document Sharing just like any other Document. 
 
 The FHIR Document has a benefit of being made up of the same resources that one would get from a Query/Response API. There is clear identity (.id) of each of these resources to so they are clearly distinct, which can be used for tracking if the data contained previously known. The FHIR Document model includes more consistent metadata and provenance for each resource. This traceability makes accessing the content within a FHIR Document more consistent limiting unnecessary duplication of data. This model enables more easy on the Content Consumer.
 
@@ -630,9 +637,9 @@ There are three different models of a document: Stable, Delayed Assembly, and On
 
 A **Stable document** is one where the content has been gathered together at the time the document entry is authored. The stable model fits best with environments that can produce a document and have it stored in a Document Repository for retrieval as is necessary. The Stable document entry can be replaced, but the content is fixed at the time the document entry is authored.
 
-A **Delayed Assembly document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind and identity. The document is not assembled until the first Document Consumer requests to retrieve that document. The Retrieve request triggers the creation (delayed assembly) of the document. The Document Entry is updated with the given hash and size, and the document is now available as a Stable document. Usually this model is used when the Document Source is a responsible electronic health record but is not inherently document based. The Document Source can indicate all of the metadata about the document (except the hash and size), but chooses to not produce the document content until a Retrieve request is made. This model is used for episode or encounter based documents that have a given scope of content.
+A **Delayed Assembly document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind and identity. The document is not assembled until the first Document Consumer requests to retrieve that document. The retrieve request triggers the creation (delayed assembly) of the document. The Document Entry is updated with the given hash and size, and the document is now available as a Stable document. This model can be used when the Document Source is a database that is not inherently document based, but can produce a document for persistant storage upon request. The Document Source can indicate all of the metadata about the document (except the hash and size), but chooses to not produce the document content until a retrieve request is made. 
 
-An **On-Demand document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind, but content that is expected to change over time. The On-Demand model is used for summary documents, where the document contains the 'current' data fitting the defined kind of document. Thus, a request two months apart may contain different content given changes during the two month span. The document instance isn't created until a Document Consumer requests to retrieve an instance of the document. The Retrieve request triggers the creation of an instance of the document. The instance could be preserved as a snapshot, which is a kind of [Association](#27-document-relationships) managed off of the On-Demand document entry.
+An **On-Demand document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind, but content that is expected to change over time. The On-Demand model is used when the document source can ensure that the returned document always contains information that is known to be accurate at the time of request. This can be used in cases where the document source is a database that is not inherently document based, and document consumers wish to always receive the most up to date information available. Thus, a request two months apart may contain different content given changes during the two month span. The document instance isn't created until a Document Consumer requests to retrieve an instance of the document. The retrieve request triggers the creation of an instance of the document. The instance could be preserved as a snapshot, which is a kind of [Association](#27-document-relationships) managed off of the On-Demand document entry.
 
 # 3 Document sharing profiles
 
@@ -687,7 +694,7 @@ The IHE profiles addressing these models are:
 
   - Federated Discovery and Retrieve – Cross-Community Access ([XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html))
 
-The following figure shows the flow of data for each of these models.
+The following figures show the flow of data for each of these models.
 
 ![](images/push-models.png)
 
@@ -899,8 +906,8 @@ of discovery can be highly automated.
 
 ### 3.2.3 Governance
 
-As described in [1 Principles of Health Document Sharing](#1-principles-of-health-document-sharing) 
-is document content neutral; uses
+As described in [1 Principles of Health Document Sharing](#1-principles-of-health-document-sharing), 
+Document Sharing is document content neutral; uses
 document metadata that are represented in a structured, standard format;
 and supports longevity of document storage.
 
@@ -1109,12 +1116,15 @@ that need to be addressed at the time of deployment.
 
 **Table 5-1: IHE Profiles that Support Various Styles of Distributed Management of Patient ID**
 
+
 |    Patient Identification Profiles       |                           Assumptions                             |                       Conditions                       | 
 | ---------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------|
 | [Patient Demographics Query (PDQ)](#52-patient-demographics-query-pdq) | 1. supports the access to a central registry of identities. <br/> 2. It supports the ability to query in one or more patient identity domains of interest, by a set of demographics traits and get in response one or more matching identities with their complete set of demographics traits, usually including patient identifiers.| 1. The process to create and update the registry of identities along with their demographics needs to be addressed at deployment time for each one of the identity domains served. |
 | [Patient Id Cross-referencing (PIX)](#51-patient-identity-cross-reference-pix) | 1. supports the linking of patient identifiers from different domains. <br/> 2. Each identifier domain entirely controls the creation, updates, and merges of its identities. <br/> 3. The consumer of identity cross-references does not need to know any of the patient demographics as managed by the domain controlling the identity. | 1. Each deployment relies on a cross-referencing algorithm which is centrally managed and needs to be quality controlled. <br/> 2. The consumers of cross-references between identities from different identity domains either persist the cross-reference and actively process update notifications (profile option), or never persist cross-references and re-query when needed. |
 | [Cross-Enterprise Patient Discovery (XCPD)](#53-cross-community-patient-discover-xcpd) | 1. supports access between distributed peer patient identity domains. <br/> 2. It supports the ability to query by a set of demographics traits, including a domain-specific patient identifier, and get in response one or more matching identities with a complete set of demographics traits, and usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the peer patient identity domain needs to be addressed at deployment time for each one of the identity domains served. |
 | [Patient Master Identity Registry (PMIR)](#54-patient-master-identity-registry-pmir)  | 1. supports the distributed creation, access, update, and merge process of shared master patient identity.  <br/> 2. The identity registry is a passive store for such shared (or golden) identities that are under the distributed control of identity sources.  | 1. Each deployment defines the policies to be followed by identity sources to ensure stability and quality of the master identities they create, update, and merge. <br/> 3. There is a mechanism to distribute all create, update, and merge actions to identity consumer actors, which have a duty to reflect these changes in their patient-specific information stores. |
+
+
 
 The [Patient Identity Management deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Patient-Identity-Mgmt-2012-03-07.pptx) 
 provides more detail about [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html). The [Patient Master Identity Registry (PMIR) Webinar](https://www.youtube.com/watch?v=MTHEfufTi-o&t=21s) covers more depth on [PMIR](#54-patient-master-identity-registry-pmir).
@@ -1283,8 +1293,6 @@ that information. Within the directory, one may also store relationships
 between providers. For example, Nurse Joe may be an individual provider
 who belongs to the organizational provider General Hospital.
 
-It does not support attributes intended directly for Access Control.
-
 
 # 7 Security and Privacy
 
@@ -1341,8 +1349,8 @@ Network Controls.
 
 While community Policies and Risk Management are outside its scope, IHE
 does recognize that these elements are a necessary piece of a system
-implementation. IHE IT Infrastructure technical white paper, [Template
-for [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html). [Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf) outlines
+implementation. The IHE IT Infrastructure technical white paper, [Template
+for XDS Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf) outlines
 some of the issues that should be evaluated for inclusion in the local
 Policy creation and Risk Management decisions. It is therefore the duty
 of system implementers to take this guidance into account as part of
@@ -1509,8 +1517,8 @@ Authentication ([ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html)). This 
 system:
 
 1.  User authentication and Access Controls are enforced accordingly,
-2.  security Audit Logs are recorded, and
-3. strong network authentication and encryption for all communications
+2.  Security Audit Logs are recorded, and
+3.  Strong network authentication and encryption for all communications
     of sensitive patient data.
 
 The Security Audit Logging includes a set of security relevant events
@@ -1746,9 +1754,42 @@ The Document Sharing Health Information Exchange has been deployed in various re
 
 In 2012, an initiative was launched, with donor support from the US President's Emergency Plan for AIDS Relief [PEPFAR](https://www.state.gov/pepfar/), to develop an open source health enterprise architecture that could be adapted and adopted by low and middle income countries (LMIC) to support national-scale health data sharing. The [Open Health Information Exchange (OpenHIE)](https://ohie.org/) framework describes a comprehensive family of digital health workflows expressed in terms of IHE Profiles. A case study of [OpenHIE](https://ohie.org), and version 1 of its architecture, was published by the [Principles for Digital Development](https://digitalprinciples.org/wp-content/uploads/PDD_CaseStudy-OpenHIE_v3.pdf). The latest version (v2) of the OpenHIE architecture, which is based on the HL7 FHIR specification (as profiled by IHE's [Mobile Health Document Sharing (MHDS)](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) specification), can be found here: https://ohie.org/architecture-specification/.
 
-### 8.1.2 CareQuality
+### 8.1.2 The Sequoia Project
+In 2012, [The Sequoia Project](https://sequoiaproject.org/) was chartered as a non-profit 501(c)(3) to advance the implementation of secure, interoperable nationwide health information exchange. [The Office of the National Coordinator for Health Information Technology](http://healthit.gov/), part of the [U.S. Department of Health and Human Services](http://hhs.gov/), transitioned management of its [eHealth Exchange](https://ehealthexchange.org/) to The Sequoia Project for maintenance.  In 2014, Sequoia began to support additional interoperability initiatives beginning with [Carequality](https://carequality.org/). In 2016, Sequoia partnered with [RSNA](https://www.rsna.org/) to develop the [RSNA Image Share Validation](https://sequoiaproject.org/rsna/) program  Then, in 2017, The Sequoia Project began supporting the [Patient Unified Lookup System for Emergencies (PULSE)](https://sequoiaproject.org/pulse/)  which can be made available in any geographic area to support healthcare professionals and first responders caring for displaced individuals or volunteer healthcare workers who are deployed to a disaster area outside of their normal health IT environment.
 
-blah blah [CareQuality](https://carequality.org/what-we-do/)
+In 2018, The Sequoia Project updated its corporate structure to reflect the continued maturation of the organization and the significantly larger role that The Sequoia Project plays as the central convener for interoperability. The updated corporate structure resulted in The Sequoia Project having two distinct subsidiaries, one for [eHealth Exchange](https://ehealthexchange.org/) and one for [Carequality](https://carequality.org/). Following the reorganization, The Sequoia Project continues to bring together industry and government to transparently and inclusively develop solutions to the most pressing challenges of health data exchange.  The Sequoia Project launched [Interoperability Matters](https://sequoiaproject.org/interoperability-matters-2/)  which engages experts from across the healthcare and healthcare IT communities to identify, prioritize, and collaborate on the most pressing, discrete challenges to nationwide health information sharing.  Thought leadership will be transformed into leadership action on topics like [Person Identity Management](https://sequoiaproject.org/resources/patient-matching/),  [Information Blocking](https://sequoiaproject.org/interoperability-matters-2/information-blocking-workgroup-public-advisory-forum/), [Data Usability]()  [HL7 FHIR®](https://sequoiaproject.org/resources/fhir/)  and supporting disaster response efforts such as the Patient Unified Lookup System for Emergencies (PULSE). In addition, The Sequoia Project worked with IHE International to build a robust and rigorous testing platform to focus on known interoperability issues and security. The [Sequoia Project Interoperability Testing Platform (ITP)](https://sequoiaproject.org/resources/interoperability-testing-platform-benefits/) is a set of more than a dozen testing tools and test scripts covering transport, security, and content aspects to improve health information exchange nationwide.  As a nonprofit operating in the public interest, our governance process ensures transparent oversight of this work.
+ 
+#### 8.1.2.1 eHealth Exchange
+In 2012, the [eHealth Exchange Network](https://ehealthexchange.org/) transitioned from the Office of the National Coordinator for Health IT to a private sector initiative, supported by [The Sequoia Project](https://sequoiaproject.org/). Since then, the eHealth Exchange network became a separate company, independent from Sequoia and has morphed and matured to connect more than 75 percent of all hospitals in the United States, 70,000 medical groups, and over 120 million patients. Today, the eHealth Exchange is the largest public-private health information network in the country.  Its connectivity spans all 50 states and the current participants can be found [here](https://ehealthexchange.org/participants/).
+
+The [eHealth Exchange](https://ehealthexchange.org/what-is-the-ehealth-exchange/) is a mature network of U.S. exchange partners, including the government and healthcare industry, that securely share clinical information over the Internet, using a standardized approach. By leveraging [common standards](https://ehealthexchange.org/testing-program/exchange-specifications/)  participants find the eHealth Exchange offers a unique value proposition, one that enables them to share a wide array of health data without requiring additional customization or one-off legal agreements. The eHealth Exchange is improving content to address several pain points across the healthcare industry, including optionality, terminology, specification and complexity. Participating organizations mutually agree to support a common set of standards and specifications that enable the establishment of a secure, trusted and interoperable connection among all participating organizations for the standardized flow of information, by: 
+- Sending health information to other participating organizations
+- Finding and requesting copies of healthcare information from other participating organizations – where permitted by law and policy
+- Matching patients to their data without a national patient identifier
+- Subscribing to receive updates to health information
+
+The eHealth Exchange supports multiple use cases, including: 
+- Treatment / Care Coordination
+- Military / Veteran Health
+- Authorized Release of Information for Disability Benefits Determination, Consumer Access to Health Information, and Life Insurance
+- Quality Reporting for the End Stage Renal Disease (ESRD) Program
+- Immunization
+- Encounter Alerts
+- Prescription Drug Monitoring Program (PDMP) and Electronic Lab Reporting (in support of public heatlh)
+- Electronic Case Reporting to the Association of Public Health Laboratories
+- Syndromic Surveillance
+- Image Sharing
+
+#### 8.1.2.2 Carequality
+What if you had a cell phone plan that only allowed you to call other customers of your carrier?  That’s the situation for many healthcare providers today when they join a data sharing network.  The networks provide connectivity, but only within their membership, which ofter follows geographic or technology vendor lines.  The connectivity can provide significant benefits, but falls shows of the potential value if networks could be connected. [Carequality](https://carequality.org/overview-video/) has brought together the entire healthcare industry to overcome this challenge by providing a national-level, consensus-build, common interoperability framework to enable exchange between and among health data sharing networks.  Carequality brings together a diverse group of [implementers](https://carequality.org/members-and-supporters/)  including electronic health record (EHR) vendors, record locator service (RLS) providers and other types of existing networks from the private sector and government, to determine technical and policy agreements to enable data to flow between and among networks, platforms, and geographies, much like the telecommunications industry did for linking cell phone networks.  
+
+There are three essential core elements to enable this sort of widespread connectivity, without individual pre-coordination with each partner:
+- Common rules of the road: In order for the varied participants to trust each other with health information, everyone needs to have a legal obligation to abide by the same rules.
+- Well defined technical specifications: Shared rules are not enough; clear standards must be laid out in an implementation guide that all implementers can follow.
+- A participant directory: To connect using the common standards, systems must know the addresses and roles of each participant
+
+Carequality is implementing each of these pieces, as the core of a practical, operational framework for connecting the country through existing networks.  The comprehensive [Carequality Interoperability Framework](https://carequality.org/resources/) consists of multiple elements, including legal terms, policy requirements, technical specifications, and governance processes, which operationalize data sharing under the previously approved Principles of Trust.  The Framework is now available for health information exchange networks, vendors, payers, and others across the healthcare ecosystem to adopt, providing a practical approach to unlocking previously unseen levels of connectivity. By developing a scalable, health IT interoperability framework for nationwide health data sharing across networks Carequality is [helping patient and providers](https://carequality.org/members-and-supporters/testimonials/). 
+
 
 ### 8.1.3 CommonWell
 

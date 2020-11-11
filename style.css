@@ -1,0 +1,12 @@
+/* basic table styling */
+table, th, td {
+	border: 1px solid black;
+}
+
+
+img {
+	margin-top: 20pt;
+	margin-bottom: 20pt;
+	max-width:100%;
+	height: auto;
+}
