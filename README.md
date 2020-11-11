@@ -1201,7 +1201,7 @@ The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/T
 ## 5.3 Cross-Community Patient Discovery (XCPD)
 
 The Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) profile offers a means to
-discover mutually known patients and a method to correlate the patient's
+discover mutually known patients and a method to correlate those patients'
 identifiers across those communities.
 
 [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) is similar in function to [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) but is more suited to environments where there is no centralized source of patient demographics or
@@ -1224,18 +1224,18 @@ community that represent Trudy. With this information, Dr. Holsen can
 subsequently use [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) to look for documents containing Trudy’s past
 medical history held within the Chicago community.
 
-The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be used similarly as XCPD but leverages the [FHIR](http://fhir.hl7.org) standard.  [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be a FHIR API backed by a [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) query. 
+The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) profile can be used similarly to XCPD but leverages the [FHIR](http://fhir.hl7.org) standard.  [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be a FHIR API backed by an [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) query. 
 
 The [Cross-Community slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Cross-Community_2012-12-10.ppt) and webinar [8 Further Reading](#8-further-reading), provide
 more detail about [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
 ## 5.4 Patient Master Identity Registry (PMIR)
 
-The Patient Master Identity Registry [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) is a community based system of cooperating to maintain a master identity for each patient. [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) leverages the [FHIR](http://fhir.hl7.org) standard.
+The Patient Master Identity Registry [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) profile is a community based system of cooperating patient identity sources maintaining a master identity for each patient. [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) leverages the [FHIR](http://fhir.hl7.org) standard.
 
-A consumer system may query the [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) registry to receive the master Patient Identity (aka. golden identity) based on their local identifiers or based on the identifying characteristics of the patient. In this way the PCP office can discover the master Patient Identity so that it can communicate with the systems in that community using a known patient identifier. This query uses [Patient Identity Cross-referencing for Mobile (PIXm)](#51-patient-identity-cross-reference-pix) and [Patient Demographics Query for Mobile (PDQm)](#52-patient-demographics-query-pdq).
+A consumer system may query the [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) registry to receive the master Patient Identity (aka. golden identity) based on their local identifiers or based on the identifying characteristics of the patient. In this way the PCP office can discover the master Patient Identity so that it can communicate with the systems in that community using a known patient identifier. This query uses [Patient Identity Cross-referencing for Mobile (PIXm)](#51-patient-identity-cross-reference-pix) or [Patient Demographics Query for Mobile (PDQm)](#52-patient-demographics-query-pdq).
 
-Authorized patient identity source authorities will feed create, update, or merge events to the [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) registry, which will further propagate these changes to a set of patient identity consumers that have subscribed. Upon receiving a create, update, or merge event these subscribed consumers are expected to update their patient specific information accordingly. For example when a merge has been declared the subscribed consumer will merge into the surviving identity any data that was known against the merged identity. This set of authorized patient identity source authorities keep the master identity accurate, using update when there are changes to the demographics. The registry may also implement the identity source to enable automated quality checks.
+Authorized patient identity source authorities will feed create, update, or merge events to the [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) registry, which will further propagate these changes to a set of patient identity consumers that have subscribed. Upon receiving a create, update, or merge event these subscribed consumers are expected to update their patient information accordingly. For example when a merge has been declared, the subscribed consumer will merge into the surviving identity any data that was known against the merged identity. This set of authorized patient identity source authorities keep the master identity accurate, using update when there are changes to the demographics. The registry may also implement the identity source to enable automated quality checks.
 
  A primary use of the PMIR, PDQm, and PIXm Profiles are to enable document consumers and document sources using the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) Profile to find the patient’s identifier in that Community Patient Identifier Domain within a [Centralized Discovery and Retrieve](#32-centralized-discovery-and-retrieve) environment.
  
@@ -1243,11 +1243,11 @@ Authorized patient identity source authorities will feed create, update, or merg
 
 **Figure 5.4-1: Patient Master Identity Registry flow**
 
-The Figure 5.4-1 diagram shows four systems: A Patient Registration Desk, A Patient Master Registry, Data Consumer Systems, and a Data Services (data server). These are implementing the PMIR actors. This is not the only way the PMIR actors can be used, many configurations are not shown including one where the Patient Master Registry has internal logic that would have it detect and automatically correct entries which is accomplished by the Patient Master Registry also implementing a Patient Identity Source.
+The Figure 5.4-1 diagram shows four systems: A Patient Registration Desk, A Patient Master Registry, Data Consumer Systems, and a Data Services (data server). These are implementing the PMIR actors. This is not the only way the PMIR actors can be used; many configurations are not shown including one where the Patient Master Registry has internal logic that would have it detect and automatically correct entries which is accomplished by the Patient Master Registry also implementing a Patient Identity Source.
 
-First shown is that the Data Services, representing any or all of the servers (e.g. EHR) in a community that hold data about patient subjects. This Data Services uses the PMIR Patient Identity Subscriber actor to subscribe to be notified if any Patient Identity changes (created, updated, merged, or deleted). This subscription comes in later caused by Registration Desk activities.
+First shown is the Data Services, representing any or all of the servers (e.g. EHR) in a community that hold data about patient subjects. This Data Services uses the PMIR Patient Identity Subscriber actor to subscribe to be notified of any Patient Identity changes (created, updated, merged, or deleted). This subscription triggers notifications later due to Registration Desk activities.
  
-Second shown is the Registration Desk activities. A patient presents, so is looked up in the Patient Master Registry. The Registration Desk can create new patients, update an existing Patient, or merge where multiple entries are found for the same patient. All updates are notified by the Patient Master Registry to any subscribing systems such as a Data Service.
+Second shown is the Registration Desk activities. A patient presents, and is looked up in the Patient Master Registry. The Registration Desk can create new patients, update an existing Patient, or merge where multiple entries are found for the same patient. All updates are notified by the Patient Master Registry to any subscribing systems such as a Data Service.
 
 Third is the use of these Patient Identities in accessing or creating data in a Data Service.
 
