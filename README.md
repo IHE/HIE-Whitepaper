@@ -1214,13 +1214,17 @@ The Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Vol
 discover mutually known patients and a method to correlate those patients'
 identifiers across those communities.
 
-[XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) is similar in function to [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) but is more suited to environments where there is no centralized source of patient demographics or
-identifiers. For this reason [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) is most likely to be used with the
-[Federated Discovery and Retrieve](#33-federated-discovery-and-retrieve) model of Document Sharing. Thus, [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) and [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) are
-designed for environments where the implementation of a centralized
-source of patient demographics, identifiers, or record locations is not considered practical. 
+[XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) is similar in function to
+[PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) but is used with the
+[Federated Discovery and Retrieve](#33-federated-discovery-and-retrieve) model of Document Sharing.
+[XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) enables discovery that a patient is known and potentially has
+information at a given community. Once this is known, the requester can use
+[XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) to obtain documents for that patient from that community. 
+[XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) also enables "Record Locator Services" that allow requesters
+to discover a patient is known in multiple communities without having to ask each one. 
 [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) supports a hierarchical
-approach which bridges communities that might use [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) or [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) internally.
+approach which bridges communities that might use [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) 
+or [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) internally.
 
 To illustrate the use of [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html), imagine that Dr. Holsen has an encounter
 with his patient, Trudy Levitz. At the moment, Trudy lives in
