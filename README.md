@@ -1121,7 +1121,7 @@ that need to be addressed at the time of deployment.
 | ---------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------|
 | [Patient Demographics Query (PDQ)](#52-patient-demographics-query-pdq) | 1. supports the access to a central registry of identities. <br/> 2. It supports the ability to query in one or more patient identity domains of interest, by a set of demographics traits and get in response one or more matching identities with their complete set of demographics traits, usually including patient identifiers.| 1. The process to create and update the registry of identities along with their demographics needs to be addressed at deployment time for each one of the identity domains served. |
 | [Patient Id Cross-referencing (PIX)](#51-patient-identity-cross-reference-pix) | 1. supports the linking of patient identifiers from different domains. <br/> 2. Each identifier domain entirely controls the creation, updates, and merges of its identities. <br/> 3. The consumer of identity cross-references does not need to know any of the patient demographics as managed by the domain controlling the identity. | 1. Each deployment relies on a cross-referencing algorithm which is centrally managed and needs to be quality controlled. <br/> 2. The consumers of cross-references between identities from different identity domains either persist the cross-reference and actively process update notifications (profile option), or never persist cross-references and re-query when needed. |
-| [Cross-Enterprise Patient Discovery (XCPD)](#53-cross-community-patient-discover-xcpd) | 1. supports access between distributed peer patient identity domains. <br/> 2. It supports the ability to query by a set of demographics traits, including a domain-specific patient identifier, and get in response one or more matching identities with a complete set of demographics traits, and usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the peer patient identity domain needs to be addressed at deployment time for each one of the identity domains served. |
+| [Cross-Community Patient Discovery (XCPD)](#53-cross-community-patient-discover-xcpd) | 1. supports access between distributed peer patient identity domains. <br/> 2. It supports the ability to query by a set of demographics traits, including a domain-specific patient identifier, and get in response one or more matching identities with a complete set of demographics traits, and usually the patient identifier from the remote patient identity domains. | 1. The process to create and update the peer patient identity domain needs to be addressed at deployment time for each one of the identity domains served. |
 | [Patient Master Identity Registry (PMIR)](#54-patient-master-identity-registry-pmir)  | 1. supports the distributed creation, access, update, and merge process of shared master patient identity.  <br/> 2. The identity registry is a passive store for such shared (or golden) identities that are under the distributed control of identity sources.  | 1. Each deployment defines the policies to be followed by identity sources to ensure stability and quality of the master identities they create, update, and merge. <br/> 3. There is a mechanism to distribute all create, update, and merge actions to identity consumer actors, which have a duty to reflect these changes in their patient-specific information stores. |
 
 
@@ -1214,13 +1214,17 @@ The Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Vol
 discover mutually known patients and a method to correlate those patients'
 identifiers across those communities.
 
-[XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) is similar in function to [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) but is more suited to environments where there is no centralized source of patient demographics or
-identifiers. For this reason [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) is most likely to be used with the
-[Federated Discovery and Retrieve](#33-federated-discovery-and-retrieve) model of Document Sharing. Thus, [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) and [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) are
-designed for environments where the implementation of a centralized
-source of patient demographics, identifiers, or record locations is not considered practical. 
+[XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) is similar in function to
+[PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) but is used with the
+[Federated Discovery and Retrieve](#33-federated-discovery-and-retrieve) model of Document Sharing.
+[XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) enables discovery that a patient is known and potentially has
+information at a given community. Once this is known, the requester can use
+[XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) to obtain documents for that patient from that community. 
+[XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) also enables "Record Locator Services" that allow requesters
+to discover a patient is known in multiple communities without having to ask each one. 
 [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) supports a hierarchical
-approach which bridges communities that might use [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) or [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) internally.
+approach which bridges communities that might use [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) 
+or [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) internally.
 
 To illustrate the use of [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html), imagine that Dr. Holsen has an encounter
 with his patient, Trudy Levitz. At the moment, Trudy lives in
@@ -1233,8 +1237,6 @@ community and finds the relevant patient identifiers from the Chicago
 community that represent Trudy. With this information, Dr. Holsen can
 subsequently use [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) to look for documents containing Trudy’s past
 medical history held within the Chicago community.
-
-The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) profile can be used similarly to XCPD but leverages the [FHIR](http://fhir.hl7.org) standard.  [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be a FHIR API backed by an [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) query. 
 
 The [Cross-Community slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Cross-Community_2012-12-10.ppt) and webinar [8 Further Reading](#8-further-reading), provide
 more detail about [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
