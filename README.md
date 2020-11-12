@@ -1029,9 +1029,15 @@ more detail about [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [
 
 ### 3.4.1 Cross-Community Document Reliable Interchange (XCDR)
 
-The [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) profile provides a point-to-point method of sending documents to a specific community. It leverages common principles as described in Section 2. It sends documents and metadata using the same Web-Services reliable transport that is used to publish documents in the Centralized Discovery and Retrieve Document model.
+The [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) profile provides
+a point-to-point method of sending documents to a specific community.
+It leverages common principles as described in Section 2. It sends documents and
+metadata using the same Web-Services reliable transport that is used to publish
+documents in the Centralized Discovery and Retrieve Document model.
 
-An XCDR Responding Gateway for a community may support submissions to multiple communities that are behind it. These communities would typically be described as parent-child relationships in a common directory.
+An [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) Responding Gateway
+for a community may support submissions to multiple communities that are behind it.
+These communities would typically be described as parent-child relationships in a common directory.
 
 ## 3.5 Choosing an infrastructure
 
