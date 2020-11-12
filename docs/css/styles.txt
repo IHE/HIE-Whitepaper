@@ -1,0 +1,443 @@
+
+IHE Styles from the IHE Supplement Template (posted by mary):
+
+
+Author Instructions
+Font: Italic, Style: Linked, Show in the Styles gallery
+Based on: Body Text
+
+Body Text
+Font: (Default) Times New Roman, 12 pt, Left
+Line spacing: single, Space
+Before: 6 pt, Widow/Orphan control, Style: Linked, Show in the Styles
+Gallery
+
+Editor Instructions
+Font: Italic, Border:
+Box: (Single solid line, Auto, 0.5 pt Line width)
+Based on: Body Text
+
+Figure Title
+Space
+Before: 3 pt
+After: 15 pt, Don't keep with next, Keep lines together
+Based on: Table Title
+
+Footer
+Tab stops: 3", Centered + 6", Right
+Based on: Normal
+
+Glossary
+Indent:
+Left: 0"
+First line: 0", No bullets or numbering
+Based on: Heading 1
+
+Header
+Tab stops: 3", Centered + 6", Right
+Based on: Normal
+
+Heading 1
+Style for Next Paragraph: Body Text
+Font: (Default) Arial, 14 pt, Bold, Do not check spelling or grammar, Kern
+at 14 pt, Indent:
+Left: 0"
+Hanging: 0.25", Left
+Line spacing: single, Space
+Before: 12 pt
+After: 3 pt, Widow/Orphan control, Page break before, Keep with next,
+Level 1, Outline numbered + Level: 1 + Numbering Style: 1, 2, 3, … +
+Start at: 9 + Alignment: Left + Aligned at: 0" + Indent at: 0.25", Style:
+Linked, Show in the Styles gallery
+Following style: Body Text
+
+Heading 2
+Style for Next Paragraph: Body Text
+Indent:
+Left: 0"
+Hanging: 0.4", No page break before, Level 2
+Tab stops: 0.4", List tab, Style: Linked, Show in the Styles gallery
+Based on: Heading 1
+Following style: Body Text
+
+Heading 3
+Style for Next Paragraph: Body Text
+Font: 12 pt, Indent:
+Left: 0"
+Hanging: 0.5", Level 3
+Tab stops: 0.5", List tab + Not at 0.4", Style: Linked, Show in the
+Styles gallery
+Based on: Heading 2
+Following style: Body Text
+
+Heading 4
+Style for Next Paragraph: Body Text
+Indent:
+Left: 0"
+First line: 0", Level 4
+Tab stops: Not at 0.5", No bullets or numbering, Style: Linked, Show
+in the Styles gallery
+Based on: Heading 3
+Following style: Body Text
+
+Heading 5
+Style for Next Paragraph: Body Text
+Level 5, Style: Linked, Show in the Styles gallery
+Based on: Heading 4
+Following style: Body Text
+
+Heading 6
+Style for Next Paragraph: Body Text
+Level 6, Style: Show in the Styles gallery
+Based on: Heading 5
+Following style: Body Text
+
+Heading 7
+Style for Next Paragraph: Body Text
+Level 7, Style: Show in the Styles gallery
+Based on: Heading 6
+Following style: Body Text
+
+Heading 8
+Style for Next Paragraph: Body Text
+Level 8, Style: Show in the Styles gallery
+Based on: Heading 7
+Following style: Body Text
+
+Heading 9
+Style for Next Paragraph: Body Text
+Level 9, Style: Show in the Styles gallery
+Based on: Heading 8
+Following style: Body Text
+
+HTML Address
+Font: Italic, Style: Linked
+Based on: Normal
+Hyperlink
+Underline, Font color: Blue, Priority: 100
+
+List
+Indent:
+Left: 0.25"
+Hanging: 0.5", Style: Linked
+Based on: Body Text
+
+List 1
+Style: Linked, Show in the Styles gallery
+Based on: List
+
+List 2
+Indent:
+Left: 0.5", Style: Linked
+Based on: List
+
+List 3
+Indent:
+Left: 0.75"
+Hanging: 0.5", Style: Linked
+Based on: Normal
+
+List 3 Continue
+Indent:
+First line: 0"
+Based on: List 3
+
+List 4
+Indent:
+Left: 1"
+Hanging: 0.25", Style: Hide until used, Priority: 100
+Based on: Normal
+
+List 5
+Indent:
+Left: 1"
+Hanging: 0.25", Style: Linked
+Based on: Normal
+
+List Bullet
+Indent:
+Left: 0"
+Hanging: 0.25"
+Tab stops: 0.25", List tab, Bulleted + Level: 1 + Aligned at: 0" + Tab
+after: 0.25" + Indent at: 0.25", Style: Linked, Hide until used
+Based on: Normal
+
+List Bullet 1
+Style: Linked, Show in the Styles gallery
+Based on: List Bullet
+
+List Bullet 2
+Indent:
+Left: 0.25"
+Hanging: 0.25", Bulleted + Level: 1 + Aligned at: 0.25" + Indent at:
+0.5", Style: Linked
+Based on: Normal
+
+List Bullet 3
+Indent:
+Left: 0.5"
+Hanging: 0.25", Bulleted + Level: 1 + Aligned at: 0.5" + Indent at:
+0.75", Style: Linked
+Based on: Normal
+
+List Bullet 4
+Indent:
+Left: 0.75"
+Hanging: 0.25", Bulleted + Level: 1 + Aligned at: 0.75" + Indent at:
+1"
+Based on: Normal
+
+List Bullet 5
+Indent:
+Left: 1"
+Hanging: 0.25", Bulleted + Level: 1 + Aligned at: 1" + Indent at:
+1.25", Style: Hide until used, Priority: 100
+Based on: Normal
+
+List Continue
+Indent:
+Left: 0.25", Don't add space between paragraphs of the same style,
+Style: Linked, Hide until used, Priority: 100
+Based on: Normal
+
+List Continue 1
+Style: Linked, Show in the Styles gallery
+Based on: List Continue
+
+List Continue 2
+Indent:
+Left: 0.5", Don't add space between paragraphs of the same style, Style:
+Hide until used, Priority: 100
+Based on: Normal
+
+List Continue 3
+Indent:
+Left: 0.75", Don't add space between paragraphs of the same style,
+Style: Hide until used, Priority: 100
+Based on: Normal
+
+List Continue 4
+Indent:
+Left: 1", Don't add space between paragraphs of the same style, Style:
+Hide until used, Priority: 100
+Based on: Normal
+
+List Continue 5
+Indent:
+Left: 1.25", Don't add space between paragraphs of the same style,
+Style: Hide until used, Priority: 100
+Based on: Normal
+
+List Number
+Indent:
+Left: 0"
+Hanging: 0.25", Don't add space between paragraphs of the same style
+Tab stops: 0.25", List tab, Numbered + Level: 1 + Numbering Style: 1,
+2, 3, … + Start at: 1 + Alignment: Left + Aligned at: 0" + Tab after:
+0.25" + Indent at: 0.25", Style: Hide until used, Priority: 100
+Based on: Normal
+
+List Number 1
+Add space between paragraphs of the same style, Style: Linked, Show in
+the Styles gallery
+Based on: List Number
+
+List Number 2
+Indent:
+Left: 0.25"
+Hanging: 0.25"
+Tab stops: 0.5", List tab, Numbered + Level: 1 + Numbering Style: 1,
+2, 3, … + Start at: 1 + Alignment: Left + Aligned at: 0.25" + Tab after:
+0.5" + Indent at: 0.5", Style: Linked
+Based on: Normal
+
+List Number 3
+Indent:
+Left: 0.5"
+Hanging: 0.25"
+Tab stops: 0.75", List tab, Numbered + Level: 1 + Numbering Style: 1,
+2, 3, … + Start at: 1 + Alignment: Left + Aligned at: 0.5" + Tab after:
+0.75" + Indent at: 0.75"
+Based on: Normal
+
+List Number 4
+Indent:
+Left: 0.75"
+Hanging: 0.25"
+Tab stops: 1", List tab, Numbered + Level: 1 + Numbering Style: 1, 2,
+3, … + Start at: 1 + Alignment: Left + Aligned at: 0.75" + Tab after: 1" +
+Indent at: 1"
+Based on: Normal
+
+List Number 5
+Indent:
+Left: 1"
+Hanging: 0.25"
+Tab stops: 1.25", List tab, Numbered + Level: 1 + Numbering Style: 1,
+2, 3, … + Start at: 1 + Alignment: Left + Aligned at: 1" + Tab after:
+1.25" + Indent at: 1.25", Style: Hide until used, Priority: 100
+Based on: Normal
+
+List Number Continue
+Indent:
+Left: 0.63", Space
+Before: 3 pt
+Based on: Normal
+
+List Paragraph
+Indent:
+Left: 0.5", Style: Show in the Styles gallery, Priority: 35
+Based on: Normal
+
+Note
+Font: 9 pt, Indent:
+Left: 0.13"
+Hanging: 0.38", Space
+After: 3 pt, Don't hyphenate
+Tab stops: 0.5", Left + 0.84", Left + 1.34", Left + 1.76", Left +
+2.51", Left + 3.51", Left + 6", Right,Leader: …
+Based on: Normal
+
+Part Title
+Style for Next Paragraph: Body Text
+Font: (Default) Arial, 22 pt, Bold, Font color: Auto, Not Expanded by /
+Condensed by , Centered, Space
+Before: 12 pt
+After: 3 pt, Add space between paragraphs of the same style, Page
+break before, Keep with next, Level 1, Border:
+Bottom: (No border)
+Based on: Title
+Following style: Body Text
+
+Table Entry
+Font: 9 pt, Indent:
+Left: 0.05"
+Right: 0.05", Space
+Before: 2 pt
+After: 2 pt, Style: Linked, Show in the Styles gallery
+
+Table Title
+Font: Arial, 11 pt, Bold, Centered, Space
+Before: 15 pt
+After: 3 pt, Keep with next
+Based on: Body Text
+
+TableText
+Font: Bookman Old Style, 9 pt, Do not check spelling or grammar, (none)
+Line spacing: Exactly 11 pt, Space
+Before: 2 pt
+After: 2 pt, Keep with next, Style: Linked
+Based on: Normal
+
+Title
+Style for Next Paragraph: Normal
+Font: Cambria, 26 pt, Font color: Custom Color(RGB(23,54,93)),
+Expanded by 0.25 pt, Kern at 14 pt, Space
+Before: 0 pt
+After: 15 pt, Don't add space between paragraphs of the same style,
+Border:
+Bottom: (Single solid line, Custom Color(RGB(79,129,189)), 1 pt Line
+width, From text: 4 pt Border spacing: ), Style: Linked, Show in the
+Styles gallery, Priority: 11
+Based on: Normal
+Following style: Normal
+
+TOC 1
+Style for Next Paragraph: Normal
+Font: (Default) Times New Roman, 12 pt, Indent:
+Left: 0"
+Hanging: 0.2", Left
+Line spacing: single, Widow/Orphan control
+Tab stops: 6.49", Right,Leader: …, Priority: 40
+Following style: Normal
+
+TOC 2
+Style for Next Paragraph: Normal
+Indent:
+Left: 0.2"
+Hanging: 0.3"
+Tab stops: 6.49", Right,Leader: … + Not at 6.49", Priority: 40
+Based on: TOC 1
+Following style: Normal
+
+TOC 3
+Style for Next Paragraph: Normal
+Indent:
+Left: 0.4"
+Hanging: 0.4", Priority: 40
+Based on: TOC 2
+Following style: Normal
+
+TOC 4
+Style for Next Paragraph: Normal
+Indent:
+Left: 0.6"
+Hanging: 0.5", Priority: 40
+Based on: TOC 3
+Following style: Normal
+
+TOC 5
+Style for Next Paragraph: Normal
+Indent:
+Left: 0.8"
+Hanging: 0.7", Priority: 40
+Based on: TOC 4
+Following style: Normal
+
+TOC 6
+Style for Next Paragraph: Normal
+Indent:
+Left: 1"
+Hanging: 0.8", Priority: 40
+Based on: TOC 5
+Following style: Normal
+
+TOC 7
+Style for Next Paragraph: Normal
+Indent:
+Left: 1.2"
+Hanging: 0.9", Priority: 40
+Based on: TOC 6
+Following style: Normal
+
+TOC 8
+Style for Next Paragraph: Normal
+Indent:
+Left: 1.4"
+Hanging: 1", Priority: 40
+Based on: TOC 7
+Following style: Normal
+
+TOC 9
+Style for Next Paragraph: Normal
+Indent:
+Left: 1.6"
+Hanging: 1.2", Priority: 40
+Based on: TOC 8
+Following style: Normal
+
+TOC Heading
+Style for Next Paragraph: Normal
+Font: Bold, Space
+Before: 0 pt, Style: Hide until used, Show in the Styles gallery,
+Priority: 40
+Based on: Normal
+Following style: Normal
+
+XML Example
+Font: (Default) Courier New, 10 pt, Space
+Before: 0 pt
+Based on: Body Text
+
+XML Fragment
+Do not check spelling or grammar, Space
+Before: 0 pt, Keep with next, Keep lines together, Border:
+Box: (Single solid line, Auto, 0.5 pt Line width)
+Tab stops: 0.13", Left
+Based on: Plain Text
+
+XMLname
+Font: (Default) Courier New, 10 pt, Style: Show in the Styles gallery
+
+XMLnameBold
+Font: (Default) Courier New, 10 pt, Bold

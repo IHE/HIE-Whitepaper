@@ -1,0 +1,33 @@
+name: publish
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: docker://pandoc/core:2.9
+        with:
+          args: -r gfm --template=ihe_template --metadata title="HIE-Whitepaper" -w html -o docs/index.html README.md
+      - uses: actions/upload-artifact@master
+        with:
+          name: docs
+          path: docs
+      - run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -f docs/index.html
+          git commit -m "Publish to HTML" 
+      - uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true

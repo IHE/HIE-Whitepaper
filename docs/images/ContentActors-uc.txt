@@ -1,0 +1,8 @@
+@startuml
+
+agent "Content Creator" as ContentCreator
+agent "Content Consumer" as ContentConsumer
+usecase (Document Sharing) as (DocumentSharing)
+ContentCreator --> (DocumentSharing)
+ContentConsumer --> (DocumentSharing)
+@enduml

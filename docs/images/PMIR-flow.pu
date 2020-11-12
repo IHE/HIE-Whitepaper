@@ -1,0 +1,37 @@
+@startuml
+skinparam ParticipantPadding 20
+skinparam BoxPadding 10
+
+box "Registration Desk"
+participant "Patient Demographics Consumer"
+participant "Patient Identity Source"
+end box
+box "Patient Master Registry"
+participant "Patient Identity Manager"
+end box
+box "Data Services"
+participant "Patient Identity Subscriber"
+participant "Patient Identity Consumer"
+end box
+
+alt Data Services registers as an interested party
+"Patient Identity Subscriber" -> "Patient Identity Manager" : register as an interested party
+end
+
+alt Registration Desk updates a patient identity
+"Patient Demographics Consumer" -> "Patient Identity Manager" : Query given known identifying characteristics (demographics, identifiers, MRN, etc)
+
+alt One Patient found with need to update demographics
+"Patient Identity Source" -> "Patient Identity Manager": Update Patient demographics
+"Patient Identity Manager" -> "Patient Identity Consumer": Update Patient demographics
+else patient is not found
+"Patient Identity Source" -> "Patient Identity Manager": Create NEW Patient with these demographics
+"Patient Identity Manager" -> "Patient Identity Consumer": Create NEW Patient with these demographics
+else more than one patient is found
+"Patient Identity Source" -> "Patient Identity Manager": Deprecate Patient B preferring Patient A
+note left: determine which to keep and which to replace
+"Patient Identity Manager" -> "Patient Identity Consumer": Deprecate Patient B preferring Patient A
+note right: fixup data referencing B to now reference A
+end
+end
+@enduml

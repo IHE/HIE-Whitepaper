@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "foundation-icons";
+    src: url("./icons/foundation-icons.eot");
+    src: url("./icons/foundation-icons.eot?#iefix") format("embedded-opentype"), url("./icons/foundation-icons.woff") format("woff"), url("./icons/foundation-icons.ttf") format("truetype"), url("./icons/foundation-icons.svg#fontcustom") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Styles for  icon font */
+
+
+/* 
+ * Foundation Icons v 3.0
+ * Made by ZURB 2013 http://zurb.com/playground/foundation-icon-fonts-3
+ * MIT License
+ */
+
+ .fi-download:before,
+ .fi-web:before,
+ .fi-calendar:before,
+ .fi-arrow-up:before,
+ .fi-arrow-right:before,
+ .fi-arrows-compress:before,
+ .fi-arrows-expand:before,
+ .fi-alert:before,
+ .fi-mail:before,
+ .fi-social-facebook:before,
+ .fi-social-google-plus:before {
+     font-family: "foundation-icons";
+     font-style: normal;
+     font-weight: normal;
+     font-variant: normal;
+     text-transform: none;
+     line-height: 1;
+     -webkit-font-smoothing: antialiased;
+     display: inline-block;
+     text-decoration: inherit;
+ }
+ 
+ .fi-download:before {
+     content: "\f143";
+ }
+ 
+ .fi-web:before {
+     content: "\f212";
+ }
+ 
+ .fi-calendar:before {
+     content: "\f124";
+ }
+ 
+ .fi-arrow-up:before {
+     content: "\f10c";
+ }
+ 
+ .fi-arrow-right:before {
+     content: "\f10b";
+ }
+ 
+ .fi-arrows-expand:before {
+     content: "\f10e";
+ }
+ 
+ .fi-arrows-compress:before {
+     content: "\f10d";
+ }
+ 
+ .fi-alert:before {
+     content: "\f101";
+ }
+ 
+ .fi-mail:before {
+     content: "\f16d";
+ }
+ 
+ .fi-social-facebook:before {
+     content: "\f1c4";
+ }
+ 
+ .fi-social-google-plus:before {
+     content: "\f1ca";
+ }
+ 
+ .size-icon-sm {
+     font-size: 140%;
+ }
+ 
+ .size-icon-lg {
+     font-size: 200%;
+ }
+ 

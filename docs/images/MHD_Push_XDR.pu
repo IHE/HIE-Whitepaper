@@ -1,0 +1,11 @@
+@startuml
+Participant "MHD Document Source" as M_D_S
+box "Intermediary" 
+Participant "MHD Document Recipient" as M_D_R
+Participant "XDR Document Source" as X_D_S
+end box
+Participant "XDR Document Recipient" as X_D_R
+M_D_S -> M_D_R : Here are the documents using FHIR transport
+M_D_R -> X_D_S : Internal translation
+X_D_S -> X_D_R: Here are the documents using XDR transport
+@enduml
