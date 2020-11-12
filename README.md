@@ -1238,8 +1238,6 @@ community that represent Trudy. With this information, Dr. Holsen can
 subsequently use [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) to look for documents containing Trudy’s past
 medical history held within the Chicago community.
 
-The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) profile can be used similarly to XCPD but leverages the [FHIR](http://fhir.hl7.org) standard.  [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be a FHIR API backed by an [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) query. 
-
 The [Cross-Community slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Cross-Community_2012-12-10.ppt) and webinar [8 Further Reading](#8-further-reading), provide
 more detail about [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
