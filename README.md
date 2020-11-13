@@ -174,6 +174,45 @@ sharing and each environment will use some set of those building blocks
 to enable the architecture desired by the community or communities
 participating.
 
+## 1.4 Connectathon and Projectathon
+
+IHE [Connectathons](https://www.ihe.net/participate/connectathon/) are a cross-vendor, live, supervised and structured testing 
+event where industry leaders test implementations of IHE Profiles to advance 
+health IT interoperability. All tests are evaluated on interoperability and 
+conformance to IHE Profiles found in IHE’s Technical Frameworks. The test floor 
+is overseen by IHE’s technical project managers providing a safe, neutral test 
+environment and an unparalleled opportunity for industry collaboration and problem resolution. 
+[IHE Connectathons](https://www.ihe.net/participate/connectathon/) take place multiple times and locations annually in various 
+countries across the world to advance health IT and patient safety. Including [USA](https://www.iheusa.org/what-is-ihe-connectathon), [Europe](https://www.ihe-europe.net/), and [Japan](http://www.ihe-j.org/en/), and the [world](https://www.ihe.net/participate/connectathon/).
+
+**Benefits of IHE Connectathon Testing**
+- Reduce Development Costs and Time to Market
+- Debug systems and product capabilities within minutes leveraging a broad cross-section of industry partners on-site including:
+- Electronic medical record (EMR) vendors, public health agencies, device vendors and key infrastructure components that support health information exchange including Patient Identity Managers, Document Registries and Repositories, Cross Community Gateways
+- Leverage 20+ years of standards development experience and test tools developed in partnership with IHE International, IHE USA and National Institute of Standards and Technology (NIST)
+- Learn, collaborate, and network with 450+ of the industry’s top professionals at the largest interoperability testing event in the world
+- Be present with industry’s top vendors implementing IHE Profiles to enable interoperability
+- Learn and speak with the industry’s top leaders on-site at the [IHE NA Connectathon](https://www.iheusa.org/ihe-connectathon-overview)
+- Qualify to participate and demonstrate IHE Profiles in HIMSS Interoperability Showcases across the globe
+
+**Projectathon**
+
+The [Projectathon](https://www.ihe-europe.net/testing-IHE/projectathons) is a testing session dedicated to a 
+specific deployment project using a set of IHE Profiles in their interoperability specifications.
+
+Participants to a [Projectathon](https://www.ihe-europe.net/testing-IHE/projectathons) will 
+test conformity and interoperability of their systems or solutions 
+against the deployment project interoperability specifications based on IHE Profiles. 
+For a [Projectathon](https://www.ihe-europe.net/testing-IHE/projectathons), the test plans and 
+testing tools are customized to the specifics of the deployment projects. 
+
+The organization which has the lead of the project has the responsibility to define the testing criteria 
+for the project requirements and publishes the results at the end of the [Projectathon](https://www.ihe-europe.net/testing-IHE/projectathons). 
+The testing session can be delegated to the IHE team where IHE is experienced and can provide the necessary skills for managing such a testing event. 
+The [Projectathon](https://www.ihe-europe.net/testing-IHE/projectathons) can be the preliminary event 
+before any conformity assessment, quality label or certification process.
+
+
 # 2 Principles of IHE for Health Document Sharing
 
 This section describes several principles which are foundational to
