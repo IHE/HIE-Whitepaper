@@ -90,6 +90,19 @@ exchange model based on open standards. This paper does not cover the
 technical details as they are found in the IHE Profiles, White Papers,
 and Webinar material.
 
+Some intended audience include:
+- Govt (MOH, CDC)
+- Federal Health Agencies (ONC, HHS, NIST)
+- Regional/State Health Agencies (State Public Health Agencies)
+- NGOs (WHO, UNICEF)
+- Health Information Exchanges
+- Standards Development Organizations
+- HIT Non-Profits/Professional Associations (GDHP, HIMSS, RSNA, etc.)
+- Health Systems
+- Ambulatory Clinics
+- Long-term, Post-Acute Care
+- Executive Offices: CEO, CIO, CMIO, CNIO, CSO, CTO, CPO, C3PO, etc
+
 ## 1.3 Overview of Health Document Sharing Communities
 
 A health document sharing community (community) exists for the purpose
