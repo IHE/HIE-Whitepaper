@@ -351,7 +351,7 @@ expected to last over the span of many decades, just as the documents
 that comprise them are expected to have persistence, wholeness,
 stewardship, context, and potential for authentication. As a health
 information exchange is adopted it is a common practice to use an
-historical bulk data load, or comprehensive patient summary to
+historical bulk data load or comprehensive patient summary to
 initialize the electronic patient record with data for historical
 purposes.
 
@@ -359,7 +359,7 @@ Within a care setting Clinical Data Repositories (CDR) or Clinical
 Information Model Infrastructure databases might be used to enhance
 Clinical Decision Support as a complement to document discovery. These
 databases would not be nationwide, but rather be local to the patient’s 
-care facility, like EHRs themselves, Document Sharing supports
+care facility. Like EHRs themselves, Document Sharing supports
 interoperability amongst local systems and supports a longitudinal
 patient record that spans across many local systems potentially using
 multiple different database systems.
@@ -511,7 +511,7 @@ lifecycle events related to the original document.
 
 **Figure 2.7-1: Multiple Document formats of the same document related by Document Associations.**
 
-Depicted in Figure 2.7-1 is a master document of format C-CDA with a set of transforms of the same content into CCD, C32, PDF, and a FHIR Document. This enables a Document Consumer to pull the content that best fits their ability to consume. Note the master document could be of any format, so one might chose to have the master document as the FHIR Document. Similar associations functionality would also support human language translations.
+Depicted in Figure 2.7-1 is a master document of format C-CDA with a set of transforms of the same content into CCD, C32, PDF, and a FHIR Document. This enables a Document Consumer to pull the content that best fits their ability to consume. Note the master document could be of any format, so one might choose to have the master document as the FHIR Document. Similar associations functionality would also support human language translations.
 
 ## 2.8 Document Sharing Models
 
@@ -584,7 +584,7 @@ profiles that aid the resolution of the patient identifier.
 One of the challenges of Document Sharing that is not directly addressed
 by IHE is the identification of Document Sharing partners. Each Document
 Sharing model has a different type of need: where a centralized
-discovery approach requires the identification of the central locater,
+discovery approach requires the identification of the central locator,
 the peer-based push and discovery mode requires identification of each
 of the peers. This ability to discover sharing partners can be
 accomplished in many different ways and a clear preference is not yet
@@ -797,6 +797,18 @@ In addition the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) can be 
 
 ![](images/MHD_Push_XDR.png)
 
+### 3.1.4 Cross-Community Document Reliable Interchange (XCDR)
+
+The [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) profile provides
+a point-to-point method of sending documents to a specific community.
+It leverages common principles as described in Section 2. It sends documents and
+metadata using the same Web-Services reliable transport that is used to publish
+documents in the Centralized Discovery and Retrieve Document model.
+
+An [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) Responding Gateway
+for a community may support submissions to multiple communities that are behind it.
+These communities would typically be described as parent-child relationships in a common directory.
+
 ## 3.2 Centralized Discovery and Retrieve
 
 The Mobile Health Document Sharing ([MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html)) and Cross-Enterprise Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)) profile enables centralized
@@ -924,8 +936,8 @@ Document Sharing is document content neutral; uses
 document metadata that are represented in a structured, standard format;
 and supports longevity of document storage.
 
-[MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) requires a [governance structure](#22-document-sharing-governance) and
-defines the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain or a Community as the agent for that governance. An [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)
+[MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) require a [governance structure](#22-document-sharing-governance) and
+define the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain or a Community as the agent for that governance. An [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)
 Affinity domain or a Community is a group that have agreed to
 work together using a common set of policies and Document Sharing. Some examples
 are:
@@ -989,7 +1001,7 @@ information. But care-givers need access to a patient's entire
 longitudinal health history, regardless of where that historic
 information was created. The population is mobile, sometimes due to a
 temporary situation like a vacation, reoccurring like seasonal housing,
-work related, or some other choice. Therefor many patients receive care
+work related, or some other choice. Therefore many patients receive care
 outside of their home community and sometimes the care received
 externally can be very significant clinically. A very specific
 healthcare related use-case is when a patient is seeking the care of a
@@ -1000,12 +1012,12 @@ address this need.
 To implement [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html), a community builds two services called gateways
 through which all inter-community transactions will flow. An Initiating
 Gateway is used to send queries to other communities, while a Responding
-Gateway is employed to receive queries and respond to them. Behind the
-gateways may be a single organization, like the USA Veterans
+Gateway is employed to receive queries and respond to them. Behind each
+gateway may be a single organization, like the USA Veterans
 Administration, a complex community of many organizations, or a more
 simple organization like a single small hospital or facility. The
-gateways hide the internal structure of each participant in the
-cross-community exchange.
+gateway may hide the internal structure of these participants in the
+cross-community exchange, or may expose them as identifiable communities reachable through the gateway.
 
 [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) is based on the discovery and retrieve pattern defined in [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), but
 does not require that either community use [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html). Rather than the
