@@ -784,6 +784,18 @@ In addition the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) can be 
 
 ![](images/MHD_Push_XDR.png)
 
+### 3.1.4 Cross-Community Document Reliable Interchange (XCDR)
+
+The [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) profile provides
+a point-to-point method of sending documents to a specific community.
+It leverages common principles as described in Section 2. It sends documents and
+metadata using the same Web-Services reliable transport that is used to publish
+documents in the Centralized Discovery and Retrieve Document model.
+
+An [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) Responding Gateway
+for a community may support submissions to multiple communities that are behind it.
+These communities would typically be described as parent-child relationships in a common directory.
+
 ## 3.2 Centralized Discovery and Retrieve
 
 The Mobile Health Document Sharing ([MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html)) and Cross-Enterprise Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)) profile enables centralized
@@ -1025,28 +1037,14 @@ on this profile see [Section 5.3](#53-cross-community-patient-discovery-xcpd).
 The [Cross-Community slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Cross-Community_2012-12-10.ppt) provides
 more detail about [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
-## 3.4 Federated Push
-
-### 3.4.1 Cross-Community Document Reliable Interchange (XCDR)
-
-The [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) profile provides
-a point-to-point method of sending documents to a specific community.
-It leverages common principles as described in Section 2. It sends documents and
-metadata using the same Web-Services reliable transport that is used to publish
-documents in the Centralized Discovery and Retrieve Document model.
-
-An [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) Responding Gateway
-for a community may support submissions to multiple communities that are behind it.
-These communities would typically be described as parent-child relationships in a common directory.
-
-## 3.5 Choosing an infrastructure
+## 3.4 Choosing an infrastructure
 
 Presented is the Centralized Document Registry model of [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html), the Federated Community Exchange of [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html), and the API access model enabled by [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) along side the classic access model defined in [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)/[XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html). These choices present two very important alternatives that need to be considered.
 
 
 ![](images/Which_Infrastructure_to_use.png)
 
-**Figure 3.5-1: Decision tree on which Infrastructure to use**
+**Figure 3.4-1: Decision tree on which Infrastructure to use**
 
 First, recognize that the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) as an API for publishing and consuming documents is always available regardless of use of [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html), [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html), [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), or [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html). The clients can be enabled to use legacy ([XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html)/[XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)/[XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) or [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) based query/retrieve or publication.   Where one has an [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html), [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), or [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) infrastructure; one can always add [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) as a more simple API.
 
