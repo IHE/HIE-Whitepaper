@@ -1792,18 +1792,13 @@ There are three essential core elements to enable this sort of widespread connec
 
 Carequality is implementing each of these pieces, as the core of a practical, operational framework for connecting the country through existing networks.  The comprehensive [Carequality Interoperability Framework](https://carequality.org/resources/) consists of multiple elements, including legal terms, policy requirements, technical specifications, and governance processes, which operationalize data sharing under the previously approved Principles of Trust.  The Framework is now available for health information exchange networks, vendors, payers, and others across the healthcare ecosystem to adopt, providing a practical approach to unlocking previously unseen levels of connectivity. By developing a scalable, health IT interoperability framework for nationwide health data sharing across networks Carequality is [helping patient and providers](https://carequality.org/members-and-supporters/testimonials/). 
 
-
-### 8.1.3 CommonWell
-
-blah blah [CommonWell](https://www.commonwellalliance.org/connect-to-the-network/)
-
-### 8.1.4 Canada Health Infoway
+### 8.1.3 Canada Health Infoway
 
 Canada’s national standard for the exchange of diagnostic imaging (DI) is Cross-enterprise Document Sharing for Imaging (XDS-I). The benefits of nation-wide adoption of these specifications have been evaluated, over the years, by Canada’s national digital health agency, Canada Health Infoway. A recently-released [benefits analysis of community access to medical imaging](https://www.infoway-inforoute.ca/en/what-we-do/news-events/webinars/resources/reports/benefits-evaluation/3009-community-access-to-medical-imaging-benefits-evaluation) noted benefits related to access, quality, and some improvements in productivity (although not evenly realized across all participants). The use of detailed benefits evaluations has informed Canada’s adoption of digital health and the fine-tuning of approaches that better serve the needs of clinicians and their patients.
 
-### 8.1.5 Netherlands
+### 8.1.4 Netherlands
 
-#### 8.1.5.1 Frysian Cardiology Network 
+#### 8.1.4.1 Frysian Cardiology Network 
 
 [IHE Success Story](https://www.iheusa.org/sites/iheusa/files/HIMSS_IHE_Forcare_Success_Story_web.pdf)
 
@@ -1811,7 +1806,7 @@ After extensive research the Medical Center Leeuwarden (MCL, The Netherlands) ch
 
 The network covers 4 hospitals and 2 outpatient clinics. The number of users is approximately 250, with 10,000 documents being processed annually.
 
-#### 8.1.5.2 XDS Network North Netherlands
+#### 8.1.4.2 XDS Network North Netherlands
 
 Starting in 2014 the hospitals in the northern provinces in the Netherlands have gradually create an XDS-based network to share diagnostic images among them. The initial goal, to reduce exchange of CD and DVD to virtually zero, was reached around 2018. It demonstrated that the costs per study transfer were reduced with almost 90%. Over a million studies are available through the network to date.
    
@@ -1820,14 +1815,14 @@ From the initial image sharing use case the network has expanded into other use 
 
 The [following video](https://www.youtube.com/watch?v=LtbZ6QzUBhs) demonstrates how the XDS network is used to provide access to CT images in a time critical trauma use-case.
 
-#### 8.1.5.3 Dutch COVID-19 Portal
+#### 8.1.4.3 Dutch COVID-19 Portal
 
 As the first wave of the COVID-19 pandemic hit, the Dutch hospitals were quickly flooded with patients. In several hospitals that soon lead to a shortage of ICU bed capacity. The Dutch government set up a national control center to coordinate the spreading of patients across hospitals in The Netherlands. To exchange radiology images and reports as well as other information for patients being transferred, Phillips set up a COVID-19 Portal. Within the first two weeks of that IHE XDS based information exchange infrastructure being available, virtually all the Dutch hospitals were using it. The portal uses an IHE BPPC based consent mechanism that enables a sending hospital to specify which receiving hospital can access a patient’s record. This mechanism allows hospitals to use a sharing-type infrastructure as opposed to a peer-to-peer information exchange, while staying compliant with Dutch privacy regulations.
 
 More [information is available here](https://www.ihe.net/wp-content/uploads/2020/04/Netherlands_COVID-case-study_edits_4.24.20.pdf).
 
 
-### 8.1.6 Switzerland
+### 8.1.5 Switzerland
 
 The Swiss Electronic Patient Record is a national initiative to build a XDS-based sharing infrastructure for all health related data. Reports, diagnostic data, medication, images, and other health related information is shared between practitioners, hospitals and the patients concerned.
 
@@ -1842,7 +1837,7 @@ The national extensions and the mandatory IHE profiles are legally anchored as p
 While initially planned to April 2020, the go live was postponed due to the COVID-19 pandemia to April 2021.
 
 
-### 8.1.7 And many more
+### 8.1.6 And many more
 
 See the other [IHE case studies on the use of IHE profiles](https://www.ihe.net/resources/user_success_stories/)
 
