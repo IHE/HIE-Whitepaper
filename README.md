@@ -263,8 +263,8 @@ through the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Do
 
 ## 2.3 Distinction between Documents and Messages
 
-The HL7 standard for [Structured Documents
-Section 1.2](http://archive.hl7.org/v3ballotarchive/v3ballot2008may/html/domains/uvcd/UVCD.htm#spec-dam)
+The HL7 standard for Structured Documents
+Section 
 describes the document vs. message distinction as follows “A document is
 designed to be persistent for long periods of time, whereas messages are
 more often expected to be transient. There is a place for both of these
