@@ -1,1 +1,1 @@
-pandoc -r gfm --template=ihe_template --metadata title="HIE-Whitepaper" --metadata path-prefix="../../" -w html -o index.html README.md
+pandoc -r gfm --template=https://github.com/IHE/publications/raw/master/ihe_template.html --metadata title="HIE-Whitepaper" --metadata path-prefix="../../" -w html -o index.html README.md
