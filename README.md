@@ -185,10 +185,12 @@ environment and an unparalleled opportunity for industry collaboration and probl
 [IHE Connectathons](https://www.ihe.net/participate/connectathon/) take place multiple times and locations annually in various 
 countries across the world to advance health IT and patient safety. Including [USA](https://www.iheusa.org/what-is-ihe-connectathon), [Europe](https://www.ihe-europe.net/), and [Japan](http://www.ihe-j.org/en/), and the [world](https://www.ihe.net/participate/connectathon/).
 
+![](.//images/standards-connectathon-lifecycle.png)
+ 
 **Benefits of IHE Connectathon Testing**
 - Reduce Development Costs and Time to Market
 - Debug systems and product capabilities within minutes leveraging a broad cross-section of industry partners on-site including:
-- Electronic medical record (EMR) vendors, public health agencies, device vendors and key infrastructure components that support health information exchange including Patient Identity Managers, Document Registries and Repositories, Cross Community Gateways
+  - Electronic medical record (EMR) vendors, public health agencies, device vendors and key infrastructure components that support health information exchange including Patient Identity Managers, Document Registries and Repositories, Cross Community Gateways
 - Leverage 20+ years of standards development experience and test tools developed in partnership with IHE International, IHE USA and National Institute of Standards and Technology (NIST)
 - Learn, collaborate, and network with 450+ of the industry’s top professionals at the largest interoperability testing event in the world
 - Be present with industry’s top vendors implementing IHE Profiles to enable interoperability
