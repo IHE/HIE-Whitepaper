@@ -1112,7 +1112,7 @@ Where none of these conditions exist, then the choice could be [XDS](http://prof
 
 
 
-## 4 Consuming data as FHIR Resources
+# 4 Consuming data as FHIR Resources
 
 A challenge that Document Sharing has is on the consuming side. The [2.3 Principles of a Document](#23-distinction-between-documents-and-messages) are more beneficial to the source. The source is in control of each document creation, and content. Therefore a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
 
