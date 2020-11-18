@@ -685,7 +685,7 @@ encryption, data integrity, digital signatures, and privacy consent
 management. Security and Privacy and the profiles IHE offers are
 discussed in [7 Security and Privacy](#7-security-and-privacy).
 
-# 2.12 Dynamic Documents
+## 2.12 Dynamic Documents
 
 There are three different models of a document: Stable, Delayed Assembly, and On-Demand. 
 
