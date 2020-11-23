@@ -1,6 +1,6 @@
 **Integrating the Healthcare Enterprise**
 
-![IHE\_LOGO\_for\_tf-docs](.//images/IHE-logo.jpeg)
+![](.//images/ihe-logo.jpeg)
 
 
 **[IHE IT Infrastructure](https://profiles.ihe.net/ITI)** **White Paper**
@@ -1923,7 +1923,7 @@ While initially planned to April 2020, the go live was postponed due to the COVI
 
 See the other [IHE case studies on the use of IHE profiles](https://www.ihe.net/resources/user_success_stories/)
 
-**Comments are invited and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.
+**Comments are invited and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.**
 
 **Comments on this white paper are invited at any time and can be submitted as either [IHE comment form](https://www.ihe.net/ITI_Public_Comments/) or [GitHub issues](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md)** Please reference the section that your comment applies to.
 
