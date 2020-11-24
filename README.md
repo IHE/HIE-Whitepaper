@@ -118,7 +118,7 @@ Some intended audiences include:
 - Health Systems
 - Ambulatory Clinics
 - Long-term, Post-Acute Care
-- Executive Offices: CEO, CIO, CMIO, CNIO, CSO, CTO, CPO, C3PO, etc
+- Executive Offices: CEO, CIO, CMIO, CNIO, CSO, CTO, CPO, C3PO, etc.
 
 ## 1.3 Overview of Health Document Sharing Communities
 
@@ -329,7 +329,7 @@ community should address the following issues:
 
 The purpose of this aspect of governance is to enable semantic
 interoperability among participating partners. When the Cross-enterprise
-Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)) profile is used the governance is provided
+Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)) Profile is used the governance is provided
 through the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain, see [Section 3.2 Centralized Discovery and Retrieve](#32-centralized-discovery-and-retrieve).
 
 ## 2.3 Distinction between Documents and Messages
@@ -456,11 +456,11 @@ partners in the exchange.
 
 IHE and other organizations have integration profiles which define
 document content for specific, commonly occurring cases. For example,
-the IHE Laboratory domain has defined an XD-LAB content profile to
+the IHE Pathology and Laboratory Medicine domain has defined an XD-LAB Content Profile to
 support sharing laboratory reports. Likewise, the IHE Patient Care
 Coordination (PCC) domain has defined various content profiles including
-a Medical Summary (XDS-MS) content profile and an Emergency Department
-Referral (EDR) content profile. XDS-MS supports a patient’s transfer of
+a Medical Summary (XDS-MS) Content Profile and an Emergency Department
+Referral (EDR) Content Profile. XDS-MS supports a patient’s transfer of
 care from one care setting to another, and EDR supports the situation
 where a physician determines that a patient should proceed directly to
 an emergency department for care. In each of these cases, it is useful
@@ -667,7 +667,7 @@ For locating source of information about a particular patient, some
 approaches are:
 
   - Patient Specific Health Data Locator – the Cross-Community Patient
-    Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) profile enables a special type of locator which can
+    Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) Profile enables a special type of locator which can
     be used to find entities holding data about specific patients. See
     [ Section 5 Patient identity management](#5-patient-identity-management) for more information about [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
@@ -790,7 +790,7 @@ The following sections will describe in more detail the three models.
 
 ### 3.1.1 Cross-Enterprise Document Reliable Interchange (XDR)
 
-The [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) profile provides a point-to-point method of sending documents to
+The [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) Profile provides a point-to-point method of sending documents to
 a specific recipient. It leverages common principles as described in
 Section 2. It sends documents and metadata using the same Web-Services
 reliable transport that is used to publish documents in the Centralized
@@ -806,7 +806,7 @@ The [Point-to-Point Transmission of Documents slide deck](https://github.com/IHE
 
 ### 3.1.2 Cross-Enterprise Document Media Interchange (XDM)
 
-The Cross-Enterprise Document Media Interchange ([XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html)) profile addresses
+The Cross-Enterprise Document Media Interchange ([XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html)) Profile addresses
 situations where the electronic exchange of clinical information does
 not rely on networked connections between the parties exchanging the
 information. In these cases, electronic media (such as CDs and USB
@@ -815,18 +815,18 @@ to another.
 
 The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) e-Mail option is a logical advance for directed e-mail exchange
 that provides content packaging and metadata to enable accurate
-processing. The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) profile has been adopted in national exchange
+processing. The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) Profile has been adopted in national exchange
 specifications such as the USA defined “Direct Project”.
 
-The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) CD-ROM and USB-Memory options are logical methods for physically
+The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) CD-ROM and USB-Memory Options are logical methods for physically
 handing the patient records to the patient them-selves; or for delivery
 via secure courier.
 
 Whether the data is transferred via electronic media or e-mail, the same
 format is used to express the documents, metadata, and encapsulation
-structure. The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) profile can be especially useful when there is no
+structure. The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) Profile can be especially useful when there is no
 established infrastructure in place between those who have documents and
-those that need them. Thus the [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) profile can be used in environments
+those that need them. Thus the [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) Profile can be used in environments
 where much of the Governance is managed manually, out-of-band. The
 receiver of an [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) exchange does need to be robust to high variability
 of the content due to this lack of automated Governance.
@@ -838,7 +838,7 @@ documentation or to an orthopedist of Mary’s choice in which case the
 point of service is unknown at the time of the referral. Dr. Suwati
 decides to write a referral letter and to create an image file of the
 X-ray of Mary's leg. Dr. Suwati employs her EMR to write this letter and
-the image file to a USB key using the [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) profile. She then gives the
+the image file to a USB key using the [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) Profile. She then gives the
 USB key to Mary so that she may take the files with her to the
 orthopedist.
 
@@ -846,7 +846,7 @@ The [Point-to-Point Transmission of Documents slide deck](https://github.com/IHE
 
 ### 3.1.3 Mobile access to Health Documents (MHD) push
 
-The [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) profile provides a point-to-point method of sending documents to a specific recipient. It leverages common principles described in Section 2. It sends documents and metadata using FHIR Rest push to deliver one or more documents to a Document Recipient. 
+The [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profile provides a point-to-point method of sending documents to a specific recipient. It leverages common principles described in Section 2. It sends documents and metadata using FHIR Rest push to deliver one or more documents to a Document Recipient. 
 
 The typical use case for [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) in this mode is when documents are known to be needed by a recipient. Such as a patient referral in the use case given in [XDR](#311-cross-enterprise-document-reliable-interchange-xdr).
 
@@ -856,7 +856,7 @@ In addition the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) can be 
 
 ### 3.1.4 Cross-Community Document Reliable Interchange (XCDR)
 
-The [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) profile provides
+The [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) Profile provides
 a point-to-point method of sending documents to a specific community.
 It leverages common principles as described in Section 2. It sends documents and
 metadata using the same Web-Services reliable transport that is used to publish
@@ -868,7 +868,7 @@ These communities would typically be described as parent-child relationships in 
 
 ## 3.2 Centralized Discovery and Retrieve
 
-The Mobile Health Document Sharing ([MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html)) and Cross-Enterprise Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)) profile enables centralized
+The Mobile Health Document Sharing ([MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html)) and Cross-Enterprise Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)) Profiles enable centralized
 discovery of health documents and retrieval of those documents from
 distributed document repositories. Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)) provides a simplified API for Document Source and Document Consumer actors.
 
@@ -890,7 +890,7 @@ Suwati) has three principal objectives: find patient records available
 from external systems, view a selection of those records, and
 incorporate a select number of those records to her local system. This
 sequence of actions is repeated continually in the healthcare setting.
-To address this very common scenario, IHE has created the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) profile and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile, a
+To address this very common scenario, IHE has created the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) Profile and the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Profile, a
 method to coordinate the authorized discovery and sharing of medical
 documents among disparate information systems.
 
@@ -902,11 +902,11 @@ separation allows for minimal yet rich metadata to be centrally managed
 in a document registry while the full clinical details stay protected
 within distributed document repositories. 
 
-[MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) allows for a similar separation of repository, but does not call out the repository actor. The MHD Document Source simply preserves the document in an appropriate repository available to the MHDS community, and records the URL to that location when publishing the metadata to the MHDS repository. The MHD Document Source can include the document within the publication request where the MHDS Registry will store and provide access to it centrally. MHDS also includes solutions for Patient Identity Management Registry ([PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html)), Terminology Services ([SVCM](http://profiles.ihe.net/ITI/TF/Volume1/ch-51.html)), organization directory ([mCSD](http://profiles.ihe.net/ITI/TF/Volume1/ch-46.html)), user authentication/authorization ([IUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-34.html)), system security ([ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html)), and Consistent Time ([CT](http://profiles.ihe.net/ITI/TF/Volume1/ch-7.html)).  More details available in the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) profile.
+[MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) allows for a similar separation of repository, but does not call out the repository actor. The MHD Document Source simply preserves the document in an appropriate repository available to the MHDS community, and records the URL to that location when publishing the metadata to the MHDS repository. The MHD Document Source can include the document within the publication request where the MHDS Registry will store and provide access to it centrally. MHDS also includes solutions for Patient Identity Management Registry ([PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html)), Terminology Services ([SVCM](http://profiles.ihe.net/ITI/TF/Volume1/ch-51.html)), organization directory ([mCSD](http://profiles.ihe.net/ITI/TF/Volume1/ch-46.html)), user authentication/authorization ([IUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-34.html)), system security ([ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html)), and Consistent Time ([CT](http://profiles.ihe.net/ITI/TF/Volume1/ch-7.html)).  More details available in the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) Profile.
  
 Both XDS and MHDS enable the automation of discovery and retrieve of document content by more advanced health information systems.
 
-The following Figure 3.2-1 shows the use of the MHD profile as an API to an XDS Document Sharing exchange. 
+The following Figure 3.2-1 shows the use of the MHD Profile as an API to an XDS Document Sharing exchange. 
 
 ![](images/MHD-as-API-to-XDS.png)
 
@@ -1040,7 +1040,7 @@ Sharing environment. The services include:
 
 ### 3.2.4 Notifications
 
-The [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile supports registration of content and the ability to
+The [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Profile supports registration of content and the ability to
 query and retrieve from a centralized service, but there are many use
 cases where a system (i.e., a clinician) may wish to be proactively
 notified when a new document is made available. DSUB describes the use of subscription and notification mechanisms for use within an XDS Affinity Domain and across communities. The subscription allows for the matching of metadata during the publication of a new document for a given patient, and results a notification which can be parsed:
@@ -1063,7 +1063,7 @@ outside of their home community and sometimes the care received
 externally can be very significant clinically. A very specific
 healthcare related use-case is when a patient is seeking the care of a
 specialist. So, there is a need to share health information between two
-communities. The Cross-Community Access ([XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html)) profile was developed to
+communities. The Cross-Community Access ([XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html)) Profile was developed to
 address this need.
 
 To implement [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html), a community builds two services called gateways
@@ -1101,7 +1101,7 @@ broadly the query is federated.
 The Federation of many communities does create a larger patient identity
 problem, and thus a federation approach to patient identity is needed as
 well. This patient identity federation is profiled in the
-Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) profile. For more information
+Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) Profile. For more information
 on this profile see [Section 5.3](#53-cross-community-patient-discovery-xcpd).
 
 The [Cross-Community slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Cross-Community_2012-12-10.ppt) provides
@@ -1122,7 +1122,7 @@ Where there are existing source systems or consumer systems that are using the l
 
 Where no existing infrastructure exists, there is still critical distinctions that would encourage the choice of infrastructure. 
 * [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) are the only solution that enable asynchronous communications. The technology that [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) are based on is more flexible enabling requests and responses to be decoupled. This is important when the communications may be to remote locations, locations that are not always connected, or locations that might need extra time to process requests. 
-* [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) are the only solution that enable end-to-end security. This is important when there are intermediaries that are only partially trusted, where data claims need to be cryptographically checked at the ends of the communications, or where communications are crossing jurisdiction boundaries (e.g. EC rules around the use of AS4)
+* [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) are the only solution that enable end-to-end security. This is important when there are intermediaries that are only partially trusted, where data claims need to be cryptographically checked at the ends of the communications, or where communications are crossing jurisdiction boundaries (e.g., EC rules around the use of AS4)
 
 Where none of these conditions exist, then the choice could be [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) or [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) based. 
 
@@ -1172,7 +1172,7 @@ around demographics changing over time (name changes) and other aspects
 of demographics matching rules. There is also concern around privacy
 when unnecessarily transporting patient demographics.
 
-A Patient Identity is distinct from Patient Identifier, in that a Patient Identifier is a unique value within a domain; whereas the Patient Identity is made up of one or more Patient Identifier(s) and identifying information including what is classically understood as demographics and also identifiers issued by any recognized authority. These attributes of a Patient Identity could include name (family name, given name(s), etc), phone, email, gender, birth date, address(s), marital status, photo, *others to contact*, preference for language, general practitioner(s), and links to other Patient Identities. The use of identifiers from other recognized authorities would include identifiers issued by healthcare organizations, but also by non-healthcare organizations such as government issued identifiers such as drivers license number, social security number, or passport number; or any identifier that a patient can be authenticated by such as a Voluntary Health Identifier (VHID) being a specific example of an identifier assigned outside of treatment or a Decentralized Identifier (DID) being an example of a general purpose identifier that can be authenticated. 
+A Patient Identity is distinct from Patient Identifier, in that a Patient Identifier is a unique value within a domain; whereas the Patient Identity is made up of one or more Patient Identifier(s) and identifying information including what is classically understood as demographics and also identifiers issued by any recognized authority. These attributes of a Patient Identity could include name (family name, given name(s), etc.), phone, email, gender, birth date, address(s), marital status, photo, *others to contact*, preference for language, general practitioner(s), and links to other Patient Identities. The use of identifiers from other recognized authorities would include identifiers issued by healthcare organizations, but also by non-healthcare organizations such as government issued identifiers such as drivers license number, social security number, or passport number; or any identifier that a patient can be authenticated by such as a Voluntary Health Identifier (VHID) being a specific example of an identifier assigned outside of treatment or a Decentralized Identifier (DID) being an example of a general purpose identifier that can be authenticated. 
 
 IHE recommends that the identification of the patient be done
 through patient identifiers in a common or accepted patient
@@ -1213,7 +1213,7 @@ provides more detail about [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.htm
 
 ## 5.1 Patient Identity Cross-Reference (PIX)
 
-The Patient Identity Cross-Reference [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile supports the access to a central registry of cross-referenced identities, and the feed of identity updates from distributed identity domains. 
+The Patient Identity Cross-Reference [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Profile supports the access to a central registry of cross-referenced identities, and the feed of identity updates from distributed identity domains. 
 
 Most health information systems assign to each patient an identifier
 (usually a string of letters and/or numbers) that is unique to the
@@ -1237,13 +1237,13 @@ patient identifiers for Gary Collins.
 
 **Figure 5.1-1: Patient identifier cross-referencing**
 
-The [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile is IHE's answer to the difficulty of managing an
+The [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Profile is IHE's answer to the difficulty of managing an
 individual patient's multiple Identifiers. A [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Manager system receives
 feeds from multiple patient identity domains, such as the PCP and
 specialist offices, and uses the demographics in those feeds to create a
 cross-referencing table which associates identities with matching
 demographics and does not associate identities found not to match. It
-should be noted that the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile does not specify how patient
+should be noted that the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Profile does not specify how patient
 matching occurs. Each deployment is welcome to use their own matching
 algorithms to determine which IDs should be cross-referenced. The IHE
 profile focuses only on the interfacing characteristics that would be
@@ -1255,10 +1255,10 @@ the query. In this way the PCP office can discover the identifier used
 by the specialist’s system and thus can communicate with that system
 using a known patient identifier.
 
-A primary use of the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile is to enable document consumers and
-document sources using the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile to find the patient’s identifier
+A primary use of the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Profile is to enable document consumers and
+document sources using the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Profile to find the patient’s identifier
 in that [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Patient Identifier Domain (XAD-PID). Centralized Discovery and Retrieve are described above in section 3.2](#32-centralized-discovery-and-retrieve). 
-The [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile can be used for Cross-Community if the
+The [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Profile can be used for Cross-Community if the
 communities are willing to have a centralized patient cross-reference
 
 The [Patient Identifier Cross-reference for Mobile (PIXm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-41.html) provides the same query capability as PIX but leverages the [FHIR](http://fhir.hl7.org) standard. [PIXm](http://profiles.ihe.net/ITI/TF/Volume1/ch-41.html) can be used as an API to a Patient Identity Management system like [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) defines.  [PIXm](http://profiles.ihe.net/ITI/TF/Volume1/ch-41.html) does not include a feed transaction, see the [Patient Master Identity Registry (PMIR)](#54-patient-master-identity-registry-pmir) discussion below. 
@@ -1278,17 +1278,17 @@ A typical use of [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) is to d
 Patient ID. Imagine that Justin McCarthy heads to the local public
 health department for a vaccination. The public health department's
 clinical system does not assign local patient identifiers and thus
-cannot use the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile to discover Justin's [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain
+cannot use the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Profile to discover Justin's [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain
 Patient ID (a required element for the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) transactions described
 above). The public health department can use [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) to find matches for
 Justin and will receive Justin's [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Patient ID as part
 of the demographics returned. With the knowledge of Justin's [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)
 Affinity Domain Patient ID, the public health department can now publish
-his vaccination record to the community via the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile.
+his vaccination record to the community via the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Profile.
 
 The [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) service could be combined with the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) service to provide comprehensive patient identity knowledge. 
 
-The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) profile is functionally the same as PDQ but leverages the [FHIR](http://fhir.hl7.org) standard.  [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be used as an API to a Patient Identity Management system. [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be a FHIR API backed by a [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) query or a [Cross-Enterprise Patient Discovery (XCPD)](#53-cross-community-patient-discover-xcpd) query.   
+The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) Profile is functionally the same as PDQ but leverages the [FHIR](http://fhir.hl7.org) standard.  [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be used as an API to a Patient Identity Management system. [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be a FHIR API backed by a [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) query or a [Cross-Enterprise Patient Discovery (XCPD)](#53-cross-community-patient-discover-xcpd) query.   
 
 ## 5.3 Cross-Community Patient Discovery (XCPD)
 
@@ -1325,7 +1325,7 @@ more detail about [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
 ## 5.4 Patient Master Identity Registry (PMIR)
 
-The Patient Master Identity Registry [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) profile is a community based system of cooperating patient identity sources maintaining a master identity for each patient. [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) leverages the [FHIR](http://fhir.hl7.org) standard.
+The Patient Master Identity Registry [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) Profile is a community based system of cooperating patient identity sources maintaining a master identity for each patient. [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) leverages the [FHIR](http://fhir.hl7.org) standard.
 
 A consumer system may query the [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) registry to receive the master Patient Identity (aka. golden identity) based on their local identifiers or based on the identifying characteristics of the patient. In this way the PCP office can discover the master Patient Identity so that it can communicate with the systems in that community using a known patient identifier. This query uses [Patient Identity Cross-referencing for Mobile (PIXm)](#51-patient-identity-cross-reference-pix) or [Patient Demographics Query for Mobile (PDQm)](#52-patient-demographics-query-pdq).
 
@@ -1339,7 +1339,7 @@ Authorized patient identity source authorities will feed create, update, or merg
 
 The Figure 5.4-1 diagram shows four systems: A Patient Registration Desk, A Patient Master Registry, Data Consumer Systems, and a Data Services (data server). These are implementing the PMIR actors. This is not the only way the PMIR actors can be used; many configurations are not shown including one where the Patient Master Registry has internal logic that would have it detect and automatically correct entries which is accomplished by the Patient Master Registry also implementing a Patient Identity Source.
 
-First shown is the Data Services, representing any or all of the servers (e.g. EHR) in a community that hold data about patient subjects. This Data Services uses the PMIR Patient Identity Subscriber actor to subscribe to be notified of any Patient Identity changes (created, updated, merged, or deleted). This subscription triggers notifications later due to Registration Desk activities.
+First shown is the Data Services, representing any or all of the servers (e.g., EHR) in a community that hold data about patient subjects. This Data Services uses the PMIR Patient Identity Subscriber actor to subscribe to be notified of any Patient Identity changes (created, updated, merged, or deleted). This subscription triggers notifications later due to Registration Desk activities.
  
 Second shown is the Registration Desk activities. A patient presents, and is looked up in the Patient Master Registry. The Registration Desk can create new patients, update an existing Patient, or merge where multiple entries are found for the same patient. All updates are notified by the Patient Master Registry to any subscribing systems such as a Data Service.
 
@@ -1692,7 +1692,7 @@ explaining the detail of this Privacy Consent to the requesting
 system/individual adds no value. Most often the requesting
 system/individual is either fully empowered to receive and use the
 content, or not authorized at all. In these cases, the use of user
-identity context, as discussed above around the [IUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-34.html) or [XUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-13.html) profiles, is
+identity context, as discussed above around the [IUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-34.html) or [XUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-13.html) Profiles, is
 sufficient to make the Access Control decision. The trust relationship
 of the Document Sharing exchange includes background governance on
 appropriate use, as discussed above around the [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Profile.
@@ -1884,7 +1884,7 @@ Canada’s national standard for the exchange of diagnostic imaging (DI) is Cros
 
 [IHE Success Story](https://www.iheusa.org/sites/iheusa/files/HIMSS_IHE_Forcare_Success_Story_web.pdf)
 
-After extensive research the Medical Center Leeuwarden (MCL, The Netherlands) chose to create a regional cardiology exchange based on the principles of the IHE XDS profile back in 2007.  The cardiology exchange network connects hospitals in the Dutch province of Friesland and is in operation since 2008. The exchange network is based on various IT-Infrastructure profiles centered around XDS and supports a clinical pathway where community-based hospitals and clinics refer patients for cardiac intervention procedures to MCL. Given the heterogeneous landscape of clinical information systems from different (local) vendors, information broker technology is used to connect to legacy system and to transform data into XDS documents. Prior to implementing the exchange network, it took on average 3 days to complete a patient referral. Most of the delay was caused by the inability to exchange diagnostic information in a timely manner. With the network in place referrals can be completed in less than 24 hours which provides great patient benefits and lead to a shorter stay in the hospital 
+After extensive research the Medical Center Leeuwarden (MCL, The Netherlands) chose to create a regional cardiology exchange based on the principles of the IHE XDS Profile back in 2007.  The cardiology exchange network connects hospitals in the Dutch province of Friesland and is in operation since 2008. The exchange network is based on various IT-Infrastructure profiles centered around XDS and supports a clinical pathway where community-based hospitals and clinics refer patients for cardiac intervention procedures to MCL. Given the heterogeneous landscape of clinical information systems from different (local) vendors, information broker technology is used to connect to legacy system and to transform data into XDS documents. Prior to implementing the exchange network, it took on average 3 days to complete a patient referral. Most of the delay was caused by the inability to exchange diagnostic information in a timely manner. With the network in place referrals can be completed in less than 24 hours which provides great patient benefits and lead to a shorter stay in the hospital 
 
 The network covers 4 hospitals and 2 outpatient clinics. The number of users is approximately 250, with 10,000 documents being processed annually.
 
@@ -1893,7 +1893,7 @@ The network covers 4 hospitals and 2 outpatient clinics. The number of users is 
 Starting in 2014 the hospitals in the northern provinces in the Netherlands have gradually create an XDS-based network to share diagnostic images among them. The initial goal, to reduce exchange of CD and DVD to virtually zero, was reached around 2018. It demonstrated that the costs per study transfer were reduced with almost 90%. Over a million studies are available through the network to date.
    
 
-From the initial image sharing use case the network has expanded into other use cases. A number of mental health professionals use the network to share a summary record. As these records hold very privacy sensitive information, strict access control has been implemented that leverages a combination of the IHE XUA and BPPC profiles though which the identity of the mental health professional is exchanged. IHE BPPC based consent documents are used to comply with Dutch legislation. It requires that explicit patient consent is obtained before information can be shared. Another use case the network supports is the transfer of patients to Skilled Nursing Facilities and/or Long-Term Care facilities. In 2019 the XDS network was extended with XDW-based workflow capabilities to implement a referral workflow to support hospitals in the region to refer patients to the newly opened Proton Therapy Center. 
+From the initial image sharing use case the network has expanded into other use cases. A number of mental health professionals use the network to share a summary record. As these records hold very privacy sensitive information, strict access control has been implemented that leverages a combination of the IHE XUA and BPPC Profiles though which the identity of the mental health professional is exchanged. IHE BPPC based consent documents are used to comply with Dutch legislation. It requires that explicit patient consent is obtained before information can be shared. Another use case the network supports is the transfer of patients to Skilled Nursing Facilities and/or Long-Term Care facilities. In 2019 the XDS network was extended with XDW-based workflow capabilities to implement a referral workflow to support hospitals in the region to refer patients to the newly opened Proton Therapy Center. 
 
 The [following video](https://www.youtube.com/watch?v=LtbZ6QzUBhs) demonstrates how the XDS network is used to provide access to CT images in a time critical trauma use-case.
 
