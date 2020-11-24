@@ -1,6 +1,6 @@
 **Integrating the Healthcare Enterprise**
 
-![](.//images/ihe-logo.jpeg)
+![](.//images/ihe-logo.png)
 
 
 **[IHE IT Infrastructure](https://profiles.ihe.net/ITI)** **White Paper**
@@ -418,7 +418,7 @@ Information Model Infrastructure databases might be used to enhance
 Clinical Decision Support as a complement to document discovery. These
 databases would not be nationwide, but rather be local to the patient’s 
 care facility. Like EHRs themselves, Document Sharing supports
-interoperability amongst local systems and supports a longitudinal
+interoperability among local systems and supports a longitudinal
 patient record that spans across many local systems potentially using
 multiple different database systems.
 
@@ -707,7 +707,7 @@ There are three different models of a document: Stable, Delayed Assembly, and On
 
 A **Stable document** is one where the content has been gathered together at the time the document entry is authored. The stable model fits best with environments that can produce a document and have it stored in a Document Repository for retrieval as is necessary. The Stable document entry can be replaced, but the content is fixed at the time the document entry is authored.
 
-A **Delayed Assembly document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind and identity. The document is not assembled until the first Document Consumer requests to retrieve that document. The retrieve request triggers the creation (delayed assembly) of the document. The Document Entry is updated with the given hash and size, and the document is now available as a Stable document. This model can be used when the Document Source is a database that is not inherently document based, but can produce a document for persistant storage upon request. The Document Source can indicate all of the metadata about the document (except the hash and size), but chooses to not produce the document content until a retrieve request is made. 
+A **Delayed Assembly document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind and identity. The document is not assembled until the first Document Consumer requests to retrieve that document. The retrieve request triggers the creation (delayed assembly) of the document. The Document Entry is updated with the given hash and size, and the document is now available as a Stable document. This model can be used when the Document Source is a database that is not inherently document based, but can produce a document for persistent storage upon request. The Document Source can indicate all of the metadata about the document (except the hash and size), but chooses to not produce the document content until a retrieve request is made. 
 
 An **On-Demand document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind, but content that is expected to change over time. The On-Demand model is used when the document source can ensure that the returned document always contains information that is known to be accurate at the time of request. This can be used in cases where the document source is a database that is not inherently document based, and document consumers wish to always receive the most up to date information available. Thus, a request two months apart may contain different content given changes during the two month span. The document instance isn't created until a Document Consumer requests to retrieve an instance of the document. The retrieve request triggers the creation of an instance of the document. The instance could be preserved as a snapshot, which is a kind of [Association](#27-document-relationships) managed off of the On-Demand document entry.
 
@@ -813,7 +813,7 @@ information. In these cases, electronic media (such as CDs and USB
 drives) or email may be employed to transport the data from one system
 to another.
 
-The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) e-Mail option is a logical advance for directed e-mail exchange
+The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) e-Mail Option is a logical advance for directed e-mail exchange
 that provides content packaging and metadata to enable accurate
 processing. The [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) Profile has been adopted in national exchange
 specifications such as the USA defined “Direct Project”.
@@ -1102,7 +1102,7 @@ The Federation of many communities does create a larger patient identity
 problem, and thus a federation approach to patient identity is needed as
 well. This patient identity federation is profiled in the
 Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) Profile. For more information
-on this profile see [Section 5.3](#53-cross-community-patient-discovery-xcpd).
+on this profile, see [Section 5.3](#53-cross-community-patient-discovery-xcpd).
 
 The [Cross-Community slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Cross-Community_2012-12-10.ppt) provides
 more detail about [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
@@ -1153,7 +1153,7 @@ The flows of information are depicted in the Figure 4-1:
 3. Each data element is linked to the document(s) from which it was extracted per the [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
 4. Clinician accesses context of any data element of interest using source documents ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profiles) providing the clinical context in which the observation was recorded.
 
-For a more detailed guide see the [mXDE webinar](https://www.youtube.com/watch?v=o24WQgxiYVI&t=47s)
+For a more detailed guide, see the [mXDE webinar](https://www.youtube.com/watch?v=o24WQgxiYVI&t=47s)
 
 # 5 Patient identity management
 
@@ -1257,7 +1257,7 @@ using a known patient identifier.
 
 A primary use of the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Profile is to enable document consumers and
 document sources using the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Profile to find the patient’s identifier
-in that [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Patient Identifier Domain (XAD-PID). Centralized Discovery and Retrieve are described above in section 3.2](#32-centralized-discovery-and-retrieve). 
+in that [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Patient Identifier Domain (XAD-PID). Centralized Discovery and Retrieve are described above in [Section 3.2](#32-centralized-discovery-and-retrieve). 
 The [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Profile can be used for Cross-Community if the
 communities are willing to have a centralized patient cross-reference
 
@@ -1339,7 +1339,7 @@ Authorized patient identity source authorities will feed create, update, or merg
 
 The Figure 5.4-1 diagram shows four systems: A Patient Registration Desk, A Patient Master Registry, Data Consumer Systems, and a Data Services (data server). These are implementing the PMIR actors. This is not the only way the PMIR actors can be used; many configurations are not shown including one where the Patient Master Registry has internal logic that would have it detect and automatically correct entries which is accomplished by the Patient Master Registry also implementing a Patient Identity Source.
 
-First shown is the Data Services, representing any or all of the servers (e.g., EHR) in a community that hold data about patient subjects. This Data Services uses the PMIR Patient Identity Subscriber actor to subscribe to be notified of any Patient Identity changes (created, updated, merged, or deleted). This subscription triggers notifications later due to Registration Desk activities.
+First shown is the Data Services, representing any or all of the servers (e.g., EHR) in a community that hold data about patient subjects. This Data Services uses the PMIR Patient Identity Subscriber to subscribe to be notified of any Patient Identity changes (created, updated, merged, or deleted). This subscription triggers notifications later due to Registration Desk activities.
  
 Second shown is the Registration Desk activities. A patient presents, and is looked up in the Patient Master Registry. The Registration Desk can create new patients, update an existing Patient, or merge where multiple entries are found for the same patient. All updates are notified by the Patient Master Registry to any subscribing systems such as a Data Service.
 
@@ -1535,7 +1535,7 @@ guidelines have served as a basis for data protection laws in the United
 States, Europe, Canada, Japan, Australia, and elsewhere. Together, these
 principles and laws provide a useful framework for developing general
 data protection requirements for health information systems. For more
-information see <http://oecdprivacy.org>.
+information, see <http://oecdprivacy.org>.
 
 Based on the experience of the IHE participants in implementing
 community environments there is a common set of Security and Privacy
@@ -1622,7 +1622,7 @@ basis for a chain of trust through accountability among all of the
 systems participating in the Document Sharing exchange. The
 communications between these trusted systems is also encrypted.
 
-For more information on the use of IHE [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) to enable basic security see
+For more information on the use of IHE [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) to enable basic security, see
 the security and privacy slide
 decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and the [Security and Privacy Profiles Introduction is long-form narrated](https://healthcaresecprivacy.blogspot.com/2011/05/ihe-privacy-and-security-profiles.html).
 
@@ -1678,7 +1678,7 @@ Control rules can leverage any of the user context, patient identity, or
 document metadata discussed above.
 
 For more details on enabling Role-Based-Access-Control and federation of
-identities see the security and privacy slide
+identities, see the security and privacy slide
 decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and the [Security and Privacy Profiles Introduction is long-form narrated](https://healthcaresecprivacy.blogspot.com/2011/05/ihe-privacy-and-security-profiles.html).
 
 ### 7.2.3 Patient Privacy Consent to participate in Document Sharing
@@ -1753,7 +1753,7 @@ the Opt-Out policy. This policy would then be registered as a
 replacement for the previous Opt-In policies including the research
 policy. Thus, now if that research application tries to access the
 patient’s data, it will be blocked as the patient does not have a
-current acknowledgement of the research policy.
+current acknowledgment of the research policy.
 
 ### 7.2.4 Security and Privacy in a Patient Safety Environment 
 
@@ -1780,9 +1780,9 @@ The following is a breakdown of the security and privacy controls and in
 what way the IHE profiles can help. The following table shows the set of
 identified Controls (identified in above) as columns and the supportive
 IHE Profiles as rows. In this table a ‘√’ indicates a direct
-relationship. A direct relationship means that the Profile addresses the
+relationship. A direct relationship means that the profile addresses the
 security and/or privacy principle. An ‘.” indicates an indirect
-relationship, meaning that the Profile assists with the principle.
+relationship, meaning that the profile assists with the principle.
 Further details on the ‘√’ direct and ‘.’ Indirect relationships can be
 found in the profile text or through other webinars.
 
@@ -1859,13 +1859,13 @@ The eHealth Exchange supports multiple use cases, including:
 - Quality Reporting for the End Stage Renal Disease (ESRD) Program
 - Immunization
 - Encounter Alerts
-- Prescription Drug Monitoring Program (PDMP) and Electronic Lab Reporting (in support of public heatlh)
+- Prescription Drug Monitoring Program (PDMP) and Electronic Lab Reporting (in support of public health)
 - Electronic Case Reporting to the Association of Public Health Laboratories
 - Syndromic Surveillance
 - Image Sharing
 
 #### 8.1.2.2 Carequality
-What if you had a cell phone plan that only allowed you to call other customers of your carrier?  That’s the situation for many healthcare providers today when they join a data sharing network.  The networks provide connectivity, but only within their membership, which ofter follows geographic or technology vendor lines.  The connectivity can provide significant benefits, but falls shows of the potential value if networks could be connected. [Carequality](https://carequality.org/overview-video/) has brought together the entire healthcare industry to overcome this challenge by providing a national-level, consensus-build, common interoperability framework to enable exchange between and among health data sharing networks.  Carequality brings together a diverse group of [implementers](https://carequality.org/members-and-supporters/)  including electronic health record (EHR) vendors, record locator service (RLS) providers and other types of existing networks from the private sector and government, to determine technical and policy agreements to enable data to flow between and among networks, platforms, and geographies, much like the telecommunications industry did for linking cell phone networks.  
+What if you had a cell phone plan that only allowed you to call other customers of your carrier?  That’s the situation for many healthcare providers today when they join a data sharing network.  The networks provide connectivity, but only within their membership, which often follows geographic or technology vendor lines.  The connectivity can provide significant benefits, but falls shows of the potential value if networks could be connected. [Carequality](https://carequality.org/overview-video/) has brought together the entire healthcare industry to overcome this challenge by providing a national-level, consensus-build, common interoperability framework to enable exchange between and among health data sharing networks.  Carequality brings together a diverse group of [implementers](https://carequality.org/members-and-supporters/)  including electronic health record (EHR) vendors, record locator service (RLS) providers and other types of existing networks from the private sector and government, to determine technical and policy agreements to enable data to flow between and among networks, platforms, and geographies, much like the telecommunications industry did for linking cell phone networks.  
 
 There are three essential core elements to enable this sort of widespread connectivity, without individual pre-coordination with each partner:
 - Common rules of the road: In order for the varied participants to trust each other with health information, everyone needs to have a legal obligation to abide by the same rules.
@@ -1916,7 +1916,7 @@ The base IHE profiles are adapted to the [Swiss specific use cases](https://ehea
 
 The national extensions and the mandatory IHE profiles are legally anchored as part of the ordinances to the law of the electronic patient dossier. Communities and their vendors verify the compliance to the IHE profiles performing [Swiss specific interoperability tests](https://ehealthsuisse.ihe-europe.net/gazelle/testing/testsDefinition/testsList.seam?testType=2&testStatus=1) as part of a certification process.  
 
-While initially planned to April 2020, the go live was postponed due to the COVID-19 pandemia to April 2021.
+While initially planned for April 2020, due to the COVID-19 pandemic, the go live was postponed until April 2021.
 
 
 ### 8.1.6 And many more
