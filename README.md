@@ -1,15 +1,14 @@
 **Integrating the Healthcare Enterprise**
 
-![](.//images/ihe-logo.png)
 
 
 **[IHE IT Infrastructure](https://profiles.ihe.net/ITI)** **White Paper**
 
 **Enabling Document Sharing Health Information Exchange Using IHE Profiles**
 
-**Revision 1.0 - Draft for Public Comment**
+**Revision 2.0 - Draft for Public Comment**
 
-Date: November xx, 2020
+Date: December 2, 2020
 
 Author: ITI Technical Committee
 
@@ -27,7 +26,7 @@ Email: iti@ihe.net
 * [7 Security and Privacy](#7-security-and-privacy)
 * [8 Further Reading](#8-further-reading)
 
-This white paper is published on November xx, 2020 for public comment. Comments are invited and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.
+This white paper is published on December 2, 2020 for public comment. Comments are invited and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.
 
 In order to be considered in the development of the subsequent version of the white paper, comments must be received by **January 15, 2021**.
 
