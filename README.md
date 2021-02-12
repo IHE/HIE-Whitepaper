@@ -1,6 +1,18 @@
+**Integrating the Healthcare Enterprise**
+
 **[IHE IT Infrastructure](https://profiles.ihe.net/ITI)** **White Paper**
 
 **Enabling Document Sharing Health Information Exchange Using IHE Profiles**
+
+**Revision 2.0-beta - Draft for Publication**
+
+Date: February 12, 2020
+
+Author: ITI Technical Committee
+
+Email: [iti@ihe.net](mailto:iti@ihe.net)
+
+**Please verify you ahve the most recent version of this document. See [here](http://profiles.ihe.net/ITI) for Published version.
 
 **CONTENTS**
 * [1 Introduction](#1-introduction)
@@ -367,7 +379,7 @@ document.
 
 Two structured and coded health specific document types are Clinical Document Architecture (CDA) and Fast Health Interoperability Resources (FHIR) documents. Both of these formats are defined by HL7. CDA has received much of the attention over the past 20 years, with FHIR emerging in 2010s. FHIR's initial focus was on an interactive query/response model referred to as "REST"; but FHIR has a "Document" encoding as well. The FHIR Document model has a top level resource that sets the context, content, and flow of the FHIR Document, and that is followed by copies of the data resources; all of this is encoded into a single bundle. This single bundle is able to be managed in Document Sharing just like any other Document. 
 
-The FHIR Document has a benefit of being made up of the same resources that one would get from a Query/Response API. There is clear identity (.id) of each of these resources to so they are clearly distinct, which can be used for tracking if the data contained previously known. The FHIR Document model includes more consistent metadata and provenance for each resource. This traceability makes accessing the content within a FHIR Document more consistent limiting unnecessary duplication of data. This model enables more easy on the Content Consumer.
+The FHIR Document has a benefit of being made up of the same resources that one would get from a Query/Response API. There is clear identity (.id) of each of these resources to so they are clearly distinct, which can be used for tracking if the data contained previously known. The FHIR Document model includes more consistent metadata and provenance for each resource. This traceability makes accessing the content within a FHIR Document more consistent limiting unnecessary duplication of data. 
 
 ## 2.4 Longitudinal Patient Record
 
@@ -503,6 +515,8 @@ Metadata serve multiple purposes. They allow systems to perform:
 
   - support security and integrity controls
 
+![](https://profiles.ihe.net/ITI/TF/Volume3/media/Figure_4.1.3.1-1.png)
+
 Any metadata element may support overlapping purposes, but the
 combination of metadata elements provides a robust understanding of the
 document and enables automated and manual management of the document
@@ -561,7 +575,7 @@ principles in this section. Because the principles are the same it is
 relatively simple to implement more than one model to accomplish
 multiple objectives. The three models are:
 
-  - **Direct Push** – in this model, clinical content in the form of
+  - **Push** – in this model, clinical content in the form of
     documents and metadata is sent directly to a known recipient, or
     published on media for delivery
 
@@ -580,11 +594,11 @@ associations. Each requires some level of governance structure in order
 to operate, although there is some difference in the governance needs.
 For instance, the centralized model requires knowledge only of the
 centralized locator which can then provide connections with distributed
-document repositories. For Direct Push and Federated approaches a
+document repositories. For Push and Federated approaches a
 detailed directory of participating entitles is typically used to ensure
 that the push or query transactions are sent to the proper place. All
 include strong support for authenticity and encryption on transport.
-Privacy requirements vary especially between the Direct Push, where
+Privacy requirements vary especially between the Push, where
 privacy policy is generally determined prior to initiation of the
 action, and Discovery mechanisms where privacy policy is most often
 determined prior to responding to the request. So, while the issues that
@@ -603,7 +617,7 @@ The Document Sharing mechanisms enabled through IHE assume that a
 patient is associated with every document shared. That patient is
 described within the metadata describing the document.
 
-In the case of a Direct Push, it is up to the receiving entity to
+In the case of a Push, it is up to the receiving entity to
 resolve the patient by using the metadata containing identifiers and
 demographics of the patient. It is preferable to resolve the patient
 prior to sending documents and using the patient identifier metadata
@@ -707,7 +721,7 @@ multiple, disparate systems in a way that minimizes the burden that data
 sharing imposes on those systems. These profiles may be categorized
 according to three different data sharing models:
 
-  - Direct Push – supports **point-to-point push of documents** where
+  - Push – supports **point-to-point push of documents** where
     content is sent directly to the intended recipient found through
     manual means or infrastructure enabled directory
 
@@ -722,7 +736,7 @@ according to three different data sharing models:
   - Federated Discovery and Retrieve – content is pulled directly from
     the content holder who is found through manual means or a directory
 
-The three models are designed to support different use cases. The Direct
+The three models are designed to support different use cases. The 
 Push model can be relatively simple but it cannot satisfy all use cases
 because it relies on the source of documents to know where those
 documents will be needed. The Discovery models can also handle use cases
@@ -742,7 +756,7 @@ like:
 
 The IHE profiles addressing these models are:
 
-  - Direct Push – Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Cross-Enterprise Document Reliable Interchange ([XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html)), and Cross-Enterprise Document Media Interchange ([XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html))
+  - Push – Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Cross-Enterprise Document Reliable Interchange ([XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html)), and Cross-Enterprise Document Media Interchange ([XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html))
 
   - Centralized Discovery and Retrieve – Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)), Mobile Health Document Sharing ([MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html)), and Cross-Enterprise Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html))
 
@@ -752,9 +766,9 @@ The following figures show the flow of data for each of these models.
 
 ![](images/push-models.png)
 
-**Figure 3-1: Data Flow for Direct Push Sharing Models.**
+**Figure 3-1: Data Flow for Push Sharing Models.**
 
-Figure 3-1 shows three different Direct Push models. The sending system is depicted on the left sending to a recipient on the right. 
+Figure 3-1 shows three different Push models. The sending system is depicted on the left sending to a recipient on the right. 
 
 ![](images/centralized-models.png)
 
@@ -770,7 +784,7 @@ Figure 3-3 shows a deployment depicting set of communities that are linked by th
 
 The following sections will describe in more detail the three models.
 
-## 3.1 Direct Push
+## 3.1 Push
 
 ### 3.1.1 Cross-Enterprise Document Reliable Interchange (XDR)
 
@@ -834,7 +848,7 @@ The [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) profile provides a 
 
 The typical use case for [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) in this mode is when documents are known to be needed by a recipient. Such as a patient referral in the use case given in [XDR](#311-cross-enterprise-document-reliable-interchange-xdr).
 
-In addition the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) can be used as an API in push mode. In this use case the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) push request could be handled by an intermediary that further pushes the content using [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) or [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html). On the recipient side the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) api could be used by an intermediary to forward a [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) or [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) push is further pushed to a Recipient using [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html); or the intermediary could store in a registry allowing a [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Document Consumer to query and retrieve the content.
+In addition the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) can be used as an push API to a system that ultimately delivers the content. For example diagrammed below is MHD initiating a push to an Intermediary. In this use case the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) push request could be handled by the intermediary that further pushes the content using [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) or an e-mail carrying [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) (e.g., the Direct Project). On the recipient side (not shown in the diagram) the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) could be used by an intermediary to forward a [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html) or [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html) push content. MHD (not shown in the diagram) could also be used on the recipient side as a query/retrieve where the intermediary has cached content addressed to that recipient. This Intermediary is an example of a Direct Project HISP with the added functionality provided by MHD, enabling FHIR based push with end-to-end interoperability between three different transport stacks in MHD, XDR, and e-mail XDM.
 
 ![](images/MHD_Push_XDR.png)
 
@@ -1026,11 +1040,11 @@ Sharing environment. The services include:
 
 The [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) profile supports registration of content and the ability to
 query and retrieve from a centralized service, but there are many use
-cases where a system (i.e., a clinician) may wish to be proactively
-notified when a new document is made available. DSUB describes the use of subscription and notification mechanisms for use within an XDS Affinity Domain and across communities. The subscription allows for the matching of metadata during the publication of a new document for a given patient, and results a notification which can be parsed:
+cases where a system (e.g., system acting on behalf of a clinician) may wish to be proactively
+notified when a new document is made available. [DSUB](http://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) describes the use of subscription and notification mechanisms for use within an XDS Affinity Domain. The subscription allows for the matching of metadata during the publication of a new document for a given patient, and results a notification which can be parsed:
 
-1. Using a push-style method of notification where the Subscriber subscribes to receive notifications about the availability of documents based on specific criteria or,
-2. Using a pull-style method which creates a Pull Point resource able to store notifications targeted to a specific recipient. Notifications stored in the Pull Point can be retrieved using a specific transaction.
+1. Using a push-style method of notification where the "Document Metadata Subscriber" actor subscribes to receive notifications at the "Document Metadata Notification Recipient" actor about the availability of documents based on specific criteria or,
+2. Using a pull-style method which creates a "Notification Pull Point" actor able to store notifications targeted to a specific recipient. Notifications stored in the Pull Point can be retrieved by the "Notification Puller" actor.
 
 The [Publication and Discovery slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDS_DSUB_2012-12-10.ppt) provides more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](http://profiles.ihe.net/ITI/TF/Volume1/ch-26.html).
 
@@ -1132,10 +1146,10 @@ The flows of information are depicted in the Figure 4-1:
 
 **Figure 4-1: mXDE Flow from Documents to Resources**
 
-1. Specific data elements are extracted from the structured documents per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
-2. Data elements (e.g. allergies) queried using the FHIR based Query for Existing Data for Mobile ([QEDm](https://wiki.ihe.net/index.php/Query_for_Existing_Data_for_Mobile)) Profile (Query_for_Existing_Data_for_Mobile).
-3. Each data element is linked to the document(s) from which it was extracted per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
-4. Clinician accesses context of any data element of interest using source documents ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profiles) providing the clinical context in which the observation was recorded.
+1. Documents are published into a Document Sharing infrastructure. This solution supports all IHE models of Document Sharing including XDS, XCA, and MHDS. 
+2. Specific data elements are extracted from the structured documents per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
+3. Data elements (e.g. allergies) queried using the FHIR based Query for Existing Data for Mobile ([QEDm](https://wiki.ihe.net/index.php/Query_for_Existing_Data_for_Mobile)) Profile (Query_for_Existing_Data_for_Mobile).
+4. Each data element is linked to the document(s) from which it was extracted per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile. Clinician accesses context of any data element of interest using source documents ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profiles) providing the clinical context in which the observation was recorded.
 
 For a more detailed guide see the [mXDE webinar](https://www.youtube.com/watch?v=o24WQgxiYVI&t=47s)
 
@@ -1801,6 +1815,7 @@ sharing. For those readers who wish to learn more details, please refer:
 1. IHE IT Infrastructure [formal specifications and whitepapers](https://www.ihe.net/resources/technical_frameworks/#IT )
 1. A white paper that covers deployment planning for an exchange [Template for XDS Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
 1. A Handbook to aid a Document Sharing community with designing how they will use [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
+1. An article on the value of IHE [Turning Hype into Value: IHE's Important Role](https://www.infoway-inforoute.ca/en/what-we-do/blog/digital-health-records/7974-turning-hype-into-value-ihe-s-important-role)
 1. Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [IHE Process](https://wiki.ihe.net/index.php/Process) 
 1. HIMSS:  [Interoperability in Healthcare Guide](https://www.himss.org/resources/interoperability-healthcare). This guide covers the basics of interoperability in health information exchange. Covering the definition of interoperability, interoperability standards, interoperability ecosystem, use of information exchange, workflow considerations and guidelines, and policy and government efforts.
 1. Full listing of all IHE authored [Implementation Guide Profiles](https://wiki.ihe.net/index.php/Profiles)
