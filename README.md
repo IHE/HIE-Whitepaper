@@ -1255,8 +1255,6 @@ using a known patient identifier.
 A primary use of the [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Profile is to enable document consumers and
 document sources using the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Profile to find the patient’s identifier
 in that [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain Patient Identifier Domain (XAD-PID). Centralized Discovery and Retrieve are described above in [Section 3.2](#32-centralized-discovery-and-retrieve). 
-The [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Profile can be used for Cross-Community if the
-communities are willing to have a centralized patient cross-reference
 
 The [Patient Identifier Cross-reference for Mobile (PIXm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-41.html) provides the same query capability as PIX but leverages the [FHIR](http://fhir.hl7.org) standard. [PIXm](http://profiles.ihe.net/ITI/TF/Volume1/ch-41.html) can be used as an API to a Patient Identity Management system like [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) defines.  [PIXm](http://profiles.ihe.net/ITI/TF/Volume1/ch-41.html) does not include a feed transaction, see the [Patient Master Identity Registry (PMIR)](#54-patient-master-identity-registry-pmir) discussion below. 
 
