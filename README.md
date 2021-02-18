@@ -196,8 +196,8 @@ health IT interoperability. All tests are evaluated on interoperability and
 conformance to IHE Profiles found in IHE’s Technical Frameworks. The test floor 
 is overseen by IHE’s technical project managers providing a safe, neutral test 
 environment and an unparalleled opportunity for industry collaboration and problem resolution. 
-[IHE Connectathons](https://www.ihe.net/participate/connectathon/) take place multiple times and locations annually in various 
-countries across the world to advance health IT and patient safety. Including [USA](https://www.iheusa.org/what-is-ihe-connectathon), [Europe](https://www.ihe-europe.net/), and [Japan](http://www.ihe-j.org/en/), and the [world](https://www.ihe.net/participate/connectathon/).
+[IHE Connectathons](https://www.ihe.net/participate/connectathon/) take place multiple times and locations annually around the world 
+to advance health IT and patient safety, including [USA](https://www.iheusa.org), [Europe](https://www.ihe-europe.net/), [Japan](http://www.ihe-j.org/en/), and elsewhere.
 
 ![](.//images/standards-connectathon-lifecycle.png)
  
