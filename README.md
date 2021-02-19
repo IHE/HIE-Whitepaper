@@ -1190,15 +1190,15 @@ share a common patient identification scheme (an identifier and an
 assignment process to a patient) and issuing authority for patient
 identifiers.
 
-The following table introduces some key considerations for Patient Identity Management in a Document Sharing Health Information Exchange related to the four IHE Profiles that support various
-styles of distributed management of patient identities and discusses the 
-assumptions the profile is built upon and highlights key conditions 
-that need to be addressed at the time of deployment.
+The following table introduces the IHE Profiles for Patient Identity Management in a Document Sharing Health Information Exchange.  
+The four IHE Profiles support various styles of distributed management of patient identities.
+The table identifies, for each Profile, key "Architecture Capabilities" that distinguish each of the Profiles, to aid with picking the right solution for various settings and needs. 
+The third column in the table describes some deployment considerations including systems design and policy.
 
 **Table 5-1: IHE Profiles that Support Various Styles of Distributed Management of Patient ID**
 
 
-|    Patient Identification Profiles       |                           Assumptions                             |                       Conditions                       |
+|    Patient Identification Profile       |                   Architecture Capabilities                |                       Deployment Considerations                       |
 |------------------------------------------|-------------------------------------------------------------------|--------------------------------------------------------|
 | [Patient Demographics Query (PDQ)](#52-patient-demographics-query-pdq) | 1. Supports the access to a registry of identities. <br/> 2. It supports the ability to query patient identity domains of interest, by a set of demographics traits and get in response one or more matching identities with their complete set of demographics traits.| 1. The process to create and update the registry of identities along with their demographics needs to be addressed at deployment time for each one of the identity domains served. |
 | [Patient Id Cross-referencing (PIX)](#51-patient-identity-cross-reference-pix) | 1. Supports the linking of patient identifiers from different domains. <br/> 2. Each identifier domain entirely controls the creation, updates, and merges of its patient identities. <br/> 3. The consumer of identity cross-references does not need to know any of the patient demographics as managed by the domain controlling the identity. | 1. Each deployment relies on a cross-referencing algorithm which is centrally managed and needs to be quality controlled. <br/> 2. The consumers of cross-references between identities from different identity domains either persist the cross-reference and actively processes notification updates (profile option), or never persist cross-references and re-query when needed. |
