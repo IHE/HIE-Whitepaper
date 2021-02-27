@@ -6,13 +6,13 @@
 
 **Revision 2.0-beta - Draft for Publication**
 
-Date: February 12, 2020
+Date: February 19, 2020
 
 Author: ITI Technical Committee
 
 Email: [iti@ihe.net](mailto:iti@ihe.net)
 
-**Please verify you ahve the most recent version of this document. See [here](http://profiles.ihe.net/ITI) for Published version.
+**Please verify you have the most recent version of this document. See [here](http://profiles.ihe.net/ITI) for Published version.
 
 **CONTENTS**
 * [1 Introduction](#1-introduction)
@@ -339,16 +339,16 @@ more often expected to be transient. There is a place for both of these
 constructs in healthcare.” HL7 characterizes a document by the following
 properties:
 
-  - *Persistence –* Documents are persistent over time. The content of
+  - *Persistence* – Documents are persistent over time. The content of
     the document does not change from one moment to another. A document
     represents information stored at a single instance in time.
 
-  - *Wholeness -* A document is a whole unit of information. Parts of
+  - *Wholeness* - A document is a whole unit of information. Parts of
     the document may be created or edited separately, or may also be
     authenticated or legally authenticated, but the entire document is
     still to be treated as a whole unit.
 
-  - *Stewardship –*A document is maintained over its lifetime by a
+  - *Stewardship* – A document is maintained over its lifetime by a
     custodian, either an organization or a person entrusted with its
     care.
 
