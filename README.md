@@ -12,7 +12,7 @@ Author: ITI Technical Committee
 
 Email: [iti@ihe.net](mailto:iti@ihe.net)
 
-**Please verify you have the most recent version of this document. See [here](http://profiles.ihe.net/ITI) for Published version.
+**Please verify you have the most recent version of this white paper. See [here](http://profiles.ihe.net/ITI) for the Published version.
 
 # Foreword
 
@@ -1636,7 +1636,7 @@ carrier and billing address. Yet another document might carry the
 results of a very private procedure that the patient wishes to be
 available only to direct care providers. This differentiation of the
 types of data can be represented using a diagram like found in Table
-7.2.2-1: Sample Access Control Policies
+7.2.2-1: Sample Access Control Policies.
 
 **Table 7.2.2-1: Sample Access Control Policies**
 
