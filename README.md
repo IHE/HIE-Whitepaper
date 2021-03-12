@@ -4,15 +4,30 @@
 
 **Enabling Document Sharing Health Information Exchange Using IHE Profiles**
 
-**Revision 2.0-beta - Draft for Publication**
+**Revision 2.1 - Published**
 
-Date: February 19, 2020
+Date: March xx, 2021
 
 Author: ITI Technical Committee
 
 Email: [iti@ihe.net](mailto:iti@ihe.net)
 
-**Please verify you have the most recent version of this document. See [here](http://profiles.ihe.net/ITI) for Published version.
+**Please verify you have the most recent version of this white paper. See [here](http://profiles.ihe.net/ITI) for the Published version.
+
+# Foreword
+
+This is a white paper of the IHE IT Infrastructure (ITI) domain.
+
+This white paper is published on March xx, 2021. Comments are invited at any time and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.
+
+General information about IHE can be found at [https://www.ihe.net](https://www.ihe.net/).
+
+Information about the IHE IT Infrastructure domain can be found at [https://www.ihe.net/IHE_Domains](https://www.ihe.net/IHE_Domains/).
+
+Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [https://www.ihe.net/about_ihe/ihe_process](https://www.ihe.net/about_ihe/ihe_process/) and [https://www.ihe.net/resources/profiles](https://www.ihe.net/resources/profiles/).
+
+The current version of the IHE IT Infrastructure Technical Framework can be found at [https://profiles.ihe.net/ITI](https://profiles.ihe.net/ITI/).
+
 
 **CONTENTS**
 * [1 Introduction](#1-introduction)
@@ -24,9 +39,6 @@ Email: [iti@ihe.net](mailto:iti@ihe.net)
 * [7 Security and Privacy](#7-security-and-privacy)
 * [8 Further Reading](#8-further-reading)
 
-This white paper is published on December 2, 2020 for public comment. Comments are invited and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.
-
-In order to be considered in the development of the subsequent version of the white paper, comments must be received by **January 15, 2021**.
 
 # 1 Introduction
 
@@ -869,7 +881,7 @@ These communities would typically be described as parent-child relationships in 
 
 The Mobile Health Document Sharing ([MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html)) and Cross-Enterprise Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)) Profiles enable centralized
 discovery of health documents and retrieval of those documents from
-distributed document repositories. Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)) provides a simplified API for Document Source and Document Consumer actors.
+distributed document repositories. Mobile access to Health Documents ([MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html)) provides a simplified API for Document Source and Document Consumer Actors.
 
 The following scenario describes a typical exchange of clinical
 information using [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) or [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html). Dr. Suwati works for New Hope Medical Partners
@@ -1044,8 +1056,8 @@ query and retrieve from a centralized service, but there are many use
 cases where a system (e.g., system acting on behalf of a clinician) may wish to be proactively
 notified when a new document is made available. [DSUB](http://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) describes the use of subscription and notification mechanisms for use within an XDS Affinity Domain. The subscription allows for the matching of metadata during the publication of a new document for a given patient, and results a notification which can be parsed:
 
-1. Using a push-style method of notification where the "Document Metadata Subscriber" actor subscribes to receive notifications at the "Document Metadata Notification Recipient" actor about the availability of documents based on specific criteria or,
-2. Using a pull-style method which creates a "Notification Pull Point" actor able to store notifications targeted to a specific recipient. Notifications stored in the Pull Point can be retrieved by the "Notification Puller" actor.
+1. Using a push-style method of notification where the "Document Metadata Subscriber" Actor subscribes to receive notifications at the "Document Metadata Notification Recipient" Actor about the availability of documents based on specific criteria or,
+2. Using a pull-style method which creates a "Notification Pull Point" Actor able to store notifications targeted to a specific recipient. Notifications stored in the Pull Point can be retrieved by the "Notification Puller" Actor.
 
 The [Publication and Discovery slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDS_DSUB_2012-12-10.ppt) provides more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](http://profiles.ihe.net/ITI/TF/Volume1/ch-26.html).
 
@@ -1149,7 +1161,7 @@ The flows of information are depicted in the Figure 4-1:
 
 1. Documents are published into a Document Sharing infrastructure. This solution supports all IHE models of Document Sharing including XDS, XCA, and MHDS. 
 2. Specific data elements are extracted from the structured documents per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
-3. Data elements (e.g. allergies) queried using the FHIR based Query for Existing Data for Mobile ([QEDm](https://wiki.ihe.net/index.php/Query_for_Existing_Data_for_Mobile)) Profile (Query_for_Existing_Data_for_Mobile).
+3. Data elements (e.g., allergies) queried using the FHIR based Query for Existing Data for Mobile ([QEDm](https://wiki.ihe.net/index.php/Query_for_Existing_Data_for_Mobile)) Profile (Query_for_Existing_Data_for_Mobile).
 4. Each data element is linked to the document(s) from which it was extracted per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile. Clinician accesses context of any data element of interest using source documents ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profiles) providing the clinical context in which the observation was recorded.
 
 For a more detailed guide, see the [mXDE webinar](https://www.youtube.com/watch?v=o24WQgxiYVI&t=47s)
@@ -1192,7 +1204,7 @@ identifiers.
 
 The following table introduces the IHE Profiles for Patient Identity Management in a Document Sharing Health Information Exchange.  
 The four IHE Profiles support various styles of distributed management of patient identities.
-The table identifies, for each Profile, key "Architecture Capabilities" that distinguish each of the Profiles, to aid with picking the right solution for various settings and needs. 
+The table identifies, for each profile, key "Architecture Capabilities" that distinguish each of the Profiles, to aid with picking the right solution for various settings and needs. 
 The third column in the table describes some deployment considerations including systems design and policy.
 
 **Table 5-1: IHE Profiles that Support Various Styles of Distributed Management of Patient ID**
@@ -1212,7 +1224,7 @@ provides more detail about [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.htm
 
 ## 5.1 Patient Identity Cross-Reference (PIX)
 
-The Patient Identity Cross-Reference [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) profile supports the access to a central registry of cross-referenced patient identities, and the feed of patient identity updates from distributed patient identity domains. 
+The Patient Identity Cross-Reference [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Profile supports the access to a central registry of cross-referenced patient identities, and the feed of patient identity updates from distributed patient identity domains. 
 
 Each system that issues patient identities is considered an assigning authority, and every assigning authority is uniquely identified. 
 The set of identities issued by an assigning authority are considered a Patient Identity Domain or Patient Identifier Domain.
@@ -1221,7 +1233,7 @@ The combination of the unique assigning authority (aka The Patient Identity Doma
 For example, "Gary Collins" may be
 identified as `3562A` at the office of his Primary Care Physician (PCP)
 and `0320` at his specialty practice. 
-The systems are participating in a Health Information Exchange and using the PIX profile. 
+The systems are participating in a Health Information Exchange and using the PIX Profile. 
 As these identifiers were created or updated the Patient ID Manager was informed using the PIX feed transaction.
 Within the Patient ID Manager "Gary Collins" with identifier `3562A` and `0320` are matched with a 99% confidence, where as "Gary Collin" is not considered strong enough matched with only a 30% confidence due to the last name difference. These determinations are based on local constraints and policies, and are described here only for illustrative purposes.
 If the PCP's system wants to
@@ -1267,7 +1279,7 @@ help identify the patient. With information on dates of birth and gender,
 information about Leslie Ramsi, a male born on May-2-1968, can be
 distinguished from that of Leslie Ramsi, a female born on July-23-1987.
 
-The Patient Demographics Query [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) profile enables client systems to discover full identity information on a Patient given some set of demographics information the client knows. 
+The Patient Demographics Query [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) Profile enables client systems to discover full identity information on a Patient given some set of demographics information the client knows. 
 The PDQ service is made available by systems with more comprehensive and more accurate
 demographic information about patients, and provide a query mechanism so that the details can be discovered.
 
@@ -1283,13 +1295,13 @@ of the demographics returned. With the knowledge of Justin's [XDS](http://profil
 Affinity Domain Patient ID, the public health department can now publish
 his vaccination record to the community via the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Profile.
 
-The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) profile provides similar functionality as PDQ but uses the [FHIR](http://fhir.hl7.org) standard. [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be a FHIR API backed by a [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) query or a [Cross-Enterprise Patient Discovery (XCPD)](#53-cross-community-patient-discover-xcpd) query.
+The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) Profile provides similar functionality as PDQ but uses the [FHIR](http://fhir.hl7.org) standard. [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be a FHIR API backed by a [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) query or a [Cross-Enterprise Patient Discovery (XCPD)](#53-cross-community-patient-discover-xcpd) query.
 
 This is an introduction to the Profiles use within an HIE. These profiles include other use-case support, and other optional functions. Please reference the Profiles for details in [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) and [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html).
 
 ## 5.3 Cross-Community Patient Discovery (XCPD)
 
-The Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) profile defines a means to
+The Cross-Community Patient Discovery ([XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html)) Profile defines a means to
 discover mutually known patients and correlations those patients'
 identifiers across communities.
 
@@ -1321,7 +1333,7 @@ more detail about [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
 ## 5.4 Patient Master Identity Registry (PMIR)
 
-The Patient Master Identity Registry [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) profile is a collaborative community based system of cooperating patient identity sources maintaining a master identity for each patient. [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) leverages the [FHIR](http://fhir.hl7.org) standard.
+The Patient Master Identity Registry [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) Profile is a collaborative community based system of cooperating patient identity sources maintaining a master identity for each patient. [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) leverages the [FHIR](http://fhir.hl7.org) standard.
 
 For example, a consumer system may query the [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html) registry to receive the shared master Patient Identity (aka. golden identity) based on their local identifiers or based on the identifying characteristics of the patient (demographics). In this way a PCP office can discover the master Patient Identity so that it can communicate with the systems in that community using a known patient identifier. This query uses [Patient Identity Cross-referencing for Mobile (PIXm)](#51-patient-identity-cross-reference-pix) or [Patient Demographics Query for Mobile (PDQm)](#52-patient-demographics-query-pdq).
 
@@ -1329,7 +1341,7 @@ Patient identity source will feed create, update, or merge events to the [PMIR](
 
 The PMIR, PDQm, and PIXm Profiles are used within the [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) Profile to manage and find the patient’s identifier in that community as part of the [Centralized Discovery and Retrieve](#32-centralized-discovery-and-retrieve) environment.
 
-This is an introduction to the PMIR Profile use within MHDS. PMIR profile includes other optional functions. Please reference the Profile for details in [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html). 
+This is an introduction to the PMIR Profile use within MHDS. PMIR Profile includes other optional functions. Please reference the Profile for details in [PMIR](http://profiles.ihe.net/ITI/TF/Volume1/ch-49.html). 
 
 # 6 Common Provider Directory
 
@@ -1624,7 +1636,7 @@ carrier and billing address. Yet another document might carry the
 results of a very private procedure that the patient wishes to be
 available only to direct care providers. This differentiation of the
 types of data can be represented using a diagram like found in Table
-7.2.2-1: Sample Access Control Policies
+7.2.2-1: Sample Access Control Policies.
 
 **Table 7.2.2-1: Sample Access Control Policies**
 
