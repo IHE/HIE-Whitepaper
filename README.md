@@ -6,7 +6,7 @@
 
 **Revision 2.1 - Published**
 
-Date: March xx, 2021
+Date: March 19, 2021
 
 Author: ITI Technical Committee
 
@@ -18,7 +18,7 @@ Email: [iti@ihe.net](mailto:iti@ihe.net)
 
 This is a white paper of the IHE IT Infrastructure (ITI) domain.
 
-This white paper is published on March xx, 2021. Comments are invited at any time and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.
+This white paper is published on March 19, 2021. Comments are invited at any time and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.
 
 General information about IHE can be found at [https://www.ihe.net](https://www.ihe.net/).
 
@@ -579,7 +579,7 @@ lifecycle events related to the original document.
 
 **Figure 2.7-1: Multiple Document formats of the same document related by Document Associations.**
 
-Depicted in Figure 2.7-1 is a master document of format C-CDA with a set of transforms of the same content into CCD, C32, PDF, and a FHIR Document. This enables a Document Consumer to pull the content that best fits their ability to consume. Note the master document could be of any format, so one might choose to have the master document as the FHIR Document. Similar associations functionality would also support human language translations.
+Depicted in Figure 2.7-1 is a master document of format C-CDA with a set of transforms of the same content into CCD&copy;, C32, PDF, and a FHIR Document. This enables a Document Consumer to pull the content that best fits their ability to consume. Note the master document could be of any format, so one might choose to have the master document as the FHIR Document. Similar associations functionality would also support human language translations.
 
 ## 2.8 Document Sharing Models
 
