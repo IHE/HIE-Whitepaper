@@ -1348,7 +1348,7 @@ This is an introduction to the PMIR Profile use within MHDS. PMIR Profile includ
 As with patient identity management, the management of data related to
 healthcare providers (both individual providers and provider
 organizations) is a fundamental challenge for communities. IHE has
-defined the Mobile Care Services Discovery [(mCDS)](http://profiles.ihe.net/ITI/TF/Volume1/ch-46.html) and Healthcare Provider Directory [(HPD)](http://profiles.ihe.net/ITI/TF/Volume1/ch-28.html) Profiles to addresses
+defined the Mobile Care Services Discovery [(mCSD)](http://profiles.ihe.net/ITI/TF/Volume1/ch-46.html) and Healthcare Provider Directory [(HPD)](http://profiles.ihe.net/ITI/TF/Volume1/ch-28.html) Profiles to addresses
 this challenge. There are two principal benefits of using a provider directory.
 First, it provides a means to disambiguate the identity of
 providers (i.e., allow one to distinguish between the 58 year-old male
