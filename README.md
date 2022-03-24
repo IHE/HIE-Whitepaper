@@ -1779,23 +1779,23 @@ what way the IHE profiles can help. The following table shows the set of
 identified Controls (identified in above) as columns and the supportive
 IHE Profiles as rows. In this table a ‘√’ indicates a direct
 relationship. A direct relationship means that the profile addresses the
-security and/or privacy principle. An ‘.” indicates an indirect
+security and/or privacy principle. An ‘O” indicates an indirect
 relationship, meaning that the profile assists with the principle.
-Further details on the ‘√’ direct and ‘.’ Indirect relationships can be
+Further details on the ‘√’ direct and ‘O’ Indirect relationships can be
 found in the profile text or through other webinars.
 
 **Table 7.3-1: Profiles Relationship to Controls**
 
 | Function vs Profile                  | Audit Log | Id / Authn | Authz | Secrecy | Integrity | Non-Repudiation | Privacy |
 | ------------------------------------ | --------- | ---------- | ----- | ------- | --------- | --------------- | ------- |
-| Audit Trails and Node Authentication | √         | √          | √     | √       | √         | √               | √       |
-| Consistent Time                      | √         | ∙          |       |         |           | √               |         |
-| Internet User Authorization          |           | √          | √     |         |           | ∙               | ∙       |
-| Cross-Enterprise User Assertion      |           | √          | ∙     |         |           | ∙               | ∙       |
-| Basic Patient Privacy Consents       |           |            | ∙     |         |           |                 | √       |
-| Mobile Care Services Discovery       |           | √          | ∙     |         |           | ∙               |         |
+| Audit Trails and Node Authentication | √         | √          | √     | √       | √         | O               | O       |
+| Consistent Time                      | √         | O          |       |         |           | √               |         |
+| Internet User Authorization          |           | √          | √     |         |           | O               | O       |
+| Cross-Enterprise User Assertion      |           | √          | O     |         |           | O               | O       |
+| Basic Patient Privacy Consents       |           |            | O     |         |           |                 | √       |
+| Mobile Care Services Discovery       |           | √          | O     |         |           | O               |         |
 | Document Digital Signature           |           | √          |       |         | √         | √               |         |
-| Document Encryption                  |           |            | √     | √       | ∙         |                 |         |
+| Document Encryption                  |           |            | √     | √       | O         |                 | O       |
 
 
 Note: The topic of Security and Privacy is covered in slide
