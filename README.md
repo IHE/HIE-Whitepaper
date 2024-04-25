@@ -865,6 +865,12 @@ In addition the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) can be 
 
 ![](images/MHD_Push_XDR.png)
 
+[MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) has some unique Options that make the Document Source role easier. These may be useful in a push interaction model where the Document Recipient is known to support these Options, or where the Document Recipient can support these options and translate the result into the other transport stack like XDR or XDM:
+
+- The [Simplified Publish Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13324-simplified-publish-option) recognizes that there are Document Source Actors that have simple publication needs that can be automated on the Document Recipient.
+-  The [Generate Metadata Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13325-generate-metadata-option) recognizes that there are Document Source Actors that have a structured and coded format of a document (CDA or FHIR-Document) and simple publication needs that can be automated on the Document Recipient.
+- The [ITI-65 FHIR Documents Publish Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13326-iti-65-fhir-documents-publish-option) adds support to ITI-65 to carry a FHIR-Document encoded within the ITI-65, rather than needing this FHIR-Document encoded within a Binary
+
 ### 3.1.4 Cross-Community Document Reliable Interchange (XCDR)
 
 The [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) Profile provides
@@ -983,6 +989,12 @@ approaches.
     organization, like a hospital system of an infrastructure only
     partner.
 
+[MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) has some unique Options that make the Document Source role easier. These may be useful in a publication interaction model where the Document Recipient is known to support these Options:
+
+- The [Simplified Publish Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13324-simplified-publish-option) recognizes that there are Document Source Actors that have simple publication needs that can be automated on the Document Recipient.
+-  The [Generate Metadata Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13325-generate-metadata-option) recognizes that there are Document Source Actors that have a structured and coded format of a document (CDA or FHIR-Document) and simple publication needs that can be automated on the Document Recipient.
+- The [ITI-65 FHIR Documents Publish Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13326-iti-65-fhir-documents-publish-option) adds support to ITI-65 to carry a FHIR-Document encoded within the ITI-65, rather than needing this FHIR-Document encoded within a Binary
+
 ### 3.2.2 Document Discovery
 
 To complete our analogy, we must consider the library patron (Dr. Suwati
@@ -1004,7 +1016,7 @@ Document Sharing is document content neutral; uses
 document metadata that are represented in a structured, standard format;
 and supports longevity of document storage.
 
-[MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) require a [governance structure](#22-document-sharing-governance) and
+[MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) require a [governance structure](#22-document-sharing-governance) and
 define the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain or a Community as the agent for that governance. An [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)
 Affinity domain or a Community is a group that have agreed to
 work together using a common set of policies and Document Sharing. Some examples
