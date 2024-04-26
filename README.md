@@ -492,6 +492,10 @@ IHE Content Profiles can be found:
 
   - FHIR-Document <https://wiki.ihe.net/index.php/Category:FHIR-Doc>
   
+A good illustration and description of the IHE Content Profile concept is
+the [Sharing of IPS (sIPS)](https://profiles.ihe.net/ITI/TF/Volume1/ch-56.html) provides for methods of exchanging 
+the [HL7 International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips) FHIR Document, using Document Sharing.
+
 ## 2.6 Value of Metadata
 
 Another key principle leveraged by IHE Document Sharing is the use of
