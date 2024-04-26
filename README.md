@@ -1366,36 +1366,103 @@ This is an introduction to the PMIR Profile use within MHDS. PMIR Profile includ
 
 # 6 Common Provider Directory
 
-As with patient identity management, the management of data related to
-healthcare providers (both individual providers and provider
-organizations) is a fundamental challenge for communities. IHE has
-defined the Mobile Care Services Discovery [(mCSD)](http://profiles.ihe.net/ITI/TF/Volume1/ch-46.html) and Healthcare Provider Directory [(HPD)](http://profiles.ihe.net/ITI/TF/Volume1/ch-28.html) Profiles to addresses
-this challenge. There are two principal benefits of using a provider directory.
-First, it provides a means to disambiguate the identity of
-providers (i.e., allow one to distinguish between the 58 year-old male
-pediatric nurse named Lindsay Smith and the 32 year-old female
-orthopedic surgeon Lindsay Smith). Second, it offers a method to
-discover a provider's contact information (e.g., phone numbers, street
-address, etc., as well as an electronic endpoint and digital certificate
-that may be used for trusted communication).
+The [mCSD Whitepaper](https://profiles.ihe.net/ITI/papers/mCSD/index.html) and [Document Sharing Across Network Topologies Whitepaper](https://profiles.ihe.net/ITI/papers/Topologies/index.html) focus on describing the use of directories. 
+Here are some topics where directories are beneficial:
 
-The referral process (one provider referring a patient to the care of
-another provider) is one of the most common uses of the a provider directory.
-When Dr. Palov wishes to send his patient Mary Blythe to a female
-endocrinologist who speaks Spanish, he may query the Directory to find
-contact information for providers that match those criteria. Similarly,
-Dr. Palov may wish to refer another patient, Thomas Reed, to the local
-Mercy Hospital. Dr. Palov could query the Directory to discover the
-hospital's electronic endpoint (e.g., a secure email address or a
-repository endpoint) so that he may forward some of Mr. Reed's 
-records to the hospital in advance of his visit.
+## 6.1 Master Facility List
 
-The healthcare provider directory profiles describe both how to store
-data regarding healthcare providers and also how to subsequently access
-that information. Within the directory, one may also store relationships
-between providers. For example, Nurse Joe may be an individual provider
-who belongs to the organizational provider General Hospital.
+A developing country has decided to implement a Master Facility List
+(MFL) based on recommendations from the WHO in the [MFL Resource
+Package](https://www.who.int/healthinfo/country_monitoring_evaluation/mfl/en/).
+This resource includes a minimum data set to uniquely identify, locate,
+and contact a specific facility. Since this will be a single source of
+information for the country, there may be differing hierarchies that
+need to be supported for the facilities. For example, one hierarchy would
+be the administrative hierarchy for the country (region, district,
+county). Another would be the supply chain hierarchy where hubs may be
+located separately from administrative regions. Yet another could be a
+reporting hierarchy used to send data to health system managers, and on
+up to international organizations.
 
+See [Simple Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#321-simple-facility-registry)
+
+## 6.2 Care Services Registry
+
+To support health system planning, resource management, and patient
+referral workflows, it will be important to be able to relate healthcare
+facilities with the health services that are provided there by practitioners. A
+care services registry may be operationalized that leverages mCSD to
+cross-reference a code list of health services with the unique list of
+facility IDs. Such a cross reference may include information related to
+service provision availability (days and times of day).
+
+See [Care Services Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#521-care-services-registry)
+
+## 6.3 Health Worker Registry
+
+A Health Worker Registry could be operationalized by collecting and
+collating underlying provider demographic content from multiple clinical
+colleges (e.g., College of Physicians and Surgeons, College of Nurses,
+College of Pharmacists, etc.). These Colleges exert governance over their
+membership, which may include a requirement of licensure in the
+self-governing body in order to legally practice in a jurisdiction. As
+such, the underlying Colleges will maintain the content and a Health
+Worker Registry would periodically refresh its content from these
+multiple underlying sources and execute necessary cross-referencing and
+de-duplication workflows to support an care services registry relating
+WHICH workers (Practitioner) provide WHAT SERVICES (HealthcareService), WHERE (Location).
+
+See [Federated Health Worker Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#412-federated-health-worker-registry)
+
+## 6.4 Functioning Facilities Registry
+
+Monitor functioning facilities, e.g., when buildings are operational,
+construction teams, infrastructure, maintenance, then share that
+information with the public. There is a need to immediately view services,
+openings, closures.
+
+See [Simple Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#321-simple-facility-registry)
+
+## 6.5 Federated Facility Registry
+
+A common problem is that multiple data systems are collecting
+information about facilities. For example, in one country, there are
+6 DHIS2 platforms that are not aligned, and are struggling to maintain
+metadata.
+
+See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry)
+
+## 6.6 Federated Data Collection
+
+A way is needed to integrate some regular, large data collections
+(HHFA) from surveys which visit all facilities in the country, and these
+data sources are not connected to the maintenance of the facilities. One
+should be able to integrate information from large data collection.
+
+See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry)
+
+## 6.7 Aggregate Data Reporting
+
+Aggregate data reporting refers to routine reporting, often from a health facility, to an administrative jurisdiction, health financing entity, or external donors and investors.
+
+As an example use case, a donor invests in vertical public health programs for epidemic control across many countries. The donor has a multi-country dashboard and analytics platform that aggregates data and tracks progress of program outcomes at the facility level There are within-country facility IDs issued by the Ministry of Health, and IDs for facilities used by the multi-country analytics platform. IDs may change, temporary facilities like immunization sites may be added, administrative hierarchies may split, and facilities may drop or be upgraded to another level of clinical care over time. A similar use case could arise in a country in which public healthcare is decentralized and provided and overseen by subnational political units who engage in routine reporting to the national authority.
+
+See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry)
+
+## 6.8  Document Sharing Across Network Topologies
+
+The  [Document Sharing Across Network Topologies Whitepaper](https://profiles.ihe.net/ITI/papers/Topologies/index.html) discusses the challanges with complex networks, and how a directory can be used to control the complexity. Use-cases discussed in this whitepaper are:
+
+- Representation of a single Organization's Endpoint in a directory
+- Organizations with Multiple Endpoints
+- Representing Network Membership and Connectivity
+- Multiple Paths to an Organization
+- Endpoint to a Complex Organization
+- Importance of Policy Specifying the Meaning of OrganizationAffiliation.code
+
+<img src="images/multi_layered_network.svg" alt="Multi-Layered Topology Example" width="400"/>
+
+**Figure 6.8-1: Multi-Layered Topology Example**
 
 # 7 Security and Privacy
 
@@ -1866,6 +1933,8 @@ sharing. For those readers who wish to learn more details, please refer to:
 1. [Webinar on Sharing of IPS](https://youtu.be/DX33OZDeNIs?si=dKjzw53bBIA0Vowq)
 1. [Webinar on Basic Audit Log Patterns (BALP)](https://youtu.be/u-M2JMbQFwA?si=AgTR7LLRz83htS_n)
 1. [Webinar on Document Sharing across Network Topologies](https://youtu.be/V9DGfO1QLtI?si=3fOBg7gRu1HU1Wyl)
+1. [mCSD Whitepaper](https://profiles.ihe.net/ITI/papers/mCSD/index.html) 
+1. [Document Sharing Across Network Topologies Whitepaper](https://profiles.ihe.net/ITI/papers/Topologies/index.html)
 
 ## 8.1 Case Studies
 
