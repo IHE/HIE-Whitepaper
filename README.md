@@ -1155,7 +1155,7 @@ Where none of these conditions exist, then the choice could be [XDS](http://prof
 
 # 4 Consuming data as FHIR Resources
 
-A challenge that Document Sharing has is on the consuming side. The Principles of a Document are more beneficial to the source. The source is in control of each document creation, and content. Therefore, a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
+Document Sharing has is a challange on the consuming side. The Principles of a Document are more beneficial to the source. The source is in control of each document creation, and content. Therefore, a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
 
 The Mobile Cross-Enterprise Document Data Element Extraction ([mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html)) Profile provides the means to access data elements extracted from shared structured documents. The profile enables the deployment of health data exchange infrastructures where fine-grained access to health data coexists and complements the sharing of coarse-grained documents and the fine-grained data elements they contain.
 
@@ -1163,9 +1163,10 @@ This profile is based on the reality that health information sharing relies on d
 
 * Document-Level Granularity: share and access documents as a composition of various data elements to reflect the information known and produced during a care or administrative workflow step. This level of granularity is optimum to ensure that contained data has clarity of context in care delivery and reflects source attestation (responsibility) of clinical data shared.
 * Data Element-Level Granularity: access a specific type of data element (e.g., vital signs, medications, etc.). This level of granularity is optimum when the list of data elements relevant to a “time span” or a set of encounters is of interest. Examples of situations where this level of granularity may be optimum include access to a list of allergies at the time of medication dispensation, or information reconciliation at the time of hospital admission.
+
 Each granularity level delivers unique benefits and this profile provides efficient access to both levels.
 
-This profile defines rules to ensure consistency and traceability of information used for clinical decisions. When a data element is accessed by a Clinical Data Consumer, identifiers from that data element can be used to access one or more documents in which this data element was originally recorded, providing a valuable broader clinical context.
+The ([mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html)) Profile defines rules to ensure consistency and traceability of information used for clinical decisions. When a data element is accessed by a Clinical Data Consumer. ([mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html)) Profile assures that all FHIR Resources made availalbe have Provenance linkage to the document(s) in which this data element was originally recorded, providing a valuable broader clinical context.
 
 The flows of information are depicted in the Figure 4-1:
 
@@ -1176,7 +1177,7 @@ The flows of information are depicted in the Figure 4-1:
 1. Documents are published into a Document Sharing infrastructure. This solution supports all IHE models of Document Sharing including XDS, XCA, and MHDS. 
 2. Specific data elements are extracted from the structured documents per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
 3. Data elements (e.g., allergies) queried using the FHIR based Query for Existing Data for Mobile ([QEDm](https://wiki.ihe.net/index.php/Query_for_Existing_Data_for_Mobile)) Profile (Query_for_Existing_Data_for_Mobile).
-4. Each data element is linked to the document(s) from which it was extracted per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile. Clinician accesses context of any data element of interest using source documents ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profiles) providing the clinical context in which the observation was recorded.
+4. Each data element is linked using Provenance resource to the document(s) from which it was extracted per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile. Clinician accesses context of any data element of interest using source documents ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profiles) providing the clinical context in which the observation was recorded.
 
 For a more detailed guide, see the [mXDE webinar](https://www.youtube.com/watch?v=o24WQgxiYVI&t=47s)
 
