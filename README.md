@@ -989,6 +989,8 @@ approaches.
     organization, like a hospital system of an infrastructure only
     partner.
 
+  - MHDS does not include a formal Document Repository, but does support all of the deployment architectures.  MHDS is based on FHIR where the concept of distributing ANY resources is a natural use of REST Resource URLs. This is further discussed in [MHDS Storage of Binary section](https://profiles.ihe.net/ITI/MHDS/volume-1.html#150112-storage-of-binary).
+
 [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) has some unique Options that make the Document Source role easier. These may be useful in a publication interaction model where the Document Recipient is known to support these Options:
 
 - The [Simplified Publish Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13324-simplified-publish-option) recognizes that there are Document Source Actors that have simple publication needs that can be automated on the Document Recipient.
