@@ -1717,14 +1717,14 @@ identity context, as discussed above around the [IUA](http://profiles.ihe.net/IT
 sufficient to make the Access Control decision. The trust relationship
 of the Document Sharing exchange includes background governance on
 appropriate use, as discussed above around the [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Profile.
+The [Basic Audit Log Patterns (BALP)](https://profiles.ihe.net/ITI/TF/Volume1/ch-52.html) Profile defines a specific audit log profile for use disclosing documents.
 
 Privacy Consents may need to be expressed in a way that all parties in a
 Document Exchange can understand. IHE has published the Basic Patient
-Privacy Consents ([BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html)) Profile that can be used to enable basic privacy
-consent controls, and Advanced Patient Privacy Consents [APPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-43.html) that can
-encode more complex rules specific to a patient consent. The encoding of
-Consent and advanced rules in FHIR “Consent” resource is possible but
-has not yet been profiled by IHE.
+Privacy Consents [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) Profile that can be used to enable basic privacy
+consent controls, Advanced Patient Privacy Consents [APPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-43.html) that can
+encode more complex rules specific to a patient consent, and 
+Privacy Consent on FHIR [PCF](https://profiles.ihe.net/ITI/TF/Volume1/ch-53.html) that uses FHIR Consent resource with profiles for Basic, Intermediate, and Advanced Consents with OAuth enforcement profiles. 
 
 Some examples of the type of policy that can be necessary for Patient
 Privacy Consents are:
@@ -1748,12 +1748,21 @@ Privacy Consents are:
 
   - Change the consent policy (change from opt-in to opt-out)
 
+The [Volume 1 Appendix P on Privacy Access Policies](https://profiles.ihe.net/ITI/PCF/ch-P.html) includes 
+discussion on important aspects that need to be considered when developing policies and enforcing them. 
+Privacy policies are an important part of an organization’s overall risk management strategy. 
+They help to protect the organization from potential legal liability, as well as from reputational damage. 
+Privacy policies should be aligned with other policies within the organization, such as data security 
+policies, employee training policies, and incident response plans.
+
 The [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) Profile can be used as a gate-keeper to the document sharing
 community. [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) does not define the policies but does allow for a
 community that has defined its set of policies to capture that a patient
 has chosen one or more of those policies.
 
 The [APPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-43.html) Profile adds to the [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) functionality the ability to include deviations from the base policy in a structured and coded format. Where [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) is limited to agreement or not to a pre-defined policy, [APPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-43.html) allows for more fluid patient privacy consent function.
+
+The Privacy Consent on FHIR [PCF](https://profiles.ihe.net/ITI/TF/Volume1/ch-53.html) builds upon a basic Identity and Authorization model of Internet User Authorization ([IUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-34.html)) to provide consent-based access control. The Privacy Consent on FHIR is thus focused only on Access Control decisions regarding the parameters of the data subject (patient) privacy consent. The Privacy Consent on FHIR leverages these basic Identity and Authorization decisions as context setting for the authorization decision and enforcement. For example, a user that would never be allowed access would be denied access at the [IUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-34.html) level without invoking [PCF](https://profiles.ihe.net/ITI/TF/Volume1/ch-53.html), and where [PCF](https://profiles.ihe.net/ITI/TF/Volume1/ch-53.html) will further evaluate authorization based on Privacy Consents.
 
 For example: Let’s say that the above set of sample policy fragments was
 available to a patient sharing in a community. The patient could agree
