@@ -1629,6 +1629,12 @@ filtering, alerting, and reporting to an audit service. The more
 centralized this audit log analysis can be, the easier it is to
 prove accountability across the whole Document Sharing exchange.
 
+For FHIR environments, the [Basic Audit Log Patterns (BALP)](https://profiles.ihe.net/ITI/TF/Volume1/ch-52.html) Profile 
+is a Content Profile that defines some basic and reusable AuditEvent patterns. This includes basic audit log profiles for 
+FHIR RESTful operations to be used when there is not a more specific audit event defined. A focus is on enabling Privacy 
+centric AuditEvent logs that hold well-formed indication of the Patient when they are the subject of the activity being 
+recorded in the log. Where a more specific audit event can be defined, it should be derived off of these basic patterns.
+
 Once it is known that the system will enforce Access Controls and Audit
 Controls then it can be connected to other systems that have also been
 assessed positively. In this way these systems only talk to other
@@ -1667,7 +1673,7 @@ types of data can be represented using a diagram like found in Table
 | Researcher                          | X |   |   |   |   |   |
 | Patient or Legal Representative     |   | X | X | X | X |   |
 
-Then documents can be labeled with one or more of the codes on the
+Then documents can be labeled with the best code from the "Confidentiality codes" on the
 columns, and results in the specified Functional Roles to be given
 access to that type of document. In this way, the document sharing
 metadata informs the Role-Based Access Control (RBAC) decisions through
@@ -1676,7 +1682,7 @@ self-describing sensitivity, known as confidentialityCode.
 In the same way that the Document Sharing metadata ‘doctype’ defines what the
 document is in terms of the clinical/administrative content, the
 confidentialityCode defines what the document is in terms of
-privacy/security content, sometimes referred to as sensitivity. The
+privacy/security content, based on the data sensitivity. The
 confidentialityCodes should be looked at as a relatively static
 assessment of the document content privacy/security characteristics.
 Some documents are so sensitive in nature that they simply should not be
