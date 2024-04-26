@@ -1863,6 +1863,9 @@ sharing. For those readers who wish to learn more details, please refer to:
 1. Publication and discovery support [Non-Patient File Sharing (NPFS)](https://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFS))
 1. System end-point configuration management form and catalog [Survey of Network Interfaces Form White Paper](https://ihe.github.io/SNIF/SNIF-Whitepaper.html)
 1. [Webinar on the topic](https://www.youtube.com/watch?v=3sDgnS71m4o)
+1. [Webinar on Sharing of IPS](https://youtu.be/DX33OZDeNIs?si=dKjzw53bBIA0Vowq)
+1. [Webinar on Basic Audit Log Patterns (BALP)](https://youtu.be/u-M2JMbQFwA?si=AgTR7LLRz83htS_n)
+1. [Webinar on Document Sharing across Network Topologies](https://youtu.be/V9DGfO1QLtI?si=3fOBg7gRu1HU1Wyl)
 
 ## 8.1 Case Studies
 
