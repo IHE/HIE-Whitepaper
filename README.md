@@ -1073,6 +1073,8 @@ notified when a new document is made available. [DSUB](http://profiles.ihe.net/I
 1. Using a push-style method of notification where the "Document Metadata Subscriber" Actor subscribes to receive notifications at the "Document Metadata Notification Recipient" Actor about the availability of documents based on specific criteria or,
 2. Using a pull-style method which creates a "Notification Pull Point" Actor able to store notifications targeted to a specific recipient. Notifications stored in the Pull Point can be retrieved by the "Notification Puller" Actor.
 
+When using MHD as an API to XDS, the [DSUBm](https://profiles.ihe.net/ITI/TF/Volume1/ch-54.html) profile provides grouping with DSUB to enable subscriptions support into XDS Affinity Domain. Similarly when using MHD as an API to MHDS, the [DSUBm](https://profiles.ihe.net/ITI/TF/Volume1/ch-54.html) profile provides subscription support within the MHDS domain. Various deployment models are described in [DSUBm Cross-Profile Considerations](https://profiles.ihe.net/ITI/DSUBm/volume-1.html#1546-cross-profile-considerations).
+
 The [Publication and Discovery slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDS_DSUB_2012-12-10.ppt) provides more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](http://profiles.ihe.net/ITI/TF/Volume1/ch-26.html).
 
 ## 3.3 Federated Discovery and Retrieve
