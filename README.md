@@ -1161,7 +1161,7 @@ Where none of these conditions exist, then the choice could be [XDS](http://prof
 
 # 4 Consuming data as FHIR Resources
 
-Document Sharing has is a challange on the consuming side. The Principles of a Document are more beneficial to the source. The source is in control of each document creation, and content. Therefore, a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
+There are some situations where the Principles of a Document are not beneficial to a consuming application. A Document Consumer application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document resulting in many documents being retrieved to find the information needed.
 
 The Mobile Cross-Enterprise Document Data Element Extraction ([mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html)) Profile provides the means to access data elements extracted from shared structured documents. The profile enables the deployment of health data exchange infrastructures where fine-grained access to health data coexists and complements the sharing of coarse-grained documents and the fine-grained data elements they contain.
 
