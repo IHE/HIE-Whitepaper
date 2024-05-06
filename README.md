@@ -4,9 +4,9 @@
 
 **Enabling Document Sharing Health Information Exchange Using IHE Profiles**
 
-**Revision 2.1 - Published**
+**Revision 2.2 - Published**
 
-Date: March 19, 2021
+Date: May 17, 2024
 
 Author: ITI Technical Committee
 
@@ -16,9 +16,9 @@ Email: [iti@ihe.net](mailto:iti@ihe.net)
 
 # Foreword
 
-This is a white paper of the IHE IT Infrastructure (ITI) domain.
+This is a white paper of the IHE IT Infrastructure (ITI) domain. [Revision Notes](#revisions)
 
-This white paper is published on March 19, 2021. Comments are invited at any time and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.
+Comments are invited at any time and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.
 
 General information about IHE can be found at [https://www.ihe.net](https://www.ihe.net/).
 
@@ -1172,7 +1172,7 @@ This profile is based on the reality that health information sharing relies on d
 
 Each granularity level delivers unique benefits and this profile provides efficient access to both levels.
 
-The ([mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html)) Profile defines rules to ensure consistency and traceability of information used for clinical decisions. When a data element is accessed by a Clinical Data Consumer. ([mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html)) Profile assures that all FHIR Resources made availalbe have Provenance linkage to the document(s) in which this data element was originally recorded, providing a valuable broader clinical context.
+The ([mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html)) Profile defines rules to ensure consistency and traceability of information used for clinical decisions. When a data element is accessed by a Clinical Data Consumer ([mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html)) Profile assures that all FHIR Resources made availalbe have Provenance linkage to the document(s) in which this data element was originally recorded, providing a valuable broader clinical context.
 
 The flows of information are depicted in the Figure 4-1:
 
@@ -2032,6 +2032,12 @@ See the other [IHE case studies on the use of IHE profiles](https://www.ihe.net/
 
 **Comments are invited and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.**
 
+# Revisions
 
+## Revision 2.2
 
+- Added new Profiles: PCF, DSUBm, sIPS, and BALP.
+- Enhanced PDQm with $match, mXDE, and NPFS.
+- Enhanced the Directory section relative to mCSD Whitepaper and Topologies Whitepaper.
 
+Specific Change tracking can be found in the [HIE-Whitepaper Github Repo PR 134](https://github.com/IHE/HIE-Whitepaper/pull/134)
