@@ -4,9 +4,9 @@
 
 **Enabling Document Sharing Health Information Exchange Using IHE Profiles**
 
-**Revision 2.1 - Published**
+**Revision 2.2 - Published**
 
-Date: March 19, 2021
+Date: May 17, 2024
 
 Author: ITI Technical Committee
 
@@ -16,9 +16,9 @@ Email: [iti@ihe.net](mailto:iti@ihe.net)
 
 # Foreword
 
-This is a white paper of the IHE IT Infrastructure (ITI) domain.
+This is a white paper of the IHE IT Infrastructure (ITI) domain. [Revision Notes](#revisions)
 
-This white paper is published on March 19, 2021. Comments are invited at any time and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.
+Comments are invited at any time and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.
 
 General information about IHE can be found at [https://www.ihe.net](https://www.ihe.net/).
 
@@ -492,6 +492,10 @@ IHE Content Profiles can be found:
 
   - FHIR-Document <https://wiki.ihe.net/index.php/Category:FHIR-Doc>
   
+A good illustration and description of the IHE Content Profile concept is
+the [Sharing of IPS (sIPS)](https://profiles.ihe.net/ITI/TF/Volume1/ch-56.html) provides for methods of exchanging 
+the [HL7 International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips) FHIR Document, using Document Sharing.
+
 ## 2.6 Value of Metadata
 
 Another key principle leveraged by IHE Document Sharing is the use of
@@ -865,6 +869,12 @@ In addition the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) can be 
 
 ![](images/MHD_Push_XDR.png)
 
+[MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) has some unique Options that make the Document Source role easier. These may be useful in a push interaction model where the Document Recipient is known to support these Options, or where the Document Recipient can support these options and translate the result into the other transport stack like XDR or XDM:
+
+- The [Simplified Publish Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13324-simplified-publish-option) recognizes that there are Document Source Actors that have simple publication needs that can be automated on the Document Recipient.
+-  The [Generate Metadata Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13325-generate-metadata-option) recognizes that there are Document Source Actors that have a structured and coded format of a document (CDA or FHIR-Document) and simple publication needs that can be automated on the Document Recipient.
+- The [ITI-65 FHIR Documents Publish Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13326-iti-65-fhir-documents-publish-option) adds support to ITI-65 to carry a FHIR-Document encoded within the ITI-65, rather than needing this FHIR-Document encoded within a Binary
+
 ### 3.1.4 Cross-Community Document Reliable Interchange (XCDR)
 
 The [XCDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-40.html) Profile provides
@@ -983,6 +993,14 @@ approaches.
     organization, like a hospital system of an infrastructure only
     partner.
 
+  - MHDS does not include a formal Document Repository, but does support all of the deployment architectures.  MHDS is based on FHIR where the concept of distributing ANY resources is a natural use of REST Resource URLs. This is further discussed in [MHDS Storage of Binary section](https://profiles.ihe.net/ITI/MHDS/volume-1.html#150112-storage-of-binary).
+
+[MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) has some unique Options that make the Document Source role easier. These may be useful in a publication interaction model where the Document Recipient is known to support these Options:
+
+- The [Simplified Publish Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13324-simplified-publish-option) recognizes that there are Document Source Actors that have simple publication needs that can be automated on the Document Recipient.
+-  The [Generate Metadata Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13325-generate-metadata-option) recognizes that there are Document Source Actors that have a structured and coded format of a document (CDA or FHIR-Document) and simple publication needs that can be automated on the Document Recipient.
+- The [ITI-65 FHIR Documents Publish Option](https://profiles.ihe.net/ITI/MHD/1332_actor_options.html#13326-iti-65-fhir-documents-publish-option) adds support to ITI-65 to carry a FHIR-Document encoded within the ITI-65, rather than needing this FHIR-Document encoded within a Binary
+
 ### 3.2.2 Document Discovery
 
 To complete our analogy, we must consider the library patron (Dr. Suwati
@@ -1004,7 +1022,7 @@ Document Sharing is document content neutral; uses
 document metadata that are represented in a structured, standard format;
 and supports longevity of document storage.
 
-[MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) require a [governance structure](#22-document-sharing-governance) and
+[MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html) and [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) require a [governance structure](#22-document-sharing-governance) and
 define the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain or a Community as the agent for that governance. An [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)
 Affinity domain or a Community is a group that have agreed to
 work together using a common set of policies and Document Sharing. Some examples
@@ -1058,6 +1076,8 @@ notified when a new document is made available. [DSUB](http://profiles.ihe.net/I
 
 1. Using a push-style method of notification where the "Document Metadata Subscriber" Actor subscribes to receive notifications at the "Document Metadata Notification Recipient" Actor about the availability of documents based on specific criteria or,
 2. Using a pull-style method which creates a "Notification Pull Point" Actor able to store notifications targeted to a specific recipient. Notifications stored in the Pull Point can be retrieved by the "Notification Puller" Actor.
+
+When using MHD as an API to XDS, the [DSUBm](https://profiles.ihe.net/ITI/TF/Volume1/ch-54.html) profile provides grouping with DSUB to enable subscriptions support into XDS Affinity Domain. Similarly when using MHD as an API to MHDS, the [DSUBm](https://profiles.ihe.net/ITI/TF/Volume1/ch-54.html) profile provides subscription support within the MHDS domain. Various deployment models are described in [DSUBm Cross-Profile Considerations](https://profiles.ihe.net/ITI/DSUBm/volume-1.html#1546-cross-profile-considerations).
 
 The [Publication and Discovery slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDS_DSUB_2012-12-10.ppt) provides more detail about [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](http://profiles.ihe.net/ITI/TF/Volume1/ch-26.html).
 
@@ -1141,7 +1161,7 @@ Where none of these conditions exist, then the choice could be [XDS](http://prof
 
 # 4 Consuming data as FHIR Resources
 
-A challenge that Document Sharing has is on the consuming side. The Principles of a Document are more beneficial to the source. The source is in control of each document creation, and content. Therefore, a consuming application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document. 
+There are some situations where the Principles of a Document are not beneficial to a consuming application. A Document Consumer application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document resulting in many documents being retrieved to find the information needed.
 
 The Mobile Cross-Enterprise Document Data Element Extraction ([mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html)) Profile provides the means to access data elements extracted from shared structured documents. The profile enables the deployment of health data exchange infrastructures where fine-grained access to health data coexists and complements the sharing of coarse-grained documents and the fine-grained data elements they contain.
 
@@ -1149,9 +1169,10 @@ This profile is based on the reality that health information sharing relies on d
 
 * Document-Level Granularity: share and access documents as a composition of various data elements to reflect the information known and produced during a care or administrative workflow step. This level of granularity is optimum to ensure that contained data has clarity of context in care delivery and reflects source attestation (responsibility) of clinical data shared.
 * Data Element-Level Granularity: access a specific type of data element (e.g., vital signs, medications, etc.). This level of granularity is optimum when the list of data elements relevant to a “time span” or a set of encounters is of interest. Examples of situations where this level of granularity may be optimum include access to a list of allergies at the time of medication dispensation, or information reconciliation at the time of hospital admission.
+
 Each granularity level delivers unique benefits and this profile provides efficient access to both levels.
 
-This profile defines rules to ensure consistency and traceability of information used for clinical decisions. When a data element is accessed by a Clinical Data Consumer, identifiers from that data element can be used to access one or more documents in which this data element was originally recorded, providing a valuable broader clinical context.
+The ([mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html)) Profile defines rules to ensure consistency and traceability of information used for clinical decisions. When a data element is accessed by a Clinical Data Consumer ([mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html)) Profile assures that all FHIR Resources made availalbe have Provenance linkage to the document(s) in which this data element was originally recorded, providing a valuable broader clinical context.
 
 The flows of information are depicted in the Figure 4-1:
 
@@ -1162,7 +1183,7 @@ The flows of information are depicted in the Figure 4-1:
 1. Documents are published into a Document Sharing infrastructure. This solution supports all IHE models of Document Sharing including XDS, XCA, and MHDS. 
 2. Specific data elements are extracted from the structured documents per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile.
 3. Data elements (e.g., allergies) queried using the FHIR based Query for Existing Data for Mobile ([QEDm](https://wiki.ihe.net/index.php/Query_for_Existing_Data_for_Mobile)) Profile (Query_for_Existing_Data_for_Mobile).
-4. Each data element is linked to the document(s) from which it was extracted per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile. Clinician accesses context of any data element of interest using source documents ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profiles) providing the clinical context in which the observation was recorded.
+4. Each data element is linked using Provenance resource to the document(s) from which it was extracted per [mXDE](http://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) Profile. Clinician accesses context of any data element of interest using source documents ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profiles) providing the clinical context in which the observation was recorded.
 
 For a more detailed guide, see the [mXDE webinar](https://www.youtube.com/watch?v=o24WQgxiYVI&t=47s)
 
@@ -1295,7 +1316,7 @@ of the demographics returned. With the knowledge of Justin's [XDS](http://profil
 Affinity Domain Patient ID, the public health department can now publish
 his vaccination record to the community via the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Profile.
 
-The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) Profile provides similar functionality as PDQ but uses the [FHIR](http://fhir.hl7.org) standard. [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be a FHIR API backed by a [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) query or a [Cross-Enterprise Patient Discovery (XCPD)](#53-cross-community-patient-discover-xcpd) query.
+The [Patient Demographics Query for Mobile (PDQm)](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) Profile provides similar functionality as PDQ but uses the [FHIR](http://fhir.hl7.org) standard. [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) can be a FHIR API backed by a [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) query or a [Cross-Enterprise Patient Discovery (XCPD)](#53-cross-community-patient-discover-xcpd) query. [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html) supports a FHIR Search, and the $match Operation. The [$match Operation provides](https://profiles.ihe.net/ITI/PDQm/volume-1.html#13843-use-case-analysis) Master Patient Index (MPI) style search functionality. This interaction gives the Patient Demographics Supplier full authority to implement the patient matching algorithm of its choice, rather than following the strict rules of the FHIR search interaction.
 
 This is an introduction to the Profiles use within an HIE. These profiles include other use-case support, and other optional functions. Please reference the Profiles for details in [PDQ](http://profiles.ihe.net/ITI/TF/Volume1/ch-8.html) and [PDQm](http://profiles.ihe.net/ITI/TF/Volume1/ch-38.html).
 
@@ -1345,36 +1366,103 @@ This is an introduction to the PMIR Profile use within MHDS. PMIR Profile includ
 
 # 6 Common Provider Directory
 
-As with patient identity management, the management of data related to
-healthcare providers (both individual providers and provider
-organizations) is a fundamental challenge for communities. IHE has
-defined the Mobile Care Services Discovery [(mCSD)](http://profiles.ihe.net/ITI/TF/Volume1/ch-46.html) and Healthcare Provider Directory [(HPD)](http://profiles.ihe.net/ITI/TF/Volume1/ch-28.html) Profiles to addresses
-this challenge. There are two principal benefits of using a provider directory.
-First, it provides a means to disambiguate the identity of
-providers (i.e., allow one to distinguish between the 58 year-old male
-pediatric nurse named Lindsay Smith and the 32 year-old female
-orthopedic surgeon Lindsay Smith). Second, it offers a method to
-discover a provider's contact information (e.g., phone numbers, street
-address, etc., as well as an electronic endpoint and digital certificate
-that may be used for trusted communication).
+The [mCSD Whitepaper](https://profiles.ihe.net/ITI/papers/mCSD/index.html) and [Document Sharing Across Network Topologies Whitepaper](https://profiles.ihe.net/ITI/papers/Topologies/index.html) focus on describing the use of directories. 
+Here are some topics where directories are beneficial:
 
-The referral process (one provider referring a patient to the care of
-another provider) is one of the most common uses of the a provider directory.
-When Dr. Palov wishes to send his patient Mary Blythe to a female
-endocrinologist who speaks Spanish, he may query the Directory to find
-contact information for providers that match those criteria. Similarly,
-Dr. Palov may wish to refer another patient, Thomas Reed, to the local
-Mercy Hospital. Dr. Palov could query the Directory to discover the
-hospital's electronic endpoint (e.g., a secure email address or a
-repository endpoint) so that he may forward some of Mr. Reed's 
-records to the hospital in advance of his visit.
+## 6.1 Master Facility List
 
-The healthcare provider directory profiles describe both how to store
-data regarding healthcare providers and also how to subsequently access
-that information. Within the directory, one may also store relationships
-between providers. For example, Nurse Joe may be an individual provider
-who belongs to the organizational provider General Hospital.
+A developing country has decided to implement a Master Facility List
+(MFL) based on recommendations from the WHO in the [MFL Resource
+Package](https://www.who.int/healthinfo/country_monitoring_evaluation/mfl/en/).
+This resource includes a minimum data set to uniquely identify, locate,
+and contact a specific facility. Since this will be a single source of
+information for the country, there may be differing hierarchies that
+need to be supported for the facilities. For example, one hierarchy would
+be the administrative hierarchy for the country (region, district,
+county). Another would be the supply chain hierarchy where hubs may be
+located separately from administrative regions. Yet another could be a
+reporting hierarchy used to send data to health system managers, and on
+up to international organizations.
 
+See [Simple Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#321-simple-facility-registry)
+
+## 6.2 Care Services Registry
+
+To support health system planning, resource management, and patient
+referral workflows, it will be important to be able to relate healthcare
+facilities with the health services that are provided there by practitioners. A
+care services registry may be operationalized that leverages mCSD to
+cross-reference a code list of health services with the unique list of
+facility IDs. Such a cross reference may include information related to
+service provision availability (days and times of day).
+
+See [Care Services Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#521-care-services-registry)
+
+## 6.3 Health Worker Registry
+
+A Health Worker Registry could be operationalized by collecting and
+collating underlying provider demographic content from multiple clinical
+colleges (e.g., College of Physicians and Surgeons, College of Nurses,
+College of Pharmacists, etc.). These Colleges exert governance over their
+membership, which may include a requirement of licensure in the
+self-governing body in order to legally practice in a jurisdiction. As
+such, the underlying Colleges will maintain the content and a Health
+Worker Registry would periodically refresh its content from these
+multiple underlying sources and execute necessary cross-referencing and
+de-duplication workflows to support an care services registry relating
+WHICH workers (Practitioner) provide WHAT SERVICES (HealthcareService), WHERE (Location).
+
+See [Federated Health Worker Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#412-federated-health-worker-registry)
+
+## 6.4 Functioning Facilities Registry
+
+Monitor functioning facilities, e.g., when buildings are operational,
+construction teams, infrastructure, maintenance, then share that
+information with the public. There is a need to immediately view services,
+openings, closures.
+
+See [Simple Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#321-simple-facility-registry)
+
+## 6.5 Federated Facility Registry
+
+A common problem is that multiple data systems are collecting
+information about facilities. For example, in one country, there are
+6 DHIS2 platforms that are not aligned, and are struggling to maintain
+metadata.
+
+See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry)
+
+## 6.6 Federated Data Collection
+
+A way is needed to integrate some regular, large data collections
+(HHFA) from surveys which visit all facilities in the country, and these
+data sources are not connected to the maintenance of the facilities. One
+should be able to integrate information from large data collection.
+
+See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry)
+
+## 6.7 Aggregate Data Reporting
+
+Aggregate data reporting refers to routine reporting, often from a health facility, to an administrative jurisdiction, health financing entity, or external donors and investors.
+
+As an example use case, a donor invests in vertical public health programs for epidemic control across many countries. The donor has a multi-country dashboard and analytics platform that aggregates data and tracks progress of program outcomes at the facility level There are within-country facility IDs issued by the Ministry of Health, and IDs for facilities used by the multi-country analytics platform. IDs may change, temporary facilities like immunization sites may be added, administrative hierarchies may split, and facilities may drop or be upgraded to another level of clinical care over time. A similar use case could arise in a country in which public healthcare is decentralized and provided and overseen by subnational political units who engage in routine reporting to the national authority.
+
+See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry)
+
+## 6.8  Document Sharing Across Network Topologies
+
+The  [Document Sharing Across Network Topologies Whitepaper](https://profiles.ihe.net/ITI/papers/Topologies/index.html) discusses the challanges with complex networks, and how a directory can be used to control the complexity. Use-cases discussed in this whitepaper are:
+
+- Representation of a single Organization's Endpoint in a directory
+- Organizations with Multiple Endpoints
+- Representing Network Membership and Connectivity
+- Multiple Paths to an Organization
+- Endpoint to a Complex Organization
+- Importance of Policy Specifying the Meaning of OrganizationAffiliation.code
+
+<img src="images/multi_layered_network.svg" alt="Multi-Layered Topology Example" width="400"/>
+
+**Figure 6.8-1: Multi-Layered Topology Example**
 
 # 7 Security and Privacy
 
@@ -1612,6 +1700,12 @@ filtering, alerting, and reporting to an audit service. The more
 centralized this audit log analysis can be, the easier it is to
 prove accountability across the whole Document Sharing exchange.
 
+For FHIR environments, the [Basic Audit Log Patterns (BALP)](https://profiles.ihe.net/ITI/TF/Volume1/ch-52.html) Profile 
+is a Content Profile that defines some basic and reusable AuditEvent patterns. This includes basic audit log profiles for 
+FHIR RESTful operations to be used when there is not a more specific audit event defined. A focus is on enabling Privacy 
+centric AuditEvent logs that hold well-formed indication of the Patient when they are the subject of the activity being 
+recorded in the log. Where a more specific audit event can be defined, it should be derived off of these basic patterns.
+
 Once it is known that the system will enforce Access Controls and Audit
 Controls then it can be connected to other systems that have also been
 assessed positively. In this way these systems only talk to other
@@ -1650,7 +1744,7 @@ types of data can be represented using a diagram like found in Table
 | Researcher                          | X |   |   |   |   |   |
 | Patient or Legal Representative     |   | X | X | X | X |   |
 
-Then documents can be labeled with one or more of the codes on the
+Then documents can be labeled with the best code from the "Confidentiality codes" on the
 columns, and results in the specified Functional Roles to be given
 access to that type of document. In this way, the document sharing
 metadata informs the Role-Based Access Control (RBAC) decisions through
@@ -1659,7 +1753,7 @@ self-describing sensitivity, known as confidentialityCode.
 In the same way that the Document Sharing metadata ‘doctype’ defines what the
 document is in terms of the clinical/administrative content, the
 confidentialityCode defines what the document is in terms of
-privacy/security content, sometimes referred to as sensitivity. The
+privacy/security content, based on the data sensitivity. The
 confidentialityCodes should be looked at as a relatively static
 assessment of the document content privacy/security characteristics.
 Some documents are so sensitive in nature that they simply should not be
@@ -1694,14 +1788,14 @@ identity context, as discussed above around the [IUA](http://profiles.ihe.net/IT
 sufficient to make the Access Control decision. The trust relationship
 of the Document Sharing exchange includes background governance on
 appropriate use, as discussed above around the [ATNA](http://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Profile.
+The [Basic Audit Log Patterns (BALP)](https://profiles.ihe.net/ITI/TF/Volume1/ch-52.html) Profile defines a specific audit log profile for use disclosing documents.
 
 Privacy Consents may need to be expressed in a way that all parties in a
 Document Exchange can understand. IHE has published the Basic Patient
-Privacy Consents ([BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html)) Profile that can be used to enable basic privacy
-consent controls, and Advanced Patient Privacy Consents [APPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-43.html) that can
-encode more complex rules specific to a patient consent. The encoding of
-Consent and advanced rules in FHIR “Consent” resource is possible but
-has not yet been profiled by IHE.
+Privacy Consents [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) Profile that can be used to enable basic privacy
+consent controls, Advanced Patient Privacy Consents [APPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-43.html) that can
+encode more complex rules specific to a patient consent, and 
+Privacy Consent on FHIR [PCF](https://profiles.ihe.net/ITI/TF/Volume1/ch-53.html) that uses FHIR Consent resource with profiles for Basic, Intermediate, and Advanced Consents with OAuth enforcement profiles. 
 
 Some examples of the type of policy that can be necessary for Patient
 Privacy Consents are:
@@ -1725,12 +1819,21 @@ Privacy Consents are:
 
   - Change the consent policy (change from opt-in to opt-out)
 
+The [Volume 1 Appendix P on Privacy Access Policies](https://profiles.ihe.net/ITI/PCF/ch-P.html) includes 
+discussion on important aspects that need to be considered when developing policies and enforcing them. 
+Privacy policies are an important part of an organization’s overall risk management strategy. 
+They help to protect the organization from potential legal liability, as well as from reputational damage. 
+Privacy policies should be aligned with other policies within the organization, such as data security 
+policies, employee training policies, and incident response plans.
+
 The [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) Profile can be used as a gate-keeper to the document sharing
 community. [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) does not define the policies but does allow for a
 community that has defined its set of policies to capture that a patient
 has chosen one or more of those policies.
 
 The [APPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-43.html) Profile adds to the [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) functionality the ability to include deviations from the base policy in a structured and coded format. Where [BPPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-19.html) is limited to agreement or not to a pre-defined policy, [APPC](http://profiles.ihe.net/ITI/TF/Volume1/ch-43.html) allows for more fluid patient privacy consent function.
+
+The Privacy Consent on FHIR [PCF](https://profiles.ihe.net/ITI/TF/Volume1/ch-53.html) builds upon a basic Identity and Authorization model of Internet User Authorization ([IUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-34.html)) to provide consent-based access control. The Privacy Consent on FHIR is thus focused only on Access Control decisions regarding the parameters of the data subject (patient) privacy consent. The Privacy Consent on FHIR leverages these basic Identity and Authorization decisions as context setting for the authorization decision and enforcement. For example, a user that would never be allowed access would be denied access at the [IUA](http://profiles.ihe.net/ITI/TF/Volume1/ch-34.html) level without invoking [PCF](https://profiles.ihe.net/ITI/TF/Volume1/ch-53.html), and where [PCF](https://profiles.ihe.net/ITI/TF/Volume1/ch-53.html) will further evaluate authorization based on Privacy Consents.
 
 For example: Let’s say that the above set of sample policy fragments was
 available to a patient sharing in a community. The patient could agree
@@ -1827,6 +1930,11 @@ sharing. For those readers who wish to learn more details, please refer to:
 1. Publication and discovery support [Non-Patient File Sharing (NPFS)](https://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFS))
 1. System end-point configuration management form and catalog [Survey of Network Interfaces Form White Paper](https://ihe.github.io/SNIF/SNIF-Whitepaper.html)
 1. [Webinar on the topic](https://www.youtube.com/watch?v=3sDgnS71m4o)
+1. [Webinar on Sharing of IPS](https://youtu.be/DX33OZDeNIs?si=dKjzw53bBIA0Vowq)
+1. [Webinar on Basic Audit Log Patterns (BALP)](https://youtu.be/u-M2JMbQFwA?si=AgTR7LLRz83htS_n)
+1. [Webinar on Document Sharing across Network Topologies](https://youtu.be/V9DGfO1QLtI?si=3fOBg7gRu1HU1Wyl)
+1. [mCSD Whitepaper](https://profiles.ihe.net/ITI/papers/mCSD/index.html) 
+1. [Document Sharing Across Network Topologies Whitepaper](https://profiles.ihe.net/ITI/papers/Topologies/index.html)
 
 ## 8.1 Case Studies
 
@@ -1924,6 +2032,12 @@ See the other [IHE case studies on the use of IHE profiles](https://www.ihe.net/
 
 **Comments are invited and can be submitted using the [ITI Public Comment form](http://www.ihe.net/ITI_Public_Comments/) or by creating a [GitHub Issue](https://github.com/IHE/HIE-Whitepaper/issues/new?template=public-comment-issue-template.md). Please reference the section that your comment applies to.**
 
+# Revisions
 
+## Revision 2.2
 
+- Added new Profiles: PCF, DSUBm, sIPS, and BALP.
+- Enhanced PDQm with $match, mXDE, and NPFS.
+- Enhanced the Directory section relative to mCSD Whitepaper and Topologies Whitepaper.
 
+Specific Change tracking can be found in the [HIE-Whitepaper Github Repo PR 134](https://github.com/IHE/HIE-Whitepaper/pull/134)
