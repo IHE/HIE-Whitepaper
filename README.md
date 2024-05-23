@@ -6,7 +6,7 @@
 
 **Revision 2.2 - Published**
 
-Date: May 17, 2024
+Date: May 24, 2024
 
 Author: ITI Technical Committee
 
@@ -24,7 +24,7 @@ General information about IHE can be found at [https://www.ihe.net](https://www.
 
 Information about the IHE IT Infrastructure domain can be found at [https://www.ihe.net/IHE_Domains](https://www.ihe.net/IHE_Domains/).
 
-Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [https://www.ihe.net/about_ihe/ihe_process](https://www.ihe.net/about_ihe/ihe_process/) and [https://www.ihe.net/resources/profiles](https://www.ihe.net/resources/profiles/).
+Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [https://www.ihe.net/resources/profiles](https://www.ihe.net/resources/profiles/) and [https://www.ihe.net/about_ihe/ihe_process](https://www.ihe.net/about_ihe/ihe_process/).
 
 The current version of the IHE IT Infrastructure Technical Framework can be found at [https://profiles.ihe.net/ITI](https://profiles.ihe.net/ITI/).
 
@@ -60,7 +60,7 @@ paper will show how various profiles work together to provide a
 standards based, interoperable approach to community and cross-community
 health information sharing.
 
-IHE has provided a recorded [YouTube webinar on the topic of the HIE-Whitepaper](https://www.youtube.com/watch?v=3sDgnS71m4o) with a focus on the FHIR support available.
+IHE has provided a recorded [YouTube webinar on the topic of the HIE-White Paper](https://www.youtube.com/watch?v=3sDgnS71m4o) with a focus on the FHIR support available.
 
 ## 1.1 Scope
 
@@ -96,16 +96,16 @@ Handbook](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metad
 provides guidance on developing policy and vocabulary valuesets for use
 within the community. For application of Document Sharing for particular
 clinical use cases, consider the work of the clinical IHE domains:
-* Cardiology
-* Devices
-* Endoscopy
-* Eye Care
-* Pathology and Laboratory Medicine
-* Patient Care Coordination
-* Pharmacy
-* Quality, Research and Public Health
-* Radiation Oncology
-* Radiology
+- Cardiology
+- Devices
+- Endoscopy
+- Eye Care
+- Pathology and Laboratory Medicine
+- Patient Care Coordination
+- Pharmacy
+- Quality, Research and Public Health
+- Radiation Oncology
+- Radiology
 
 ## 1.2 Intended Audience
 
@@ -726,7 +726,7 @@ A **Delayed Assembly document** is one where a Document Source (or Document Sour
 
 An **On-Demand document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind, but content that is expected to change over time. The On-Demand model is used when the document source can ensure that the returned document always contains information that is known to be accurate at the time of request. This can be used in cases where the document source is a database that is not inherently document based, and document consumers wish to always receive the most up to date information available. Thus, a request two months apart may contain different content given changes during the two month span. The document instance isn't created until a Document Consumer requests to retrieve an instance of the document. The retrieve request triggers the creation of an instance of the document. The instance could be preserved as a snapshot, which is a kind of [Association](#27-document-relationships) managed off of the On-Demand document entry.
 
-# 3 Document sharing profiles
+# 3 Document Sharing Profiles
 
 The key actors in health information exchange are the document source
 actors – those applications or modules that create the document to be
@@ -1366,7 +1366,7 @@ This is an introduction to the PMIR Profile use within MHDS. PMIR Profile includ
 
 # 6 Common Provider Directory
 
-The [mCSD Whitepaper](https://profiles.ihe.net/ITI/papers/mCSD/index.html) and [Document Sharing Across Network Topologies Whitepaper](https://profiles.ihe.net/ITI/papers/Topologies/index.html) focus on describing the use of directories. 
+The [mCSD White Paper](https://profiles.ihe.net/ITI/papers/mCSD/index.html) and [Document Sharing Across Network Topologies White Paper](https://profiles.ihe.net/ITI/papers/Topologies/index.html) focus on describing the use of directories. 
 Here are some topics where directories are beneficial:
 
 ## 6.1 Master Facility List
@@ -1396,7 +1396,7 @@ cross-reference a code list of health services with the unique list of
 facility IDs. Such a cross reference may include information related to
 service provision availability (days and times of day).
 
-See [Care Services Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#521-care-services-registry)
+See [Care Services Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#521-care-services-registry).
 
 ## 6.3 Health Worker Registry
 
@@ -1412,7 +1412,7 @@ multiple underlying sources and execute necessary cross-referencing and
 de-duplication workflows to support an care services registry relating
 WHICH workers (Practitioner) provide WHAT SERVICES (HealthcareService), WHERE (Location).
 
-See [Federated Health Worker Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#412-federated-health-worker-registry)
+See [Federated Health Worker Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#412-federated-health-worker-registry).
 
 ## 6.4 Functioning Facilities Registry
 
@@ -1421,7 +1421,7 @@ construction teams, infrastructure, maintenance, then share that
 information with the public. There is a need to immediately view services,
 openings, closures.
 
-See [Simple Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#321-simple-facility-registry)
+See [Simple Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#321-simple-facility-registry).
 
 ## 6.5 Federated Facility Registry
 
@@ -1430,7 +1430,7 @@ information about facilities. For example, in one country, there are
 6 DHIS2 platforms that are not aligned, and are struggling to maintain
 metadata.
 
-See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry)
+See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry).
 
 ## 6.6 Federated Data Collection
 
@@ -1439,7 +1439,7 @@ A way is needed to integrate some regular, large data collections
 data sources are not connected to the maintenance of the facilities. One
 should be able to integrate information from large data collection.
 
-See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry)
+See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry).
 
 ## 6.7 Aggregate Data Reporting
 
@@ -1447,11 +1447,11 @@ Aggregate data reporting refers to routine reporting, often from a health facili
 
 As an example use case, a donor invests in vertical public health programs for epidemic control across many countries. The donor has a multi-country dashboard and analytics platform that aggregates data and tracks progress of program outcomes at the facility level There are within-country facility IDs issued by the Ministry of Health, and IDs for facilities used by the multi-country analytics platform. IDs may change, temporary facilities like immunization sites may be added, administrative hierarchies may split, and facilities may drop or be upgraded to another level of clinical care over time. A similar use case could arise in a country in which public healthcare is decentralized and provided and overseen by subnational political units who engage in routine reporting to the national authority.
 
-See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry)
+See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry).
 
 ## 6.8  Document Sharing Across Network Topologies
 
-The  [Document Sharing Across Network Topologies Whitepaper](https://profiles.ihe.net/ITI/papers/Topologies/index.html) discusses the challanges with complex networks, and how a directory can be used to control the complexity. Use-cases discussed in this whitepaper are:
+The  [Document Sharing Across Network Topologies White Paper](https://profiles.ihe.net/ITI/papers/Topologies/index.html) discusses the challanges with complex networks, and how a directory can be used to control the complexity. Use-cases discussed in this white paper are:
 
 - Representation of a single Organization's Endpoint in a directory
 - Organizations with Multiple Endpoints
@@ -1480,8 +1480,8 @@ white papers and handbooks from IHE, but there is no
 single policy that must
 be put in place by an IHE based community to ensure privacy and
 security. 
-* [Template for Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
-* [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
+- [Template for Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
+- [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
 
 In this section, we will discuss potential policy decisions and
 positions with regard to the profiles. It is especially important for the
@@ -1914,7 +1914,7 @@ sharing. For those readers who wish to learn more details, please refer to:
 
 1. General information about IHE can be found at [IHE](http://ihe.net)
 1. Information about the [IHE domains](http://ihe.net/IHE_Domains)
-1. IHE IT Infrastructure Committee [Educational slides and webinars](http://wiki.ihe.net/index.php?title=Current_Published_ITI_Educational_Materials).
+1. IHE IT Infrastructure Committee [Educational slides and webinars](http://wiki.ihe.net/index.php?title=Current_Published_ITI_Educational_Materials)
 1. IHE IT Infrastructure [formal specifications and white papers](https://www.ihe.net/resources/technical_frameworks/#IT )
 1. A white paper that covers deployment planning for an exchange [Template for XDS Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
 1. A Handbook to aid a Document Sharing community with designing how they will use [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
@@ -1933,8 +1933,8 @@ sharing. For those readers who wish to learn more details, please refer to:
 1. [Webinar on Sharing of IPS](https://youtu.be/DX33OZDeNIs?si=dKjzw53bBIA0Vowq)
 1. [Webinar on Basic Audit Log Patterns (BALP)](https://youtu.be/u-M2JMbQFwA?si=AgTR7LLRz83htS_n)
 1. [Webinar on Document Sharing across Network Topologies](https://youtu.be/V9DGfO1QLtI?si=3fOBg7gRu1HU1Wyl)
-1. [mCSD Whitepaper](https://profiles.ihe.net/ITI/papers/mCSD/index.html) 
-1. [Document Sharing Across Network Topologies Whitepaper](https://profiles.ihe.net/ITI/papers/Topologies/index.html)
+1. [mCSD White Paper](https://profiles.ihe.net/ITI/papers/mCSD/index.html) 
+1. [Document Sharing Across Network Topologies White Paper](https://profiles.ihe.net/ITI/papers/Topologies/index.html)
 
 ## 8.1 Case Studies
 
@@ -2038,6 +2038,6 @@ See the other [IHE case studies on the use of IHE profiles](https://www.ihe.net/
 
 - Added new Profiles: PCF, DSUBm, sIPS, and BALP.
 - Enhanced PDQm with $match, mXDE, and NPFS.
-- Enhanced the Directory section relative to mCSD Whitepaper and Topologies Whitepaper.
+- Enhanced the Directory section relative to mCSD White Paper and Topologies White Paper.
 
-Specific Change tracking can be found in the [HIE-Whitepaper Github Repo PR 134](https://github.com/IHE/HIE-Whitepaper/pull/134)
+Specific Change tracking can be found in the [HIE-White Paper Github Repo PR 134](https://github.com/IHE/HIE-Whitepaper/pull/134)
