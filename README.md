@@ -6,7 +6,7 @@
 
 **Revision 2.2 - Published**
 
-Date: May 17, 2024
+Date: May 24, 2024
 
 Author: ITI Technical Committee
 
@@ -24,7 +24,7 @@ General information about IHE can be found at [https://www.ihe.net](https://www.
 
 Information about the IHE IT Infrastructure domain can be found at [https://www.ihe.net/IHE_Domains](https://www.ihe.net/IHE_Domains/).
 
-Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [https://www.ihe.net/about_ihe/ihe_process](https://www.ihe.net/about_ihe/ihe_process/) and [https://www.ihe.net/resources/profiles](https://www.ihe.net/resources/profiles/).
+Information about the organization of IHE Technical Frameworks and Supplements and the process used to create them can be found at [https://www.ihe.net/resources/profiles](https://www.ihe.net/resources/profiles/) and [https://www.ihe.net/about_ihe/ihe_process](https://www.ihe.net/about_ihe/ihe_process/).
 
 The current version of the IHE IT Infrastructure Technical Framework can be found at [https://profiles.ihe.net/ITI](https://profiles.ihe.net/ITI/).
 
@@ -32,9 +32,9 @@ The current version of the IHE IT Infrastructure Technical Framework can be foun
 **CONTENTS**
 * [1 Introduction](#1-introduction)
 * [2 Principles of Health Document Sharing](#2-principles-of-ihe-for-health-document-sharing)
-* [3 Document sharing profiles](#3-document-sharing-profiles)
-* [4 Consuming data as FHIR Resources](#4-consuming-data-as-fhir-resources)
-* [5 Patient identity management](#5-patient-identity-management)
+* [3 Document Sharing Profiles](#3-document-sharing-profiles)
+* [4 Consuming Data as FHIR Resources](#4-consuming-data-as-fhir-resources)
+* [5 Patient Identity Management](#5-patient-identity-management)
 * [6 Common Provider Directory](#6-common-provider-directory)
 * [7 Security and Privacy](#7-security-and-privacy)
 * [8 Further Reading](#8-further-reading)
@@ -60,7 +60,7 @@ paper will show how various profiles work together to provide a
 standards based, interoperable approach to community and cross-community
 health information sharing.
 
-IHE has provided a recorded [YouTube webinar on the topic of the HIE-Whitepaper](https://www.youtube.com/watch?v=3sDgnS71m4o) with a focus on the FHIR support available.
+IHE has provided a recorded [YouTube webinar on the topic of the HIE-White Paper](https://www.youtube.com/watch?v=3sDgnS71m4o) with a focus on the FHIR support available.
 
 ## 1.1 Scope
 
@@ -96,16 +96,16 @@ Handbook](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metad
 provides guidance on developing policy and vocabulary valuesets for use
 within the community. For application of Document Sharing for particular
 clinical use cases, consider the work of the clinical IHE domains:
-* Cardiology
-* Devices
-* Endoscopy
-* Eye Care
-* Pathology and Laboratory Medicine
-* Patient Care Coordination
-* Pharmacy
-* Quality, Research and Public Health
-* Radiation Oncology
-* Radiology
+- Cardiology
+- Devices
+- Endoscopy
+- Eye Care
+- Pathology and Laboratory Medicine
+- Patient Care Coordination
+- Pharmacy
+- Quality, Research and Public Health
+- Radiation Oncology
+- Radiology
 
 ## 1.2 Intended Audience
 
@@ -246,7 +246,7 @@ before any conformity assessment, quality label or certification process.
 This section describes several principles which are foundational to
 IHE’s approach to health document sharing.
 
-## 2.1 General IHE principles
+## 2.1 General IHE Principles
 
 The following general IHE principles are applicable to the set of IHE
 profiles used for Document Sharing:
@@ -341,7 +341,7 @@ interoperability among participating partners. When the Cross-enterprise
 Document Sharing ([XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)) Profile is used the governance is provided
 through the [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) Affinity Domain, see [Section 3.2 Centralized Discovery and Retrieve](#32-centralized-discovery-and-retrieve).
 
-## 2.3 Distinction between Documents and Messages
+## 2.3 Distinction Between Documents and Messages
 
 The HL7 standard for Structured Documents
 Section 
@@ -651,7 +651,7 @@ historic norms, regulations, and business factors. Some regions have a
 universal identifier, but most regions do not. IHE provides several
 profiles that aid the resolution of the patient identifier. 
 
-## 2.10 Locating sharing partners
+## 2.10 Locating Sharing Partners
 
 One of the challenges of Document Sharing that is not directly addressed
 by IHE is the identification of Document Sharing partners. Each Document
@@ -726,7 +726,7 @@ A **Delayed Assembly document** is one where a Document Source (or Document Sour
 
 An **On-Demand document** is one where a Document Source (or Document Source Repository) publishes a promise to produce a document of a specific kind, but content that is expected to change over time. The On-Demand model is used when the document source can ensure that the returned document always contains information that is known to be accurate at the time of request. This can be used in cases where the document source is a database that is not inherently document based, and document consumers wish to always receive the most up to date information available. Thus, a request two months apart may contain different content given changes during the two month span. The document instance isn't created until a Document Consumer requests to retrieve an instance of the document. The retrieve request triggers the creation of an instance of the document. The instance could be preserved as a snapshot, which is a kind of [Association](#27-document-relationships) managed off of the On-Demand document entry.
 
-# 3 Document sharing profiles
+# 3 Document Sharing Profiles
 
 The key actors in health information exchange are the document source
 actors – those applications or modules that create the document to be
@@ -789,13 +789,13 @@ Figure 3-1 shows three different Push models. The sending system is depicted on 
 
 ![](images/centralized-models.png)
 
-**Figure 3-2: Data Flow for Centralized Discovery and Retrieve Sharing Models.**
+**Figure 3-2: Data Flow for Centralized Discovery and Retrieve Sharing Models**
 
 Figure 3-2 shows a MHDS community, and a XDS community;  with clients publishing on the left side and clients consuming on the right side. Note that MHD clients are shown with the ability to be accessing the XDS Affinity Domain using the MHD API. This figure is showing the relationship of the profiles and actors, but is not depicting all possible deployment architectures.
 
 ![](images/federation-models.png)
 
-**Figure 3-3: Data Flow for Federalization Discovery and Retrieve Sharing Models.**
+**Figure 3-3: Data Flow for Federalization Discovery and Retrieve Sharing Models**
 
 Figure 3-3 shows a deployment depicting set of communities that are linked by the [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html) for patient discovery, and [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) for federated Query for Documents and Retrieve Documents. On the Left side are [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) style clients. In this case the Publication functionality is supported as they are interacting locally with an XDS Affinity Domain.
 
@@ -859,7 +859,7 @@ orthopedist.
 
 The [Point-to-Point Transmission of Documents slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-XDM_XDR_2012-12-10.ppt)  provides more detail about [XDM](http://profiles.ihe.net/ITI/TF/Volume1/ch-16.html).
 
-### 3.1.3 Mobile access to Health Documents (MHD) push
+### 3.1.3 Mobile Access to Health Documents (MHD) Push
 
 The [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) Profile provides a point-to-point method of sending documents to a specific recipient. It leverages common principles described in Section 2. It sends documents and metadata using FHIR Rest push to deliver one or more documents to a Document Recipient. 
 
@@ -931,7 +931,7 @@ The following Figure 3.2-1 shows the use of the MHD Profile as an API to an XDS 
 
 ![](images/MHD-as-API-to-XDS.png)
 
-**Figure 3.2-1: XDS environment with MHD as API.**
+**Figure 3.2-1: XDS Environment with MHD as API**
 
 The IHE Youtube channel has the [XDS webinar](https://www.youtube.com/watch?v=VG1oF5FEijY&t=2s) and the [MHD webinar](https://www.youtube.com/watch?v=ZpQrHI3VVxY&t=1s) available.
 
@@ -1138,14 +1138,14 @@ on this profile, see [Section 5.3](#53-cross-community-patient-discovery-xcpd).
 The [Cross-Community slide deck](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Cross-Community_2012-12-10.ppt) provides
 more detail about [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) and [XCPD](http://profiles.ihe.net/ITI/TF/Volume1/ch-27.html).
 
-## 3.4 Choosing an infrastructure
+## 3.4 Choosing an Infrastructure
 
 Presented is the Centralized Document Registry model of [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html), the Federated Community Exchange of [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html), and the API access model enabled by [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) along side the classic access model defined in [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)/[XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html). These choices present two very important alternatives that need to be considered.
 
 
 ![](images/Which_Infrastructure_to_use.png)
 
-**Figure 3.4-1: Decision tree on which Infrastructure to use**
+**Figure 3.4-1: Decision Tree on Which Infrastructure to Use**
 
 First, recognize that the [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) as an API for publishing and consuming documents is always available regardless of use of [MHDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-50.html), [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html), [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), or [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html). The clients can be enabled to use legacy ([XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html)/[XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)/[XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) or [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) based query/retrieve or publication.   Where one has an [XDR](http://profiles.ihe.net/ITI/TF/Volume1/ch-15.html), [XDS](http://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), or [XCA](http://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) infrastructure; one can always add [MHD](http://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) as a more simple API.
 
@@ -1159,7 +1159,7 @@ Where none of these conditions exist, then the choice could be [XDS](http://prof
 
 
 
-# 4 Consuming data as FHIR Resources
+# 4 Consuming Data as FHIR Resources
 
 There are some situations where the Principles of a Document are not beneficial to a consuming application. A Document Consumer application must be robust to the fact that the data may not be broken down or organized in a way that is helpful to the consumer application. There may not even be the information that the consumer wants in any given document resulting in many documents being retrieved to find the information needed.
 
@@ -1187,7 +1187,7 @@ The flows of information are depicted in the Figure 4-1:
 
 For a more detailed guide, see the [mXDE webinar](https://www.youtube.com/watch?v=o24WQgxiYVI&t=47s)
 
-# 5 Patient identity management
+# 5 Patient Identity Management
 
 The Document Sharing defined in this white paper is patient centric,
 meaning that a patient is associated with each document shared. When
@@ -1265,7 +1265,7 @@ The use of the PIX query for cross-references from the Patient ID Manager will g
 
 ![](images/PatientManager.png)
 
-**Figure 5.1-1: Patient identifier cross-referencing**
+**Figure 5.1-1: Patient Identifier Cross-Referencing**
 
 The [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Profile is IHE's answer to the difficulty of managing an
 individual patient's multiple Identifiers. A [PIX](http://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) Manager system receives
@@ -1366,7 +1366,7 @@ This is an introduction to the PMIR Profile use within MHDS. PMIR Profile includ
 
 # 6 Common Provider Directory
 
-The [mCSD Whitepaper](https://profiles.ihe.net/ITI/papers/mCSD/index.html) and [Document Sharing Across Network Topologies Whitepaper](https://profiles.ihe.net/ITI/papers/Topologies/index.html) focus on describing the use of directories. 
+The [mCSD White Paper](https://profiles.ihe.net/ITI/papers/mCSD/index.html) and [Document Sharing Across Network Topologies White Paper](https://profiles.ihe.net/ITI/papers/Topologies/index.html) focus on describing the use of directories. 
 Here are some topics where directories are beneficial:
 
 ## 6.1 Master Facility List
@@ -1396,7 +1396,7 @@ cross-reference a code list of health services with the unique list of
 facility IDs. Such a cross reference may include information related to
 service provision availability (days and times of day).
 
-See [Care Services Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#521-care-services-registry)
+See [Care Services Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#521-care-services-registry).
 
 ## 6.3 Health Worker Registry
 
@@ -1412,7 +1412,7 @@ multiple underlying sources and execute necessary cross-referencing and
 de-duplication workflows to support an care services registry relating
 WHICH workers (Practitioner) provide WHAT SERVICES (HealthcareService), WHERE (Location).
 
-See [Federated Health Worker Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#412-federated-health-worker-registry)
+See [Federated Health Worker Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#412-federated-health-worker-registry).
 
 ## 6.4 Functioning Facilities Registry
 
@@ -1421,7 +1421,7 @@ construction teams, infrastructure, maintenance, then share that
 information with the public. There is a need to immediately view services,
 openings, closures.
 
-See [Simple Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#321-simple-facility-registry)
+See [Simple Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#321-simple-facility-registry).
 
 ## 6.5 Federated Facility Registry
 
@@ -1430,7 +1430,7 @@ information about facilities. For example, in one country, there are
 6 DHIS2 platforms that are not aligned, and are struggling to maintain
 metadata.
 
-See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry)
+See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry).
 
 ## 6.6 Federated Data Collection
 
@@ -1439,7 +1439,7 @@ A way is needed to integrate some regular, large data collections
 data sources are not connected to the maintenance of the facilities. One
 should be able to integrate information from large data collection.
 
-See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry)
+See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry).
 
 ## 6.7 Aggregate Data Reporting
 
@@ -1447,11 +1447,11 @@ Aggregate data reporting refers to routine reporting, often from a health facili
 
 As an example use case, a donor invests in vertical public health programs for epidemic control across many countries. The donor has a multi-country dashboard and analytics platform that aggregates data and tracks progress of program outcomes at the facility level There are within-country facility IDs issued by the Ministry of Health, and IDs for facilities used by the multi-country analytics platform. IDs may change, temporary facilities like immunization sites may be added, administrative hierarchies may split, and facilities may drop or be upgraded to another level of clinical care over time. A similar use case could arise in a country in which public healthcare is decentralized and provided and overseen by subnational political units who engage in routine reporting to the national authority.
 
-See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry)
+See [Federated Facility Registry](https://profiles.ihe.net/ITI/papers/mCSD/index.html#322-federated-facility-registry).
 
 ## 6.8  Document Sharing Across Network Topologies
 
-The  [Document Sharing Across Network Topologies Whitepaper](https://profiles.ihe.net/ITI/papers/Topologies/index.html) discusses the challanges with complex networks, and how a directory can be used to control the complexity. Use-cases discussed in this whitepaper are:
+The  [Document Sharing Across Network Topologies White Paper](https://profiles.ihe.net/ITI/papers/Topologies/index.html) discusses the challanges with complex networks, and how a directory can be used to control the complexity. Use-cases discussed in this white paper are:
 
 - Representation of a single Organization's Endpoint in a directory
 - Organizations with Multiple Endpoints
@@ -1480,8 +1480,8 @@ white papers and handbooks from IHE, but there is no
 single policy that must
 be put in place by an IHE based community to ensure privacy and
 security. 
-* [Template for Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
-* [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
+- [Template for Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
+- [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
 
 In this section, we will discuss potential policy decisions and
 positions with regard to the profiles. It is especially important for the
@@ -1718,7 +1718,7 @@ For more information on the use of IHE [ATNA](http://profiles.ihe.net/ITI/TF/Vol
 the security and privacy slide
 decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and the [Security and Privacy Profiles Introduction is long-form narrated](https://healthcaresecprivacy.blogspot.com/2011/05/ihe-privacy-and-security-profiles.html).
 
-### 7.2.2 Protecting different types of documents
+### 7.2.2 Protecting Different Types of Documents
 
 The IHE Document Sharing profiles allow for many different
 types of documents to be shared. These documents are likely to have
@@ -1773,7 +1773,7 @@ For more details on enabling Role-Based-Access-Control and federation of
 identities, see the security and privacy slide
 decks [1](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part1_2012-12-30.pptx) and [2](https://github.com/IHE/IT-Infrastructure/blob/master/Presentations/IHE-Security_Privacy_Part2_2012-12-30.pptx) and the [Security and Privacy Profiles Introduction is long-form narrated](https://healthcaresecprivacy.blogspot.com/2011/05/ihe-privacy-and-security-profiles.html).
 
-### 7.2.3 Patient Privacy Consent to participate in Document Sharing
+### 7.2.3 Patient Privacy Consent to Participate in Document Sharing
 
 The topic of Patient Privacy Consent (Authorization) to collect, use,
 and disclose is a complex topic. This complexity does not always need to
@@ -1914,7 +1914,7 @@ sharing. For those readers who wish to learn more details, please refer to:
 
 1. General information about IHE can be found at [IHE](http://ihe.net)
 1. Information about the [IHE domains](http://ihe.net/IHE_Domains)
-1. IHE IT Infrastructure Committee [Educational slides and webinars](http://wiki.ihe.net/index.php?title=Current_Published_ITI_Educational_Materials).
+1. IHE IT Infrastructure Committee [Educational slides and webinars](http://wiki.ihe.net/index.php?title=Current_Published_ITI_Educational_Materials)
 1. IHE IT Infrastructure [formal specifications and white papers](https://www.ihe.net/resources/technical_frameworks/#IT )
 1. A white paper that covers deployment planning for an exchange [Template for XDS Affinity Domain Deployment Planning](https://www.ihe.net/Technical_Framework/upload/IHE_ITI_White_Paper_XDS_Affinity_Domain_Template_TI_2008-12-02.pdf)
 1. A Handbook to aid a Document Sharing community with designing how they will use [Document Sharing Metadata](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Handbook_Metadata.pdf)
@@ -1933,8 +1933,8 @@ sharing. For those readers who wish to learn more details, please refer to:
 1. [Webinar on Sharing of IPS](https://youtu.be/DX33OZDeNIs?si=dKjzw53bBIA0Vowq)
 1. [Webinar on Basic Audit Log Patterns (BALP)](https://youtu.be/u-M2JMbQFwA?si=AgTR7LLRz83htS_n)
 1. [Webinar on Document Sharing across Network Topologies](https://youtu.be/V9DGfO1QLtI?si=3fOBg7gRu1HU1Wyl)
-1. [mCSD Whitepaper](https://profiles.ihe.net/ITI/papers/mCSD/index.html) 
-1. [Document Sharing Across Network Topologies Whitepaper](https://profiles.ihe.net/ITI/papers/Topologies/index.html)
+1. [mCSD White Paper](https://profiles.ihe.net/ITI/papers/mCSD/index.html) 
+1. [Document Sharing Across Network Topologies White Paper](https://profiles.ihe.net/ITI/papers/Topologies/index.html)
 
 ## 8.1 Case Studies
 
@@ -2038,6 +2038,6 @@ See the other [IHE case studies on the use of IHE profiles](https://www.ihe.net/
 
 - Added new Profiles: PCF, DSUBm, sIPS, and BALP.
 - Enhanced PDQm with $match, mXDE, and NPFS.
-- Enhanced the Directory section relative to mCSD Whitepaper and Topologies Whitepaper.
+- Enhanced the Directory section relative to mCSD White Paper and Topologies White Paper.
 
-Specific Change tracking can be found in the [HIE-Whitepaper Github Repo PR 134](https://github.com/IHE/HIE-Whitepaper/pull/134)
+Specific Change tracking can be found in the [HIE-White Paper Github Repo PR 134](https://github.com/IHE/HIE-Whitepaper/pull/134)
