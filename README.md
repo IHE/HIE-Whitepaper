@@ -12,7 +12,7 @@ Author: ITI Technical Committee
 
 Email: [iti@ihe.net](mailto:iti@ihe.net)
 
-**Please verify you have the most recent version of this white paper. See [here](http://profiles.ihe.net/ITI) for the Published version.
+**Please verify you have the most recent version of this white paper. See [here](http://profiles.ihe.net/ITI) for the Published version.**
 
 # Foreword
 
