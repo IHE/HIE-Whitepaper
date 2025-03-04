@@ -1,0 +1,12 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Other Request
+    url: https://www.ihe.net/about_ihe/contact_us/
+    about: For all other requests
+  - name: Formal Change Proposal
+    url: https://wiki.ihe.net/index.php/Category:CPs
+    about: For requesting a formal Change Proposal other than github Issue method
+  - name: Other Public Comment form
+    url: https://www.ihe.net/resources/public_comment/
+    about: For submitting Public Comment without use of github Issue method
+    
