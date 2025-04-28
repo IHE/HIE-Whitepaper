@@ -1,0 +1,61 @@
+name: Public Comment
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: where
+    attributes:
+      label: Section Number
+      description: Identify the most specific section number the issue occurs.
+      placeholder:  e.g. 4.1.2
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What is wrong
+      description: Describe your issue. Don't write a book, but do include enough to indicate what you see as a problem.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to happen.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      multiple: false
+      options:
+        - High: Important issue where there is major issue to be resolved. Requires discussion and debate.
+        - Medium: Significant issue or clarification. Requires discussion, but should not lead to long debate.
+        - Low: Typo or other minor classification that an editor can manage. Requires no group discussion.
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this feature request, you agree to follow the IHE [Code of Conduct](https://github.com/IHE/.github/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow the IHE Code of Conduct
+          required: true
+        
